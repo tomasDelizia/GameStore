@@ -1,0 +1,23 @@
+#Reemplezar 3k2_Confiteria por nombre de carpeta que contiene la solución y solución.
+generar-ejecutable:
+    image: mono:latest
+
+    variables:
+        solution: "3k2_Confiteria.sln"
+        carpeta: "3k2_Confiteria"
+
+    before_script:
+        - nuget restore $solution
+
+    script:
+        - pwd
+        - ls -al
+        - msbuild /p:Configuration=Release $solution
+        - mkdir proyecto        
+        - mv $carpeta/bin/Release/* proyecto
+        - ls -al proyecto
+    artifacts:
+        paths:
+          - proyecto
+        expire_in: 3 days
+    when: manual
