@@ -2,8 +2,8 @@
 
 # PAV I 3k2 2021
 
-### Reemplazar por nombre de sistema
-- Reemplazar por descripción del sistema o lo que necesiten para recordar como levantar el sistema. 
+### GameStore
+- Sistema de gestión de venta y alquiler de videojuegos, consolas y periféricos.
 
 
 # PAV I 3k2 - Material
