@@ -6,12 +6,12 @@ namespace GameStore.Entidades
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+    [Table("Plataformas")]
     public partial class Plataforma
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Plataforma()
         {
-            Articulos = new HashSet<Articulo>();
         }
 
         [Key]
@@ -22,8 +22,5 @@ namespace GameStore.Entidades
         public string Nombre { get; set; }
 
         public string Descripcion { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Articulo> Articulos { get; set; }
     }
 }

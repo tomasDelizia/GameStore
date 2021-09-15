@@ -135,7 +135,7 @@ namespace GameStore.InterfacesDeUsuario
 
         private void BtnNuevoArticulo_Click(object sender, EventArgs e)
         {
-            Form frmAltaArticulo = new AltaArticulo();
+            Form frmAltaArticulo = new AltaArticulo(_unidadDeTrabajo);
             frmAltaArticulo.Show();
         }
 

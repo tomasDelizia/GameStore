@@ -86,12 +86,6 @@ namespace GameStore.RepositoriosBD.Implementaciones
                 .Property(e => e.MontoDevolucionTardiaPorDia)
                 .HasPrecision(9, 2);
 
-            modelBuilder.Entity<CategoriaAlquiler>()
-                .HasMany(e => e.DetallesDeAlquilers)
-                .WithOptional(e => e.CategoriaAlquiler)
-                .HasForeignKey(e => e.Categoria)
-                .WillCascadeOnDelete();
-
             modelBuilder.Entity<Clasificacion>()
                 .Property(e => e.Nombre)
                 .IsUnicode(false);
@@ -144,24 +138,6 @@ namespace GameStore.RepositoriosBD.Implementaciones
                 .Property(e => e.CalleNombre)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Empleado>()
-                .HasMany(e => e.Alquileres)
-                .WithOptional(e => e.Empleado)
-                .HasForeignKey(e => e.IdVendedor)
-                .WillCascadeOnDelete();
-
-            modelBuilder.Entity<Empleado>()
-                .HasMany(e => e.Compras)
-                .WithOptional(e => e.Empleado)
-                .HasForeignKey(e => e.IdProveedor)
-                .WillCascadeOnDelete();
-
-            modelBuilder.Entity<Empleado>()
-                .HasMany(e => e.Ventas)
-                .WithOptional(e => e.Empleado)
-                .HasForeignKey(e => e.IdVendedor)
-                .WillCascadeOnDelete();
-
             modelBuilder.Entity<EstadoVideojuego>()
                 .Property(e => e.Nombre)
                 .IsUnicode(false);
@@ -201,11 +177,6 @@ namespace GameStore.RepositoriosBD.Implementaciones
             modelBuilder.Entity<Permiso>()
                 .Property(e => e.Descripcion)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<Permiso>()
-                .HasMany(e => e.Roles)
-                .WithMany(e => e.Permisos)
-                .Map(m => m.ToTable("PermisosXRoles").MapLeftKey("IdPermiso").MapRightKey("IdRol"));
 
             modelBuilder.Entity<Plataforma>()
                 .Property(e => e.Nombre)
@@ -231,11 +202,6 @@ namespace GameStore.RepositoriosBD.Implementaciones
                 .Property(e => e.CalleNombre)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Proveedor>()
-                .HasMany(e => e.Compras)
-                .WithOptional(e => e.Proveedor)
-                .WillCascadeOnDelete();
-
             modelBuilder.Entity<Rol>()
                 .Property(e => e.Nombre)
                 .IsUnicode(false);
@@ -243,11 +209,6 @@ namespace GameStore.RepositoriosBD.Implementaciones
             modelBuilder.Entity<Rol>()
                 .Property(e => e.Descripcion)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<Rol>()
-                .HasMany(e => e.Usuarios)
-                .WithMany(e => e.Roles)
-                .Map(m => m.ToTable("RolesXUsuarios").MapLeftKey("IdRol").MapRightKey("IdUsuario"));
 
             modelBuilder.Entity<Socio>()
                 .Property(e => e.Nombre)
