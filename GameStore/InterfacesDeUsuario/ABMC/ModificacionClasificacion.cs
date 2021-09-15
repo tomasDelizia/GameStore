@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GameStore.InterfacesDeUsuario.ABMC
 {
-    public partial class ModificarClasificacion : Form
+    public partial class ModificacionClasificacion : Form
     {
-        public ModificarClasificacion()
+        public ModificacionClasificacion()
         {
             InitializeComponent();
         }

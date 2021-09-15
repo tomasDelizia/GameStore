@@ -21,7 +21,8 @@ namespace GameStore
             {
                 //Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new Login());
+                Application.Run(new Inicio(unidadDeTrabajo));
+                //Application.Run(new Login(unidadDeTrabajo));
                 //Application.Run(new Form1(unidadDeTrabajo));
 
                 // Guardar la unidad de trabajo para guardar cambios en la BD.

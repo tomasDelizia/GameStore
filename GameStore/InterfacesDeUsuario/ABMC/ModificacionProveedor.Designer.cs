@@ -1,7 +1,7 @@
 ﻿
 namespace GameStore.InterfacesDeUsuario.ABMC
 {
-    partial class ModificarProveedor
+    partial class ModificacionProveedor
     {
         /// <summary>
         /// Required designer variable.
@@ -366,7 +366,7 @@ namespace GameStore.InterfacesDeUsuario.ABMC
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Name = "ModificarProveedor";
+            this.Name = "ModificacionProveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Proveedor";
             this.panel2.ResumeLayout(false);

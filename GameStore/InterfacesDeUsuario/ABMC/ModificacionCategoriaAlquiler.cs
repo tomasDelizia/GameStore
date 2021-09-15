@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GameStore.InterfacesDeUsuario.ABMC
 {
-    public partial class ModificarProveedor : Form
+    public partial class ModificacionCategoriaAlquiler : Form
     {
-        public ModificarProveedor()
+        public ModificacionCategoriaAlquiler()
         {
             InitializeComponent();
         }

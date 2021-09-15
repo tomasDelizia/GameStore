@@ -1,33 +1,39 @@
 ﻿using System;
-using System.Collections;
 using System.Windows.Forms;
+using GameStore.Entidades;
+using GameStore.RepositoriosBD;
+using GameStore.Servicios;
+using GameStore.Servicios.Implementaciones;
 
 namespace GameStore.InterfacesDeUsuario
 {
     public partial class Login : Form
     {
-        public Login()
+        private readonly IServicioUsuario _servicioUsuario;
+
+
+        public Login(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
+            _servicioUsuario = new ServicioUsuario(unidadDeTrabajo.RepositorioUsuario);
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            //Defino los usuarios y pass aceptadas
-            ArrayList usernames = new ArrayList() { "agustin", "tomas", "abril", "gaston", "a"};
-            ArrayList passwords = new ArrayList() { "123", "345", "admin", "a"};
+            string nombreUsuario = TxtNombreUsuario.Text;
+            string contrasenia = TxtContrasenia.Text;
+            Usuario usuarioLogueado = _servicioUsuario.Login(nombreUsuario, contrasenia);
 
-            if (usernames.Contains(TxtUser.Text) && passwords.Contains(TxtPass.Text))
-            {
-               string nombre = TxtUser.Text;
-               Form frmBienvenida = new Bienvenida(nombre);
-               frmBienvenida.ShowDialog();
-               Form frmInicio = new Inicio();
-               frmInicio.Show();
+            if (usuarioLogueado != null) {
+                Form frmBienvenida = new Bienvenida(nombreUsuario);
+                frmBienvenida.ShowDialog();
+                //Form frmInicio = new Inicio();
+                //frmInicio.Show();
+                this.Dispose();
             }
             else
             {
-                MessageBox.Show("Usuario y/o contrasenña invalidos", "Error Login", MessageBoxButtons.OK);
+                MessageBox.Show("Usuario y/o contraseña inválidos", "Error Login", MessageBoxButtons.OK);
             }
         }
 

@@ -31,8 +31,8 @@ namespace GameStore.InterfacesDeUsuario
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.BtnLogin = new System.Windows.Forms.Button();
-            this.TxtUser = new System.Windows.Forms.TextBox();
-            this.TxtPass = new System.Windows.Forms.TextBox();
+            this.TxtNombreUsuario = new System.Windows.Forms.TextBox();
+            this.TxtContrasenia = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -53,29 +53,32 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.BtnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLogin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLogin.ForeColor = System.Drawing.Color.LightGray;
             this.BtnLogin.Location = new System.Drawing.Point(582, 260);
             this.BtnLogin.Name = "BtnLogin";
-            this.BtnLogin.Size = new System.Drawing.Size(80, 25);
+            this.BtnLogin.Size = new System.Drawing.Size(80, 31);
             this.BtnLogin.TabIndex = 0;
             this.BtnLogin.Text = "Login";
             this.BtnLogin.UseVisualStyleBackColor = false;
             this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
-            // TxtUser
+            // TxtNombreUsuario
             // 
-            this.TxtUser.Location = new System.Drawing.Point(476, 137);
-            this.TxtUser.Name = "TxtUser";
-            this.TxtUser.Size = new System.Drawing.Size(186, 20);
-            this.TxtUser.TabIndex = 3;
+            this.TxtNombreUsuario.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombreUsuario.Location = new System.Drawing.Point(476, 130);
+            this.TxtNombreUsuario.Name = "TxtNombreUsuario";
+            this.TxtNombreUsuario.Size = new System.Drawing.Size(186, 30);
+            this.TxtNombreUsuario.TabIndex = 3;
             // 
-            // TxtPass
+            // TxtContrasenia
             // 
-            this.TxtPass.Location = new System.Drawing.Point(476, 185);
-            this.TxtPass.Name = "TxtPass";
-            this.TxtPass.PasswordChar = '*';
-            this.TxtPass.Size = new System.Drawing.Size(186, 20);
-            this.TxtPass.TabIndex = 4;
+            this.TxtContrasenia.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtContrasenia.Location = new System.Drawing.Point(476, 178);
+            this.TxtContrasenia.Name = "TxtContrasenia";
+            this.TxtContrasenia.PasswordChar = '*';
+            this.TxtContrasenia.Size = new System.Drawing.Size(186, 30);
+            this.TxtContrasenia.TabIndex = 4;
             // 
             // panel1
             // 
@@ -169,8 +172,8 @@ namespace GameStore.InterfacesDeUsuario
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.TxtPass);
-            this.Controls.Add(this.TxtUser);
+            this.Controls.Add(this.TxtContrasenia);
+            this.Controls.Add(this.TxtNombreUsuario);
             this.Controls.Add(this.BtnLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
@@ -189,8 +192,8 @@ namespace GameStore.InterfacesDeUsuario
         #endregion
 
         private System.Windows.Forms.Button BtnLogin;
-        private System.Windows.Forms.TextBox TxtUser;
-        private System.Windows.Forms.TextBox TxtPass;
+        private System.Windows.Forms.TextBox TxtNombreUsuario;
+        private System.Windows.Forms.TextBox TxtContrasenia;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;

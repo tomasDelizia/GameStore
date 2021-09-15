@@ -200,23 +200,23 @@
     <Compile Include="InterfacesDeUsuario\ABMC\ModificacionUsuario.designer.cs">
       <DependentUpon>ModificacionUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificarCategoriaAlquiler.cs">
+    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionCategoriaAlquiler.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificarCategoriaAlquiler.designer.cs">
-      <DependentUpon>ModificarCategoriaAlquiler.cs</DependentUpon>
+    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionCategoriaAlquiler.designer.cs">
+      <DependentUpon>ModificacionCategoriaAlquiler.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificarClasificacion.cs">
+    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionClasificacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificarClasificacion.designer.cs">
-      <DependentUpon>ModificarClasificacion.cs</DependentUpon>
+    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionClasificacion.designer.cs">
+      <DependentUpon>ModificacionClasificacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificarProveedor.cs">
+    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificarProveedor.Designer.cs">
-      <DependentUpon>ModificarProveedor.cs</DependentUpon>
+    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionProveedor.Designer.cs">
+      <DependentUpon>ModificacionProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\Bienvenida.cs">
       <SubType>Form</SubType>
@@ -263,6 +263,7 @@
     <Compile Include="RepositoriosBD\Implementaciones\Repositorio.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioClasificacion.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\UnidadDeTrabajo.cs" />
+    <Compile Include="RepositoriosBD\Implementaciones\RepositorioUsuario.cs" />
     <Compile Include="RepositoriosBD\IRepositorio.cs" />
     <Compile Include="RepositoriosBD\IRepositorioClasificacion.cs" />
     <Compile Include="Entidades\Marca.cs" />
@@ -270,6 +271,7 @@
     <Compile Include="Entidades\Plataforma.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
     <Compile Include="Entidades\Publicante.cs" />
+    <Compile Include="RepositoriosBD\IRepositorioUsuario.cs" />
     <Compile Include="RepositoriosBD\IUnidadDeTrabajo.cs" />
     <Compile Include="Entidades\Rol.cs" />
     <Compile Include="Entidades\Sesion.cs" />
@@ -280,8 +282,10 @@
     <Compile Include="Entidades\Venta.cs" />
     <Compile Include="Servicios\Implementaciones\Servicio.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioClasificacion.cs" />
+    <Compile Include="Servicios\Implementaciones\ServicioUsuario.cs" />
     <Compile Include="Servicios\IServicio.cs" />
     <Compile Include="Servicios\IServicioClasificacion.cs" />
+    <Compile Include="Servicios\IServicioUsuario.cs" />
     <EmbeddedResource Include="InterfacesDeUsuario\ABMC\AltaArticulo.resx">
       <DependentUpon>AltaArticulo.cs</DependentUpon>
     </EmbeddedResource>
@@ -348,14 +352,14 @@
     <EmbeddedResource Include="InterfacesDeUsuario\ABMC\ModificacionUsuario.resx">
       <DependentUpon>ModificacionUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\ModificarCategoriaAlquiler.resx">
-      <DependentUpon>ModificarCategoriaAlquiler.cs</DependentUpon>
+    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\ModificacionCategoriaAlquiler.resx">
+      <DependentUpon>ModificacionCategoriaAlquiler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\ModificarClasificacion.resx">
-      <DependentUpon>ModificarClasificacion.cs</DependentUpon>
+    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\ModificacionClasificacion.resx">
+      <DependentUpon>ModificacionClasificacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\ModificarProveedor.resx">
-      <DependentUpon>ModificarProveedor.cs</DependentUpon>
+    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\ModificacionProveedor.resx">
+      <DependentUpon>ModificacionProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\Bienvenida.resx">
       <DependentUpon>Bienvenida.cs</DependentUpon>

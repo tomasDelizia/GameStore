@@ -1,18 +1,28 @@
 ﻿using System;
 using System.Windows.Forms;
 using GameStore.InterfacesDeUsuario.ABMC;
+using GameStore.RepositoriosBD;
 
 namespace GameStore.InterfacesDeUsuario
 {
     public partial class Inicio : Form
     {
-        public Inicio()
+        private IUnidadDeTrabajo _unidadDeTrabajo;
+
+        public Inicio(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
-            customizeDesing();
+            customizeDesign();
+            _unidadDeTrabajo = unidadDeTrabajo;
         }
 
-        private void customizeDesing()
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+            var frmLogin = new Login(_unidadDeTrabajo);
+            frmLogin.ShowDialog();
+        }
+
+        private void customizeDesign()
         {
             PnlSubmenuABM.Visible = false;
             PnlSubMenuReporte.Visible = false;
@@ -149,7 +159,7 @@ namespace GameStore.InterfacesDeUsuario
 
         private void BtnModificarProveedores_Click(object sender, EventArgs e)
         {
-            Form frmModificarProveedor = new ModificarProveedor();
+            Form frmModificarProveedor = new ModificacionProveedor();
             frmModificarProveedor.Show();
         }
 
@@ -200,5 +210,7 @@ namespace GameStore.InterfacesDeUsuario
         {
             this.Close();
         }
+
+
     }
 }

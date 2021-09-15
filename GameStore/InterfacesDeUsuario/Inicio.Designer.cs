@@ -122,7 +122,7 @@ namespace GameStore.InterfacesDeUsuario
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1384, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -144,25 +144,25 @@ namespace GameStore.InterfacesDeUsuario
             this.modificarToolStripMenuItem,
             this.eliminarToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.clientesToolStripMenuItem.Text = "Socio";
             // 
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.nuevoToolStripMenuItem.Text = "Nuevo";
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             // 
             // articulosToolStripMenuItem
@@ -282,7 +282,7 @@ namespace GameStore.InterfacesDeUsuario
             // masVendidosToolStripMenuItem
             // 
             this.masVendidosToolStripMenuItem.Name = "masVendidosToolStripMenuItem";
-            this.masVendidosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.masVendidosToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.masVendidosToolStripMenuItem.Text = "Mas vendidos";
             // 
             // masFielesToolStripMenuItem
@@ -340,7 +340,7 @@ namespace GameStore.InterfacesDeUsuario
             this.MenuVertical.Location = new System.Drawing.Point(0, 24);
             this.MenuVertical.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(289, 837);
+            this.MenuVertical.Size = new System.Drawing.Size(289, 725);
             this.MenuVertical.TabIndex = 2;
             // 
             // BtnCompraProveedor
@@ -962,7 +962,7 @@ namespace GameStore.InterfacesDeUsuario
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1384, 861);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.MenuVertical);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -972,6 +972,7 @@ namespace GameStore.InterfacesDeUsuario
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
+            this.Load += new System.EventHandler(this.Inicio_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.MenuVertical.ResumeLayout(false);

@@ -14,20 +14,23 @@ namespace GameStore.InterfacesDeUsuario
     public partial class Form1 : Form
     {
         private readonly IServicioClasificacion _servicioClasificacion;
+        private readonly IServicioUsuario _servicioUsuario;
 
         public Form1(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
             _servicioClasificacion = new ServicioClasificacion(unidadDeTrabajo.RepositorioClasificacion);
+            _servicioUsuario = new ServicioUsuario(unidadDeTrabajo.RepositorioUsuario);
         }
 
         private void btn_Click(object sender, EventArgs e)
         {
             List<Clasificacion> clasificaciones = _servicioClasificacion.ListarClasificaciones();
+            List<Usuario> usuarios = _servicioUsuario.ListarUsuarios();
             StringBuilder cadena = new StringBuilder();
-            foreach (var clasificacion in clasificaciones)
+            foreach (var usuario in usuarios)
             {
-                cadena.Append(clasificacion.Nombre + "\n");
+                cadena.Append(usuario.NombreUsuario + "\n");
             }
             txtClasificaciones.Text = cadena.ToString();
         }
