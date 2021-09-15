@@ -9,13 +9,14 @@
             _contextoBd = contextoBd;
             RepositorioClasificacion = new RepositorioClasificacion(_contextoBd);
             RepositorioUsuario = new RepositorioUsuario(_contextoBd);
-            RepositorioArticulo = new RepositorioArticulo(_contextoBd);
+            RepositorioTipoArticulo = new RepositorioTipoArticulo(_contextoBd);
         }
 
         public IRepositorioClasificacion RepositorioClasificacion { get; private set; }
 
         public IRepositorioUsuario RepositorioUsuario { get; private set; }
-        public IRepositorioArticulo RepositorioArticulo {get; private set;}
+        public IRepositorioTipoArticulo RepositorioTipoArticulo {get; private set;}
+
 
         public int Guardar()
         {

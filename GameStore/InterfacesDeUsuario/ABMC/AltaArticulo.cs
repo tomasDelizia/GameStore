@@ -7,11 +7,11 @@ namespace GameStore.InterfacesDeUsuario.ABMC
 {
     public partial class AltaArticulo : Form
     {
-        private readonly IServicioArticulo _servicioArticulo;
+        private readonly IServicioTipoArticulo _servicioTipoArticulo;
         public AltaArticulo(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
-            _servicioArticulo = new ServicioArticulo(unidadDeTrabajo.RepositorioArticulo);
+            _servicioTipoArticulo = new ServicioTipoArticulo(unidadDeTrabajo.RepositorioTipoArticulo);
         }
 
         private void AltaArticulo_Load(object sender, System.EventArgs e)
@@ -21,11 +21,13 @@ namespace GameStore.InterfacesDeUsuario.ABMC
 
         private void CargarTipoArticulos(ComboBox combo)
         {
-            var tiposArticulos = this._servicioArticulo.ListarArticulos();
-            foreach (var tipoArticulo in tiposArticulos)
-            {
-                combo.Items.Add(tipoArticulo);
-            }
+            var tiposArticulos = this._servicioTipoArticulo.ListarTiposDeArticulo();
+            var bindingSource = new BindingSource();
+            bindingSource.DataSource = tiposArticulos;
+            combo.DataSource = bindingSource;
+            combo.DisplayMember = "Nombre";
+            combo.ValueMember = "idTipoArticulo";
+            
         }
     }
 }

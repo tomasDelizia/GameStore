@@ -29,6 +29,7 @@ namespace GameStore.InterfacesDeUsuario.ABMC
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.cmbTipoArticulo = new System.Windows.Forms.ComboBox();
@@ -53,6 +54,11 @@ namespace GameStore.InterfacesDeUsuario.ABMC
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.gAMESTOREDataSet = new GameStore.GAMESTOREDataSet();
+            this.tiposDeArticuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tiposDeArticuloTableAdapter = new GameStore.GAMESTOREDataSetTableAdapters.TiposDeArticuloTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.gAMESTOREDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposDeArticuloBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -322,6 +328,20 @@ namespace GameStore.InterfacesDeUsuario.ABMC
             this.label3.TabIndex = 36;
             this.label3.Text = "Imagen:";
             // 
+            // gAMESTOREDataSet
+            // 
+            this.gAMESTOREDataSet.DataSetName = "GAMESTOREDataSet";
+            this.gAMESTOREDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tiposDeArticuloBindingSource
+            // 
+            this.tiposDeArticuloBindingSource.DataMember = "TiposDeArticulo";
+            this.tiposDeArticuloBindingSource.DataSource = this.gAMESTOREDataSet;
+            // 
+            // tiposDeArticuloTableAdapter
+            // 
+            this.tiposDeArticuloTableAdapter.ClearBeforeFill = true;
+            // 
             // AltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,6 +376,8 @@ namespace GameStore.InterfacesDeUsuario.ABMC
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Artículo";
             this.Load += new System.EventHandler(this.AltaArticulo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gAMESTOREDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposDeArticuloBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,5 +409,8 @@ namespace GameStore.InterfacesDeUsuario.ABMC
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label3;
+        private GAMESTOREDataSet gAMESTOREDataSet;
+        private System.Windows.Forms.BindingSource tiposDeArticuloBindingSource;
+        private GAMESTOREDataSetTableAdapters.TiposDeArticuloTableAdapter tiposDeArticuloTableAdapter;
     }
 }

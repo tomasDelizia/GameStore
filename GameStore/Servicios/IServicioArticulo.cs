@@ -9,8 +9,5 @@ namespace GameStore.Servicios
 {
     public interface IServicioArticulo : IServicio<Articulo>
     {
-        List<Articulo> ListarArticulos();
-
-
     }
 }
