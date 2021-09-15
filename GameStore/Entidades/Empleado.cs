@@ -12,10 +12,6 @@ namespace GameStore.Entidades
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Empleado()
         {
-            Alquileres = new HashSet<Alquiler>();
-            Compras = new HashSet<Compra>();
-            Usuarios = new HashSet<Usuario>();
-            Ventas = new HashSet<Venta>();
         }
 
         [Key]
@@ -52,20 +48,8 @@ namespace GameStore.Entidades
 
         public int? IdBarrio { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Alquiler> Alquileres { get; set; }
-
         public virtual Barrio Barrio { get; set; }
 
         public virtual Cargo Cargo { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Compra> Compras { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Usuario> Usuarios { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Venta> Ventas { get; set; }
     }
 }

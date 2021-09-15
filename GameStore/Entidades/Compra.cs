@@ -6,12 +6,13 @@ namespace GameStore.Entidades
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+    [Table("Compras")]
     public partial class Compra
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Compra()
         {
-            DetallesDeCompras = new HashSet<DetalleCompra>();
+            DetallesDeCompra = new HashSet<DetalleCompra>();
         }
 
         [Key]
@@ -33,6 +34,6 @@ namespace GameStore.Entidades
         public virtual TipoFactura TipoFactura { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DetalleCompra> DetallesDeCompras { get; set; }
+        public virtual ICollection<DetalleCompra> DetallesDeCompra { get; set; }
     }
 }

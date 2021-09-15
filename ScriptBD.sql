@@ -1,6 +1,4 @@
-CREATE DATABASE GAMESTORE;
-
-USE GAMESTORE;
+USE [PAV-3K2-2021-9]
 
 -- DBCC CHECKIDENT ('TABLA', RESEED, 0);	-- Resetear contador de id de una tabla
 
@@ -22,11 +20,11 @@ CREATE TABLE Desarrolladores (
 	Descripcion VARCHAR(MAX),
 	CONSTRAINT desarrolladores_id_desarrollador_pk PRIMARY KEY(IdDesarrollador));
 
-CREATE TABLE Publicantes (
-	IdPublicante INT IDENTITY,
-	Nombre VARCHAR(50) NOT NULL,
-	Descripcion VARCHAR(MAX),
-	CONSTRAINT publicantes_id_publicante_pk PRIMARY KEY(IdPublicante));
+--CREATE TABLE Publicantes (
+--	IdPublicante INT IDENTITY,
+--	Nombre VARCHAR(50) NOT NULL,
+--	Descripcion VARCHAR(MAX),
+--	CONSTRAINT publicantes_id_publicante_pk PRIMARY KEY(IdPublicante));
 
 CREATE TABLE Marcas (
 	IdMarca INT IDENTITY,
@@ -132,7 +130,7 @@ CREATE TABLE Articulos (
 	IdClasificacion INT,
 	IdGenero INT,
 	IdDesarrollador INT,
-	IdPublicante INT,
+	-- IdPublicante INT,
 	IdPlataforma INT,
 	Imagen VARCHAR(100),
 	Descripcion VARCHAR(MAX),
@@ -147,8 +145,8 @@ CREATE TABLE Articulos (
     ON UPDATE CASCADE ON DELETE SET NULL,
 	CONSTRAINT articulos_id_desarrollador_fk FOREIGN KEY(IdDesarrollador) REFERENCES Desarrolladores(IdDesarrollador)
     ON UPDATE CASCADE ON DELETE SET NULL,
-	CONSTRAINT articulos_id_publicante_fk FOREIGN KEY(IdPublicante) REFERENCES Publicantes(IdPublicante)
-    ON UPDATE CASCADE ON DELETE SET NULL,	
+	-- CONSTRAINT articulos_id_publicante_fk FOREIGN KEY(IdPublicante) REFERENCES Publicantes(IdPublicante)
+    -- ON UPDATE CASCADE ON DELETE SET NULL,	
 	CONSTRAINT articulos_id_plataforma_fk FOREIGN KEY(IdPlataforma) REFERENCES Plataformas(IdPlataforma)
     ON UPDATE CASCADE ON DELETE SET NULL,
 	CONSTRAINT articulos_id_marca_fk FOREIGN KEY(IdMarca) REFERENCES Marcas(IdMarca)

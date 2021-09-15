@@ -6,12 +6,13 @@ namespace GameStore.Entidades
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+    [Table("Alquileres")]
     public partial class Alquiler
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Alquiler()
         {
-            DetallesDeAlquilers = new HashSet<DetalleAlquiler>();
+            DetallesDeAlquiler = new HashSet<DetalleAlquiler>();
         }
 
         [Key]
@@ -44,6 +45,6 @@ namespace GameStore.Entidades
         public virtual Empleado Empleado { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DetalleAlquiler> DetallesDeAlquilers { get; set; }
+        public virtual ICollection<DetalleAlquiler> DetallesDeAlquiler { get; set; }
     }
 }

@@ -261,6 +261,7 @@
     <Compile Include="Entidades\CategoriaAlquiler.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\ContextoGameStore.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\Repositorio.cs" />
+    <Compile Include="RepositoriosBD\Implementaciones\RepositorioTipoArticulo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioClasificacion.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\UnidadDeTrabajo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioUsuario.cs" />
@@ -271,6 +272,7 @@
     <Compile Include="Entidades\Plataforma.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
     <Compile Include="Entidades\Publicante.cs" />
+    <Compile Include="RepositoriosBD\IRepositorioTipoArticulo.cs" />
     <Compile Include="RepositoriosBD\IRepositorioUsuario.cs" />
     <Compile Include="RepositoriosBD\IUnidadDeTrabajo.cs" />
     <Compile Include="Entidades\Rol.cs" />
@@ -282,9 +284,11 @@
     <Compile Include="Entidades\Venta.cs" />
     <Compile Include="Servicios\Implementaciones\Servicio.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioClasificacion.cs" />
+    <Compile Include="Servicios\Implementaciones\ServicioTipoArticulo.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioUsuario.cs" />
     <Compile Include="Servicios\IServicio.cs" />
     <Compile Include="Servicios\IServicioClasificacion.cs" />
+    <Compile Include="Servicios\IServicioTipoArticulo.cs" />
     <Compile Include="Servicios\IServicioUsuario.cs" />
     <EmbeddedResource Include="InterfacesDeUsuario\ABMC\AltaArticulo.resx">
       <DependentUpon>AltaArticulo.cs</DependentUpon>

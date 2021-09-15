@@ -29,8 +29,10 @@ namespace GameStore.Servicios.Implementaciones
             foreach (Usuario usuario in listaUsuarios)
             {
                 if (usuario.NombreUsuario == nombreUsuario && usuario.Contrasenia == contrasenia)
+                {
                     UsuarioLogueado = usuario;
                     return usuario;
+                }
             }
             return null;
         }

@@ -12,7 +12,6 @@ namespace GameStore.Entidades
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CategoriaAlquiler()
         {
-            DetallesDeAlquilers = new HashSet<DetalleAlquiler>();
         }
 
         [Key]
@@ -28,8 +27,5 @@ namespace GameStore.Entidades
         public decimal MontoAlquilerPorDia { get; set; }
 
         public decimal MontoDevolucionTardiaPorDia { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DetalleAlquiler> DetallesDeAlquilers { get; set; }
     }
 }

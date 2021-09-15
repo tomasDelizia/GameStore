@@ -24,10 +24,8 @@ namespace GameStore.Entidades
 
         public decimal MontoDevolucionTardiaPorDia { get; set; }
 
-        public virtual Alquiler Alquiler { get; set; }
-
         public virtual Articulo Articulo { get; set; }
 
-        public virtual CategoriaAlquiler CategoriasDeAlquiler { get; set; }
+        public virtual CategoriaAlquiler CategoriaAlquiler { get; set; }
     }
 }

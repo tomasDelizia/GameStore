@@ -28,7 +28,6 @@ namespace GameStore.RepositoriosBD.Implementaciones
         public virtual DbSet<Permiso> Permisos { get; set; }
         public virtual DbSet<Plataforma> Plataformas { get; set; }
         public virtual DbSet<Proveedor> Proveedores { get; set; }
-        public virtual DbSet<Publicante> Publicantes { get; set; }
         public virtual DbSet<Rol> Roles { get; set; }
         public virtual DbSet<Sesion> Sesiones { get; set; }
         public virtual DbSet<Socio> Socios { get; set; }
@@ -89,7 +88,7 @@ namespace GameStore.RepositoriosBD.Implementaciones
 
             modelBuilder.Entity<CategoriaAlquiler>()
                 .HasMany(e => e.DetallesDeAlquilers)
-                .WithOptional(e => e.CategoriasDeAlquiler)
+                .WithOptional(e => e.CategoriaAlquiler)
                 .HasForeignKey(e => e.Categoria)
                 .WillCascadeOnDelete();
 
@@ -236,14 +235,6 @@ namespace GameStore.RepositoriosBD.Implementaciones
                 .HasMany(e => e.Compras)
                 .WithOptional(e => e.Proveedor)
                 .WillCascadeOnDelete();
-
-            modelBuilder.Entity<Publicante>()
-                .Property(e => e.Nombre)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Publicante>()
-                .Property(e => e.Descripcion)
-                .IsUnicode(false);
 
             modelBuilder.Entity<Rol>()
                 .Property(e => e.Nombre)

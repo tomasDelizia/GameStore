@@ -12,7 +12,6 @@ namespace GameStore.Entidades
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Genero()
         {
-            Articulos = new HashSet<Articulo>();
         }
 
         [Key]
@@ -23,8 +22,5 @@ namespace GameStore.Entidades
         public string Nombre { get; set; }
 
         public string Descripcion { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Articulo> Articulos { get; set; }
     }
 }

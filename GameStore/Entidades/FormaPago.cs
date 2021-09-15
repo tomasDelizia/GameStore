@@ -12,8 +12,6 @@ namespace GameStore.Entidades
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FormaPago()
         {
-            Alquileres = new HashSet<Alquiler>();
-            Ventas = new HashSet<Venta>();
         }
 
         [Key]
@@ -24,11 +22,5 @@ namespace GameStore.Entidades
         public string Nombre { get; set; }
 
         public string Descripcion { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Alquiler> Alquileres { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Venta> Ventas { get; set; }
     }
 }
