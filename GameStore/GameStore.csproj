@@ -262,6 +262,9 @@
     <Compile Include="RepositoriosBD\Implementaciones\ContextoGameStore.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\Repositorio.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioArticulo.cs" />
+    <Compile Include="RepositoriosBD\Implementaciones\RepositorioDesarrollador.cs" />
+    <Compile Include="RepositoriosBD\Implementaciones\RepositorioGenero.cs" />
+    <Compile Include="RepositoriosBD\Implementaciones\RepositorioPlataforma.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioTipoArticulo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioClasificacion.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\UnidadDeTrabajo.cs" />
@@ -273,6 +276,9 @@
     <Compile Include="Entidades\Permiso.cs" />
     <Compile Include="Entidades\Plataforma.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
+    <Compile Include="RepositoriosBD\IRepositorioDesarrollador.cs" />
+    <Compile Include="RepositoriosBD\IRepositorioGenero.cs" />
+    <Compile Include="RepositoriosBD\IRepositorioPlataforma.cs" />
     <Compile Include="RepositoriosBD\IRepositorioTipoArticulo.cs" />
     <Compile Include="RepositoriosBD\IRepositorioUsuario.cs" />
     <Compile Include="RepositoriosBD\IUnidadDeTrabajo.cs" />
@@ -286,11 +292,17 @@
     <Compile Include="Servicios\Implementaciones\Servicio.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioArticulo.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioClasificacion.cs" />
+    <Compile Include="Servicios\Implementaciones\ServicioDesarrollador.cs" />
+    <Compile Include="Servicios\Implementaciones\ServicioGenero.cs" />
+    <Compile Include="Servicios\Implementaciones\ServicioPlataforma.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioTipoArticulo.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioUsuario.cs" />
     <Compile Include="Servicios\IServicio.cs" />
     <Compile Include="Servicios\IServicioArticulo.cs" />
     <Compile Include="Servicios\IServicioClasificacion.cs" />
+    <Compile Include="Servicios\IServicioDesarrollador.cs" />
+    <Compile Include="Servicios\IServicioGenero.cs" />
+    <Compile Include="Servicios\IServicioPlataforma.cs" />
     <Compile Include="Servicios\IServicioTipoArticulo.cs" />
     <Compile Include="Servicios\IServicioUsuario.cs" />
     <EmbeddedResource Include="InterfacesDeUsuario\ABMC\AltaArticulo.resx">

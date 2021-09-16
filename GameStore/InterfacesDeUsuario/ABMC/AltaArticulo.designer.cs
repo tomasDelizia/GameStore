@@ -30,28 +30,26 @@ namespace GameStore.InterfacesDeUsuario.ABMC
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
             this.cmbTipoArticulo = new System.Windows.Forms.ComboBox();
             this.cmbGenero = new System.Windows.Forms.ComboBox();
             this.cmbDesarrollador = new System.Windows.Forms.ComboBox();
             this.cmbClasificacion = new System.Windows.Forms.ComboBox();
-            this.cmbPublicante = new System.Windows.Forms.ComboBox();
             this.cmbPlataforma = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.gAMESTOREDataSet = new GameStore.GAMESTOREDataSet();
@@ -61,25 +59,25 @@ namespace GameStore.InterfacesDeUsuario.ABMC
             ((System.ComponentModel.ISupportInitialize)(this.tiposDeArticuloBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox1.Location = new System.Drawing.Point(487, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 27);
-            this.textBox1.TabIndex = 0;
+            this.txtNombre.BackColor = System.Drawing.Color.White;
+            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
+            this.txtNombre.Location = new System.Drawing.Point(487, 10);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(151, 27);
+            this.txtNombre.TabIndex = 0;
             // 
-            // textBox4
+            // txtPrecioUnitario
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox4.Location = new System.Drawing.Point(487, 43);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(151, 27);
-            this.textBox4.TabIndex = 3;
+            this.txtPrecioUnitario.BackColor = System.Drawing.Color.White;
+            this.txtPrecioUnitario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecioUnitario.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPrecioUnitario.Location = new System.Drawing.Point(487, 43);
+            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
+            this.txtPrecioUnitario.Size = new System.Drawing.Size(151, 27);
+            this.txtPrecioUnitario.TabIndex = 3;
             // 
             // cmbTipoArticulo
             // 
@@ -129,25 +127,13 @@ namespace GameStore.InterfacesDeUsuario.ABMC
             this.cmbClasificacion.TabIndex = 7;
             this.cmbClasificacion.Text = "Clasificación";
             // 
-            // cmbPublicante
-            // 
-            this.cmbPublicante.BackColor = System.Drawing.Color.White;
-            this.cmbPublicante.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPublicante.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbPublicante.FormattingEnabled = true;
-            this.cmbPublicante.Location = new System.Drawing.Point(16, 150);
-            this.cmbPublicante.Name = "cmbPublicante";
-            this.cmbPublicante.Size = new System.Drawing.Size(171, 29);
-            this.cmbPublicante.TabIndex = 8;
-            this.cmbPublicante.Text = "Publicante";
-            // 
             // cmbPlataforma
             // 
             this.cmbPlataforma.BackColor = System.Drawing.Color.White;
             this.cmbPlataforma.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPlataforma.ForeColor = System.Drawing.Color.DimGray;
             this.cmbPlataforma.FormattingEnabled = true;
-            this.cmbPlataforma.Location = new System.Drawing.Point(16, 185);
+            this.cmbPlataforma.Location = new System.Drawing.Point(16, 150);
             this.cmbPlataforma.Name = "cmbPlataforma";
             this.cmbPlataforma.Size = new System.Drawing.Size(171, 29);
             this.cmbPlataforma.TabIndex = 9;
@@ -186,17 +172,6 @@ namespace GameStore.InterfacesDeUsuario.ABMC
             this.button3.Text = "+";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.DimGray;
-            this.button4.Location = new System.Drawing.Point(193, 150);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(32, 29);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "+";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -213,22 +188,23 @@ namespace GameStore.InterfacesDeUsuario.ABMC
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(12, 228);
+            this.label1.Location = new System.Drawing.Point(12, 182);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 22);
             this.label1.TabIndex = 25;
             this.label1.Text = "Descripción:";
             // 
-            // richTextBox1
+            // txtDescripcion
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.White;
-            this.richTextBox1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.richTextBox1.Location = new System.Drawing.Point(16, 253);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(751, 123);
-            this.richTextBox1.TabIndex = 25;
-            this.richTextBox1.Text = "";
+            this.txtDescripcion.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.txtDescripcion.BackColor = System.Drawing.Color.White;
+            this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.ForeColor = System.Drawing.Color.DimGray;
+            this.txtDescripcion.Location = new System.Drawing.Point(16, 207);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(750, 167);
+            this.txtDescripcion.TabIndex = 25;
+            this.txtDescripcion.Text = "";
             // 
             // label2
             // 
@@ -258,7 +234,7 @@ namespace GameStore.InterfacesDeUsuario.ABMC
             this.button6.ForeColor = System.Drawing.Color.DimGray;
             this.button6.Location = new System.Drawing.Point(487, 109);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(282, 31);
+            this.button6.Size = new System.Drawing.Size(279, 31);
             this.button6.TabIndex = 25;
             this.button6.Text = "Subir imagen";
             this.button6.UseVisualStyleBackColor = true;
@@ -281,36 +257,37 @@ namespace GameStore.InterfacesDeUsuario.ABMC
             this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(487, 76);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(280, 27);
+            this.dateTimePicker1.Size = new System.Drawing.Size(279, 27);
             this.dateTimePicker1.TabIndex = 25;
             // 
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.DimGray;
-            this.button7.Location = new System.Drawing.Point(667, 382);
+            this.button7.Location = new System.Drawing.Point(666, 380);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(100, 34);
             this.button7.TabIndex = 25;
             this.button7.Text = "Cancelar";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnRegistrar
             // 
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.DimGray;
-            this.button8.Location = new System.Drawing.Point(563, 382);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(100, 34);
-            this.button8.TabIndex = 25;
-            this.button8.Text = "Registrar";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.Color.DimGray;
+            this.btnRegistrar.Location = new System.Drawing.Point(560, 380);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(100, 34);
+            this.btnRegistrar.TabIndex = 25;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.DimGray;
-            this.button9.Location = new System.Drawing.Point(193, 185);
+            this.button9.Location = new System.Drawing.Point(193, 150);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(32, 29);
             this.button9.TabIndex = 35;
@@ -347,31 +324,29 @@ namespace GameStore.InterfacesDeUsuario.ABMC
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(775, 420);
+            this.ClientSize = new System.Drawing.Size(778, 426);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbPlataforma);
-            this.Controls.Add(this.cmbPublicante);
             this.Controls.Add(this.cmbClasificacion);
             this.Controls.Add(this.cmbDesarrollador);
             this.Controls.Add(this.cmbGenero);
             this.Controls.Add(this.cmbTipoArticulo);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPrecioUnitario);
+            this.Controls.Add(this.txtNombre);
             this.Name = "AltaArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Artículo";
@@ -385,28 +360,26 @@ namespace GameStore.InterfacesDeUsuario.ABMC
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtPrecioUnitario;
         private System.Windows.Forms.ComboBox cmbTipoArticulo;
         private System.Windows.Forms.ComboBox cmbGenero;
         private System.Windows.Forms.ComboBox cmbDesarrollador;
         private System.Windows.Forms.ComboBox cmbClasificacion;
-        private System.Windows.Forms.ComboBox cmbPublicante;
         private System.Windows.Forms.ComboBox cmbPlataforma;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtDescripcion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label3;
         private GAMESTOREDataSet gAMESTOREDataSet;

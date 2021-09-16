@@ -7,6 +7,9 @@ namespace GameStore.RepositoriosBD
         IRepositorioClasificacion RepositorioClasificacion { get; }
         IRepositorioUsuario RepositorioUsuario { get; }
         IRepositorioTipoArticulo RepositorioTipoArticulo { get; }
+        IRepositorioDesarrollador RepositorioDesarrollador { get; }
+        IRepositorioGenero RepositorioGenero { get; }
+        IRepositorioPlataforma RepositorioPlataforma { get; }
         int Guardar();
     }
 }
