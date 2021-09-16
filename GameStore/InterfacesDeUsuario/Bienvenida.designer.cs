@@ -41,19 +41,19 @@ namespace GameStore.InterfacesDeUsuario
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.LblUsername = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.Location = new System.Drawing.Point(325, 142);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 39);
+            this.label1.Size = new System.Drawing.Size(229, 39);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome:";
+            this.label1.Text = "Bienvenido/a\r\n";
             // 
             // panel1
             // 
@@ -67,7 +67,7 @@ namespace GameStore.InterfacesDeUsuario
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(52, 93);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 150);
@@ -77,7 +77,7 @@ namespace GameStore.InterfacesDeUsuario
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (20)))), ((int) (((byte) (20)))));
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(250, 0);
@@ -88,7 +88,7 @@ namespace GameStore.InterfacesDeUsuario
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label2.Location = new System.Drawing.Point(146, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(223, 44);
@@ -117,7 +117,7 @@ namespace GameStore.InterfacesDeUsuario
             // LblUsername
             // 
             this.LblUsername.AutoSize = true;
-            this.LblUsername.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblUsername.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.LblUsername.Location = new System.Drawing.Point(541, 142);
             this.LblUsername.Name = "LblUsername";
             this.LblUsername.Size = new System.Drawing.Size(0, 39);
@@ -127,7 +127,7 @@ namespace GameStore.InterfacesDeUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (15)))), ((int) (((byte) (15)))), ((int) (((byte) (15)))));
             this.ClientSize = new System.Drawing.Size(780, 320);
             this.Controls.Add(this.LblUsername);
             this.Controls.Add(this.progressBar1);
@@ -142,12 +142,11 @@ namespace GameStore.InterfacesDeUsuario
             this.Text = "Bienvenida";
             this.Load += new System.EventHandler(this.Bienvenida_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

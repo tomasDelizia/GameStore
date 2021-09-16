@@ -68,167 +68,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GAMESTOREDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\AltaArticulo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\AltaArticulo.designer.cs">
-      <DependentUpon>AltaArticulo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\AltaCategoriaAlquiler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\AltaCategoriaAlquiler.designer.cs">
-      <DependentUpon>AltaCategoriaAlquiler.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\AltaClasificacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\AltaClasificacion.designer.cs">
-      <DependentUpon>AltaClasificacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\AltaEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\AltaEmpleado.Designer.cs">
-      <DependentUpon>AltaEmpleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\AltaFormaPago.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\AltaFormaPago.Designer.cs">
-      <DependentUpon>AltaFormaPago.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\AltaMarca.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\AltaMarca.designer.cs">
-      <DependentUpon>AltaMarca.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\AltaProveedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\AltaProveedor.designer.cs">
-      <DependentUpon>AltaProveedor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\AltaSocio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\AltaSocio.Designer.cs">
-      <DependentUpon>AltaSocio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\AltaUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\AltaUsuario.Designer.cs">
-      <DependentUpon>AltaUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\BajaArticulo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\BajaArticulo.designer.cs">
-      <DependentUpon>BajaArticulo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\BajaCategoriaAlquiler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\BajaCategoriaAlquiler.designer.cs">
-      <DependentUpon>BajaCategoriaAlquiler.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\BajaClasificacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\BajaClasificacion.designer.cs">
-      <DependentUpon>BajaClasificacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\BajaEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\BajaEmpleado.Designer.cs">
-      <DependentUpon>BajaEmpleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\BajaFormaPago.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\BajaFormaPago.Designer.cs">
-      <DependentUpon>BajaFormaPago.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\BajaMarca.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\BajaMarca.designer.cs">
-      <DependentUpon>BajaMarca.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\BajaProveedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\BajaProveedor.designer.cs">
-      <DependentUpon>BajaProveedor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\BajaSocio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\BajaSocio.Designer.cs">
-      <DependentUpon>BajaSocio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\BajaUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\BajaUsuario.designer.cs">
-      <DependentUpon>BajaUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionArticulo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionArticulo.designer.cs">
-      <DependentUpon>ModificacionArticulo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionEmpleado.Designer.cs">
-      <DependentUpon>ModificacionEmpleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionSocio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionSocio.Designer.cs">
-      <DependentUpon>ModificacionSocio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionUsuario.designer.cs">
-      <DependentUpon>ModificacionUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionCategoriaAlquiler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionCategoriaAlquiler.designer.cs">
-      <DependentUpon>ModificacionCategoriaAlquiler.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionClasificacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionClasificacion.designer.cs">
-      <DependentUpon>ModificacionClasificacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionProveedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\ABMC\ModificacionProveedor.Designer.cs">
-      <DependentUpon>ModificacionProveedor.cs</DependentUpon>
-    </Compile>
     <Compile Include="InterfacesDeUsuario\Bienvenida.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InterfacesDeUsuario\Bienvenida.designer.cs">
       <DependentUpon>Bienvenida.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\Inicio.cs">
       <SubType>Form</SubType>
@@ -241,6 +85,156 @@
     </Compile>
     <Compile Include="InterfacesDeUsuario\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\AltaCategoriaAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\AltaCategoriaAlquiler.designer.cs">
+      <DependentUpon>AltaCategoriaAlquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\BajaCategoriaAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\BajaCategoriaAlquiler.designer.cs">
+      <DependentUpon>BajaCategoriaAlquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ModificacionCategoriaAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ModificacionCategoriaAlquiler.designer.cs">
+      <DependentUpon>ModificacionCategoriaAlquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaArticulo.designer.cs">
+      <DependentUpon>AltaArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaClasificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaClasificacion.designer.cs">
+      <DependentUpon>AltaClasificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaMarca.designer.cs">
+      <DependentUpon>AltaMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaArticulo.designer.cs">
+      <DependentUpon>BajaArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaClasificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaClasificacion.designer.cs">
+      <DependentUpon>BajaClasificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaMarca.designer.cs">
+      <DependentUpon>BajaMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionArticulo.designer.cs">
+      <DependentUpon>ModificacionArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionClasificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionClasificacion.designer.cs">
+      <DependentUpon>ModificacionClasificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionCompras\AltaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionCompras\AltaProveedor.designer.cs">
+      <DependentUpon>AltaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionCompras\BajaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionCompras\BajaProveedor.designer.cs">
+      <DependentUpon>BajaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionCompras\ModificacionProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionCompras\ModificacionProveedor.Designer.cs">
+      <DependentUpon>ModificacionProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\AltaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\AltaEmpleado.Designer.cs">
+      <DependentUpon>AltaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\BajaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\BajaEmpleado.Designer.cs">
+      <DependentUpon>BajaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\ModificacionEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\ModificacionEmpleado.Designer.cs">
+      <DependentUpon>ModificacionEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionSocios\AltaSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionSocios\AltaSocio.Designer.cs">
+      <DependentUpon>AltaSocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionSocios\BajaSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionSocios\BajaSocio.Designer.cs">
+      <DependentUpon>BajaSocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionSocios\ModificacionSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionSocios\ModificacionSocio.Designer.cs">
+      <DependentUpon>ModificacionSocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\AltaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\AltaUsuario.Designer.cs">
+      <DependentUpon>AltaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\BajaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\BajaUsuario.designer.cs">
+      <DependentUpon>BajaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\ModificacionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\ModificacionUsuario.designer.cs">
+      <DependentUpon>ModificacionUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionVentas\AltaFormaPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionVentas\AltaFormaPago.Designer.cs">
+      <DependentUpon>AltaFormaPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionVentas\BajaFormaPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionVentas\BajaFormaPago.Designer.cs">
+      <DependentUpon>BajaFormaPago.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -305,92 +299,89 @@
     <Compile Include="Servicios\IServicioPlataforma.cs" />
     <Compile Include="Servicios\IServicioTipoArticulo.cs" />
     <Compile Include="Servicios\IServicioUsuario.cs" />
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\AltaArticulo.resx">
-      <DependentUpon>AltaArticulo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\AltaCategoriaAlquiler.resx">
-      <DependentUpon>AltaCategoriaAlquiler.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\AltaClasificacion.resx">
-      <DependentUpon>AltaClasificacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\AltaEmpleado.resx">
-      <DependentUpon>AltaEmpleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\AltaFormaPago.resx">
-      <DependentUpon>AltaFormaPago.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\AltaMarca.resx">
-      <DependentUpon>AltaMarca.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\AltaProveedor.resx">
-      <DependentUpon>AltaProveedor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\AltaSocio.resx">
-      <DependentUpon>AltaSocio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\AltaUsuario.resx">
-      <DependentUpon>AltaUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\BajaArticulo.resx">
-      <DependentUpon>BajaArticulo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\BajaCategoriaAlquiler.resx">
-      <DependentUpon>BajaCategoriaAlquiler.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\BajaClasificacion.resx">
-      <DependentUpon>BajaClasificacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\BajaEmpleado.resx">
-      <DependentUpon>BajaEmpleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\BajaFormaPago.resx">
-      <DependentUpon>BajaFormaPago.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\BajaMarca.resx">
-      <DependentUpon>BajaMarca.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\BajaProveedor.resx">
-      <DependentUpon>BajaProveedor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\BajaSocio.resx">
-      <DependentUpon>BajaSocio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\BajaUsuario.resx">
-      <DependentUpon>BajaUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\ModificacionArticulo.resx">
-      <DependentUpon>ModificacionArticulo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\ModificacionEmpleado.resx">
-      <DependentUpon>ModificacionEmpleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\ModificacionSocio.resx">
-      <DependentUpon>ModificacionSocio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\ModificacionUsuario.resx">
-      <DependentUpon>ModificacionUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\ModificacionCategoriaAlquiler.resx">
-      <DependentUpon>ModificacionCategoriaAlquiler.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\ModificacionClasificacion.resx">
-      <DependentUpon>ModificacionClasificacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\ABMC\ModificacionProveedor.resx">
-      <DependentUpon>ModificacionProveedor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\Bienvenida.resx">
       <DependentUpon>Bienvenida.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\AltaCategoriaAlquiler.resx">
+      <DependentUpon>AltaCategoriaAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\BajaCategoriaAlquiler.resx">
+      <DependentUpon>BajaCategoriaAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\ModificacionCategoriaAlquiler.resx">
+      <DependentUpon>ModificacionCategoriaAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\AltaArticulo.resx">
+      <DependentUpon>AltaArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\AltaClasificacion.resx">
+      <DependentUpon>AltaClasificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\AltaMarca.resx">
+      <DependentUpon>AltaMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\BajaArticulo.resx">
+      <DependentUpon>BajaArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\BajaClasificacion.resx">
+      <DependentUpon>BajaClasificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\BajaMarca.resx">
+      <DependentUpon>BajaMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionArticulo.resx">
+      <DependentUpon>ModificacionArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionClasificacion.resx">
+      <DependentUpon>ModificacionClasificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionCompras\AltaProveedor.resx">
+      <DependentUpon>AltaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionCompras\BajaProveedor.resx">
+      <DependentUpon>BajaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionCompras\ModificacionProveedor.resx">
+      <DependentUpon>ModificacionProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionEmpleados\AltaEmpleado.resx">
+      <DependentUpon>AltaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionEmpleados\BajaEmpleado.resx">
+      <DependentUpon>BajaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionEmpleados\ModificacionEmpleado.resx">
+      <DependentUpon>ModificacionEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionSocios\AltaSocio.resx">
+      <DependentUpon>AltaSocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionSocios\BajaSocio.resx">
+      <DependentUpon>BajaSocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionSocios\ModificacionSocio.resx">
+      <DependentUpon>ModificacionSocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionUsuarios\AltaUsuario.resx">
+      <DependentUpon>AltaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionUsuarios\BajaUsuario.resx">
+      <DependentUpon>BajaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionUsuarios\ModificacionUsuario.resx">
+      <DependentUpon>ModificacionUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionVentas\AltaFormaPago.resx">
+      <DependentUpon>AltaFormaPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionVentas\BajaFormaPago.resx">
+      <DependentUpon>BajaFormaPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

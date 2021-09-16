@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
-using GameStore.InterfacesDeUsuario.ABMC;
+using GameStore.InterfacesDeUsuario.PresentacionArticulos;
+using GameStore.InterfacesDeUsuario.PresentacionCompras;
+using GameStore.InterfacesDeUsuario.PresentacionEmpleados;
+using GameStore.InterfacesDeUsuario.PresentacionSocios;
+using GameStore.InterfacesDeUsuario.PresentacionUsuarios;
 using GameStore.RepositoriosBD;
 
 namespace GameStore.InterfacesDeUsuario
