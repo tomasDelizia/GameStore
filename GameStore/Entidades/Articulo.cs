@@ -15,6 +15,7 @@ namespace GameStore.Entidades
         }
 
         [Key]
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int Codigo { get; set; }
 
         public int? IdTipoArticulo { get; set; }
@@ -42,8 +43,8 @@ namespace GameStore.Entidades
 
         public int? IdPlataforma { get; set; }
 
-        [StringLength(100)]
-        public string Imagen { get; set; }
+        [ForeignKey("Archivo")]
+        public int? IdImagen { get; set; }
 
         public string Descripcion { get; set; }
 
@@ -60,5 +61,7 @@ namespace GameStore.Entidades
         public virtual Plataforma Plataforma { get; set; }
 
         public virtual TipoArticulo TipoArticulo { get; set; }
+
+        public virtual Archivo Archivo { get; set; }
     }
 }

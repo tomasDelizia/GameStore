@@ -10,6 +10,7 @@ namespace GameStore.RepositoriosBD.Implementaciones
         {
         }
 
+        public virtual DbSet<Archivo> Archivos { get; set; }
         public virtual DbSet<Alquiler> Alquileres { get; set; }
         public virtual DbSet<Articulo> Articulos { get; set; }
         public virtual DbSet<Barrio> Barrios { get; set; }
@@ -42,6 +43,10 @@ namespace GameStore.RepositoriosBD.Implementaciones
                 .Property(e => e.MontoSenia)
                 .HasPrecision(9, 2);
 
+            modelBuilder.Entity<Archivo>()
+            .Property(e => e.Nombre)
+            .IsUnicode(false);
+
             modelBuilder.Entity<Articulo>()
                 .Property(e => e.Nombre)
                 .IsUnicode(false);
@@ -49,10 +54,6 @@ namespace GameStore.RepositoriosBD.Implementaciones
             modelBuilder.Entity<Articulo>()
                 .Property(e => e.PrecioUnitario)
                 .HasPrecision(9, 2);
-
-            modelBuilder.Entity<Articulo>()
-                .Property(e => e.Imagen)
-                .IsUnicode(false);
 
             modelBuilder.Entity<Articulo>()
                 .Property(e => e.Descripcion)

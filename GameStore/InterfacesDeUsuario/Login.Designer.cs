@@ -55,29 +55,31 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLogin.ForeColor = System.Drawing.Color.LightGray;
-            this.BtnLogin.Location = new System.Drawing.Point(582, 260);
+            this.BtnLogin.Location = new System.Drawing.Point(462, 234);
             this.BtnLogin.Name = "BtnLogin";
-            this.BtnLogin.Size = new System.Drawing.Size(80, 31);
+            this.BtnLogin.Size = new System.Drawing.Size(94, 31);
             this.BtnLogin.TabIndex = 0;
-            this.BtnLogin.Text = "Login";
+            this.BtnLogin.Text = "Ingresar";
             this.BtnLogin.UseVisualStyleBackColor = false;
             this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // TxtNombreUsuario
             // 
+            this.TxtNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtNombreUsuario.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombreUsuario.Location = new System.Drawing.Point(476, 130);
+            this.TxtNombreUsuario.Location = new System.Drawing.Point(328, 114);
             this.TxtNombreUsuario.Name = "TxtNombreUsuario";
-            this.TxtNombreUsuario.Size = new System.Drawing.Size(186, 30);
+            this.TxtNombreUsuario.Size = new System.Drawing.Size(370, 23);
             this.TxtNombreUsuario.TabIndex = 3;
             // 
             // TxtContrasenia
             // 
+            this.TxtContrasenia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtContrasenia.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtContrasenia.Location = new System.Drawing.Point(476, 178);
+            this.TxtContrasenia.Location = new System.Drawing.Point(328, 185);
             this.TxtContrasenia.Name = "TxtContrasenia";
             this.TxtContrasenia.PasswordChar = '*';
-            this.TxtContrasenia.Size = new System.Drawing.Size(186, 30);
+            this.TxtContrasenia.Size = new System.Drawing.Size(370, 23);
             this.TxtContrasenia.TabIndex = 4;
             // 
             // panel1
@@ -106,10 +108,10 @@ namespace GameStore.InterfacesDeUsuario
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox1.Location = new System.Drawing.Point(317, 133);
+            this.textBox1.Location = new System.Drawing.Point(328, 84);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(125, 24);
+            this.textBox1.Size = new System.Drawing.Size(73, 24);
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = "Usuario:";
             // 
@@ -119,7 +121,7 @@ namespace GameStore.InterfacesDeUsuario
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox2.Location = new System.Drawing.Point(317, 181);
+            this.textBox2.Location = new System.Drawing.Point(328, 155);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(125, 24);
@@ -132,7 +134,7 @@ namespace GameStore.InterfacesDeUsuario
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(524, 38);
+            this.label1.Location = new System.Drawing.Point(456, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 33);
             this.label1.TabIndex = 9;

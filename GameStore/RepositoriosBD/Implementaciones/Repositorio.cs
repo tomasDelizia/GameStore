@@ -33,31 +33,31 @@ namespace GameStore.RepositoriosBD.Implementaciones
         public void Insertar(TEntidad entidad)
         {
             _contextoBd.Set<TEntidad>().Add(entidad);
-            // _contextoBd.SaveChanges();
+            _contextoBd.SaveChanges();
         }
 
         public void InsertarRango(IEnumerable<TEntidad> entidades)
         {
             _contextoBd.Set<TEntidad>().AddRange(entidades);
-            // _contextoBd.SaveChanges();
+            _contextoBd.SaveChanges();
         }
 
         public void Borrar(TEntidad entidadABorrar)
         {
             _contextoBd.Set<TEntidad>().Remove(entidadABorrar);
-            // _contextoBd.SaveChanges();
+            _contextoBd.SaveChanges();
         }
 
         public void BorrarRango(IEnumerable<TEntidad> entidadesABorrar)
         {
             _contextoBd.Set<TEntidad>().RemoveRange(entidadesABorrar);
-            // _contextoBd.SaveChanges();
+            _contextoBd.SaveChanges();
         }
 
         public void Actualizar(TEntidad entidad)
         {
             _contextoBd.Entry(entidad).State = EntityState.Modified;
-            // _contextoBd.SaveChanges();
+            _contextoBd.SaveChanges();
         }
     }
 }

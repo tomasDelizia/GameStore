@@ -24,6 +24,7 @@ namespace GameStore.InterfacesDeUsuario
         {
             var frmLogin = new Login(_unidadDeTrabajo);
             frmLogin.ShowDialog();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void customizeDesign()

@@ -7,12 +7,15 @@
         public UnidadDeTrabajo(ContextoGameStore contextoBd)
         {
             _contextoBd = contextoBd;
+            RepositorioArticulo = new RepositorioArticulo(_contextoBd);
             RepositorioClasificacion = new RepositorioClasificacion(_contextoBd);
             RepositorioUsuario = new RepositorioUsuario(_contextoBd);
             RepositorioTipoArticulo = new RepositorioTipoArticulo(_contextoBd);
             RepositorioDesarrollador = new RepositorioDesarrollador(_contextoBd);
             RepositorioGenero = new RepositorioGenero(_contextoBd);
             RepositorioPlataforma = new RepositorioPlataforma(_contextoBd);
+            RepositorioArchivo = new RepositorioArchivo(_contextoBd);
+            RepositorioMarca = new RepositorioMarca(_contextoBd);
         }
 
         public IRepositorioClasificacion RepositorioClasificacion { get; private set; }
@@ -21,7 +24,9 @@
         public IRepositorioDesarrollador RepositorioDesarrollador { get; private set; }
         public IRepositorioGenero RepositorioGenero { get; private set; }
         public IRepositorioPlataforma RepositorioPlataforma { get; private set; }
-
+        public IRepositorioArchivo RepositorioArchivo { get; private set; }
+        public IRepositorioArticulo RepositorioArticulo { get; private set; }
+        public IRepositorioMarca RepositorioMarca { get; private set; }
 
         public int Guardar()
         {

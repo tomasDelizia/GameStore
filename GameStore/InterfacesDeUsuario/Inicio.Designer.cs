@@ -48,7 +48,6 @@ namespace GameStore.InterfacesDeUsuario
             this.generoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clasificacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.desarrolladorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.publicanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.plataformaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -227,7 +226,6 @@ namespace GameStore.InterfacesDeUsuario
             this.generoToolStripMenuItem,
             this.clasificacionToolStripMenuItem,
             this.desarrolladorToolStripMenuItem,
-            this.publicanteToolStripMenuItem,
             this.plataformaToolStripMenuItem,
             this.marcaToolStripMenuItem});
             this.otrosToolStripMenuItem.Name = "otrosToolStripMenuItem";
@@ -238,25 +236,19 @@ namespace GameStore.InterfacesDeUsuario
             // 
             this.generoToolStripMenuItem.Name = "generoToolStripMenuItem";
             this.generoToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.generoToolStripMenuItem.Text = "Genero";
+            this.generoToolStripMenuItem.Text = "Género";
             // 
             // clasificacionToolStripMenuItem
             // 
             this.clasificacionToolStripMenuItem.Name = "clasificacionToolStripMenuItem";
             this.clasificacionToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.clasificacionToolStripMenuItem.Text = "Clasificacion";
+            this.clasificacionToolStripMenuItem.Text = "Clasificación";
             // 
             // desarrolladorToolStripMenuItem
             // 
             this.desarrolladorToolStripMenuItem.Name = "desarrolladorToolStripMenuItem";
             this.desarrolladorToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.desarrolladorToolStripMenuItem.Text = "Desarrollador";
-            // 
-            // publicanteToolStripMenuItem
-            // 
-            this.publicanteToolStripMenuItem.Name = "publicanteToolStripMenuItem";
-            this.publicanteToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.publicanteToolStripMenuItem.Text = "Publicante";
             // 
             // plataformaToolStripMenuItem
             // 
@@ -283,13 +275,13 @@ namespace GameStore.InterfacesDeUsuario
             // 
             this.masVendidosToolStripMenuItem.Name = "masVendidosToolStripMenuItem";
             this.masVendidosToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.masVendidosToolStripMenuItem.Text = "Mas vendidos";
+            this.masVendidosToolStripMenuItem.Text = "Más vendidos";
             // 
             // masFielesToolStripMenuItem
             // 
             this.masFielesToolStripMenuItem.Name = "masFielesToolStripMenuItem";
             this.masFielesToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.masFielesToolStripMenuItem.Text = "Mas fieles";
+            this.masFielesToolStripMenuItem.Text = "Más fieles";
             // 
             // registrarVentaToolStripMenuItem
             // 
@@ -354,7 +346,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnCompraProveedor.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.BtnCompraProveedor.Size = new System.Drawing.Size(272, 40);
             this.BtnCompraProveedor.TabIndex = 7;
-            this.BtnCompraProveedor.Text = "Compra Proveedor";
+            this.BtnCompraProveedor.Text = "Compra a proveedor";
             this.BtnCompraProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCompraProveedor.UseVisualStyleBackColor = true;
             // 
@@ -384,7 +376,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnRegistrarVenta.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.BtnRegistrarVenta.Size = new System.Drawing.Size(272, 40);
             this.BtnRegistrarVenta.TabIndex = 5;
-            this.BtnRegistrarVenta.Text = "Registrar Venta";
+            this.BtnRegistrarVenta.Text = "Venta";
             this.BtnRegistrarVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnRegistrarVenta.UseVisualStyleBackColor = true;
             // 
@@ -413,7 +405,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnMasFieles.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.BtnMasFieles.Size = new System.Drawing.Size(272, 40);
             this.BtnMasFieles.TabIndex = 8;
-            this.BtnMasFieles.Text = "MasFieles";
+            this.BtnMasFieles.Text = "Más Fieles";
             this.BtnMasFieles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnMasFieles.UseVisualStyleBackColor = true;
             // 
@@ -432,7 +424,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnMasVendidos.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.BtnMasVendidos.Size = new System.Drawing.Size(272, 40);
             this.BtnMasVendidos.TabIndex = 7;
-            this.BtnMasVendidos.Text = "MasVendidos";
+            this.BtnMasVendidos.Text = "Más Vendidos";
             this.BtnMasVendidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnMasVendidos.UseVisualStyleBackColor = true;
             // 
@@ -828,7 +820,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnArticulos.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.BtnArticulos.Size = new System.Drawing.Size(272, 40);
             this.BtnArticulos.TabIndex = 2;
-            this.BtnArticulos.Text = "Articulos";
+            this.BtnArticulos.Text = "Artículos";
             this.BtnArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnArticulos.UseVisualStyleBackColor = true;
             this.BtnArticulos.Click += new System.EventHandler(this.BtnArticulos_Click);
@@ -949,10 +941,10 @@ namespace GameStore.InterfacesDeUsuario
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.SteelBlue;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -4);
+            this.pictureBox1.Location = new System.Drawing.Point(-26, 1);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(292, 119);
+            this.pictureBox1.Size = new System.Drawing.Size(315, 115);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -1012,7 +1004,6 @@ namespace GameStore.InterfacesDeUsuario
         private System.Windows.Forms.ToolStripMenuItem generoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clasificacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem desarrolladorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem publicanteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem plataformaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcaToolStripMenuItem;
         private System.Windows.Forms.Panel MenuVertical;

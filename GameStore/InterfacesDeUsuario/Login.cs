@@ -27,8 +27,6 @@ namespace GameStore.InterfacesDeUsuario
             if (usuarioLogueado != null) {
                 Form frmBienvenida = new Bienvenida(nombreUsuario);
                 frmBienvenida.ShowDialog();
-                //Form frmInicio = new Inicio();
-                //frmInicio.Show();
                 this.Dispose();
             }
             else

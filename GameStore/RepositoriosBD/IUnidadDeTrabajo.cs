@@ -4,12 +4,16 @@ namespace GameStore.RepositoriosBD
 {
     public interface IUnidadDeTrabajo : IDisposable
     {
+        IRepositorioArchivo RepositorioArchivo { get; }
+        IRepositorioArticulo RepositorioArticulo { get; }
         IRepositorioClasificacion RepositorioClasificacion { get; }
-        IRepositorioUsuario RepositorioUsuario { get; }
         IRepositorioTipoArticulo RepositorioTipoArticulo { get; }
         IRepositorioDesarrollador RepositorioDesarrollador { get; }
         IRepositorioGenero RepositorioGenero { get; }
         IRepositorioPlataforma RepositorioPlataforma { get; }
+        IRepositorioUsuario RepositorioUsuario { get; }
+        IRepositorioMarca RepositorioMarca { get; }
+
         int Guardar();
     }
 }

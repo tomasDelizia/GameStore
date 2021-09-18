@@ -132,7 +132,7 @@ CREATE TABLE Articulos (
 	IdDesarrollador INT,
 	-- IdPublicante INT,
 	IdPlataforma INT,
-	Imagen VARCHAR(100),
+	IdImagen INT,
 	Descripcion VARCHAR(MAX),
 	CONSTRAINT articulos_codigo_pk PRIMARY KEY(Codigo),
 	CONSTRAINT articulos_id_tipo_articulo_fk FOREIGN KEY(IdTipoArticulo) REFERENCES TiposDeArticulo (IdTipoArticulo)
@@ -150,6 +150,8 @@ CREATE TABLE Articulos (
 	CONSTRAINT articulos_id_plataforma_fk FOREIGN KEY(IdPlataforma) REFERENCES Plataformas(IdPlataforma)
     ON UPDATE CASCADE ON DELETE SET NULL,
 	CONSTRAINT articulos_id_marca_fk FOREIGN KEY(IdMarca) REFERENCES Marcas(IdMarca)
+    ON UPDATE CASCADE ON DELETE SET NULL,
+	CONSTRAINT articulos_imagen_fk FOREIGN KEY(Imagen) REFERENCES Archivos(IdArchivo)
     ON UPDATE CASCADE ON DELETE SET NULL
 	);
 
@@ -380,4 +382,11 @@ CREATE TABLE DetallesDeCompra (
     ON UPDATE CASCADE ON DELETE CASCADE,
 	CONSTRAINT detalles_de_compra_codigo_fk FOREIGN KEY(Codigo) REFERENCES Articulos (Codigo)
     ON UPDATE CASCADE ON DELETE CASCADE,
+);
+
+CREATE TABLE Archivos (
+	IdArchivo INT IDENTITY,
+	Nombre VARCHAR(50),
+	Contenido VARBINARY(MAX),
+	CONSTRAINT archivos_id_archivo_pk PRIMARY KEY (IdArchivo)
 );
