@@ -441,7 +441,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnReporte.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.BtnReporte.Size = new System.Drawing.Size(272, 37);
             this.BtnReporte.TabIndex = 3;
-            this.BtnReporte.Text = "Reporte";
+            this.BtnReporte.Text = "Reportes";
             this.BtnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnReporte.UseVisualStyleBackColor = true;
             this.BtnReporte.Click += new System.EventHandler(this.BtnReporte_Click);
@@ -512,7 +512,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnEliminarEmpleado.Text = "Eliminar";
             this.BtnEliminarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnEliminarEmpleado.UseVisualStyleBackColor = true;
-            this.BtnEliminarEmpleado.Click += new System.EventHandler(this.BtnEliminarEmpleado_Click);
             // 
             // BtnModificarEmpleado
             // 
@@ -530,7 +529,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnModificarEmpleado.Text = "Modificar";
             this.BtnModificarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnModificarEmpleado.UseVisualStyleBackColor = true;
-            this.BtnModificarEmpleado.Click += new System.EventHandler(this.BtnModificarEmpleado_Click);
             // 
             // BtnNuevoEmpleado
             // 
@@ -548,7 +546,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnNuevoEmpleado.Text = "Nuevo";
             this.BtnNuevoEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnNuevoEmpleado.UseVisualStyleBackColor = true;
-            this.BtnNuevoEmpleado.Click += new System.EventHandler(this.BtnNuevoEmpleado_Click);
             // 
             // BtnEmpleado
             // 
@@ -565,7 +562,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnEmpleado.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.BtnEmpleado.Size = new System.Drawing.Size(272, 40);
             this.BtnEmpleado.TabIndex = 8;
-            this.BtnEmpleado.Text = "Empleado";
+            this.BtnEmpleado.Text = "Empleados";
             this.BtnEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnEmpleado.UseVisualStyleBackColor = true;
             this.BtnEmpleado.Click += new System.EventHandler(this.BtnEmpleado_Click);
@@ -597,7 +594,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnEliminarUsuario.Text = "Eliminar";
             this.BtnEliminarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnEliminarUsuario.UseVisualStyleBackColor = true;
-            this.BtnEliminarUsuario.Click += new System.EventHandler(this.BtnEliminarUsuario_Click);
             // 
             // BtnModificarUsuario
             // 
@@ -615,7 +611,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnModificarUsuario.Text = "Modificar";
             this.BtnModificarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnModificarUsuario.UseVisualStyleBackColor = true;
-            this.BtnModificarUsuario.Click += new System.EventHandler(this.BtnModificarUsuario_Click);
             // 
             // BtnNuevoUsuario
             // 
@@ -633,7 +628,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnNuevoUsuario.Text = "Nuevo";
             this.BtnNuevoUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnNuevoUsuario.UseVisualStyleBackColor = true;
-            this.BtnNuevoUsuario.Click += new System.EventHandler(this.BtnNuevoUsuario_Click);
             // 
             // BtnUsuario
             // 
@@ -682,7 +676,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnEliminarProveedores.Text = "Eliminar";
             this.BtnEliminarProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnEliminarProveedores.UseVisualStyleBackColor = true;
-            this.BtnEliminarProveedores.Click += new System.EventHandler(this.BtnEliminarProveedores_Click);
             // 
             // BtnModificarProveedores
             // 
@@ -700,7 +693,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnModificarProveedores.Text = "Modificar";
             this.BtnModificarProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnModificarProveedores.UseVisualStyleBackColor = true;
-            this.BtnModificarProveedores.Click += new System.EventHandler(this.BtnModificarProveedores_Click);
             // 
             // BtnNuevoProveedores
             // 
@@ -718,7 +710,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnNuevoProveedores.Text = "Nuevo";
             this.BtnNuevoProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnNuevoProveedores.UseVisualStyleBackColor = true;
-            this.BtnNuevoProveedores.Click += new System.EventHandler(this.BtnNuevoProveedores_Click);
             // 
             // BtnProveedores
             // 
@@ -767,7 +758,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnEliminarArticulo.Text = "Eliminar";
             this.BtnEliminarArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnEliminarArticulo.UseVisualStyleBackColor = true;
-            this.BtnEliminarArticulo.Click += new System.EventHandler(this.BtnEliminarArticulo_Click);
             // 
             // BtnModificarArticulo
             // 
@@ -785,7 +775,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnModificarArticulo.Text = "Modificar";
             this.BtnModificarArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnModificarArticulo.UseVisualStyleBackColor = true;
-            this.BtnModificarArticulo.Click += new System.EventHandler(this.BtnModificarArticulo_Click);
             // 
             // BtnNuevoArticulo
             // 
@@ -803,7 +792,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnNuevoArticulo.Text = "Nuevo";
             this.BtnNuevoArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnNuevoArticulo.UseVisualStyleBackColor = true;
-            this.BtnNuevoArticulo.Click += new System.EventHandler(this.BtnNuevoArticulo_Click);
             // 
             // BtnArticulos
             // 
@@ -853,7 +841,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnEliminarSocio.Text = "Eliminar";
             this.BtnEliminarSocio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnEliminarSocio.UseVisualStyleBackColor = true;
-            this.BtnEliminarSocio.Click += new System.EventHandler(this.BtnEliminarSocio_Click);
             // 
             // BtnModificarSocio
             // 
@@ -871,7 +858,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnModificarSocio.Text = "Modificar";
             this.BtnModificarSocio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnModificarSocio.UseVisualStyleBackColor = true;
-            this.BtnModificarSocio.Click += new System.EventHandler(this.BtnModificarSocio_Click);
             // 
             // BtnNuevoSocio
             // 
@@ -889,7 +875,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnNuevoSocio.Text = "Nuevo";
             this.BtnNuevoSocio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnNuevoSocio.UseVisualStyleBackColor = true;
-            this.BtnNuevoSocio.Click += new System.EventHandler(this.BtnNuevoSocio_Click);
             // 
             // BtnSocio
             // 

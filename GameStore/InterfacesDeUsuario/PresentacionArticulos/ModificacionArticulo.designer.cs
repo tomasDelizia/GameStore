@@ -29,586 +29,506 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbTipoArticulo = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.components = new System.ComponentModel.Container();
+            this.numPrecioUnitario = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnAgregarMarca = new System.Windows.Forms.Button();
+            this.gAMESTOREDataSet = new GameStore.GAMESTOREDataSet();
+            this.tiposDeArticuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tiposDeArticuloTableAdapter = new GameStore.GAMESTOREDataSetTableAdapters.TiposDeArticuloTableAdapter();
+            this.cboMarca = new System.Windows.Forms.ComboBox();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.cmbPlataforma = new System.Windows.Forms.ComboBox();
-            this.cmbPublicante = new System.Windows.Forms.ComboBox();
-            this.cmbClasificacion = new System.Windows.Forms.ComboBox();
-            this.cmbDesarrollador = new System.Windows.Forms.ComboBox();
-            this.cmbGenero = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnAgregarPlataforma = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btnSubirImagen = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAgregarClasificacion = new System.Windows.Forms.Button();
+            this.btnAgregarDesarrollador = new System.Windows.Forms.Button();
+            this.btnAgregarTipoArticulo = new System.Windows.Forms.Button();
+            this.btnAgregarGenero = new System.Windows.Forms.Button();
+            this.cboPlataforma = new System.Windows.Forms.ComboBox();
+            this.cboClasificacion = new System.Windows.Forms.ComboBox();
+            this.cboDesarrollador = new System.Windows.Forms.ComboBox();
+            this.cboGenero = new System.Windows.Forms.ComboBox();
+            this.cboTipoArticulo = new System.Windows.Forms.ComboBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrecioUnitario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gAMESTOREDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposDeArticuloBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // button3
+            // numPrecioUnitario
             // 
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.DimGray;
-            this.button3.Location = new System.Drawing.Point(165, 221);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 29);
-            this.button3.TabIndex = 82;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.numPrecioUnitario.DecimalPlaces = 2;
+            this.numPrecioUnitario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numPrecioUnitario.ForeColor = System.Drawing.Color.DimGray;
+            this.numPrecioUnitario.Location = new System.Drawing.Point(590, 42);
+            this.numPrecioUnitario.Maximum = new decimal(new int[] {
+            500000,
+            0,
+            0,
+            0});
+            this.numPrecioUnitario.Name = "numPrecioUnitario";
+            this.numPrecioUnitario.Size = new System.Drawing.Size(279, 27);
+            this.numPrecioUnitario.TabIndex = 77;
+            this.numPrecioUnitario.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // label4
+            // label11
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(10, 85);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 22);
-            this.label4.TabIndex = 80;
-            this.label4.Text = "Código:";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DimGray;
+            this.label11.Location = new System.Drawing.Point(90, 184);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(76, 22);
+            this.label11.TabIndex = 76;
+            this.label11.Text = "Marca:";
             // 
-            // textBox2
+            // btnAgregarMarca
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox2.Location = new System.Drawing.Point(99, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(151, 27);
-            this.textBox2.TabIndex = 79;
+            this.btnAgregarMarca.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarMarca.ForeColor = System.Drawing.Color.DimGray;
+            this.btnAgregarMarca.Location = new System.Drawing.Point(378, 182);
+            this.btnAgregarMarca.Name = "btnAgregarMarca";
+            this.btnAgregarMarca.Size = new System.Drawing.Size(32, 29);
+            this.btnAgregarMarca.TabIndex = 75;
+            this.btnAgregarMarca.Text = "+";
+            this.btnAgregarMarca.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // gAMESTOREDataSet
             // 
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.DimGray;
-            this.button8.Location = new System.Drawing.Point(547, 358);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(100, 34);
-            this.button8.TabIndex = 75;
-            this.button8.Text = "Eliminar";
-            this.button8.UseVisualStyleBackColor = true;
+            this.gAMESTOREDataSet.DataSetName = "GAMESTOREDataSet";
+            this.gAMESTOREDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button7
+            // tiposDeArticuloBindingSource
             // 
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.DimGray;
-            this.button7.Location = new System.Drawing.Point(651, 358);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 34);
-            this.button7.TabIndex = 73;
-            this.button7.Text = "Cancelar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.tiposDeArticuloBindingSource.DataMember = "TiposDeArticulo";
+            this.tiposDeArticuloBindingSource.DataSource = this.gAMESTOREDataSet;
             // 
-            // label2
+            // tiposDeArticuloTableAdapter
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(4, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 22);
-            this.label2.TabIndex = 76;
-            this.label2.Text = "Nombre:";
+            this.tiposDeArticuloTableAdapter.ClearBeforeFill = true;
             // 
-            // cmbTipoArticulo
+            // cboMarca
             // 
-            this.cmbTipoArticulo.BackColor = System.Drawing.Color.White;
-            this.cmbTipoArticulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTipoArticulo.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbTipoArticulo.FormattingEnabled = true;
-            this.cmbTipoArticulo.Location = new System.Drawing.Point(8, 116);
-            this.cmbTipoArticulo.Name = "cmbTipoArticulo";
-            this.cmbTipoArticulo.Size = new System.Drawing.Size(242, 29);
-            this.cmbTipoArticulo.TabIndex = 72;
-            this.cmbTipoArticulo.Text = "Tipo de artículo";
+            this.cboMarca.BackColor = System.Drawing.Color.White;
+            this.cboMarca.Enabled = false;
+            this.cboMarca.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboMarca.ForeColor = System.Drawing.Color.DimGray;
+            this.cboMarca.FormattingEnabled = true;
+            this.cboMarca.Location = new System.Drawing.Point(172, 182);
+            this.cboMarca.Name = "cboMarca";
+            this.cboMarca.Size = new System.Drawing.Size(200, 29);
+            this.cboMarca.TabIndex = 74;
+            this.cboMarca.Text = "Selección";
             // 
-            // textBox1
+            // pictureBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox1.Location = new System.Drawing.Point(99, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 27);
-            this.textBox1.TabIndex = 71;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.Controls.Add(this.comboBox4);
-            this.panel1.Controls.Add(this.comboBox3);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.cmbTipoArticulo);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(265, 266);
-            this.panel1.TabIndex = 87;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.BackColor = System.Drawing.Color.White;
-            this.comboBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(8, 186);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(242, 29);
-            this.comboBox4.TabIndex = 90;
-            this.comboBox4.Text = "Plataforma";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.BackColor = System.Drawing.Color.White;
-            this.comboBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(8, 151);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(242, 29);
-            this.comboBox3.TabIndex = 89;
-            this.comboBox3.Text = "Marca";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(69, 1);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 33);
-            this.label3.TabIndex = 88;
-            this.label3.Text = "Filtrado:";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DarkGray;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.dateTimePicker1);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.richTextBox1);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button10);
-            this.panel2.Controls.Add(this.button11);
-            this.panel2.Controls.Add(this.button12);
-            this.panel2.Controls.Add(this.cmbPlataforma);
-            this.panel2.Controls.Add(this.cmbPublicante);
-            this.panel2.Controls.Add(this.cmbClasificacion);
-            this.panel2.Controls.Add(this.cmbDesarrollador);
-            this.panel2.Controls.Add(this.cmbGenero);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.dataGridView2);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(300, 13);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(710, 520);
-            this.panel2.TabIndex = 91;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(323, 262);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 22);
-            this.label1.TabIndex = 114;
-            this.label1.Text = "Imagen:";
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.DimGray;
-            this.button9.Location = new System.Drawing.Point(211, 332);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(32, 29);
-            this.button9.TabIndex = 113;
-            this.button9.Text = "+";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.DimGray;
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.DimGray;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(416, 225);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(280, 27);
-            this.dateTimePicker1.TabIndex = 105;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(250, 225);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(160, 22);
-            this.label7.TabIndex = 112;
-            this.label7.Text = "Fecha de salida:";
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.DimGray;
-            this.button6.Location = new System.Drawing.Point(416, 258);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(282, 31);
-            this.button6.TabIndex = 99;
-            this.button6.Text = "Cambiar imagen";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(266, 194);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(144, 22);
-            this.label8.TabIndex = 111;
-            this.label8.Text = "Precio unitario:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(321, 161);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 22);
-            this.label9.TabIndex = 110;
-            this.label9.Text = "Nombre:";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.White;
-            this.richTextBox1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.richTextBox1.Location = new System.Drawing.Point(34, 400);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(664, 96);
-            this.richTextBox1.TabIndex = 101;
-            this.richTextBox1.Text = "";
+            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox.Location = new System.Drawing.Point(628, 145);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(200, 250);
+            this.pictureBox.TabIndex = 73;
+            this.pictureBox.TabStop = false;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(30, 375);
+            this.label10.Location = new System.Drawing.Point(50, 44);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(121, 22);
-            this.label10.TabIndex = 102;
-            this.label10.Text = "Descripción:";
+            this.label10.Size = new System.Drawing.Size(116, 22);
+            this.label10.TabIndex = 72;
+            this.label10.Text = "Plataforma:";
             // 
-            // button5
+            // label9
             // 
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.DimGray;
-            this.button5.Location = new System.Drawing.Point(211, 262);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(32, 29);
-            this.button5.TabIndex = 109;
-            this.button5.Text = "+";
-            this.button5.UseVisualStyleBackColor = true;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.DimGray;
+            this.label9.Location = new System.Drawing.Point(37, 150);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(129, 22);
+            this.label9.TabIndex = 71;
+            this.label9.Text = "Clasificación:";
             // 
-            // button4
+            // label8
             // 
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.DimGray;
-            this.button4.Location = new System.Drawing.Point(211, 297);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(32, 29);
-            this.button4.TabIndex = 108;
-            this.button4.Text = "+";
-            this.button4.UseVisualStyleBackColor = true;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DimGray;
+            this.label8.Location = new System.Drawing.Point(31, 114);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(135, 22);
+            this.label8.TabIndex = 70;
+            this.label8.Text = "Desarrollador:";
             // 
-            // button10
+            // label7
             // 
-            this.button10.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.DimGray;
-            this.button10.Location = new System.Drawing.Point(211, 227);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(32, 29);
-            this.button10.TabIndex = 107;
-            this.button10.Text = "+";
-            this.button10.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.Location = new System.Drawing.Point(80, 79);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 22);
+            this.label7.TabIndex = 69;
+            this.label7.Text = "Género:";
             // 
-            // button11
+            // label4
             // 
-            this.button11.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.DimGray;
-            this.button11.Location = new System.Drawing.Point(211, 157);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(32, 29);
-            this.button11.TabIndex = 106;
-            this.button11.Text = "+";
-            this.button11.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(12, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(154, 22);
+            this.label4.TabIndex = 68;
+            this.label4.Text = "Tipo de artículo:";
             // 
-            // button12
+            // label3
             // 
-            this.button12.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.DimGray;
-            this.button12.Location = new System.Drawing.Point(211, 192);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(32, 29);
-            this.button12.TabIndex = 104;
-            this.button12.Text = "+";
-            this.button12.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(497, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(87, 22);
+            this.label3.TabIndex = 67;
+            this.label3.Text = "Imagen:";
             // 
-            // cmbPlataforma
+            // btnAgregarPlataforma
             // 
-            this.cmbPlataforma.BackColor = System.Drawing.Color.White;
-            this.cmbPlataforma.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPlataforma.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbPlataforma.FormattingEnabled = true;
-            this.cmbPlataforma.Location = new System.Drawing.Point(34, 332);
-            this.cmbPlataforma.Name = "cmbPlataforma";
-            this.cmbPlataforma.Size = new System.Drawing.Size(171, 29);
-            this.cmbPlataforma.TabIndex = 98;
-            this.cmbPlataforma.Text = "Plataforma";
+            this.btnAgregarPlataforma.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarPlataforma.ForeColor = System.Drawing.Color.DimGray;
+            this.btnAgregarPlataforma.Location = new System.Drawing.Point(378, 42);
+            this.btnAgregarPlataforma.Name = "btnAgregarPlataforma";
+            this.btnAgregarPlataforma.Size = new System.Drawing.Size(32, 29);
+            this.btnAgregarPlataforma.TabIndex = 66;
+            this.btnAgregarPlataforma.Text = "+";
+            this.btnAgregarPlataforma.UseVisualStyleBackColor = true;
             // 
-            // cmbPublicante
+            // btnModificar
             // 
-            this.cmbPublicante.BackColor = System.Drawing.Color.White;
-            this.cmbPublicante.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPublicante.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbPublicante.FormattingEnabled = true;
-            this.cmbPublicante.Location = new System.Drawing.Point(34, 297);
-            this.cmbPublicante.Name = "cmbPublicante";
-            this.cmbPublicante.Size = new System.Drawing.Size(171, 29);
-            this.cmbPublicante.TabIndex = 97;
-            this.cmbPublicante.Text = "Publicante";
+            this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.DimGray;
+            this.btnModificar.Location = new System.Drawing.Point(378, 375);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(100, 34);
+            this.btnModificar.TabIndex = 58;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // cmbClasificacion
+            // btnCancelar
             // 
-            this.cmbClasificacion.BackColor = System.Drawing.Color.White;
-            this.cmbClasificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbClasificacion.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbClasificacion.FormattingEnabled = true;
-            this.cmbClasificacion.Location = new System.Drawing.Point(34, 262);
-            this.cmbClasificacion.Name = "cmbClasificacion";
-            this.cmbClasificacion.Size = new System.Drawing.Size(171, 29);
-            this.cmbClasificacion.TabIndex = 96;
-            this.cmbClasificacion.Text = "Clasificación";
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.DimGray;
+            this.btnCancelar.Location = new System.Drawing.Point(484, 375);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(100, 34);
+            this.btnCancelar.TabIndex = 59;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // cmbDesarrollador
+            // dateTimePicker
             // 
-            this.cmbDesarrollador.BackColor = System.Drawing.Color.White;
-            this.cmbDesarrollador.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbDesarrollador.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbDesarrollador.FormattingEnabled = true;
-            this.cmbDesarrollador.Location = new System.Drawing.Point(34, 227);
-            this.cmbDesarrollador.Name = "cmbDesarrollador";
-            this.cmbDesarrollador.Size = new System.Drawing.Size(171, 29);
-            this.cmbDesarrollador.TabIndex = 95;
-            this.cmbDesarrollador.Text = "Desarrollador";
-            // 
-            // cmbGenero
-            // 
-            this.cmbGenero.BackColor = System.Drawing.Color.White;
-            this.cmbGenero.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbGenero.ForeColor = System.Drawing.Color.DimGray;
-            this.cmbGenero.FormattingEnabled = true;
-            this.cmbGenero.Location = new System.Drawing.Point(34, 192);
-            this.cmbGenero.Name = "cmbGenero";
-            this.cmbGenero.Size = new System.Drawing.Size(171, 29);
-            this.cmbGenero.TabIndex = 94;
-            this.cmbGenero.Text = "Género";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(34, 157);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(171, 29);
-            this.comboBox1.TabIndex = 93;
-            this.comboBox1.Text = "Tipo de artículo";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox4.Location = new System.Drawing.Point(416, 192);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(151, 27);
-            this.textBox4.TabIndex = 92;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox3.Location = new System.Drawing.Point(416, 159);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(151, 27);
-            this.textBox3.TabIndex = 91;
+            this.dateTimePicker.CalendarForeColor = System.Drawing.Color.DimGray;
+            this.dateTimePicker.CalendarTitleForeColor = System.Drawing.Color.DimGray;
+            this.dateTimePicker.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker.Location = new System.Drawing.Point(590, 75);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(279, 27);
+            this.dateTimePicker.TabIndex = 57;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(212, 110);
+            this.label6.Location = new System.Drawing.Point(424, 75);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(272, 33);
-            this.label6.TabIndex = 90;
-            this.label6.Text = "Modifique los datos";
+            this.label6.Size = new System.Drawing.Size(160, 22);
+            this.label6.TabIndex = 65;
+            this.label6.Text = "Fecha de salida:";
             // 
-            // dataGridView2
+            // btnSubirImagen
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView2.Location = new System.Drawing.Point(34, 38);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(662, 68);
-            this.dataGridView2.TabIndex = 89;
+            this.btnSubirImagen.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubirImagen.ForeColor = System.Drawing.Color.DimGray;
+            this.btnSubirImagen.Location = new System.Drawing.Point(590, 108);
+            this.btnSubirImagen.Name = "btnSubirImagen";
+            this.btnSubirImagen.Size = new System.Drawing.Size(279, 31);
+            this.btnSubirImagen.TabIndex = 56;
+            this.btnSubirImagen.Text = "Cambiar imagen";
+            this.btnSubirImagen.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(245, 2);
+            this.label5.Location = new System.Drawing.Point(440, 44);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(204, 33);
-            this.label5.TabIndex = 88;
-            this.label5.Text = "Coincidencias";
+            this.label5.Size = new System.Drawing.Size(144, 22);
+            this.label5.TabIndex = 64;
+            this.label5.Text = "Precio unitario:";
             // 
-            // button1
+            // label2
             // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.Location = new System.Drawing.Point(792, 537);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 34);
-            this.button1.TabIndex = 103;
-            this.button1.Text = "Modificar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(495, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 22);
+            this.label2.TabIndex = 63;
+            this.label2.Text = "Nombre:";
             // 
-            // button2
+            // txtDescripcion
             // 
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DimGray;
-            this.button2.Location = new System.Drawing.Point(896, 537);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 34);
-            this.button2.TabIndex = 100;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.txtDescripcion.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.txtDescripcion.BackColor = System.Drawing.Color.White;
+            this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.ForeColor = System.Drawing.Color.DimGray;
+            this.txtDescripcion.Location = new System.Drawing.Point(16, 233);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(568, 136);
+            this.txtDescripcion.TabIndex = 55;
+            this.txtDescripcion.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(12, 208);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 22);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "Descripción:";
+            // 
+            // btnAgregarClasificacion
+            // 
+            this.btnAgregarClasificacion.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarClasificacion.ForeColor = System.Drawing.Color.DimGray;
+            this.btnAgregarClasificacion.Location = new System.Drawing.Point(378, 147);
+            this.btnAgregarClasificacion.Name = "btnAgregarClasificacion";
+            this.btnAgregarClasificacion.Size = new System.Drawing.Size(32, 29);
+            this.btnAgregarClasificacion.TabIndex = 62;
+            this.btnAgregarClasificacion.Text = "+";
+            this.btnAgregarClasificacion.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarDesarrollador
+            // 
+            this.btnAgregarDesarrollador.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarDesarrollador.ForeColor = System.Drawing.Color.DimGray;
+            this.btnAgregarDesarrollador.Location = new System.Drawing.Point(378, 112);
+            this.btnAgregarDesarrollador.Name = "btnAgregarDesarrollador";
+            this.btnAgregarDesarrollador.Size = new System.Drawing.Size(32, 29);
+            this.btnAgregarDesarrollador.TabIndex = 61;
+            this.btnAgregarDesarrollador.Text = "+";
+            this.btnAgregarDesarrollador.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarTipoArticulo
+            // 
+            this.btnAgregarTipoArticulo.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarTipoArticulo.ForeColor = System.Drawing.Color.DimGray;
+            this.btnAgregarTipoArticulo.Location = new System.Drawing.Point(378, 7);
+            this.btnAgregarTipoArticulo.Name = "btnAgregarTipoArticulo";
+            this.btnAgregarTipoArticulo.Size = new System.Drawing.Size(32, 29);
+            this.btnAgregarTipoArticulo.TabIndex = 60;
+            this.btnAgregarTipoArticulo.Text = "+";
+            this.btnAgregarTipoArticulo.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarGenero
+            // 
+            this.btnAgregarGenero.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarGenero.ForeColor = System.Drawing.Color.DimGray;
+            this.btnAgregarGenero.Location = new System.Drawing.Point(378, 77);
+            this.btnAgregarGenero.Name = "btnAgregarGenero";
+            this.btnAgregarGenero.Size = new System.Drawing.Size(32, 29);
+            this.btnAgregarGenero.TabIndex = 53;
+            this.btnAgregarGenero.Text = "+";
+            this.btnAgregarGenero.UseVisualStyleBackColor = true;
+            // 
+            // cboPlataforma
+            // 
+            this.cboPlataforma.BackColor = System.Drawing.Color.White;
+            this.cboPlataforma.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboPlataforma.ForeColor = System.Drawing.Color.DimGray;
+            this.cboPlataforma.FormattingEnabled = true;
+            this.cboPlataforma.Location = new System.Drawing.Point(172, 42);
+            this.cboPlataforma.Name = "cboPlataforma";
+            this.cboPlataforma.Size = new System.Drawing.Size(200, 29);
+            this.cboPlataforma.TabIndex = 52;
+            this.cboPlataforma.Text = "Selección";
+            // 
+            // cboClasificacion
+            // 
+            this.cboClasificacion.BackColor = System.Drawing.Color.White;
+            this.cboClasificacion.Enabled = false;
+            this.cboClasificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboClasificacion.ForeColor = System.Drawing.Color.DimGray;
+            this.cboClasificacion.FormattingEnabled = true;
+            this.cboClasificacion.Location = new System.Drawing.Point(172, 147);
+            this.cboClasificacion.Name = "cboClasificacion";
+            this.cboClasificacion.Size = new System.Drawing.Size(200, 29);
+            this.cboClasificacion.TabIndex = 51;
+            this.cboClasificacion.Text = "Selección";
+            // 
+            // cboDesarrollador
+            // 
+            this.cboDesarrollador.BackColor = System.Drawing.Color.White;
+            this.cboDesarrollador.Enabled = false;
+            this.cboDesarrollador.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboDesarrollador.ForeColor = System.Drawing.Color.DimGray;
+            this.cboDesarrollador.FormattingEnabled = true;
+            this.cboDesarrollador.Location = new System.Drawing.Point(172, 112);
+            this.cboDesarrollador.Name = "cboDesarrollador";
+            this.cboDesarrollador.Size = new System.Drawing.Size(200, 29);
+            this.cboDesarrollador.TabIndex = 50;
+            this.cboDesarrollador.Text = "Selección";
+            // 
+            // cboGenero
+            // 
+            this.cboGenero.BackColor = System.Drawing.Color.White;
+            this.cboGenero.Enabled = false;
+            this.cboGenero.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboGenero.ForeColor = System.Drawing.Color.DimGray;
+            this.cboGenero.FormattingEnabled = true;
+            this.cboGenero.Location = new System.Drawing.Point(172, 77);
+            this.cboGenero.Name = "cboGenero";
+            this.cboGenero.Size = new System.Drawing.Size(200, 29);
+            this.cboGenero.TabIndex = 49;
+            this.cboGenero.Text = "Selección";
+            // 
+            // cboTipoArticulo
+            // 
+            this.cboTipoArticulo.BackColor = System.Drawing.Color.White;
+            this.cboTipoArticulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTipoArticulo.ForeColor = System.Drawing.Color.DimGray;
+            this.cboTipoArticulo.FormattingEnabled = true;
+            this.cboTipoArticulo.Location = new System.Drawing.Point(172, 7);
+            this.cboTipoArticulo.Name = "cboTipoArticulo";
+            this.cboTipoArticulo.Size = new System.Drawing.Size(200, 29);
+            this.cboTipoArticulo.TabIndex = 48;
+            this.cboTipoArticulo.Text = "Selección";
+            this.cboTipoArticulo.SelectedValueChanged += new System.EventHandler(this.cboTipoArticulo_SelectedValueChanged);
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.Color.White;
+            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
+            this.txtNombre.Location = new System.Drawing.Point(590, 9);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(279, 27);
+            this.txtNombre.TabIndex = 47;
             // 
             // ModificacionArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(1017, 577);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
+            this.ClientSize = new System.Drawing.Size(884, 418);
+            this.Controls.Add(this.numPrecioUnitario);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.btnAgregarMarca);
+            this.Controls.Add(this.cboMarca);
+            this.Controls.Add(this.pictureBox);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnAgregarPlataforma);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.dateTimePicker);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnSubirImagen);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnAgregarClasificacion);
+            this.Controls.Add(this.btnAgregarDesarrollador);
+            this.Controls.Add(this.btnAgregarTipoArticulo);
+            this.Controls.Add(this.btnAgregarGenero);
+            this.Controls.Add(this.cboPlataforma);
+            this.Controls.Add(this.cboClasificacion);
+            this.Controls.Add(this.cboDesarrollador);
+            this.Controls.Add(this.cboGenero);
+            this.Controls.Add(this.cboTipoArticulo);
+            this.Controls.Add(this.txtNombre);
             this.Name = "ModificacionArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Artículo";
             this.Load += new System.EventHandler(this.ModificacionArticulo_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrecioUnitario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gAMESTOREDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposDeArticuloBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbTipoArticulo;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+
+        private System.Windows.Forms.NumericUpDown numPrecioUnitario;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnAgregarMarca;
+        private GAMESTOREDataSet gAMESTOREDataSet;
+        private System.Windows.Forms.BindingSource tiposDeArticuloBindingSource;
+        private GAMESTOREDataSetTableAdapters.TiposDeArticuloTableAdapter tiposDeArticuloTableAdapter;
+        private System.Windows.Forms.ComboBox cboMarca;
+        private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.ComboBox cmbPlataforma;
-        private System.Windows.Forms.ComboBox cmbPublicante;
-        private System.Windows.Forms.ComboBox cmbClasificacion;
-        private System.Windows.Forms.ComboBox cmbDesarrollador;
-        private System.Windows.Forms.ComboBox cmbGenero;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnAgregarPlataforma;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnSubirImagen;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox txtDescripcion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAgregarClasificacion;
+        private System.Windows.Forms.Button btnAgregarDesarrollador;
+        private System.Windows.Forms.Button btnAgregarTipoArticulo;
+        private System.Windows.Forms.Button btnAgregarGenero;
+        private System.Windows.Forms.ComboBox cboPlataforma;
+        private System.Windows.Forms.ComboBox cboClasificacion;
+        private System.Windows.Forms.ComboBox cboDesarrollador;
+        private System.Windows.Forms.ComboBox cboGenero;
+        private System.Windows.Forms.ComboBox cboTipoArticulo;
+        private System.Windows.Forms.TextBox txtNombre;
     }
 }
