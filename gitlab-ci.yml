@@ -3,8 +3,8 @@ generar-ejecutable:
     image: mono:latest
 
     variables:
-        solution: "3k2_Confiteria.sln"
-        carpeta: "3k2_Confiteria"
+        solution: "GameStore.sln"
+        carpeta: "GameStore"
 
     before_script:
         - nuget restore $solution
