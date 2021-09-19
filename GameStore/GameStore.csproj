@@ -117,11 +117,35 @@
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaClasificacion.designer.cs">
       <DependentUpon>AltaClasificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaDesarrollador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaDesarrollador.Designer.cs">
+      <DependentUpon>AltaDesarrollador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaGenero.Designer.cs">
+      <DependentUpon>AltaGenero.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaMarca.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaMarca.designer.cs">
       <DependentUpon>AltaMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaPlataforma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaPlataforma.Designer.cs">
+      <DependentUpon>AltaPlataforma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaTipoArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaTipoArticulo.Designer.cs">
+      <DependentUpon>AltaTipoArticulo.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaArticulo.cs">
       <SubType>Form</SubType>
@@ -135,11 +159,41 @@
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaClasificacion.designer.cs">
       <DependentUpon>BajaClasificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaDesarrollador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaDesarrollador.Designer.cs">
+      <DependentUpon>BajaDesarrollador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaGenero.Designer.cs">
+      <DependentUpon>BajaGenero.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaMarca.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaMarca.designer.cs">
       <DependentUpon>BajaMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaPlataforma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaPlataforma.Designer.cs">
+      <DependentUpon>BajaPlataforma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaTipoArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaTipoArticulo.Designer.cs">
+      <DependentUpon>BajaTipoArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaArticulo.Designer.cs">
+      <DependentUpon>ConsultaArticulo.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionArticulo.cs">
       <SubType>Form</SubType>
@@ -152,6 +206,18 @@
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionClasificacion.designer.cs">
       <DependentUpon>ModificacionClasificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionDesarrollador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionDesarrollador.Designer.cs">
+      <DependentUpon>ModificacionDesarrollador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionGenero.Designer.cs">
+      <DependentUpon>ModificacionGenero.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionCompras\AltaProveedor.cs">
       <SubType>Form</SubType>
@@ -332,8 +398,20 @@
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\AltaClasificacion.resx">
       <DependentUpon>AltaClasificacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\AltaDesarrollador.resx">
+      <DependentUpon>AltaDesarrollador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\AltaGenero.resx">
+      <DependentUpon>AltaGenero.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\AltaMarca.resx">
       <DependentUpon>AltaMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\AltaPlataforma.resx">
+      <DependentUpon>AltaPlataforma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\AltaTipoArticulo.resx">
+      <DependentUpon>AltaTipoArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\BajaArticulo.resx">
       <DependentUpon>BajaArticulo.cs</DependentUpon>
@@ -341,8 +419,23 @@
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\BajaClasificacion.resx">
       <DependentUpon>BajaClasificacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\BajaDesarrollador.resx">
+      <DependentUpon>BajaDesarrollador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\BajaGenero.resx">
+      <DependentUpon>BajaGenero.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\BajaMarca.resx">
       <DependentUpon>BajaMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\BajaPlataforma.resx">
+      <DependentUpon>BajaPlataforma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\BajaTipoArticulo.resx">
+      <DependentUpon>BajaTipoArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaArticulo.resx">
+      <DependentUpon>ConsultaArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionArticulo.resx">
       <DependentUpon>ModificacionArticulo.cs</DependentUpon>

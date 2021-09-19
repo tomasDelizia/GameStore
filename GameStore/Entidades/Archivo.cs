@@ -22,5 +22,11 @@
         public string Nombre { get; set; }
 
         public byte[] Contenido { get; set; }
+
+        internal void ValidarNombre()
+        {
+            if (Nombre.Length > 50)
+                throw new ApplicationException("El nombre del archivo debe ser menor a 50 caracteres.");
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace GameStore.RepositoriosBD
 
         IEnumerable<TEntidad> Encontrar(Expression<Func<TEntidad, bool>> predicado);
 
-        void Insertar(TEntidad entidad);
+        int Insertar(TEntidad entidad);
 
         void InsertarRango(IEnumerable<TEntidad> entidades);
 

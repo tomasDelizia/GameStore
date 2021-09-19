@@ -143,7 +143,7 @@ namespace GameStore.InterfacesDeUsuario
             // Cerrar
             // 
             this.Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Cerrar.Image")));
-            this.Cerrar.Location = new System.Drawing.Point(748, 0);
+            this.Cerrar.Location = new System.Drawing.Point(745, 5);
             this.Cerrar.Name = "Cerrar";
             this.Cerrar.Size = new System.Drawing.Size(30, 20);
             this.Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -154,7 +154,7 @@ namespace GameStore.InterfacesDeUsuario
             // Minimizar
             // 
             this.Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Minimizar.Image")));
-            this.Minimizar.Location = new System.Drawing.Point(712, 0);
+            this.Minimizar.Location = new System.Drawing.Point(709, 5);
             this.Minimizar.Name = "Minimizar";
             this.Minimizar.Size = new System.Drawing.Size(30, 20);
             this.Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

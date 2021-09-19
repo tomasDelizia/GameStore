@@ -11,7 +11,6 @@ namespace GameStore.InterfacesDeUsuario
     {
         private readonly IServicioUsuario _servicioUsuario;
 
-
         public Login(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
@@ -37,6 +36,7 @@ namespace GameStore.InterfacesDeUsuario
 
         private void Cerrar_Click(object sender, EventArgs e)
         {
+            this.Dispose();
             Application.Exit();
         }
 

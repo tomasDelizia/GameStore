@@ -98,7 +98,8 @@ namespace GameStore.InterfacesDeUsuario
 
         private void BtnArticulos_Click(object sender, EventArgs e)
         {
-            ShowSubpanel(PnlSubMenuArticulos);
+            //ShowSubpanel(PnlSubMenuArticulos);
+            new ConsultaArticulo(_unidadDeTrabajo).ShowDialog();
         }
         private void BtnProveedores_Click(object sender, EventArgs e)
         {
@@ -119,98 +120,7 @@ namespace GameStore.InterfacesDeUsuario
             ShowSubMenu(PnlSubMenuReporte);
         }
 
-        //Diferentes AMB
-        private void BtnNuevoSocio_Click(object sender, EventArgs e)
-        {
-            Form frmAltaSocio = new AltaSocio();
-            frmAltaSocio.Show();
-        }
-
-        private void BtnModificarSocio_Click(object sender, EventArgs e)
-        {
-            Form frmModificacionSocio = new ModificacionSocio();
-            frmModificacionSocio.Show();
-        }
-
-        private void BtnEliminarSocio_Click(object sender, EventArgs e)
-        {
-            Form frmBajaSocio = new BajaSocio();
-            frmBajaSocio.Show();
-        }
-
-        private void BtnNuevoArticulo_Click(object sender, EventArgs e)
-        {
-            Form frmAltaArticulo = new AltaArticulo(_unidadDeTrabajo);
-            frmAltaArticulo.Show();
-        }
-
-        private void BtnModificarArticulo_Click(object sender, EventArgs e)
-        {
-            Form frmModificarArticulo = new ModificacionArticulo();
-            frmModificarArticulo.Show();
-        }
-
-        private void BtnEliminarArticulo_Click(object sender, EventArgs e)
-        {
-            Form frmBajaArticulo = new BajaArticulo();
-            frmBajaArticulo.Show();
-        }
-
-        private void BtnNuevoProveedores_Click(object sender, EventArgs e)
-        {
-            Form frmAltaProveedor = new AltaProveedor();
-            frmAltaProveedor.Show();
-        }
-
-        private void BtnModificarProveedores_Click(object sender, EventArgs e)
-        {
-            Form frmModificarProveedor = new ModificacionProveedor();
-            frmModificarProveedor.Show();
-        }
-
-        private void BtnEliminarProveedores_Click(object sender, EventArgs e)
-        {
-            Form frmBajaProveedor = new BajaProveedor();
-            frmBajaProveedor.Show();
-        }
-
-        private void BtnNuevoUsuario_Click(object sender, EventArgs e)
-        {
-            Form frmAltaUsuario = new AltaUsuario();
-            frmAltaUsuario.Show();
-        }
-
-        private void BtnModificarUsuario_Click(object sender, EventArgs e)
-        {
-            Form frmModificarUsuario = new ModificacionUsuario();
-            frmModificarUsuario.Show();
-        }
-
-        private void BtnEliminarUsuario_Click(object sender, EventArgs e)
-        {
-            Form frmBajaUsuario = new BajaUsuario();
-            frmBajaUsuario.Show();
-        }
-
-        private void BtnNuevoEmpleado_Click(object sender, EventArgs e)
-        {
-            Form frmAltaEmpleado = new AltaEmpleado();
-            frmAltaEmpleado.Show();
-        }
-
-        private void BtnModificarEmpleado_Click(object sender, EventArgs e)
-        {
-            Form frmModificarEmpleado = new ModificacionEmpleado();
-            frmModificarEmpleado.Show();
-        }
-
-        private void BtnEliminarEmpleado_Click(object sender, EventArgs e)
-        {
-            Form frmBajaEmpleado = new BajaEmpleado();
-            frmBajaEmpleado.Show();
-        }
-
-        // Menu de arriba
+        // Menú superior
         private void salirDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();

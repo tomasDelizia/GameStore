@@ -29,9 +29,12 @@ namespace GameStore.Servicios.Implementaciones
             return _repositorio.Encontrar(predicado);
         }
 
-        public void Insertar(TEntidad entidad)
+        public bool Insertar(TEntidad entidad)
         {
-            _repositorio.Insertar(entidad);
+            var filasAfectadas = _repositorio.Insertar(entidad);
+            if (filasAfectadas == 1)
+                return true;
+            return false;
         }
 
         public void InsertarRango(IEnumerable<TEntidad> entidades)

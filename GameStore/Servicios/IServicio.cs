@@ -12,7 +12,7 @@ namespace GameStore.Servicios
 
         IEnumerable<TEntidad> Encontrar(Expression<Func<TEntidad, bool>> predicado);
 
-        void Insertar(TEntidad entidad);
+        bool Insertar(TEntidad entidad);
 
         void InsertarRango(IEnumerable<TEntidad> entidades);
 

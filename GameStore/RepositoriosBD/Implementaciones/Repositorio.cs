@@ -30,10 +30,10 @@ namespace GameStore.RepositoriosBD.Implementaciones
             return _contextoBd.Set<TEntidad>().Where(predicado);
         }
 
-        public void Insertar(TEntidad entidad)
+        public int Insertar(TEntidad entidad)
         {
             _contextoBd.Set<TEntidad>().Add(entidad);
-            _contextoBd.SaveChanges();
+            return _contextoBd.SaveChanges();
         }
 
         public void InsertarRango(IEnumerable<TEntidad> entidades)

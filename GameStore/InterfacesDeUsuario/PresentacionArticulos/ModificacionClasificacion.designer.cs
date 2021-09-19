@@ -202,7 +202,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label2.TabIndex = 46;
             this.label2.Text = "Filtrado";
             // 
-            // ModificarClasificacion
+            // ModificacionClasificacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -212,8 +212,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "ModificarClasificacion";
-            this.Text = "Modificar Clasificacion";
+            this.Name = "ModificacionClasificacion";
+            this.Text = "Modificar Clasificación";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
