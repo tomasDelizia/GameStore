@@ -3,7 +3,7 @@ generar-ejecutable:
     image: mono:latest
 
     variables:
-        solution: "GameStore.sln"
+        solution: "GameStore/GameStore.sln"
         carpeta: "GameStore"
 
     before_script:
