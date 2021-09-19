@@ -17,6 +17,10 @@ namespace GameStore.Servicios.Implementaciones
             _repositorioArticulo = repositorioArticulo;
         }
 
-
+        public void ValidarArticulo(Articulo articulo)
+        {
+            articulo.ValidarNombre();
+            articulo.ValidarPrecio();
+        }
     }
 }

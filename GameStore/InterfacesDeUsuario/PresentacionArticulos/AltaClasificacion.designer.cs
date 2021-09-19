@@ -113,7 +113,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label1);
             this.Name = "AltaClasificacion";
-            this.Text = "AltaClasificacion";
+            this.Text = "Registrar Clasificación";
             this.ResumeLayout(false);
             this.PerformLayout();
 

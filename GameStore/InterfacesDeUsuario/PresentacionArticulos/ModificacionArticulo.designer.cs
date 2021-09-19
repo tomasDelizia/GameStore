@@ -559,6 +559,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Name = "ModificacionArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Artículo";
+            this.Load += new System.EventHandler(this.ModificacionArticulo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

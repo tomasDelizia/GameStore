@@ -9,5 +9,6 @@ namespace GameStore.Servicios
 {
     public interface IServicioArchivo : IServicio<Archivo>
     {
+        void ValidarArchivo(Archivo archivo);
     }
 }

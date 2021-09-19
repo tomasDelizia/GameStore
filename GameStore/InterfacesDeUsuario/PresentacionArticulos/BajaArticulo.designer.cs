@@ -228,7 +228,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(739, 361);
+            this.ClientSize = new System.Drawing.Size(750, 373);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.button4);

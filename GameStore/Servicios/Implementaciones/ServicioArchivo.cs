@@ -16,5 +16,12 @@ namespace GameStore.Servicios.Implementaciones
         {
             _repositorioArchivo = repositorioArchivo;
         }
+
+        public void ValidarArchivo(Archivo archivo)
+        {
+            archivo.ValidarNombre();
+        }
     }
+
+
 }

@@ -8,5 +8,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         {
             InitializeComponent();
         }
+
+        private void ModificacionArticulo_Load(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
