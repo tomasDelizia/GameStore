@@ -55,5 +55,59 @@ namespace GameStore.Entidades
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Venta> Ventas { get; set; }
+        public void ValidarNombre()
+        {
+            if (string.IsNullOrEmpty(Nombre))
+                throw new ApplicationException("El nombre es requerido.");
+            if (Nombre.Length > 50)
+                throw new ApplicationException("El nombre no debe superar los 50 caracteres.");
+        }
+        public void ValidarApellido()
+        {
+            if (string.IsNullOrEmpty(Apellido))
+                throw new ApplicationException("El apellido es requerido.");
+            if (Nombre.Length > 50)
+                throw new ApplicationException("El apellido no debe superar los 50 caracteres.");
+        }
+        public void ValidarDocumento()
+        {
+            string documento = NroDocumento.ToString();
+            if (string.IsNullOrEmpty(documento))
+                throw new ApplicationException("El documento es requerido");
+            if (NroDocumento < 0)
+                throw new ApplicationException("Ingrese un documento válido.");
+        }
+        /// <summary>
+        /// Este metodo esta replicado en Proveedor. Corregir.
+        /// </summary>
+        public void ValidarTelefono()
+        {
+            if (Telefono.Length > 30)
+                throw new ApplicationException("El teléfono no debe superar los 30 caracteres.");
+        }
+        /// <summary>
+        /// Este metodo esta replicado en Proveedor. Corregir.
+        /// </summary>
+        public void ValidarCalle()
+        {
+            if (CalleNombre.Length > 50)
+                throw new ApplicationException("El nombre de la calle no debe superar los 50 caracteres.");
+        }
+        /// <summary>
+        /// Este metodo esta replicado en proveedor. Corregir.
+        /// </summary>
+        public void ValidarNumeroCalle()
+        {
+            if (CalleNumero < 0)
+                throw new ApplicationException("No existen alturas de calles negativas. Debe ingresar un valor válido.");
+        }
+
+        public void ValidarEmail()
+        {
+            if (string.IsNullOrEmpty(Email))
+                throw new ApplicationException("El email es requerido.");
+            if (Email.Length > 50)
+                throw new ApplicationException("El email no debe superar los 50 caracteres.");
+        }
     }
 }

@@ -12,12 +12,12 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private IServicioProveedor _servicioProveedor;
         private Proveedor _proveedorAModificar;
         private IUnidadDeTrabajo _unidadDeTrabajo;
-        public ModificacionProveedor(IUnidadDeTrabajo unidadDeTrabajo, int cuit)
+        public ModificacionProveedor(IUnidadDeTrabajo unidadDeTrabajo, int id)
         {
             InitializeComponent();
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioProveedor = new ServicioProveedor(_unidadDeTrabajo.RepositorioProveedor);
-            _proveedorAModificar = _servicioProveedor.GetPorId(cuit);
+            _proveedorAModificar = _servicioProveedor.GetPorId(id);
 
         }
 

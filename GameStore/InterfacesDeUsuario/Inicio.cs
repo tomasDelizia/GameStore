@@ -87,7 +87,8 @@ namespace GameStore.InterfacesDeUsuario
 
         private void BtnSocio_Click(object sender, EventArgs e)
         {
-            ShowSubpanel(PnlSubMenuSocios);
+            //ShowSubpanel(PnlSubMenuSocios);
+            new ConsultaSocio(_unidadDeTrabajo).ShowDialog();
         }
 
         private void BtnArticulos_Click(object sender, EventArgs e)

@@ -273,6 +273,12 @@
     <Compile Include="InterfacesDeUsuario\PresentacionSocios\BajaSocio.Designer.cs">
       <DependentUpon>BajaSocio.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionSocios\ConsultaSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionSocios\ConsultaSocio.Designer.cs">
+      <DependentUpon>ConsultaSocio.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionSocios\ModificacionSocio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -331,12 +337,15 @@
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioArchivo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioArticulo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioBarrio.cs" />
+    <Compile Include="RepositoriosBD\Implementaciones\RepositorioCargo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioDesarrollador.cs" />
+    <Compile Include="RepositoriosBD\Implementaciones\RepositorioEmpleado.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioGenero.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioMarca.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioPlataforma.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioProveedor.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioRol.cs" />
+    <Compile Include="RepositoriosBD\Implementaciones\RepositorioSocio.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioTipoArticulo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioClasificacion.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\UnidadDeTrabajo.cs" />
@@ -345,16 +354,19 @@
     <Compile Include="RepositoriosBD\IRepositorioArchivo.cs" />
     <Compile Include="RepositoriosBD\IRepositorioArticulo.cs" />
     <Compile Include="RepositoriosBD\IRepositorioBarrio.cs" />
+    <Compile Include="RepositoriosBD\IRepositorioCargo.cs" />
     <Compile Include="RepositoriosBD\IRepositorioClasificacion.cs" />
     <Compile Include="Entidades\Marca.cs" />
     <Compile Include="Entidades\Permiso.cs" />
     <Compile Include="Entidades\Plataforma.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
     <Compile Include="RepositoriosBD\IRepositorioDesarrollador.cs" />
+    <Compile Include="RepositoriosBD\IRepositorioEmpleado.cs" />
     <Compile Include="RepositoriosBD\IRepositorioGenero.cs" />
     <Compile Include="RepositoriosBD\IRepositorioPlataforma.cs" />
     <Compile Include="RepositoriosBD\IRepositorioProveedor.cs" />
     <Compile Include="RepositoriosBD\IRepositorioRol.cs" />
+    <Compile Include="RepositoriosBD\IRepositorioSocio.cs" />
     <Compile Include="RepositoriosBD\IRepositorioTipoArticulo.cs" />
     <Compile Include="RepositoriosBD\IRepositorioUsuario.cs" />
     <Compile Include="RepositoriosBD\IUnidadDeTrabajo.cs" />
@@ -370,26 +382,32 @@
     <Compile Include="Servicios\Implementaciones\ServicioArchivo.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioArticulo.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioBarrio.cs" />
+    <Compile Include="Servicios\Implementaciones\ServicioCargo.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioClasificacion.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioDesarrollador.cs" />
+    <Compile Include="Servicios\Implementaciones\ServicioEmpleado.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioGenero.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioMarca.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioPlataforma.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioProveedor.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioRol.cs" />
+    <Compile Include="Servicios\Implementaciones\ServicioSocio.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioTipoArticulo.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioUsuario.cs" />
     <Compile Include="Servicios\IServicio.cs" />
     <Compile Include="Servicios\IServicioArchivo.cs" />
     <Compile Include="Servicios\IServicioArticulo.cs" />
     <Compile Include="Servicios\IServicioBarrio.cs" />
+    <Compile Include="Servicios\IServicioCargo.cs" />
     <Compile Include="Servicios\IServicioClasificacion.cs" />
     <Compile Include="Servicios\IServicioDesarrollador.cs" />
+    <Compile Include="Servicios\IServicioEmpleado.cs" />
     <Compile Include="Servicios\IServicioGenero.cs" />
     <Compile Include="Servicios\IServicioMarca.cs" />
     <Compile Include="Servicios\IServicioPlataforma.cs" />
     <Compile Include="Servicios\IServicioProveedor.cs" />
     <Compile Include="Servicios\IServicioRol.cs" />
+    <Compile Include="Servicios\IServicioSocio.cs" />
     <Compile Include="Servicios\IServicioTipoArticulo.cs" />
     <Compile Include="Servicios\IServicioUsuario.cs" />
     <EmbeddedResource Include="InterfacesDeUsuario\Bienvenida.resx">
@@ -487,6 +505,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionSocios\BajaSocio.resx">
       <DependentUpon>BajaSocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionSocios\ConsultaSocio.resx">
+      <DependentUpon>ConsultaSocio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionSocios\ModificacionSocio.resx">
       <DependentUpon>ModificacionSocio.cs</DependentUpon>
