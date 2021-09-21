@@ -22,6 +22,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         public ConsultaProveedor(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
+            dgvProveedores.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvProveedores.DefaultCellStyle.Font = new Font("Century Gothic", 10);
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioBarrio = new ServicioBarrio(unidadDeTrabajo.RepositorioBarrio);
             _servicioProveedor = new ServicioProveedor(unidadDeTrabajo.RepositorioProveedor);
