@@ -76,7 +76,6 @@ namespace GameStore.Entidades
         {
             if (PrecioUnitario <= 0 || PrecioUnitario >= 10000000)
                 throw new ApplicationException("Ingrese un precio válido.");
-
         }
     }
 }

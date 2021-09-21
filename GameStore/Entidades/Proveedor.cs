@@ -40,5 +40,40 @@ namespace GameStore.Entidades
         public int? IdBarrio { get; set; }
 
         public virtual Barrio Barrio { get; set; }
+
+        public void ValidarRazonSocial()
+        {
+            if (string.IsNullOrEmpty(RazonSocial))
+                throw new ApplicationException("La razón social es requerida.");
+            if (RazonSocial.Length > 50)
+                throw new ApplicationException("El nombre no debe superar los 50 caracteres.");
+        }
+
+        public void ValidarCuit()
+        {
+            string cuit = Cuit.ToString();
+            if (string.IsNullOrEmpty(cuit))
+                throw new ApplicationException("El cuit es requerido");
+            if (Cuit < 0)
+                throw new ApplicationException("Ingrese un CUIT válido.");
+        }
+
+        public void ValidarTelefono()
+        {
+            if (Telefono.Length > 30)
+                throw new ApplicationException("El teléfono no debe superar los 30 caracteres.");
+        }
+
+        public void ValidarCalle()
+        {
+            if (CalleNombre.Length > 50)
+                throw new ApplicationException("El nombre de la calle no debe superar los 50 caracteres.");
+        }
+
+        public void ValidarNumeroCalle()
+        {
+            if (CalleNumero < 0)
+                throw new ApplicationException("No existen alturas de calles negativas. Debe ingresar un valor válido.");
+        }
     }
 }

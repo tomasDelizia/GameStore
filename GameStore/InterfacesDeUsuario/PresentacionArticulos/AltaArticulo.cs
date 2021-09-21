@@ -167,7 +167,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             if (respuesta == DialogResult.Yes)
                 return true;
             return false;
-
         }
 
         private bool EsArticuloValido()

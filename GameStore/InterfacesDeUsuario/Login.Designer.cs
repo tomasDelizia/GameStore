@@ -58,7 +58,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnLogin.Location = new System.Drawing.Point(462, 234);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(94, 31);
-            this.BtnLogin.TabIndex = 0;
+            this.BtnLogin.TabIndex = 3;
             this.BtnLogin.Text = "Ingresar";
             this.BtnLogin.UseVisualStyleBackColor = false;
             this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
@@ -70,7 +70,7 @@ namespace GameStore.InterfacesDeUsuario
             this.TxtNombreUsuario.Location = new System.Drawing.Point(328, 114);
             this.TxtNombreUsuario.Name = "TxtNombreUsuario";
             this.TxtNombreUsuario.Size = new System.Drawing.Size(370, 23);
-            this.TxtNombreUsuario.TabIndex = 3;
+            this.TxtNombreUsuario.TabIndex = 1;
             // 
             // TxtContrasenia
             // 
@@ -80,7 +80,7 @@ namespace GameStore.InterfacesDeUsuario
             this.TxtContrasenia.Name = "TxtContrasenia";
             this.TxtContrasenia.PasswordChar = '*';
             this.TxtContrasenia.Size = new System.Drawing.Size(370, 23);
-            this.TxtContrasenia.TabIndex = 4;
+            this.TxtContrasenia.TabIndex = 2;
             // 
             // panel1
             // 
@@ -112,7 +112,7 @@ namespace GameStore.InterfacesDeUsuario
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(73, 24);
-            this.textBox1.TabIndex = 7;
+            this.textBox1.TabIndex = 4;
             this.textBox1.Text = "Usuario:";
             // 
             // textBox2
@@ -125,7 +125,7 @@ namespace GameStore.InterfacesDeUsuario
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(125, 24);
-            this.textBox2.TabIndex = 8;
+            this.textBox2.TabIndex = 5;
             this.textBox2.Text = "Contraseña:";
             // 
             // label1
@@ -182,6 +182,7 @@ namespace GameStore.InterfacesDeUsuario
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cerrar)).EndInit();

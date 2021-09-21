@@ -45,6 +45,40 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             CargarClasificaciones(cboClasificacion);
             CargarPlataformas(cboPlataforma);
             CargarMarcas(cboMarca);
+            CargarNombre(txtNombre);
+            CargarDescripcion(txtDescripcion);
+            CargarPrecio(numPrecioUnitario);
+            CargarLanzamiento(dateLanzamiento);
+            CargarImagen(imgArticulo);
+        }
+
+        private void CargarImagen(PictureBox imgArticulo)
+        {
+            byte[] contenidoImagen = _articuloAModificar.Archivo.Contenido;
+            MemoryStream memorystream = new MemoryStream(contenidoImagen, 0, contenidoImagen.Length);
+            Image imagen = Image.FromStream(memorystream);
+            imgArticulo.Image = imagen;
+            imgArticulo.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+
+        private void CargarLanzamiento(DateTimePicker dateLanzamiento)
+        {
+            dateLanzamiento.Value = (DateTime)_articuloAModificar.FechaSalida;
+        }
+
+        private void CargarPrecio(NumericUpDown numPrecioUnitario)
+        {
+            numPrecioUnitario.Value = _articuloAModificar.PrecioUnitario;
+        }
+
+        private void CargarDescripcion(RichTextBox txtDescripcion)
+        {
+            txtDescripcion.Text = _articuloAModificar.Descripcion.ToString();
+        }
+
+        private void CargarNombre(TextBox txtNombre)
+        {
+            txtNombre.Text = _articuloAModificar.Nombre.ToString();
         }
 
         private void CargarMarcas(ComboBox combo)
@@ -67,6 +101,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             combo.DisplayMember = "Nombre";
             combo.ValueMember = "IdPlataforma";
             combo.Text = "Selección";
+            combo.SelectedItem = _articuloAModificar.Plataforma;
         }
 
         private void CargarClasificaciones(ComboBox combo)
@@ -78,6 +113,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             combo.DisplayMember = "Nombre";
             combo.ValueMember = "IdClasificacion";
             combo.Text = "Selección";
+            combo.SelectedItem = _articuloAModificar.Clasificacion;
         }
 
         private void CargarTipoArticulos(ComboBox combo)
@@ -90,8 +126,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             combo.DataSource = bindingSource;
             combo.DisplayMember = "Nombre";
             combo.ValueMember = "IdTipoArticulo";
-            combo.SelectedItem = null;
             combo.Text = "Selección";
+            combo.SelectedItem = _articuloAModificar.TipoArticulo;
         }
 
         private void CargarDesarrolladores(ComboBox combo)
@@ -103,6 +139,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             combo.DisplayMember = "Nombre";
             combo.ValueMember = "IdDesarrollador";
             combo.Text = "Selección";
+            combo.SelectedItem = _articuloAModificar.Desarrollador;
         }
 
         private void CargarGeneros(ComboBox combo)
@@ -114,6 +151,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             combo.DisplayMember = "Nombre";
             combo.ValueMember = "IdGenero";
             combo.Text = "Selección";
+            combo.SelectedItem = _articuloAModificar.Genero;
         }
 
         private void btnSubirImagen_Click(object sender, EventArgs e)
@@ -125,8 +163,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                 string nombreImagen = dlgAbrirArchivo.FileName;
                 Image imagen = new Bitmap(nombreImagen);
 
-                pictureBox.Image = imagen;
-                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                imgArticulo.Image = imagen;
+                imgArticulo.SizeMode = PictureBoxSizeMode.StretchImage;
 
                 FileStream fstream = new FileStream(@nombreImagen, FileMode.Open, FileAccess.Read);
                 byte[] contenido = new byte[fstream.Length];
@@ -177,7 +215,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _articuloAModificar.Descripcion = txtDescripcion.Text;
             _articuloAModificar.Stock = 0;
             _articuloAModificar.PrecioUnitario = numPrecioUnitario.Value;
-            _articuloAModificar.FechaSalida = dateTimePicker.Value;
+            _articuloAModificar.FechaSalida = dateLanzamiento.Value;
             _articuloAModificar.Plataforma = (Plataforma)cboPlataforma.SelectedItem;
             _articuloAModificar.TipoArticulo = (TipoArticulo)cboTipoArticulo.SelectedItem;
             if (_articuloAModificar.TipoArticulo.Nombre == "Videojuego")
