@@ -40,7 +40,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbRoles = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,17 +55,17 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(50, 14);
+            this.label1.Location = new System.Drawing.Point(15, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 22);
+            this.label1.Size = new System.Drawing.Size(189, 22);
             this.label1.TabIndex = 37;
-            this.label1.Text = "Nombre:";
+            this.label1.Text = "Nombre de usuario:";
             // 
             // TxtNombre
             // 
             this.TxtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombre.Location = new System.Drawing.Point(151, 9);
+            this.TxtNombre.Location = new System.Drawing.Point(204, 12);
             this.TxtNombre.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(133, 27);
@@ -74,7 +74,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(151, 46);
+            this.textBox1.Location = new System.Drawing.Point(204, 46);
             this.textBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
@@ -86,7 +86,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(15, 48);
+            this.label2.Location = new System.Drawing.Point(80, 48);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 22);
@@ -98,7 +98,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(19, 157);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(769, 139);
+            this.dataGridView1.Size = new System.Drawing.Size(812, 139);
             this.dataGridView1.TabIndex = 41;
             // 
             // label3
@@ -116,7 +116,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(573, 12);
+            this.textBox2.Location = new System.Drawing.Point(616, 12);
             this.textBox2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(133, 27);
@@ -126,7 +126,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             // 
             this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.DimGray;
-            this.button6.Location = new System.Drawing.Point(715, 12);
+            this.button6.Location = new System.Drawing.Point(758, 12);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(73, 27);
             this.button6.TabIndex = 47;
@@ -138,7 +138,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(339, 51);
+            this.label5.Location = new System.Drawing.Point(382, 51);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(222, 22);
@@ -149,7 +149,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             // 
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.Location = new System.Drawing.Point(715, 49);
+            this.button1.Location = new System.Drawing.Point(758, 49);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(73, 27);
             this.button1.TabIndex = 50;
@@ -159,29 +159,29 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(573, 49);
+            this.textBox3.Location = new System.Drawing.Point(616, 49);
             this.textBox3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(133, 27);
             this.textBox3.TabIndex = 49;
             // 
-            // comboBox2
+            // cmbRoles
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.White;
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(19, 81);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(265, 29);
-            this.comboBox2.TabIndex = 51;
-            this.comboBox2.Text = "Rol";
+            this.cmbRoles.BackColor = System.Drawing.Color.White;
+            this.cmbRoles.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRoles.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbRoles.FormattingEnabled = true;
+            this.cmbRoles.Location = new System.Drawing.Point(19, 81);
+            this.cmbRoles.Name = "cmbRoles";
+            this.cmbRoles.Size = new System.Drawing.Size(318, 29);
+            this.cmbRoles.TabIndex = 51;
+            this.cmbRoles.Text = "Rol";
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.DimGray;
-            this.button3.Location = new System.Drawing.Point(588, 302);
+            this.button3.Location = new System.Drawing.Point(631, 302);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(97, 31);
             this.button3.TabIndex = 53;
@@ -192,7 +192,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             // 
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.DimGray;
-            this.button2.Location = new System.Drawing.Point(691, 302);
+            this.button2.Location = new System.Drawing.Point(734, 302);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(97, 31);
             this.button2.TabIndex = 52;
@@ -204,7 +204,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(339, 14);
+            this.label4.Location = new System.Drawing.Point(382, 14);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(222, 22);
@@ -217,7 +217,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.ForeColor = System.Drawing.Color.DimGray;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(573, 85);
+            this.comboBox1.Location = new System.Drawing.Point(616, 85);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(133, 29);
             this.comboBox1.TabIndex = 54;
@@ -227,7 +227,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             // 
             this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.DimGray;
-            this.button4.Location = new System.Drawing.Point(712, 85);
+            this.button4.Location = new System.Drawing.Point(755, 85);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(76, 29);
             this.button4.TabIndex = 55;
@@ -238,7 +238,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             // 
             this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.DimGray;
-            this.button5.Location = new System.Drawing.Point(573, 120);
+            this.button5.Location = new System.Drawing.Point(616, 120);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(215, 31);
             this.button5.TabIndex = 56;
@@ -250,13 +250,13 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(800, 346);
+            this.ClientSize = new System.Drawing.Size(845, 344);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbRoles);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label5);
@@ -272,6 +272,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.Name = "AltaUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Usuario";
+            this.Load += new System.EventHandler(this.AltaUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -291,7 +292,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbRoles;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;

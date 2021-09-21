@@ -37,7 +37,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.tiposDeArticuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tiposDeArticuloTableAdapter = new GameStore.GAMESTOREDataSetTableAdapters.TiposDeArticuloTableAdapter();
             this.cboMarca = new System.Windows.Forms.ComboBox();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.imgArticulo = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnAgregarPlataforma = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dateLanzamiento = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.btnSubirImagen = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioUnitario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gAMESTOREDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tiposDeArticuloBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // numPrecioUnitario
@@ -139,14 +139,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.cboMarca.TabIndex = 74;
             this.cboMarca.Text = "Selección";
             // 
-            // pictureBox
+            // imgArticulo
             // 
-            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox.Location = new System.Drawing.Point(628, 145);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(200, 250);
-            this.pictureBox.TabIndex = 73;
-            this.pictureBox.TabStop = false;
+            this.imgArticulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgArticulo.Location = new System.Drawing.Point(628, 145);
+            this.imgArticulo.Name = "imgArticulo";
+            this.imgArticulo.Size = new System.Drawing.Size(200, 250);
+            this.imgArticulo.TabIndex = 73;
+            this.imgArticulo.TabStop = false;
             // 
             // label10
             // 
@@ -249,15 +249,15 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // dateTimePicker
+            // dateLanzamiento
             // 
-            this.dateTimePicker.CalendarForeColor = System.Drawing.Color.DimGray;
-            this.dateTimePicker.CalendarTitleForeColor = System.Drawing.Color.DimGray;
-            this.dateTimePicker.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker.Location = new System.Drawing.Point(590, 75);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(279, 27);
-            this.dateTimePicker.TabIndex = 57;
+            this.dateLanzamiento.CalendarForeColor = System.Drawing.Color.DimGray;
+            this.dateLanzamiento.CalendarTitleForeColor = System.Drawing.Color.DimGray;
+            this.dateLanzamiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateLanzamiento.Location = new System.Drawing.Point(590, 75);
+            this.dateLanzamiento.Name = "dateLanzamiento";
+            this.dateLanzamiento.Size = new System.Drawing.Size(279, 27);
+            this.dateLanzamiento.TabIndex = 57;
             // 
             // label6
             // 
@@ -454,7 +454,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnAgregarMarca);
             this.Controls.Add(this.cboMarca);
-            this.Controls.Add(this.pictureBox);
+            this.Controls.Add(this.imgArticulo);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -464,7 +464,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.btnAgregarPlataforma);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.dateTimePicker);
+            this.Controls.Add(this.dateLanzamiento);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnSubirImagen);
             this.Controls.Add(this.label5);
@@ -488,7 +488,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioUnitario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gAMESTOREDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tiposDeArticuloBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -503,7 +503,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private System.Windows.Forms.BindingSource tiposDeArticuloBindingSource;
         private GAMESTOREDataSetTableAdapters.TiposDeArticuloTableAdapter tiposDeArticuloTableAdapter;
         private System.Windows.Forms.ComboBox cboMarca;
-        private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.PictureBox imgArticulo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -513,7 +513,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private System.Windows.Forms.Button btnAgregarPlataforma;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.DateTimePicker dateLanzamiento;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnSubirImagen;
         private System.Windows.Forms.Label label5;

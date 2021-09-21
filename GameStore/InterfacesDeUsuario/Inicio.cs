@@ -31,8 +31,6 @@ namespace GameStore.InterfacesDeUsuario
         {
             PnlSubmenuABM.Visible = false;
             PnlSubMenuReporte.Visible = false;
-            PnlSubMenuArticulos.Visible = false;
-            PnlSubMenuProveedores.Visible = false;
             PnlSubMenuSocios.Visible = false;
             PnlSubMenuUsuarios.Visible = false;
             PnlSubMenuEmpleados.Visible = false;
@@ -48,12 +46,8 @@ namespace GameStore.InterfacesDeUsuario
 
         private void hidePanel() 
         {
-            if (PnlSubMenuArticulos.Visible == true)
-                PnlSubMenuArticulos.Visible = false;
             if (PnlSubMenuSocios.Visible == true)
                 PnlSubMenuSocios.Visible = false;
-            if (PnlSubMenuProveedores.Visible == true)
-                PnlSubMenuProveedores.Visible = false;
             if (PnlSubMenuUsuarios.Visible == true)
                 PnlSubMenuUsuarios.Visible = false;
             if (PnlSubMenuEmpleados.Visible == true)
@@ -103,7 +97,7 @@ namespace GameStore.InterfacesDeUsuario
         }
         private void BtnProveedores_Click(object sender, EventArgs e)
         {
-            ShowSubpanel(PnlSubMenuProveedores);
+            new ConsultaProveedor(_unidadDeTrabajo).ShowDialog();
         }
 
         private void BtnUsuario_Click(object sender, EventArgs e)
@@ -126,6 +120,9 @@ namespace GameStore.InterfacesDeUsuario
             this.Close();
         }
 
-
+        private void BtnNuevoUsuario_Click(object sender, EventArgs e)
+        {
+            new AltaUsuario(_unidadDeTrabajo).ShowDialog();
+        }
     }
 }

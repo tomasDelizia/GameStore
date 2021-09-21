@@ -16,6 +16,9 @@
             RepositorioPlataforma = new RepositorioPlataforma(_contextoBd);
             RepositorioArchivo = new RepositorioArchivo(_contextoBd);
             RepositorioMarca = new RepositorioMarca(_contextoBd);
+            RepositorioRol = new RepositorioRol(_contextoBd);
+            RepositorioProveedor = new RepositorioProveedor(_contextoBd);
+            RepositorioBarrio = new RepositorioBarrio(_contextoBd);
         }
 
         public IRepositorioClasificacion RepositorioClasificacion { get; private set; }
@@ -27,7 +30,9 @@
         public IRepositorioArchivo RepositorioArchivo { get; private set; }
         public IRepositorioArticulo RepositorioArticulo { get; private set; }
         public IRepositorioMarca RepositorioMarca { get; private set; }
-
+        public IRepositorioRol RepositorioRol { get; private set; }
+        public IRepositorioProveedor RepositorioProveedor { get; private set; }
+        public IRepositorioBarrio RepositorioBarrio { get; private set; }
         public int Guardar()
         {
             return _contextoBd.SaveChanges();

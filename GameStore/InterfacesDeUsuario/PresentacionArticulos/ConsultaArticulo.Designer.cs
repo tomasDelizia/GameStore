@@ -31,11 +31,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaArticulo));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.numPrecioMax = new System.Windows.Forms.NumericUpDown();
             this.numPrecioMin = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cboPlataforma = new System.Windows.Forms.ComboBox();
@@ -55,21 +53,23 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnReiniciarFiltros = new System.Windows.Forms.Button();
+            this.numPrecioMax = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPrecioMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArticulo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrecioMax)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.Controls.Add(this.btnReiniciarFiltros);
             this.panel1.Controls.Add(this.numPrecioMax);
             this.panel1.Controls.Add(this.numPrecioMin);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cboPlataforma);
@@ -83,39 +83,19 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.panel1.Size = new System.Drawing.Size(776, 191);
             this.panel1.TabIndex = 88;
             // 
-            // numPrecioMax
-            // 
-            this.numPrecioMax.DecimalPlaces = 2;
-            this.numPrecioMax.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numPrecioMax.ForeColor = System.Drawing.Color.DimGray;
-            this.numPrecioMax.Location = new System.Drawing.Point(241, 110);
-            this.numPrecioMax.Maximum = new decimal(new int[] {
-            500000,
-            0,
-            0,
-            0});
-            this.numPrecioMax.Name = "numPrecioMax";
-            this.numPrecioMax.Size = new System.Drawing.Size(109, 27);
-            this.numPrecioMax.TabIndex = 100;
-            this.numPrecioMax.Value = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            // 
             // numPrecioMin
             // 
             this.numPrecioMin.DecimalPlaces = 2;
             this.numPrecioMin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPrecioMin.ForeColor = System.Drawing.Color.DimGray;
-            this.numPrecioMin.Location = new System.Drawing.Point(83, 110);
+            this.numPrecioMin.Location = new System.Drawing.Point(99, 93);
             this.numPrecioMin.Maximum = new decimal(new int[] {
             500000,
             0,
             0,
             0});
             this.numPrecioMin.Name = "numPrecioMin";
-            this.numPrecioMin.Size = new System.Drawing.Size(109, 27);
+            this.numPrecioMin.Size = new System.Drawing.Size(92, 27);
             this.numPrecioMin.TabIndex = 99;
             this.numPrecioMin.Value = new decimal(new int[] {
             1,
@@ -128,7 +108,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(198, 111);
+            this.label8.Location = new System.Drawing.Point(197, 94);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 22);
             this.label8.TabIndex = 98;
@@ -139,29 +119,18 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(4, 112);
+            this.label7.Location = new System.Drawing.Point(13, 96);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 22);
             this.label7.TabIndex = 95;
             this.label7.Text = "Entre $";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(4, 85);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 22);
-            this.label4.TabIndex = 94;
-            this.label4.Text = "Rango de precios:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(409, 80);
+            this.label6.Location = new System.Drawing.Point(409, 94);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(116, 22);
             this.label6.TabIndex = 93;
@@ -172,7 +141,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(371, 45);
+            this.label1.Location = new System.Drawing.Point(371, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 22);
             this.label1.TabIndex = 91;
@@ -184,7 +153,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.cboPlataforma.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPlataforma.ForeColor = System.Drawing.Color.DimGray;
             this.cboPlataforma.FormattingEnabled = true;
-            this.cboPlataforma.Location = new System.Drawing.Point(531, 78);
+            this.cboPlataforma.Location = new System.Drawing.Point(531, 94);
             this.cboPlataforma.Name = "cboPlataforma";
             this.cboPlataforma.Size = new System.Drawing.Size(242, 29);
             this.cboPlataforma.TabIndex = 90;
@@ -206,9 +175,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.txtNombre.BackColor = System.Drawing.Color.White;
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNombre.Location = new System.Drawing.Point(99, 50);
+            this.txtNombre.Location = new System.Drawing.Point(99, 59);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(187, 27);
+            this.txtNombre.Size = new System.Drawing.Size(233, 27);
             this.txtNombre.TabIndex = 71;
             // 
             // label2
@@ -216,7 +185,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(4, 50);
+            this.label2.Location = new System.Drawing.Point(3, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 22);
             this.label2.TabIndex = 76;
@@ -240,7 +209,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.cboTipoArticulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoArticulo.ForeColor = System.Drawing.Color.DimGray;
             this.cboTipoArticulo.FormattingEnabled = true;
-            this.cboTipoArticulo.Location = new System.Drawing.Point(531, 43);
+            this.cboTipoArticulo.Location = new System.Drawing.Point(531, 59);
             this.cboTipoArticulo.Name = "cboTipoArticulo";
             this.cboTipoArticulo.Size = new System.Drawing.Size(242, 29);
             this.cboTipoArticulo.TabIndex = 72;
@@ -260,7 +229,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Plataforma});
             this.dgvArticulos.Location = new System.Drawing.Point(12, 209);
             this.dgvArticulos.Name = "dgvArticulos";
-            this.dgvArticulos.Size = new System.Drawing.Size(612, 229);
+            this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvArticulos.Size = new System.Drawing.Size(612, 200);
             this.dgvArticulos.TabIndex = 89;
             this.dgvArticulos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellClick);
             // 
@@ -322,7 +292,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnAgregar.Location = new System.Drawing.Point(12, 444);
+            this.btnAgregar.Location = new System.Drawing.Point(12, 415);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(40, 40);
             this.btnAgregar.TabIndex = 101;
@@ -335,7 +305,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnModificar.Location = new System.Drawing.Point(58, 444);
+            this.btnModificar.Location = new System.Drawing.Point(58, 415);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(40, 40);
             this.btnModificar.TabIndex = 102;
@@ -348,19 +318,51 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnEliminar.Location = new System.Drawing.Point(104, 444);
+            this.btnEliminar.Location = new System.Drawing.Point(104, 415);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(40, 40);
             this.btnEliminar.TabIndex = 103;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // btnReiniciarFiltros
+            // 
+            this.btnReiniciarFiltros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReiniciarFiltros.ForeColor = System.Drawing.Color.DimGray;
+            this.btnReiniciarFiltros.Location = new System.Drawing.Point(531, 159);
+            this.btnReiniciarFiltros.Name = "btnReiniciarFiltros";
+            this.btnReiniciarFiltros.Size = new System.Drawing.Size(136, 29);
+            this.btnReiniciarFiltros.TabIndex = 101;
+            this.btnReiniciarFiltros.Text = "Reiniciar filtros";
+            this.btnReiniciarFiltros.UseVisualStyleBackColor = true;
+            this.btnReiniciarFiltros.Click += new System.EventHandler(this.btnReiniciarFiltros_Click);
+            // 
+            // numPrecioMax
+            // 
+            this.numPrecioMax.DecimalPlaces = 2;
+            this.numPrecioMax.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numPrecioMax.ForeColor = System.Drawing.Color.DimGray;
+            this.numPrecioMax.Location = new System.Drawing.Point(240, 94);
+            this.numPrecioMax.Maximum = new decimal(new int[] {
+            500000,
+            0,
+            0,
+            0});
+            this.numPrecioMax.Name = "numPrecioMax";
+            this.numPrecioMax.Size = new System.Drawing.Size(92, 27);
+            this.numPrecioMax.TabIndex = 100;
+            this.numPrecioMax.Value = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            // 
             // ConsultaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(800, 492);
+            this.ClientSize = new System.Drawing.Size(800, 464);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
@@ -372,10 +374,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Load += new System.EventHandler(this.ConsultaArticulo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPrecioMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArticulo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrecioMax)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -385,7 +387,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboPlataforma;
@@ -394,7 +395,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.ComboBox cboTipoArticulo;
-        private System.Windows.Forms.NumericUpDown numPrecioMax;
         private System.Windows.Forms.NumericUpDown numPrecioMin;
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.PictureBox picArticulo;
@@ -407,5 +407,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnReiniciarFiltros;
+        private System.Windows.Forms.NumericUpDown numPrecioMax;
     }
 }

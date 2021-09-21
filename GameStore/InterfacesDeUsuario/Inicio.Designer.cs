@@ -78,15 +78,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnModificarUsuario = new System.Windows.Forms.Button();
             this.BtnNuevoUsuario = new System.Windows.Forms.Button();
             this.BtnUsuario = new System.Windows.Forms.Button();
-            this.PnlSubMenuProveedores = new System.Windows.Forms.Panel();
-            this.BtnEliminarProveedores = new System.Windows.Forms.Button();
-            this.BtnModificarProveedores = new System.Windows.Forms.Button();
-            this.BtnNuevoProveedores = new System.Windows.Forms.Button();
             this.BtnProveedores = new System.Windows.Forms.Button();
-            this.PnlSubMenuArticulos = new System.Windows.Forms.Panel();
-            this.BtnEliminarArticulo = new System.Windows.Forms.Button();
-            this.BtnModificarArticulo = new System.Windows.Forms.Button();
-            this.BtnNuevoArticulo = new System.Windows.Forms.Button();
             this.BtnArticulos = new System.Windows.Forms.Button();
             this.PnlSubMenuSocios = new System.Windows.Forms.Panel();
             this.BtnEliminarSocio = new System.Windows.Forms.Button();
@@ -102,8 +94,6 @@ namespace GameStore.InterfacesDeUsuario
             this.PnlSubmenuABM.SuspendLayout();
             this.PnlSubMenuEmpleados.SuspendLayout();
             this.PnlSubMenuUsuarios.SuspendLayout();
-            this.PnlSubMenuProveedores.SuspendLayout();
-            this.PnlSubMenuArticulos.SuspendLayout();
             this.PnlSubMenuSocios.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -453,9 +443,7 @@ namespace GameStore.InterfacesDeUsuario
             this.PnlSubmenuABM.Controls.Add(this.BtnEmpleado);
             this.PnlSubmenuABM.Controls.Add(this.PnlSubMenuUsuarios);
             this.PnlSubmenuABM.Controls.Add(this.BtnUsuario);
-            this.PnlSubmenuABM.Controls.Add(this.PnlSubMenuProveedores);
             this.PnlSubmenuABM.Controls.Add(this.BtnProveedores);
-            this.PnlSubmenuABM.Controls.Add(this.PnlSubMenuArticulos);
             this.PnlSubmenuABM.Controls.Add(this.BtnArticulos);
             this.PnlSubmenuABM.Controls.Add(this.PnlSubMenuSocios);
             this.PnlSubmenuABM.Controls.Add(this.BtnSocio);
@@ -475,7 +463,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnOtros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnOtros.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnOtros.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnOtros.Location = new System.Drawing.Point(0, 802);
+            this.BtnOtros.Location = new System.Drawing.Point(0, 560);
             this.BtnOtros.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnOtros.Name = "BtnOtros";
             this.BtnOtros.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
@@ -491,7 +479,7 @@ namespace GameStore.InterfacesDeUsuario
             this.PnlSubMenuEmpleados.Controls.Add(this.BtnModificarEmpleado);
             this.PnlSubMenuEmpleados.Controls.Add(this.BtnNuevoEmpleado);
             this.PnlSubMenuEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlSubMenuEmpleados.Location = new System.Drawing.Point(0, 678);
+            this.PnlSubMenuEmpleados.Location = new System.Drawing.Point(0, 436);
             this.PnlSubMenuEmpleados.Name = "PnlSubMenuEmpleados";
             this.PnlSubMenuEmpleados.Size = new System.Drawing.Size(272, 124);
             this.PnlSubMenuEmpleados.TabIndex = 9;
@@ -556,7 +544,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEmpleado.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnEmpleado.Location = new System.Drawing.Point(0, 638);
+            this.BtnEmpleado.Location = new System.Drawing.Point(0, 396);
             this.BtnEmpleado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnEmpleado.Name = "BtnEmpleado";
             this.BtnEmpleado.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
@@ -573,7 +561,7 @@ namespace GameStore.InterfacesDeUsuario
             this.PnlSubMenuUsuarios.Controls.Add(this.BtnModificarUsuario);
             this.PnlSubMenuUsuarios.Controls.Add(this.BtnNuevoUsuario);
             this.PnlSubMenuUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlSubMenuUsuarios.Location = new System.Drawing.Point(0, 520);
+            this.PnlSubMenuUsuarios.Location = new System.Drawing.Point(0, 278);
             this.PnlSubMenuUsuarios.Name = "PnlSubMenuUsuarios";
             this.PnlSubMenuUsuarios.Size = new System.Drawing.Size(272, 118);
             this.PnlSubMenuUsuarios.TabIndex = 7;
@@ -628,6 +616,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnNuevoUsuario.Text = "Nuevo";
             this.BtnNuevoUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnNuevoUsuario.UseVisualStyleBackColor = true;
+            this.BtnNuevoUsuario.Click += new System.EventHandler(this.BtnNuevoUsuario_Click);
             // 
             // BtnUsuario
             // 
@@ -638,7 +627,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnUsuario.Location = new System.Drawing.Point(0, 480);
+            this.BtnUsuario.Location = new System.Drawing.Point(0, 238);
             this.BtnUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnUsuario.Name = "BtnUsuario";
             this.BtnUsuario.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
@@ -649,68 +638,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnUsuario.UseVisualStyleBackColor = true;
             this.BtnUsuario.Click += new System.EventHandler(this.BtnUsuario_Click);
             // 
-            // PnlSubMenuProveedores
-            // 
-            this.PnlSubMenuProveedores.Controls.Add(this.BtnEliminarProveedores);
-            this.PnlSubMenuProveedores.Controls.Add(this.BtnModificarProveedores);
-            this.PnlSubMenuProveedores.Controls.Add(this.BtnNuevoProveedores);
-            this.PnlSubMenuProveedores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlSubMenuProveedores.Location = new System.Drawing.Point(0, 361);
-            this.PnlSubMenuProveedores.Name = "PnlSubMenuProveedores";
-            this.PnlSubMenuProveedores.Size = new System.Drawing.Size(272, 119);
-            this.PnlSubMenuProveedores.TabIndex = 5;
-            // 
-            // BtnEliminarProveedores
-            // 
-            this.BtnEliminarProveedores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnEliminarProveedores.FlatAppearance.BorderSize = 0;
-            this.BtnEliminarProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEliminarProveedores.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEliminarProveedores.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnEliminarProveedores.Location = new System.Drawing.Point(0, 80);
-            this.BtnEliminarProveedores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnEliminarProveedores.Name = "BtnEliminarProveedores";
-            this.BtnEliminarProveedores.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.BtnEliminarProveedores.Size = new System.Drawing.Size(272, 40);
-            this.BtnEliminarProveedores.TabIndex = 8;
-            this.BtnEliminarProveedores.Text = "Eliminar";
-            this.BtnEliminarProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminarProveedores.UseVisualStyleBackColor = true;
-            // 
-            // BtnModificarProveedores
-            // 
-            this.BtnModificarProveedores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnModificarProveedores.FlatAppearance.BorderSize = 0;
-            this.BtnModificarProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnModificarProveedores.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnModificarProveedores.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnModificarProveedores.Location = new System.Drawing.Point(0, 40);
-            this.BtnModificarProveedores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnModificarProveedores.Name = "BtnModificarProveedores";
-            this.BtnModificarProveedores.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.BtnModificarProveedores.Size = new System.Drawing.Size(272, 40);
-            this.BtnModificarProveedores.TabIndex = 7;
-            this.BtnModificarProveedores.Text = "Modificar";
-            this.BtnModificarProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnModificarProveedores.UseVisualStyleBackColor = true;
-            // 
-            // BtnNuevoProveedores
-            // 
-            this.BtnNuevoProveedores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnNuevoProveedores.FlatAppearance.BorderSize = 0;
-            this.BtnNuevoProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnNuevoProveedores.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNuevoProveedores.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnNuevoProveedores.Location = new System.Drawing.Point(0, 0);
-            this.BtnNuevoProveedores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnNuevoProveedores.Name = "BtnNuevoProveedores";
-            this.BtnNuevoProveedores.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.BtnNuevoProveedores.Size = new System.Drawing.Size(272, 40);
-            this.BtnNuevoProveedores.TabIndex = 6;
-            this.BtnNuevoProveedores.Text = "Nuevo";
-            this.BtnNuevoProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnNuevoProveedores.UseVisualStyleBackColor = true;
-            // 
             // BtnProveedores
             // 
             this.BtnProveedores.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
@@ -720,7 +647,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnProveedores.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnProveedores.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnProveedores.Location = new System.Drawing.Point(0, 321);
+            this.BtnProveedores.Location = new System.Drawing.Point(0, 198);
             this.BtnProveedores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnProveedores.Name = "BtnProveedores";
             this.BtnProveedores.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
@@ -730,68 +657,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnProveedores.UseVisualStyleBackColor = true;
             this.BtnProveedores.Click += new System.EventHandler(this.BtnProveedores_Click);
-            // 
-            // PnlSubMenuArticulos
-            // 
-            this.PnlSubMenuArticulos.Controls.Add(this.BtnEliminarArticulo);
-            this.PnlSubMenuArticulos.Controls.Add(this.BtnModificarArticulo);
-            this.PnlSubMenuArticulos.Controls.Add(this.BtnNuevoArticulo);
-            this.PnlSubMenuArticulos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlSubMenuArticulos.Location = new System.Drawing.Point(0, 198);
-            this.PnlSubMenuArticulos.Name = "PnlSubMenuArticulos";
-            this.PnlSubMenuArticulos.Size = new System.Drawing.Size(272, 123);
-            this.PnlSubMenuArticulos.TabIndex = 3;
-            // 
-            // BtnEliminarArticulo
-            // 
-            this.BtnEliminarArticulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnEliminarArticulo.FlatAppearance.BorderSize = 0;
-            this.BtnEliminarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEliminarArticulo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEliminarArticulo.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnEliminarArticulo.Location = new System.Drawing.Point(0, 80);
-            this.BtnEliminarArticulo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnEliminarArticulo.Name = "BtnEliminarArticulo";
-            this.BtnEliminarArticulo.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.BtnEliminarArticulo.Size = new System.Drawing.Size(272, 40);
-            this.BtnEliminarArticulo.TabIndex = 5;
-            this.BtnEliminarArticulo.Text = "Eliminar";
-            this.BtnEliminarArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminarArticulo.UseVisualStyleBackColor = true;
-            // 
-            // BtnModificarArticulo
-            // 
-            this.BtnModificarArticulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnModificarArticulo.FlatAppearance.BorderSize = 0;
-            this.BtnModificarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnModificarArticulo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnModificarArticulo.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnModificarArticulo.Location = new System.Drawing.Point(0, 40);
-            this.BtnModificarArticulo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnModificarArticulo.Name = "BtnModificarArticulo";
-            this.BtnModificarArticulo.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.BtnModificarArticulo.Size = new System.Drawing.Size(272, 40);
-            this.BtnModificarArticulo.TabIndex = 4;
-            this.BtnModificarArticulo.Text = "Modificar";
-            this.BtnModificarArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnModificarArticulo.UseVisualStyleBackColor = true;
-            // 
-            // BtnNuevoArticulo
-            // 
-            this.BtnNuevoArticulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnNuevoArticulo.FlatAppearance.BorderSize = 0;
-            this.BtnNuevoArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnNuevoArticulo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNuevoArticulo.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnNuevoArticulo.Location = new System.Drawing.Point(0, 0);
-            this.BtnNuevoArticulo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnNuevoArticulo.Name = "BtnNuevoArticulo";
-            this.BtnNuevoArticulo.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.BtnNuevoArticulo.Size = new System.Drawing.Size(272, 40);
-            this.BtnNuevoArticulo.TabIndex = 3;
-            this.BtnNuevoArticulo.Text = "Nuevo";
-            this.BtnNuevoArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnNuevoArticulo.UseVisualStyleBackColor = true;
             // 
             // BtnArticulos
             // 
@@ -957,8 +822,6 @@ namespace GameStore.InterfacesDeUsuario
             this.PnlSubmenuABM.ResumeLayout(false);
             this.PnlSubMenuEmpleados.ResumeLayout(false);
             this.PnlSubMenuUsuarios.ResumeLayout(false);
-            this.PnlSubMenuProveedores.ResumeLayout(false);
-            this.PnlSubMenuArticulos.ResumeLayout(false);
             this.PnlSubMenuSocios.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -996,25 +859,17 @@ namespace GameStore.InterfacesDeUsuario
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel PnlSubmenuABM;
-        private System.Windows.Forms.Panel PnlSubMenuArticulos;
         private System.Windows.Forms.Button BtnArticulos;
         private System.Windows.Forms.Panel PnlSubMenuSocios;
         private System.Windows.Forms.Button BtnEliminarSocio;
         private System.Windows.Forms.Button BtnModificarSocio;
         private System.Windows.Forms.Button BtnNuevoSocio;
         private System.Windows.Forms.Button BtnSocio;
-        private System.Windows.Forms.Button BtnEliminarArticulo;
-        private System.Windows.Forms.Button BtnModificarArticulo;
-        private System.Windows.Forms.Button BtnNuevoArticulo;
         private System.Windows.Forms.Panel PnlSubMenuUsuarios;
         private System.Windows.Forms.Button BtnEliminarUsuario;
         private System.Windows.Forms.Button BtnModificarUsuario;
         private System.Windows.Forms.Button BtnNuevoUsuario;
         private System.Windows.Forms.Button BtnUsuario;
-        private System.Windows.Forms.Panel PnlSubMenuProveedores;
-        private System.Windows.Forms.Button BtnEliminarProveedores;
-        private System.Windows.Forms.Button BtnModificarProveedores;
-        private System.Windows.Forms.Button BtnNuevoProveedores;
         private System.Windows.Forms.Button BtnProveedores;
         private System.Windows.Forms.Panel PnlSubMenuReporte;
         private System.Windows.Forms.Button BtnMasFieles;

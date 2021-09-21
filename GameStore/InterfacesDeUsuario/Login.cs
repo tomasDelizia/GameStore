@@ -44,5 +44,10 @@ namespace GameStore.InterfacesDeUsuario
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
