@@ -30,34 +30,6 @@ namespace GameStore.InterfacesDeUsuario
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.asdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.articulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoArtículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.otrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.generoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clasificacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.desarrolladorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.plataformaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.masVendidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.masFielesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alquilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.compraProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.BtnCompraProveedor = new System.Windows.Forms.Button();
             this.BtnAlquiler = new System.Windows.Forms.Button();
@@ -67,249 +39,37 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnMasVendidos = new System.Windows.Forms.Button();
             this.BtnReporte = new System.Windows.Forms.Button();
             this.PnlSubmenuABM = new System.Windows.Forms.Panel();
+            this.PnlSubMenuOtros = new System.Windows.Forms.Panel();
+            this.BtnPlataforma = new System.Windows.Forms.Button();
+            this.BtnPerfil = new System.Windows.Forms.Button();
+            this.BtnMarca = new System.Windows.Forms.Button();
+            this.BtnGenero = new System.Windows.Forms.Button();
+            this.BtnFormaPago = new System.Windows.Forms.Button();
+            this.BtnDesarrollador = new System.Windows.Forms.Button();
+            this.BtnClasificacion = new System.Windows.Forms.Button();
+            this.BtnCategoriaAlquiler = new System.Windows.Forms.Button();
+            this.BtnCargo = new System.Windows.Forms.Button();
             this.BtnOtros = new System.Windows.Forms.Button();
-            this.PnlSubMenuEmpleados = new System.Windows.Forms.Panel();
-            this.BtnEliminarEmpleado = new System.Windows.Forms.Button();
-            this.BtnModificarEmpleado = new System.Windows.Forms.Button();
-            this.BtnNuevoEmpleado = new System.Windows.Forms.Button();
             this.BtnEmpleado = new System.Windows.Forms.Button();
-            this.PnlSubMenuUsuarios = new System.Windows.Forms.Panel();
-            this.BtnEliminarUsuario = new System.Windows.Forms.Button();
-            this.BtnModificarUsuario = new System.Windows.Forms.Button();
-            this.BtnNuevoUsuario = new System.Windows.Forms.Button();
             this.BtnUsuario = new System.Windows.Forms.Button();
             this.BtnProveedores = new System.Windows.Forms.Button();
             this.BtnArticulos = new System.Windows.Forms.Button();
-            this.PnlSubMenuSocios = new System.Windows.Forms.Panel();
-            this.BtnEliminarSocio = new System.Windows.Forms.Button();
-            this.BtnModificarSocio = new System.Windows.Forms.Button();
-            this.BtnNuevoSocio = new System.Windows.Forms.Button();
             this.BtnSocio = new System.Windows.Forms.Button();
             this.BtnABM = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.menuStrip1.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             this.PnlSubMenuReporte.SuspendLayout();
             this.PnlSubmenuABM.SuspendLayout();
-            this.PnlSubMenuEmpleados.SuspendLayout();
-            this.PnlSubMenuUsuarios.SuspendLayout();
-            this.PnlSubMenuSocios.SuspendLayout();
+            this.PnlSubMenuOtros.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.asdToolStripMenuItem,
-            this.reportesToolStripMenuItem,
-            this.registrarVentaToolStripMenuItem,
-            this.alquilerToolStripMenuItem,
-            this.compraProveedorToolStripMenuItem,
-            this.salirToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // asdToolStripMenuItem
-            // 
-            this.asdToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientesToolStripMenuItem,
-            this.articulosToolStripMenuItem,
-            this.proveedoresToolStripMenuItem,
-            this.otrosToolStripMenuItem});
-            this.asdToolStripMenuItem.Name = "asdToolStripMenuItem";
-            this.asdToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-            this.asdToolStripMenuItem.Text = "ABM";
-            // 
-            // clientesToolStripMenuItem
-            // 
-            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoToolStripMenuItem,
-            this.modificarToolStripMenuItem,
-            this.eliminarToolStripMenuItem});
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-            this.clientesToolStripMenuItem.Text = "Socio";
-            // 
-            // nuevoToolStripMenuItem
-            // 
-            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.nuevoToolStripMenuItem.Text = "Nuevo";
-            // 
-            // modificarToolStripMenuItem
-            // 
-            this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.modificarToolStripMenuItem.Text = "Modificar";
-            // 
-            // eliminarToolStripMenuItem
-            // 
-            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.eliminarToolStripMenuItem.Text = "Eliminar";
-            // 
-            // articulosToolStripMenuItem
-            // 
-            this.articulosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoArtículoToolStripMenuItem,
-            this.modificarToolStripMenuItem1,
-            this.eliminarToolStripMenuItem1});
-            this.articulosToolStripMenuItem.Name = "articulosToolStripMenuItem";
-            this.articulosToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-            this.articulosToolStripMenuItem.Text = "Articulos";
-            // 
-            // nuevoArtículoToolStripMenuItem
-            // 
-            this.nuevoArtículoToolStripMenuItem.Name = "nuevoArtículoToolStripMenuItem";
-            this.nuevoArtículoToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.nuevoArtículoToolStripMenuItem.Text = "Nuevo";
-            // 
-            // modificarToolStripMenuItem1
-            // 
-            this.modificarToolStripMenuItem1.Name = "modificarToolStripMenuItem1";
-            this.modificarToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
-            this.modificarToolStripMenuItem1.Text = "Modificar";
-            // 
-            // eliminarToolStripMenuItem1
-            // 
-            this.eliminarToolStripMenuItem1.Name = "eliminarToolStripMenuItem1";
-            this.eliminarToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
-            this.eliminarToolStripMenuItem1.Text = "Eliminar";
-            // 
-            // proveedoresToolStripMenuItem
-            // 
-            this.proveedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoToolStripMenuItem3,
-            this.modificarToolStripMenuItem3,
-            this.eliminarToolStripMenuItem3});
-            this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-            this.proveedoresToolStripMenuItem.Text = "Proveedores";
-            // 
-            // nuevoToolStripMenuItem3
-            // 
-            this.nuevoToolStripMenuItem3.Name = "nuevoToolStripMenuItem3";
-            this.nuevoToolStripMenuItem3.Size = new System.Drawing.Size(125, 22);
-            this.nuevoToolStripMenuItem3.Text = "Nuevo";
-            // 
-            // modificarToolStripMenuItem3
-            // 
-            this.modificarToolStripMenuItem3.Name = "modificarToolStripMenuItem3";
-            this.modificarToolStripMenuItem3.Size = new System.Drawing.Size(125, 22);
-            this.modificarToolStripMenuItem3.Text = "Modificar";
-            // 
-            // eliminarToolStripMenuItem3
-            // 
-            this.eliminarToolStripMenuItem3.Name = "eliminarToolStripMenuItem3";
-            this.eliminarToolStripMenuItem3.Size = new System.Drawing.Size(125, 22);
-            this.eliminarToolStripMenuItem3.Text = "Eliminar";
-            // 
-            // otrosToolStripMenuItem
-            // 
-            this.otrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.generoToolStripMenuItem,
-            this.clasificacionToolStripMenuItem,
-            this.desarrolladorToolStripMenuItem,
-            this.plataformaToolStripMenuItem,
-            this.marcaToolStripMenuItem});
-            this.otrosToolStripMenuItem.Name = "otrosToolStripMenuItem";
-            this.otrosToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-            this.otrosToolStripMenuItem.Text = "Otros";
-            // 
-            // generoToolStripMenuItem
-            // 
-            this.generoToolStripMenuItem.Name = "generoToolStripMenuItem";
-            this.generoToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.generoToolStripMenuItem.Text = "Género";
-            // 
-            // clasificacionToolStripMenuItem
-            // 
-            this.clasificacionToolStripMenuItem.Name = "clasificacionToolStripMenuItem";
-            this.clasificacionToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.clasificacionToolStripMenuItem.Text = "Clasificación";
-            // 
-            // desarrolladorToolStripMenuItem
-            // 
-            this.desarrolladorToolStripMenuItem.Name = "desarrolladorToolStripMenuItem";
-            this.desarrolladorToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.desarrolladorToolStripMenuItem.Text = "Desarrollador";
-            // 
-            // plataformaToolStripMenuItem
-            // 
-            this.plataformaToolStripMenuItem.Name = "plataformaToolStripMenuItem";
-            this.plataformaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.plataformaToolStripMenuItem.Text = "Plataforma";
-            // 
-            // marcaToolStripMenuItem
-            // 
-            this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
-            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.marcaToolStripMenuItem.Text = "Marca";
-            // 
-            // reportesToolStripMenuItem
-            // 
-            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.masVendidosToolStripMenuItem,
-            this.masFielesToolStripMenuItem});
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.reportesToolStripMenuItem.Text = "Reportes";
-            // 
-            // masVendidosToolStripMenuItem
-            // 
-            this.masVendidosToolStripMenuItem.Name = "masVendidosToolStripMenuItem";
-            this.masVendidosToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.masVendidosToolStripMenuItem.Text = "Más vendidos";
-            // 
-            // masFielesToolStripMenuItem
-            // 
-            this.masFielesToolStripMenuItem.Name = "masFielesToolStripMenuItem";
-            this.masFielesToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.masFielesToolStripMenuItem.Text = "Más fieles";
-            // 
-            // registrarVentaToolStripMenuItem
-            // 
-            this.registrarVentaToolStripMenuItem.Name = "registrarVentaToolStripMenuItem";
-            this.registrarVentaToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
-            this.registrarVentaToolStripMenuItem.Text = "Registrar Venta";
-            // 
-            // alquilerToolStripMenuItem
-            // 
-            this.alquilerToolStripMenuItem.Name = "alquilerToolStripMenuItem";
-            this.alquilerToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.alquilerToolStripMenuItem.Text = "Alquiler";
-            // 
-            // compraProveedorToolStripMenuItem
-            // 
-            this.compraProveedorToolStripMenuItem.Name = "compraProveedorToolStripMenuItem";
-            this.compraProveedorToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
-            this.compraProveedorToolStripMenuItem.Text = "Compra Proveedor";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salirDelSistemaToolStripMenuItem});
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.salirToolStripMenuItem.Text = "Salir";
-            // 
-            // salirDelSistemaToolStripMenuItem
-            // 
-            this.salirDelSistemaToolStripMenuItem.Name = "salirDelSistemaToolStripMenuItem";
-            this.salirDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.salirDelSistemaToolStripMenuItem.Text = "Salir del sistema";
-            this.salirDelSistemaToolStripMenuItem.Click += new System.EventHandler(this.salirDelSistemaToolStripMenuItem_Click);
-            // 
             // MenuVertical
             // 
             this.MenuVertical.AutoScroll = true;
-            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.MenuVertical.BackColor = System.Drawing.Color.Yellow;
             this.MenuVertical.Controls.Add(this.BtnCompraProveedor);
             this.MenuVertical.Controls.Add(this.BtnAlquiler);
             this.MenuVertical.Controls.Add(this.BtnRegistrarVenta);
@@ -319,10 +79,10 @@ namespace GameStore.InterfacesDeUsuario
             this.MenuVertical.Controls.Add(this.BtnABM);
             this.MenuVertical.Controls.Add(this.panel1);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
-            this.MenuVertical.Location = new System.Drawing.Point(0, 24);
+            this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(289, 725);
+            this.MenuVertical.Size = new System.Drawing.Size(289, 749);
             this.MenuVertical.TabIndex = 2;
             // 
             // BtnCompraProveedor
@@ -330,8 +90,8 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnCompraProveedor.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnCompraProveedor.FlatAppearance.BorderSize = 0;
             this.BtnCompraProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCompraProveedor.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCompraProveedor.Location = new System.Drawing.Point(0, 1208);
+            this.BtnCompraProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCompraProveedor.Location = new System.Drawing.Point(0, 970);
             this.BtnCompraProveedor.Name = "BtnCompraProveedor";
             this.BtnCompraProveedor.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.BtnCompraProveedor.Size = new System.Drawing.Size(272, 40);
@@ -345,8 +105,8 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnAlquiler.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnAlquiler.FlatAppearance.BorderSize = 0;
             this.BtnAlquiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAlquiler.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAlquiler.Location = new System.Drawing.Point(0, 1168);
+            this.BtnAlquiler.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAlquiler.Location = new System.Drawing.Point(0, 930);
             this.BtnAlquiler.Name = "BtnAlquiler";
             this.BtnAlquiler.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.BtnAlquiler.Size = new System.Drawing.Size(272, 40);
@@ -360,8 +120,8 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnRegistrarVenta.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnRegistrarVenta.FlatAppearance.BorderSize = 0;
             this.BtnRegistrarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRegistrarVenta.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRegistrarVenta.Location = new System.Drawing.Point(0, 1128);
+            this.BtnRegistrarVenta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistrarVenta.Location = new System.Drawing.Point(0, 890);
             this.BtnRegistrarVenta.Name = "BtnRegistrarVenta";
             this.BtnRegistrarVenta.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.BtnRegistrarVenta.Size = new System.Drawing.Size(272, 40);
@@ -375,7 +135,7 @@ namespace GameStore.InterfacesDeUsuario
             this.PnlSubMenuReporte.Controls.Add(this.BtnMasFieles);
             this.PnlSubMenuReporte.Controls.Add(this.BtnMasVendidos);
             this.PnlSubMenuReporte.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlSubMenuReporte.Location = new System.Drawing.Point(0, 1042);
+            this.PnlSubMenuReporte.Location = new System.Drawing.Point(0, 804);
             this.PnlSubMenuReporte.Name = "PnlSubMenuReporte";
             this.PnlSubMenuReporte.Size = new System.Drawing.Size(272, 86);
             this.PnlSubMenuReporte.TabIndex = 4;
@@ -425,7 +185,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnReporte.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnReporte.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnReporte.Location = new System.Drawing.Point(0, 1005);
+            this.BtnReporte.Location = new System.Drawing.Point(0, 767);
             this.BtnReporte.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnReporte.Name = "BtnReporte";
             this.BtnReporte.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -438,21 +198,209 @@ namespace GameStore.InterfacesDeUsuario
             // 
             // PnlSubmenuABM
             // 
+            this.PnlSubmenuABM.Controls.Add(this.PnlSubMenuOtros);
             this.PnlSubmenuABM.Controls.Add(this.BtnOtros);
-            this.PnlSubmenuABM.Controls.Add(this.PnlSubMenuEmpleados);
             this.PnlSubmenuABM.Controls.Add(this.BtnEmpleado);
-            this.PnlSubmenuABM.Controls.Add(this.PnlSubMenuUsuarios);
             this.PnlSubmenuABM.Controls.Add(this.BtnUsuario);
             this.PnlSubmenuABM.Controls.Add(this.BtnProveedores);
             this.PnlSubmenuABM.Controls.Add(this.BtnArticulos);
-            this.PnlSubmenuABM.Controls.Add(this.PnlSubMenuSocios);
             this.PnlSubmenuABM.Controls.Add(this.BtnSocio);
             this.PnlSubmenuABM.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnlSubmenuABM.Location = new System.Drawing.Point(0, 160);
             this.PnlSubmenuABM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PnlSubmenuABM.Name = "PnlSubmenuABM";
-            this.PnlSubmenuABM.Size = new System.Drawing.Size(272, 845);
+            this.PnlSubmenuABM.Size = new System.Drawing.Size(272, 607);
             this.PnlSubmenuABM.TabIndex = 2;
+            // 
+            // PnlSubMenuOtros
+            // 
+            this.PnlSubMenuOtros.Controls.Add(this.BtnPlataforma);
+            this.PnlSubMenuOtros.Controls.Add(this.BtnPerfil);
+            this.PnlSubMenuOtros.Controls.Add(this.BtnMarca);
+            this.PnlSubMenuOtros.Controls.Add(this.BtnGenero);
+            this.PnlSubMenuOtros.Controls.Add(this.BtnFormaPago);
+            this.PnlSubMenuOtros.Controls.Add(this.BtnDesarrollador);
+            this.PnlSubMenuOtros.Controls.Add(this.BtnClasificacion);
+            this.PnlSubMenuOtros.Controls.Add(this.BtnCategoriaAlquiler);
+            this.PnlSubMenuOtros.Controls.Add(this.BtnCargo);
+            this.PnlSubMenuOtros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PnlSubMenuOtros.Location = new System.Drawing.Point(0, 240);
+            this.PnlSubMenuOtros.Name = "PnlSubMenuOtros";
+            this.PnlSubMenuOtros.Size = new System.Drawing.Size(272, 364);
+            this.PnlSubMenuOtros.TabIndex = 11;
+            // 
+            // BtnPlataforma
+            // 
+            this.BtnPlataforma.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnPlataforma.DialogResult = System.Windows.Forms.DialogResult.Retry;
+            this.BtnPlataforma.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnPlataforma.FlatAppearance.BorderSize = 0;
+            this.BtnPlataforma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPlataforma.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPlataforma.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnPlataforma.Location = new System.Drawing.Point(0, 320);
+            this.BtnPlataforma.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnPlataforma.Name = "BtnPlataforma";
+            this.BtnPlataforma.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.BtnPlataforma.Size = new System.Drawing.Size(272, 40);
+            this.BtnPlataforma.TabIndex = 16;
+            this.BtnPlataforma.Text = "Plataforma";
+            this.BtnPlataforma.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnPlataforma.UseVisualStyleBackColor = true;
+            // 
+            // BtnPerfil
+            // 
+            this.BtnPerfil.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnPerfil.DialogResult = System.Windows.Forms.DialogResult.Retry;
+            this.BtnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnPerfil.FlatAppearance.BorderSize = 0;
+            this.BtnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPerfil.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPerfil.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnPerfil.Location = new System.Drawing.Point(0, 280);
+            this.BtnPerfil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnPerfil.Name = "BtnPerfil";
+            this.BtnPerfil.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.BtnPerfil.Size = new System.Drawing.Size(272, 40);
+            this.BtnPerfil.TabIndex = 15;
+            this.BtnPerfil.Text = "Perfil";
+            this.BtnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnPerfil.UseVisualStyleBackColor = true;
+            // 
+            // BtnMarca
+            // 
+            this.BtnMarca.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnMarca.DialogResult = System.Windows.Forms.DialogResult.Retry;
+            this.BtnMarca.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnMarca.FlatAppearance.BorderSize = 0;
+            this.BtnMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMarca.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMarca.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnMarca.Location = new System.Drawing.Point(0, 240);
+            this.BtnMarca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnMarca.Name = "BtnMarca";
+            this.BtnMarca.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.BtnMarca.Size = new System.Drawing.Size(272, 40);
+            this.BtnMarca.TabIndex = 14;
+            this.BtnMarca.Text = "Marca";
+            this.BtnMarca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnMarca.UseVisualStyleBackColor = true;
+            // 
+            // BtnGenero
+            // 
+            this.BtnGenero.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnGenero.DialogResult = System.Windows.Forms.DialogResult.Retry;
+            this.BtnGenero.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnGenero.FlatAppearance.BorderSize = 0;
+            this.BtnGenero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGenero.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGenero.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnGenero.Location = new System.Drawing.Point(0, 200);
+            this.BtnGenero.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnGenero.Name = "BtnGenero";
+            this.BtnGenero.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.BtnGenero.Size = new System.Drawing.Size(272, 40);
+            this.BtnGenero.TabIndex = 13;
+            this.BtnGenero.Text = "Genero";
+            this.BtnGenero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnGenero.UseVisualStyleBackColor = true;
+            // 
+            // BtnFormaPago
+            // 
+            this.BtnFormaPago.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnFormaPago.DialogResult = System.Windows.Forms.DialogResult.Retry;
+            this.BtnFormaPago.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnFormaPago.FlatAppearance.BorderSize = 0;
+            this.BtnFormaPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnFormaPago.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFormaPago.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnFormaPago.Location = new System.Drawing.Point(0, 160);
+            this.BtnFormaPago.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnFormaPago.Name = "BtnFormaPago";
+            this.BtnFormaPago.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.BtnFormaPago.Size = new System.Drawing.Size(272, 40);
+            this.BtnFormaPago.TabIndex = 12;
+            this.BtnFormaPago.Text = "Forma De Pago";
+            this.BtnFormaPago.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnFormaPago.UseVisualStyleBackColor = true;
+            this.BtnFormaPago.Click += new System.EventHandler(this.BtnFormaPago_Click);
+            // 
+            // BtnDesarrollador
+            // 
+            this.BtnDesarrollador.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnDesarrollador.DialogResult = System.Windows.Forms.DialogResult.Retry;
+            this.BtnDesarrollador.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnDesarrollador.FlatAppearance.BorderSize = 0;
+            this.BtnDesarrollador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDesarrollador.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDesarrollador.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnDesarrollador.Location = new System.Drawing.Point(0, 120);
+            this.BtnDesarrollador.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnDesarrollador.Name = "BtnDesarrollador";
+            this.BtnDesarrollador.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.BtnDesarrollador.Size = new System.Drawing.Size(272, 40);
+            this.BtnDesarrollador.TabIndex = 11;
+            this.BtnDesarrollador.Text = "Desarrollador";
+            this.BtnDesarrollador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnDesarrollador.UseVisualStyleBackColor = true;
+            this.BtnDesarrollador.Click += new System.EventHandler(this.BtnDesarrollador_Click);
+            // 
+            // BtnClasificacion
+            // 
+            this.BtnClasificacion.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnClasificacion.DialogResult = System.Windows.Forms.DialogResult.Retry;
+            this.BtnClasificacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnClasificacion.FlatAppearance.BorderSize = 0;
+            this.BtnClasificacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClasificacion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClasificacion.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnClasificacion.Location = new System.Drawing.Point(0, 80);
+            this.BtnClasificacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnClasificacion.Name = "BtnClasificacion";
+            this.BtnClasificacion.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.BtnClasificacion.Size = new System.Drawing.Size(272, 40);
+            this.BtnClasificacion.TabIndex = 10;
+            this.BtnClasificacion.Text = "Clasificacion";
+            this.BtnClasificacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnClasificacion.UseVisualStyleBackColor = true;
+            // 
+            // BtnCategoriaAlquiler
+            // 
+            this.BtnCategoriaAlquiler.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnCategoriaAlquiler.DialogResult = System.Windows.Forms.DialogResult.Retry;
+            this.BtnCategoriaAlquiler.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCategoriaAlquiler.FlatAppearance.BorderSize = 0;
+            this.BtnCategoriaAlquiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCategoriaAlquiler.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCategoriaAlquiler.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnCategoriaAlquiler.Location = new System.Drawing.Point(0, 40);
+            this.BtnCategoriaAlquiler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnCategoriaAlquiler.Name = "BtnCategoriaAlquiler";
+            this.BtnCategoriaAlquiler.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.BtnCategoriaAlquiler.Size = new System.Drawing.Size(272, 40);
+            this.BtnCategoriaAlquiler.TabIndex = 9;
+            this.BtnCategoriaAlquiler.Text = "Categoria De Alquiler";
+            this.BtnCategoriaAlquiler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCategoriaAlquiler.UseVisualStyleBackColor = true;
+            // 
+            // BtnCargo
+            // 
+            this.BtnCargo.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnCargo.DialogResult = System.Windows.Forms.DialogResult.Retry;
+            this.BtnCargo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCargo.FlatAppearance.BorderSize = 0;
+            this.BtnCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCargo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCargo.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnCargo.Location = new System.Drawing.Point(0, 0);
+            this.BtnCargo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnCargo.Name = "BtnCargo";
+            this.BtnCargo.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.BtnCargo.Size = new System.Drawing.Size(272, 40);
+            this.BtnCargo.TabIndex = 8;
+            this.BtnCargo.Text = "Cargo";
+            this.BtnCargo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCargo.UseVisualStyleBackColor = true;
             // 
             // BtnOtros
             // 
@@ -463,7 +411,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnOtros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnOtros.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnOtros.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnOtros.Location = new System.Drawing.Point(0, 560);
+            this.BtnOtros.Location = new System.Drawing.Point(0, 200);
             this.BtnOtros.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnOtros.Name = "BtnOtros";
             this.BtnOtros.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
@@ -472,68 +420,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnOtros.Text = "Otros";
             this.BtnOtros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnOtros.UseVisualStyleBackColor = true;
-            // 
-            // PnlSubMenuEmpleados
-            // 
-            this.PnlSubMenuEmpleados.Controls.Add(this.BtnEliminarEmpleado);
-            this.PnlSubMenuEmpleados.Controls.Add(this.BtnModificarEmpleado);
-            this.PnlSubMenuEmpleados.Controls.Add(this.BtnNuevoEmpleado);
-            this.PnlSubMenuEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlSubMenuEmpleados.Location = new System.Drawing.Point(0, 436);
-            this.PnlSubMenuEmpleados.Name = "PnlSubMenuEmpleados";
-            this.PnlSubMenuEmpleados.Size = new System.Drawing.Size(272, 124);
-            this.PnlSubMenuEmpleados.TabIndex = 9;
-            // 
-            // BtnEliminarEmpleado
-            // 
-            this.BtnEliminarEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnEliminarEmpleado.FlatAppearance.BorderSize = 0;
-            this.BtnEliminarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEliminarEmpleado.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEliminarEmpleado.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnEliminarEmpleado.Location = new System.Drawing.Point(0, 80);
-            this.BtnEliminarEmpleado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnEliminarEmpleado.Name = "BtnEliminarEmpleado";
-            this.BtnEliminarEmpleado.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.BtnEliminarEmpleado.Size = new System.Drawing.Size(272, 40);
-            this.BtnEliminarEmpleado.TabIndex = 14;
-            this.BtnEliminarEmpleado.Text = "Eliminar";
-            this.BtnEliminarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminarEmpleado.UseVisualStyleBackColor = true;
-            // 
-            // BtnModificarEmpleado
-            // 
-            this.BtnModificarEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnModificarEmpleado.FlatAppearance.BorderSize = 0;
-            this.BtnModificarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnModificarEmpleado.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnModificarEmpleado.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnModificarEmpleado.Location = new System.Drawing.Point(0, 40);
-            this.BtnModificarEmpleado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnModificarEmpleado.Name = "BtnModificarEmpleado";
-            this.BtnModificarEmpleado.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.BtnModificarEmpleado.Size = new System.Drawing.Size(272, 40);
-            this.BtnModificarEmpleado.TabIndex = 13;
-            this.BtnModificarEmpleado.Text = "Modificar";
-            this.BtnModificarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnModificarEmpleado.UseVisualStyleBackColor = true;
-            // 
-            // BtnNuevoEmpleado
-            // 
-            this.BtnNuevoEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnNuevoEmpleado.FlatAppearance.BorderSize = 0;
-            this.BtnNuevoEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnNuevoEmpleado.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNuevoEmpleado.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnNuevoEmpleado.Location = new System.Drawing.Point(0, 0);
-            this.BtnNuevoEmpleado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnNuevoEmpleado.Name = "BtnNuevoEmpleado";
-            this.BtnNuevoEmpleado.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.BtnNuevoEmpleado.Size = new System.Drawing.Size(272, 40);
-            this.BtnNuevoEmpleado.TabIndex = 12;
-            this.BtnNuevoEmpleado.Text = "Nuevo";
-            this.BtnNuevoEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnNuevoEmpleado.UseVisualStyleBackColor = true;
+            this.BtnOtros.Click += new System.EventHandler(this.BtnOtros_Click);
             // 
             // BtnEmpleado
             // 
@@ -544,7 +431,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEmpleado.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnEmpleado.Location = new System.Drawing.Point(0, 396);
+            this.BtnEmpleado.Location = new System.Drawing.Point(0, 160);
             this.BtnEmpleado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnEmpleado.Name = "BtnEmpleado";
             this.BtnEmpleado.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
@@ -555,69 +442,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnEmpleado.UseVisualStyleBackColor = true;
             this.BtnEmpleado.Click += new System.EventHandler(this.BtnEmpleado_Click);
             // 
-            // PnlSubMenuUsuarios
-            // 
-            this.PnlSubMenuUsuarios.Controls.Add(this.BtnEliminarUsuario);
-            this.PnlSubMenuUsuarios.Controls.Add(this.BtnModificarUsuario);
-            this.PnlSubMenuUsuarios.Controls.Add(this.BtnNuevoUsuario);
-            this.PnlSubMenuUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlSubMenuUsuarios.Location = new System.Drawing.Point(0, 278);
-            this.PnlSubMenuUsuarios.Name = "PnlSubMenuUsuarios";
-            this.PnlSubMenuUsuarios.Size = new System.Drawing.Size(272, 118);
-            this.PnlSubMenuUsuarios.TabIndex = 7;
-            // 
-            // BtnEliminarUsuario
-            // 
-            this.BtnEliminarUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnEliminarUsuario.FlatAppearance.BorderSize = 0;
-            this.BtnEliminarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEliminarUsuario.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEliminarUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnEliminarUsuario.Location = new System.Drawing.Point(0, 80);
-            this.BtnEliminarUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnEliminarUsuario.Name = "BtnEliminarUsuario";
-            this.BtnEliminarUsuario.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.BtnEliminarUsuario.Size = new System.Drawing.Size(272, 40);
-            this.BtnEliminarUsuario.TabIndex = 11;
-            this.BtnEliminarUsuario.Text = "Eliminar";
-            this.BtnEliminarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminarUsuario.UseVisualStyleBackColor = true;
-            // 
-            // BtnModificarUsuario
-            // 
-            this.BtnModificarUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnModificarUsuario.FlatAppearance.BorderSize = 0;
-            this.BtnModificarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnModificarUsuario.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnModificarUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnModificarUsuario.Location = new System.Drawing.Point(0, 40);
-            this.BtnModificarUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnModificarUsuario.Name = "BtnModificarUsuario";
-            this.BtnModificarUsuario.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.BtnModificarUsuario.Size = new System.Drawing.Size(272, 40);
-            this.BtnModificarUsuario.TabIndex = 10;
-            this.BtnModificarUsuario.Text = "Modificar";
-            this.BtnModificarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnModificarUsuario.UseVisualStyleBackColor = true;
-            // 
-            // BtnNuevoUsuario
-            // 
-            this.BtnNuevoUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnNuevoUsuario.FlatAppearance.BorderSize = 0;
-            this.BtnNuevoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnNuevoUsuario.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNuevoUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnNuevoUsuario.Location = new System.Drawing.Point(0, 0);
-            this.BtnNuevoUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnNuevoUsuario.Name = "BtnNuevoUsuario";
-            this.BtnNuevoUsuario.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.BtnNuevoUsuario.Size = new System.Drawing.Size(272, 40);
-            this.BtnNuevoUsuario.TabIndex = 9;
-            this.BtnNuevoUsuario.Text = "Nuevo";
-            this.BtnNuevoUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnNuevoUsuario.UseVisualStyleBackColor = true;
-            this.BtnNuevoUsuario.Click += new System.EventHandler(this.BtnNuevoUsuario_Click);
-            // 
             // BtnUsuario
             // 
             this.BtnUsuario.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
@@ -627,7 +451,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnUsuario.Location = new System.Drawing.Point(0, 238);
+            this.BtnUsuario.Location = new System.Drawing.Point(0, 120);
             this.BtnUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnUsuario.Name = "BtnUsuario";
             this.BtnUsuario.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
@@ -647,7 +471,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnProveedores.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnProveedores.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnProveedores.Location = new System.Drawing.Point(0, 198);
+            this.BtnProveedores.Location = new System.Drawing.Point(0, 80);
             this.BtnProveedores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnProveedores.Name = "BtnProveedores";
             this.BtnProveedores.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
@@ -667,7 +491,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnArticulos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnArticulos.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnArticulos.Location = new System.Drawing.Point(0, 158);
+            this.BtnArticulos.Location = new System.Drawing.Point(0, 40);
             this.BtnArticulos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnArticulos.Name = "BtnArticulos";
             this.BtnArticulos.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
@@ -677,69 +501,6 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnArticulos.UseVisualStyleBackColor = true;
             this.BtnArticulos.Click += new System.EventHandler(this.BtnArticulos_Click);
-            // 
-            // PnlSubMenuSocios
-            // 
-            this.PnlSubMenuSocios.Controls.Add(this.BtnEliminarSocio);
-            this.PnlSubMenuSocios.Controls.Add(this.BtnModificarSocio);
-            this.PnlSubMenuSocios.Controls.Add(this.BtnNuevoSocio);
-            this.PnlSubMenuSocios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlSubMenuSocios.Location = new System.Drawing.Point(0, 40);
-            this.PnlSubMenuSocios.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.PnlSubMenuSocios.Name = "PnlSubMenuSocios";
-            this.PnlSubMenuSocios.Size = new System.Drawing.Size(272, 118);
-            this.PnlSubMenuSocios.TabIndex = 1;
-            // 
-            // BtnEliminarSocio
-            // 
-            this.BtnEliminarSocio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnEliminarSocio.FlatAppearance.BorderSize = 0;
-            this.BtnEliminarSocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEliminarSocio.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEliminarSocio.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnEliminarSocio.Location = new System.Drawing.Point(0, 80);
-            this.BtnEliminarSocio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnEliminarSocio.Name = "BtnEliminarSocio";
-            this.BtnEliminarSocio.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.BtnEliminarSocio.Size = new System.Drawing.Size(272, 40);
-            this.BtnEliminarSocio.TabIndex = 2;
-            this.BtnEliminarSocio.Text = "Eliminar";
-            this.BtnEliminarSocio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminarSocio.UseVisualStyleBackColor = true;
-            // 
-            // BtnModificarSocio
-            // 
-            this.BtnModificarSocio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnModificarSocio.FlatAppearance.BorderSize = 0;
-            this.BtnModificarSocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnModificarSocio.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnModificarSocio.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnModificarSocio.Location = new System.Drawing.Point(0, 40);
-            this.BtnModificarSocio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnModificarSocio.Name = "BtnModificarSocio";
-            this.BtnModificarSocio.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.BtnModificarSocio.Size = new System.Drawing.Size(272, 40);
-            this.BtnModificarSocio.TabIndex = 1;
-            this.BtnModificarSocio.Text = "Modificar";
-            this.BtnModificarSocio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnModificarSocio.UseVisualStyleBackColor = true;
-            // 
-            // BtnNuevoSocio
-            // 
-            this.BtnNuevoSocio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnNuevoSocio.FlatAppearance.BorderSize = 0;
-            this.BtnNuevoSocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnNuevoSocio.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNuevoSocio.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnNuevoSocio.Location = new System.Drawing.Point(0, 0);
-            this.BtnNuevoSocio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnNuevoSocio.Name = "BtnNuevoSocio";
-            this.BtnNuevoSocio.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.BtnNuevoSocio.Size = new System.Drawing.Size(272, 40);
-            this.BtnNuevoSocio.TabIndex = 0;
-            this.BtnNuevoSocio.Text = "Nuevo";
-            this.BtnNuevoSocio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnNuevoSocio.UseVisualStyleBackColor = true;
             // 
             // BtnSocio
             // 
@@ -806,89 +567,51 @@ namespace GameStore.InterfacesDeUsuario
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.MenuVertical);
-            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.DimGray;
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.Inicio_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.MenuVertical.ResumeLayout(false);
             this.PnlSubMenuReporte.ResumeLayout(false);
             this.PnlSubmenuABM.ResumeLayout(false);
-            this.PnlSubMenuEmpleados.ResumeLayout(false);
-            this.PnlSubMenuUsuarios.ResumeLayout(false);
-            this.PnlSubMenuSocios.ResumeLayout(false);
+            this.PnlSubMenuOtros.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem masVendidosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem masFielesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirDelSistemaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem asdToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem articulosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem otrosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem generoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clasificacionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem desarrolladorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem plataformaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem marcaToolStripMenuItem;
         private System.Windows.Forms.Panel MenuVertical;
         private System.Windows.Forms.Button BtnABM;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel PnlSubmenuABM;
         private System.Windows.Forms.Button BtnArticulos;
-        private System.Windows.Forms.Panel PnlSubMenuSocios;
-        private System.Windows.Forms.Button BtnEliminarSocio;
-        private System.Windows.Forms.Button BtnModificarSocio;
-        private System.Windows.Forms.Button BtnNuevoSocio;
         private System.Windows.Forms.Button BtnSocio;
-        private System.Windows.Forms.Panel PnlSubMenuUsuarios;
-        private System.Windows.Forms.Button BtnEliminarUsuario;
-        private System.Windows.Forms.Button BtnModificarUsuario;
-        private System.Windows.Forms.Button BtnNuevoUsuario;
         private System.Windows.Forms.Button BtnUsuario;
         private System.Windows.Forms.Button BtnProveedores;
         private System.Windows.Forms.Panel PnlSubMenuReporte;
         private System.Windows.Forms.Button BtnMasFieles;
         private System.Windows.Forms.Button BtnMasVendidos;
         private System.Windows.Forms.Button BtnReporte;
-        private System.Windows.Forms.Panel PnlSubMenuEmpleados;
-        private System.Windows.Forms.Button BtnEliminarEmpleado;
-        private System.Windows.Forms.Button BtnModificarEmpleado;
-        private System.Windows.Forms.Button BtnNuevoEmpleado;
         private System.Windows.Forms.Button BtnEmpleado;
         private System.Windows.Forms.Button BtnCompraProveedor;
         private System.Windows.Forms.Button BtnAlquiler;
         private System.Windows.Forms.Button BtnRegistrarVenta;
         private System.Windows.Forms.Button BtnOtros;
-        private System.Windows.Forms.ToolStripMenuItem registrarVentaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem alquilerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem compraProveedorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nuevoArtículoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem1;
+        private System.Windows.Forms.Panel PnlSubMenuOtros;
+        private System.Windows.Forms.Button BtnCargo;
+        private System.Windows.Forms.Button BtnPlataforma;
+        private System.Windows.Forms.Button BtnPerfil;
+        private System.Windows.Forms.Button BtnMarca;
+        private System.Windows.Forms.Button BtnGenero;
+        private System.Windows.Forms.Button BtnFormaPago;
+        private System.Windows.Forms.Button BtnDesarrollador;
+        private System.Windows.Forms.Button BtnClasificacion;
+        private System.Windows.Forms.Button BtnCategoriaAlquiler;
     }
 }

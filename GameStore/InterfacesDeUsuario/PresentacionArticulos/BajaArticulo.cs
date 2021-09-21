@@ -28,8 +28,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             txtPrecio.Text = _articuloABorrar.PrecioUnitario.ToString();
         }
 
-
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try
@@ -60,6 +58,5 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         {
             this.Dispose();
         }
-
     }
 }

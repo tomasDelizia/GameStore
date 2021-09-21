@@ -16,6 +16,7 @@ namespace GameStore.RepositoriosBD
         IRepositorioRol RepositorioRol { get; }
         IRepositorioProveedor RepositorioProveedor { get; }
         IRepositorioBarrio RepositorioBarrio { get; }
+        IRepositorioFormaPago RepositorioFormaPago { get; }
         int Guardar();
     }
 }

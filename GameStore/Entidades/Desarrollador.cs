@@ -22,5 +22,13 @@ namespace GameStore.Entidades
         public string Nombre { get; set; }
 
         public string Descripcion { get; set; }
+
+        public void ValidarNombre()
+        {
+            if (string.IsNullOrEmpty(Nombre))
+                throw new ApplicationException("El nombre es requerido.");
+            if (Nombre.Length > 50)
+                throw new ApplicationException("El nombre no debe superar los 50 caracteres.");
+        }
     }
 }

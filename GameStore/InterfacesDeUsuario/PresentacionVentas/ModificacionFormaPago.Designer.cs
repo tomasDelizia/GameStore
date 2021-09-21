@@ -1,7 +1,7 @@
 ﻿
 namespace GameStore.InterfacesDeUsuario.PresentacionVentas
 {
-    partial class BajaFormaPago
+    partial class ModificacionFormaPago
     {
         /// <summary>
         /// Required designer variable.
@@ -33,8 +33,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.TxtDescripcion = new System.Windows.Forms.RichTextBox();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnModificar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -42,7 +42,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(8, 38);
+            this.label2.Location = new System.Drawing.Point(8, 41);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 22);
@@ -51,7 +51,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             // 
             // TxtDescripcion
             // 
-            this.TxtDescripcion.Location = new System.Drawing.Point(12, 63);
+            this.TxtDescripcion.Location = new System.Drawing.Point(12, 66);
             this.TxtDescripcion.Name = "TxtDescripcion";
             this.TxtDescripcion.Size = new System.Drawing.Size(385, 179);
             this.TxtDescripcion.TabIndex = 85;
@@ -60,7 +60,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             // TxtNombre
             // 
             this.TxtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombre.Location = new System.Drawing.Point(109, 8);
+            this.TxtNombre.Location = new System.Drawing.Point(109, 11);
             this.TxtNombre.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(229, 27);
@@ -71,30 +71,18 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(8, 10);
+            this.label1.Location = new System.Drawing.Point(8, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 22);
             this.label1.TabIndex = 83;
             this.label1.Text = "Nombre:";
             // 
-            // BtnEliminar
-            // 
-            this.BtnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEliminar.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnEliminar.Location = new System.Drawing.Point(198, 248);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(97, 31);
-            this.BtnEliminar.TabIndex = 82;
-            this.BtnEliminar.Text = "Eliminar";
-            this.BtnEliminar.UseVisualStyleBackColor = true;
-            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
-            // 
             // BtnCancelar
             // 
             this.BtnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnCancelar.Location = new System.Drawing.Point(301, 248);
+            this.BtnCancelar.Location = new System.Drawing.Point(301, 251);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(97, 31);
             this.BtnCancelar.TabIndex = 81;
@@ -102,21 +90,33 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.BtnCancelar.UseVisualStyleBackColor = true;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
-            // BajaFormaPago
+            // BtnModificar
+            // 
+            this.BtnModificar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnModificar.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnModificar.Location = new System.Drawing.Point(197, 252);
+            this.BtnModificar.Name = "BtnModificar";
+            this.BtnModificar.Size = new System.Drawing.Size(98, 29);
+            this.BtnModificar.TabIndex = 87;
+            this.BtnModificar.Text = "Modificar";
+            this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
+            // 
+            // ModificacionFormaPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(410, 287);
+            this.ClientSize = new System.Drawing.Size(409, 294);
+            this.Controls.Add(this.BtnModificar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtDescripcion);
             this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnCancelar);
-            this.Name = "BajaFormaPago";
-            this.Text = "BajaFormaPago";
-            this.Load += new System.EventHandler(this.BajaFormaPago_Load);
+            this.Name = "ModificacionFormaPago";
+            this.Text = "ModificacionFormaPago";
+            this.Load += new System.EventHandler(this.ModificacionFormaPago_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,7 +128,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
         private System.Windows.Forms.RichTextBox TxtDescripcion;
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button BtnCancelar;
+        private System.Windows.Forms.Button BtnModificar;
     }
 }

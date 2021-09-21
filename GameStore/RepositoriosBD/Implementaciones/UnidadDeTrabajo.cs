@@ -19,6 +19,7 @@
             RepositorioRol = new RepositorioRol(_contextoBd);
             RepositorioProveedor = new RepositorioProveedor(_contextoBd);
             RepositorioBarrio = new RepositorioBarrio(_contextoBd);
+            RepositorioFormaPago = new RepositorioFormaPago(_contextoBd);
         }
 
         public IRepositorioClasificacion RepositorioClasificacion { get; private set; }
@@ -33,6 +34,7 @@
         public IRepositorioRol RepositorioRol { get; private set; }
         public IRepositorioProveedor RepositorioProveedor { get; private set; }
         public IRepositorioBarrio RepositorioBarrio { get; private set; }
+        public IRepositorioFormaPago RepositorioFormaPago { get; private set; }
         public int Guardar()
         {
             return _contextoBd.SaveChanges();

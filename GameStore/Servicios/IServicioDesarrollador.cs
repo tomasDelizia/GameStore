@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace GameStore.Servicios
 {
-    interface IServicioDesarrollador : IServicio<Desarrollador>
+    public interface IServicioDesarrollador : IServicio<Desarrollador>
     {
+        void ValidarDesarrollador(Desarrollador desarrollador);
+        Desarrollador GetPorId(int id);
+
         List<Desarrollador> ListarDesarrolladores();
     }
 }

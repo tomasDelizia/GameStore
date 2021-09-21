@@ -5,6 +5,7 @@ using GameStore.InterfacesDeUsuario.PresentacionCompras;
 using GameStore.InterfacesDeUsuario.PresentacionEmpleados;
 using GameStore.InterfacesDeUsuario.PresentacionSocios;
 using GameStore.InterfacesDeUsuario.PresentacionUsuarios;
+using GameStore.InterfacesDeUsuario.PresentacionVentas;
 using GameStore.RepositoriosBD;
 
 namespace GameStore.InterfacesDeUsuario
@@ -31,12 +32,9 @@ namespace GameStore.InterfacesDeUsuario
         {
             PnlSubmenuABM.Visible = false;
             PnlSubMenuReporte.Visible = false;
-            PnlSubMenuSocios.Visible = false;
-            PnlSubMenuUsuarios.Visible = false;
-            PnlSubMenuEmpleados.Visible = false;
+            PnlSubMenuOtros.Visible = false;
         }
-
-        private void hideSubMenu() 
+        private void hideSubMenu()
         {
             if (PnlSubmenuABM.Visible == true)
                 PnlSubmenuABM.Visible = false;
@@ -44,14 +42,22 @@ namespace GameStore.InterfacesDeUsuario
                 PnlSubMenuReporte.Visible = false;
         }
 
-        private void hidePanel() 
+        private void hidePanel()
         {
-            if (PnlSubMenuSocios.Visible == true)
-                PnlSubMenuSocios.Visible = false;
-            if (PnlSubMenuUsuarios.Visible == true)
-                PnlSubMenuUsuarios.Visible = false;
-            if (PnlSubMenuEmpleados.Visible == true)
-                PnlSubMenuEmpleados.Visible = false;
+            if (PnlSubMenuOtros.Visible == true)
+                PnlSubMenuOtros.Visible = false;
+        }
+        private void ShowSubPanel(Panel SubMenu)
+        {
+            if (SubMenu.Visible == false)
+            {
+                hidePanel();
+                SubMenu.Visible = true;
+            }
+            else
+            {
+                SubMenu.Visible = false;
+            }
         }
 
         private void ShowSubMenu(Panel SubMenu) 
@@ -67,19 +73,6 @@ namespace GameStore.InterfacesDeUsuario
             }
         }
 
-        private void ShowSubpanel(Panel SubMenu)
-        {
-            if (SubMenu.Visible == false)
-            {
-                hidePanel();
-                SubMenu.Visible = true;
-            }
-            else
-            {
-                SubMenu.Visible = false;
-            }
-        }
-
         private void BtnABM_Click(object sender, EventArgs e)
         {
             ShowSubMenu(PnlSubmenuABM);
@@ -87,12 +80,11 @@ namespace GameStore.InterfacesDeUsuario
 
         private void BtnSocio_Click(object sender, EventArgs e)
         {
-            ShowSubpanel(PnlSubMenuSocios);
+            
         }
 
         private void BtnArticulos_Click(object sender, EventArgs e)
         {
-            //ShowSubpanel(PnlSubMenuArticulos);
             new ConsultaArticulo(_unidadDeTrabajo).ShowDialog();
         }
         private void BtnProveedores_Click(object sender, EventArgs e)
@@ -102,11 +94,15 @@ namespace GameStore.InterfacesDeUsuario
 
         private void BtnUsuario_Click(object sender, EventArgs e)
         {
-            ShowSubpanel(PnlSubMenuUsuarios);
+            
         }
         private void BtnEmpleado_Click(object sender, EventArgs e)
         {
-            ShowSubpanel(PnlSubMenuEmpleados);
+
+        }
+        private void BtnOtros_Click(object sender, EventArgs e)
+        {
+            ShowSubPanel(PnlSubMenuOtros);
         }
 
         private void BtnReporte_Click(object sender, EventArgs e)
@@ -114,15 +110,14 @@ namespace GameStore.InterfacesDeUsuario
             ShowSubMenu(PnlSubMenuReporte);
         }
 
-        // Menú superior
-        private void salirDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void BtnDesarrollador_Click(object sender, EventArgs e)
         {
-            this.Close();
+            new ConsultaDesarrollador(_unidadDeTrabajo).ShowDialog();
         }
 
-        private void BtnNuevoUsuario_Click(object sender, EventArgs e)
+        private void BtnFormaPago_Click(object sender, EventArgs e)
         {
-            new AltaUsuario(_unidadDeTrabajo).ShowDialog();
+            new ConsultaFormaPago(_unidadDeTrabajo).ShowDialog();
         }
     }
 }
