@@ -29,6 +29,12 @@ namespace GameStore.Entidades
         [Column(TypeName = "date")]
         public DateTime? FechaAlta { get; set; }
 
+        public bool? Estado { get; set; }
+
+        public int? IdPerfil { get; set; }
+
+        public virtual Perfil Perfil { get; set; }
+
         public int? IdEmpleado { get; set; }
 
         public virtual Empleado Empleado { get; set; }

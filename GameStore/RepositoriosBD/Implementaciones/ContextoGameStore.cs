@@ -5,8 +5,7 @@ namespace GameStore.RepositoriosBD.Implementaciones
 {
     public partial class ContextoGameStore : DbContext
     {
-        public ContextoGameStore()
-            : base("name=ContextoGamestore")
+        public ContextoGameStore() : base("name=ContextoGamestore")
         {
         }
 
@@ -27,6 +26,7 @@ namespace GameStore.RepositoriosBD.Implementaciones
         public virtual DbSet<Genero> Generos { get; set; }
         public virtual DbSet<Marca> Marcas { get; set; }
         public virtual DbSet<Permiso> Permisos { get; set; }
+        public virtual DbSet<Perfil> Perfiles { get; set; }
         public virtual DbSet<Plataforma> Plataformas { get; set; }
         public virtual DbSet<Proveedor> Proveedores { get; set; }
         public virtual DbSet<Rol> Roles { get; set; }
@@ -176,6 +176,14 @@ namespace GameStore.RepositoriosBD.Implementaciones
                 .IsUnicode(false);
 
             modelBuilder.Entity<Permiso>()
+                .Property(e => e.Descripcion)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Perfil>()
+                .Property(e => e.Nombre)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Perfil>()
                 .Property(e => e.Descripcion)
                 .IsUnicode(false);
 

@@ -171,7 +171,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.cmbRoles.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRoles.ForeColor = System.Drawing.Color.DimGray;
             this.cmbRoles.FormattingEnabled = true;
-            this.cmbRoles.Location = new System.Drawing.Point(19, 81);
+            this.cmbRoles.Location = new System.Drawing.Point(372, 84);
             this.cmbRoles.Name = "cmbRoles";
             this.cmbRoles.Size = new System.Drawing.Size(318, 29);
             this.cmbRoles.TabIndex = 51;

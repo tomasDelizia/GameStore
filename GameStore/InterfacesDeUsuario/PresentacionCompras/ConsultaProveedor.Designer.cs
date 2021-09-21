@@ -34,14 +34,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvProveedores = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CUIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Altura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnReiniciarFiltros = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +42,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.label2 = new System.Windows.Forms.Label();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.cmbBarrio = new System.Windows.Forms.ComboBox();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CUIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Altura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -112,55 +112,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.dgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProveedores.Size = new System.Drawing.Size(773, 146);
             this.dgvProveedores.TabIndex = 105;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Razón social";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 114;
-            // 
-            // CUIT
-            // 
-            this.CUIT.HeaderText = "CUIT";
-            this.CUIT.Name = "CUIT";
-            this.CUIT.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // Teléfono
-            // 
-            this.Teléfono.HeaderText = "Teléfono";
-            this.Teléfono.Name = "Teléfono";
-            this.Teléfono.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Calle";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            this.Precio.Width = 114;
-            // 
-            // Altura
-            // 
-            this.Altura.HeaderText = "Altura";
-            this.Altura.Name = "Altura";
-            this.Altura.ReadOnly = true;
-            // 
-            // Barrio
-            // 
-            this.Barrio.HeaderText = "Barrio";
-            this.Barrio.Name = "Barrio";
-            this.Barrio.ReadOnly = true;
             // 
             // panel1
             // 
@@ -256,6 +207,56 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.cmbBarrio.TabIndex = 72;
             this.cmbBarrio.Text = "Selección";
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Razón social";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 114;
+            // 
+            // CUIT
+            // 
+            this.CUIT.HeaderText = "CUIT";
+            this.CUIT.Name = "CUIT";
+            this.CUIT.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Teléfono
+            // 
+            this.Teléfono.HeaderText = "Teléfono";
+            this.Teléfono.Name = "Teléfono";
+            this.Teléfono.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Calle";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            this.Precio.Width = 114;
+            // 
+            // Altura
+            // 
+            this.Altura.HeaderText = "Altura";
+            this.Altura.Name = "Altura";
+            this.Altura.ReadOnly = true;
+            // 
+            // Barrio
+            // 
+            this.Barrio.HeaderText = "Barrio";
+            this.Barrio.Name = "Barrio";
+            this.Barrio.ReadOnly = true;
+            // 
             // ConsultaProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,7 +269,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.Controls.Add(this.dgvProveedores);
             this.Controls.Add(this.panel1);
             this.Name = "ConsultaProveedor";
-            this.Text = "ConsultaProveedor";
+            this.Text = "Consultar Proveedor";
             this.Load += new System.EventHandler(this.ConsultaProveedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).EndInit();
             this.panel1.ResumeLayout(false);

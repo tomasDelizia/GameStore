@@ -88,7 +88,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-             var nombreArticulo = txtNombre.Text.Trim();
+            var nombreArticulo = txtNombre.Text.Trim();
             if (nombreArticulo.Length > 50)
                 throw new ApplicationException("El nombre no debe tener más de 50 caracteres.");
 
@@ -196,6 +196,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private void btnReiniciarFiltros_Click(object sender, EventArgs e)
         {
             ConsultarArticulos();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

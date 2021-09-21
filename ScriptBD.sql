@@ -233,8 +233,11 @@ CREATE TABLE Usuarios (
 	Contrasenia VARCHAR(50) NOT NULL,
 	FechaAlta DATE,
 	IdEmpleado INT,
+	IdPerfil INT,
 	CONSTRAINT usuarios_id_usuario_pk PRIMARY KEY(IdUsuario),
 	CONSTRAINT usuarios_id_empleado_fk FOREIGN KEY(IdEmpleado) REFERENCES Empleados (IdEmpleado)
+    ON UPDATE CASCADE ON DELETE SET NULL,
+	CONSTRAINT usuarios_id_perfil_fk FOREIGN KEY(IdPerfil) REFERENCES Perfiles (IdPerfil)
     ON UPDATE CASCADE ON DELETE SET NULL,
 	);
 
@@ -390,3 +393,10 @@ CREATE TABLE Archivos (
 	Contenido VARBINARY(MAX),
 	CONSTRAINT archivos_id_archivo_pk PRIMARY KEY (IdArchivo)
 );
+
+
+CREATE TABLE Perfiles (
+	IdPerfil INT IDENTITY,
+	Nombre VARCHAR(50) NOT NULL,
+	Descripcion VARCHAR(MAX),
+	CONSTRAINT perfiles_id_perfil_pk PRIMARY KEY(IdPerfil));

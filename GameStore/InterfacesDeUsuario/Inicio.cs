@@ -22,8 +22,7 @@ namespace GameStore.InterfacesDeUsuario
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            var frmLogin = new Login(_unidadDeTrabajo);
-            frmLogin.ShowDialog();
+            new Login(_unidadDeTrabajo).ShowDialog();
             this.WindowState = FormWindowState.Maximized;
         }
 
@@ -92,7 +91,6 @@ namespace GameStore.InterfacesDeUsuario
 
         private void BtnArticulos_Click(object sender, EventArgs e)
         {
-            //ShowSubpanel(PnlSubMenuArticulos);
             new ConsultaArticulo(_unidadDeTrabajo).ShowDialog();
         }
         private void BtnProveedores_Click(object sender, EventArgs e)
@@ -102,7 +100,7 @@ namespace GameStore.InterfacesDeUsuario
 
         private void BtnUsuario_Click(object sender, EventArgs e)
         {
-            ShowSubpanel(PnlSubMenuUsuarios);
+            new ConsultaUsuario(_unidadDeTrabajo).ShowDialog();
         }
         private void BtnEmpleado_Click(object sender, EventArgs e)
         {
