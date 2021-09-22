@@ -575,6 +575,7 @@
     <Folder Include="Controladores\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GameStore.sln" />
     <Content Include="Recursos\cerrar.png" />
     <Content Include="Recursos\logo.jpg" />
     <Content Include="Recursos\minimazar.png" />
