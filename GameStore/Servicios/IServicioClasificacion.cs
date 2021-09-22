@@ -5,6 +5,8 @@ namespace GameStore.Servicios
 {
     public interface IServicioClasificacion : IServicio<Clasificacion>
     {
+        void ValidarClasificacion(Clasificacion clasificacion);
         List<Clasificacion> ListarClasificaciones();
+        
     }
 }
