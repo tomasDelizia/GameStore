@@ -62,8 +62,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             if (nombreMarca.Length > 50)
                 throw new ApplicationException("El nombre no debe tener más de 50 caracteres.");
 
-            var Descripcion = txtDescripcion.Text.Trim();
-
             var MarcasFiltradas = _servicioMarca.Encontrar(a => a.Nombre.Contains(nombreMarca)).ToList();
 
             CargarDgvMarcas(MarcasFiltradas);

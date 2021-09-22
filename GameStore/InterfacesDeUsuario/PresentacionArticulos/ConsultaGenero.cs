@@ -63,8 +63,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             if (nombreGenero.Length > 50)
                 throw new ApplicationException("El nombre no debe tener más de 50 caracteres.");
 
-            var Descripcion = txtDescripcion.Text.Trim();
-
             var GenerosFiltrados = _servicioGenero.Encontrar(a => a.Nombre.Contains(nombreGenero)).ToList();
 
             CargarDgvGenero(GenerosFiltrados);

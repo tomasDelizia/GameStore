@@ -133,6 +133,7 @@ namespace GameStore.InterfacesDeUsuario
         private void BtnMarca_Click(object sender, EventArgs e)
         {
             new ConsultaMarca(_unidadDeTrabajo).ShowDialog();
+        }
 
         private void BtnPerfil_Click(object sender, EventArgs e)
         {
