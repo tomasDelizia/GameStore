@@ -83,9 +83,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             //Validar la cantidad de filas seleccionadas
             if (dgvProveedores.SelectedRows.Count == 1)
             {
-                var cuit = Convert.ToInt32(dgvProveedores.SelectedRows[0].Cells["Id"].Value);
+                var id = Convert.ToInt32(dgvProveedores.SelectedRows[0].Cells["Id"].Value);
 
-                new ModificacionProveedor(_unidadDeTrabajo, cuit).ShowDialog();
+                new ModificacionProveedor(_unidadDeTrabajo, id).ShowDialog();
                 ConsultarProveedores();
                 return;
             }

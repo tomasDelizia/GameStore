@@ -14,17 +14,28 @@ using System.Windows.Forms;
 
 namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 {
-    public partial class AltaPlataforma : Form
+    public partial class ModificacionPlataforma : Form
     {
         private IUnidadDeTrabajo _unidadDeTrabajo;
-        private IServicioPlataforma _servicioPlataforma;
-        private Plataforma _nuevaPlataforma;
-
-        public AltaPlataforma(IUnidadDeTrabajo unidadDeTrabajo)
+        private readonly IServicioPlataforma _servicioPlataforma;
+        private Plataforma _plataformaAModificar;
+        public ModificacionPlataforma(IUnidadDeTrabajo unidadDeTrabajo, int id)
         {
             InitializeComponent();
             _unidadDeTrabajo = unidadDeTrabajo;
-            _servicioPlataforma = new ServicioPlataforma(_unidadDeTrabajo.RepositorioPlataforma);
+            _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
+            _plataformaAModificar = _servicioPlataforma.GetPorId(id);
+        }
+
+        private void ModificacionPlataforma_Load(object sender, EventArgs e)
+        {
+            CargarDatos();
+        }
+
+        private void CargarDatos()
+        {
+            txtNombre.Text = _plataformaAModificar.Nombre;
+            txtDescripcion.Text = _plataformaAModificar.Descripcion;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -32,7 +43,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Dispose();
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -40,7 +51,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                     return;
                 if (!EsPlataformaValida())
                     return;
-                RegistrarPlataforma();
+                ModificarPlataforma();
             }
             catch (ApplicationException aex)
             {
@@ -53,25 +64,18 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             }
         }
 
-        private void RegistrarPlataforma()
+        private void ModificarPlataforma()
         {
-            bool insertarPlataforma = _servicioPlataforma.Insertar(_nuevaPlataforma);
-            if (!insertarPlataforma)
-            {
-                MessageBox.Show("Ocurrió un problema al registrar la plataforma", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            MessageBox.Show("Se registró con éxito la plataforma", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            _servicioPlataforma.Actualizar(_plataformaAModificar);
+            MessageBox.Show("Se modificó con éxito el proveedor", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Dispose();
         }
 
         private bool EsPlataformaValida()
         {
-            Plataforma nuevaPlataforma = new Plataforma();
-            nuevaPlataforma.Nombre = txtNombre.Text;
-            nuevaPlataforma.Descripcion = txtDescripcion.Text;
-            _servicioPlataforma.ValidarPlataforma(nuevaPlataforma);
-            _nuevaPlataforma = nuevaPlataforma;
+            _plataformaAModificar.Nombre = txtNombre.Text;
+            _plataformaAModificar.Descripcion = txtDescripcion.Text;
+            _servicioPlataforma.ValidarPlataforma(_plataformaAModificar);
             return true;
         }
 

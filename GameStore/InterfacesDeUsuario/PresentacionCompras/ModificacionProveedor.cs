@@ -13,14 +13,13 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private Proveedor _proveedorAModificar;
         private IUnidadDeTrabajo _unidadDeTrabajo;
         private IServicioBarrio _servicioBarrio;
-
-        public ModificacionProveedor(IUnidadDeTrabajo unidadDeTrabajo, int cuit)
+        public ModificacionProveedor(IUnidadDeTrabajo unidadDeTrabajo, int id)
         {
             InitializeComponent();
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioProveedor = new ServicioProveedor(_unidadDeTrabajo.RepositorioProveedor);
             _servicioBarrio = new ServicioBarrio(_unidadDeTrabajo.RepositorioBarrio);
-            _proveedorAModificar = _servicioProveedor.GetPorId(cuit);
+            _proveedorAModificar = _servicioProveedor.GetPorId(id);
 
         }
 
@@ -127,7 +126,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             if (respuesta == DialogResult.Yes)
                 return true;
             return false;
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

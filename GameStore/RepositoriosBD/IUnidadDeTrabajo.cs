@@ -19,6 +19,7 @@ namespace GameStore.RepositoriosBD
         IRepositorioPerfil RepositorioPerfil { get; }
         IRepositorioEmpleado RepositorioEmpleado { get; }
         IRepositorioCargo RepositorioCargo { get; }
+        IRepositorioSocio RepositorioSocio { get; }
         int Guardar();
     }
 }

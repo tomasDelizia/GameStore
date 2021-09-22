@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace GameStore.Servicios
 {
-    public interface IServicioPlataforma : IServicio<Plataforma>
+    public interface IServicioSocio : IServicio<Socio>
     {
-        List<Plataforma> ListarPlataformas();
-        void ValidarPlataforma(Plataforma plataforma);
+        List<Socio> ListarSocios();
+        void ValidarSocio(Socio socio);
     }
 }
