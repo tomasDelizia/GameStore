@@ -153,5 +153,10 @@ namespace GameStore.InterfacesDeUsuario
         {
             ShowSubMenu(PnlSubMenuReporte);
         }
+
+        private void BtnCategoriaAlquiler_Click(object sender, EventArgs e)
+        {
+            new ConsultaCategoriaAlquiler(_unidadDeTrabajo).ShowDialog();
+        }
     }
 }

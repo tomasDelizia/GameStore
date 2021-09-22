@@ -94,7 +94,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnRegistrar.Location = new System.Drawing.Point(207, 256);
+            this.btnRegistrar.Location = new System.Drawing.Point(212, 256);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(98, 29);
             this.btnRegistrar.TabIndex = 71;

@@ -15,7 +15,7 @@ namespace GameStore.Entidades
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdCategoriaAlquiler { get; set; }
 
         [Required]
@@ -27,5 +27,25 @@ namespace GameStore.Entidades
         public decimal MontoAlquilerPorDia { get; set; }
 
         public decimal MontoDevolucionTardiaPorDia { get; set; }
+
+        internal void ValidarMontoAlquilerDiario()
+        {
+            if (MontoAlquilerPorDia <= 0 || MontoAlquilerPorDia >= 10000000)
+                throw new ApplicationException("Ingrese un precio válido.");
+        }
+
+        internal void ValidarMontoAlquilerTardio()
+        {
+            if (MontoDevolucionTardiaPorDia <= 0 || MontoDevolucionTardiaPorDia >= 10000000)
+                throw new ApplicationException("Ingrese un precio válido.");
+        }
+
+        internal void ValidarNombre()
+        {
+            if (string.IsNullOrEmpty(Nombre))
+                throw new ApplicationException("El nombre es requerido.");
+            if (Nombre.Length > 50)
+                throw new ApplicationException("El nombre no debe superar los 50 caracteres.");
+        }
     }
 }
