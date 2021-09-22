@@ -113,7 +113,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             ConsultarClasificaciones();
         }
 
-
+        private void ConsultaClasificacion_Load(object sender, EventArgs e)
+        {
+            ConsultarClasificaciones();
+        }
     }
 }
 

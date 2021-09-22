@@ -379,6 +379,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnClasificacion.Text = "Clasificacion";
             this.BtnClasificacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnClasificacion.UseVisualStyleBackColor = false;
+            this.BtnClasificacion.Click += new System.EventHandler(this.BtnClasificacion_Click);
             // 
             // BtnCategoriaAlquiler
             // 

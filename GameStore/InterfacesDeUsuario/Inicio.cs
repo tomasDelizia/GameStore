@@ -144,5 +144,10 @@ namespace GameStore.InterfacesDeUsuario
         {
             new ConsultarCargo(_unidadDeTrabajo).ShowDialog();
         }
+
+        private void BtnClasificacion_Click(object sender, EventArgs e)
+        {
+            new ConsultaClasificacion(_unidadDeTrabajo).ShowDialog();
+        }
     }
 }
