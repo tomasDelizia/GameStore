@@ -30,6 +30,7 @@ namespace GameStore.Servicios.Implementaciones
             empleado.ValidarCalleNombre();
             empleado.ValidarCalleNumero();
             empleado.ValidarDocumento();
+            empleado.ValidarTelefono();
         }
     }
 }

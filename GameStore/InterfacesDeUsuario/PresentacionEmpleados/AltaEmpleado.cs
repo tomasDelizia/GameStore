@@ -95,7 +95,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             empleadoNuevo.Telefono = txtTelefono.Text;
             empleadoNuevo.CalleNombre = txtCalleNombre.Text;
             empleadoNuevo.Email = txtMail.Text;
-            empleadoNuevo.CalleNumero = Convert.ToInt32(txtCalleNombre.Text);
+            empleadoNuevo.CalleNumero = Convert.ToInt32(txtCalleNumero.Text);
             empleadoNuevo.NroDocumento = Convert.ToInt32(txtDocumento.Text);
             empleadoNuevo.FechaNacimiento = dtpFechaNacimiento.Value;
             empleadoNuevo.FechaAlta = DateTime.Now;

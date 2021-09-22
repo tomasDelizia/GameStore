@@ -82,14 +82,22 @@ namespace GameStore.Entidades
         
         public void ValidarCalleNumero()
         {
-            if (CalleNumero > 10000)
-                throw new ApplicationException("La altura de la calle no debe ser mayor a 10000.");
+            if (CalleNumero > 10000 || CalleNumero < 0)
+                throw new ApplicationException("La altura de la calle no es válida.");
         }
 
         public void ValidarDocumento()
         {
+            if (string.IsNullOrEmpty(NroDocumento.ToString()))
+                throw new ApplicationException("El documento es requerido.");
             if (NroDocumento > 100000000)
                 throw new ApplicationException("El documento es inválido.");
+        }
+
+        public void ValidarTelefono()
+        {
+            if (Telefono.Length > 30)
+                throw new ApplicationException("El teléfono no debe superar los 30 caracteres.");
         }
     }
 }

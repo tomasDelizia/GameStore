@@ -99,7 +99,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             _empleadoAModificar.Telefono = txtTelefono.Text;
             _empleadoAModificar.CalleNombre = txtCalleNombre.Text;
             _empleadoAModificar.Email = txtMail.Text;
-            _empleadoAModificar.CalleNumero = Convert.ToInt32(txtCalleNombre.Text);
+            _empleadoAModificar.CalleNumero = Convert.ToInt32(txtCalleNumero.Text);
             _empleadoAModificar.NroDocumento = Convert.ToInt32(txtDocumento.Text);
             _empleadoAModificar.FechaNacimiento = dtpFechaNacimiento.Value;
             _empleadoAModificar.FechaAlta = DateTime.Now;
