@@ -104,7 +104,7 @@ namespace GameStore.InterfacesDeUsuario
         }
         private void BtnEmpleado_Click(object sender, EventArgs e)
         {
-            ShowSubpanel(PnlSubMenuEmpleados);
+            new ConsultaEmpleado(_unidadDeTrabajo).ShowDialog();
         }
 
         private void BtnReporte_Click(object sender, EventArgs e)

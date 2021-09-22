@@ -36,5 +36,11 @@ namespace GameStore.Servicios.Implementaciones
             }
             return null;
         }
+
+        public void ValidarUsuario(Usuario usuario)
+        {
+            usuario.ValidarNombre();
+            usuario.ValidarContrasenia();
+        }
     }
 }

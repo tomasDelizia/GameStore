@@ -10,5 +10,7 @@ namespace GameStore.Servicios
     public interface IServicioEmpleado : IServicio<Empleado>
     {
         List<Empleado> ListarEmpleados();
+
+        void ValidarEmpleado(Empleado empleado);
     }
 }

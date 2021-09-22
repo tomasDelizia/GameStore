@@ -116,7 +116,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             }
             else if (dgvProveedores.SelectedRows.Count > 1)
                 MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
-
         }
 
         private void btnFiltrar_Click(object sender, EventArgs e)

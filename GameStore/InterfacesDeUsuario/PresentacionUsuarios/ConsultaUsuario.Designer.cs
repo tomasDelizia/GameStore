@@ -37,21 +37,21 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.label2 = new System.Windows.Forms.Label();
             this.cboPerfiles = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtEmpleado = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.ckbIncluirTodos = new System.Windows.Forms.CheckBox();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.ckbIncluirTodos = new System.Windows.Forms.CheckBox();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Perfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtEmpleado = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -84,7 +84,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(211, 9);
+            this.label3.Location = new System.Drawing.Point(292, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 33);
             this.label3.TabIndex = 88;
@@ -141,6 +141,39 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.panel1.Size = new System.Drawing.Size(717, 173);
             this.panel1.TabIndex = 110;
             // 
+            // txtEmpleado
+            // 
+            this.txtEmpleado.BackColor = System.Drawing.Color.White;
+            this.txtEmpleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpleado.ForeColor = System.Drawing.Color.DimGray;
+            this.txtEmpleado.Location = new System.Drawing.Point(117, 124);
+            this.txtEmpleado.Name = "txtEmpleado";
+            this.txtEmpleado.Size = new System.Drawing.Size(200, 27);
+            this.txtEmpleado.TabIndex = 104;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(3, 126);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(108, 22);
+            this.label4.TabIndex = 105;
+            this.label4.Text = "Empleado:";
+            // 
+            // ckbIncluirTodos
+            // 
+            this.ckbIncluirTodos.AutoSize = true;
+            this.ckbIncluirTodos.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbIncluirTodos.ForeColor = System.Drawing.Color.DimGray;
+            this.ckbIncluirTodos.Location = new System.Drawing.Point(323, 56);
+            this.ckbIncluirTodos.Name = "ckbIncluirTodos";
+            this.ckbIncluirTodos.Size = new System.Drawing.Size(139, 26);
+            this.ckbIncluirTodos.TabIndex = 103;
+            this.ckbIncluirTodos.Text = "Incluir Todos";
+            this.ckbIncluirTodos.UseVisualStyleBackColor = true;
+            // 
             // btnFiltrar
             // 
             this.btnFiltrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -164,6 +197,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.btnModificar.Size = new System.Drawing.Size(40, 40);
             this.btnModificar.TabIndex = 113;
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnAgregar
             // 
@@ -196,42 +230,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuarios.Size = new System.Drawing.Size(717, 193);
             this.dgvUsuarios.TabIndex = 111;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
-            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnEliminar.Location = new System.Drawing.Point(107, 390);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(40, 40);
-            this.btnEliminar.TabIndex = 114;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // ckbIncluirTodos
-            // 
-            this.ckbIncluirTodos.AutoSize = true;
-            this.ckbIncluirTodos.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbIncluirTodos.ForeColor = System.Drawing.Color.DimGray;
-            this.ckbIncluirTodos.Location = new System.Drawing.Point(323, 56);
-            this.ckbIncluirTodos.Name = "ckbIncluirTodos";
-            this.ckbIncluirTodos.Size = new System.Drawing.Size(139, 26);
-            this.ckbIncluirTodos.TabIndex = 103;
-            this.ckbIncluirTodos.Text = "Incluir Todos";
-            this.ckbIncluirTodos.UseVisualStyleBackColor = true;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.ForeColor = System.Drawing.Color.DimGray;
-            this.btnSalir.Location = new System.Drawing.Point(639, 390);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(93, 29);
-            this.btnSalir.TabIndex = 105;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // IdUsuario
             // 
@@ -276,26 +274,30 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.Empleado.ReadOnly = true;
             this.Empleado.Width = 79;
             // 
-            // txtEmpleado
+            // btnEliminar
             // 
-            this.txtEmpleado.BackColor = System.Drawing.Color.White;
-            this.txtEmpleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpleado.ForeColor = System.Drawing.Color.DimGray;
-            this.txtEmpleado.Location = new System.Drawing.Point(117, 124);
-            this.txtEmpleado.Name = "txtEmpleado";
-            this.txtEmpleado.Size = new System.Drawing.Size(200, 27);
-            this.txtEmpleado.TabIndex = 104;
+            this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.DimGray;
+            this.btnEliminar.Location = new System.Drawing.Point(107, 390);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(40, 40);
+            this.btnEliminar.TabIndex = 114;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // label4
+            // btnSalir
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(3, 126);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 22);
-            this.label4.TabIndex = 105;
-            this.label4.Text = "Empleado:";
+            this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.DimGray;
+            this.btnSalir.Location = new System.Drawing.Point(636, 390);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(93, 29);
+            this.btnSalir.TabIndex = 105;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // ConsultaUsuario
             // 

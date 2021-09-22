@@ -41,5 +41,21 @@ namespace GameStore.Entidades
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Rol> Roles { get; set; }
+
+        public void ValidarNombre()
+        {
+            if (string.IsNullOrEmpty(NombreUsuario))
+                throw new ApplicationException("El nombre de usuario es requerido.");
+            if (NombreUsuario.Length > 50)
+                throw new ApplicationException("El nombre de usuario no debe superar los 50 caracteres.");
+        }
+
+        public void ValidarContrasenia()
+        {
+            if (string.IsNullOrEmpty(this.Contrasenia))
+                throw new ApplicationException("La contraseña es requerida");
+            if (this.Contrasenia.Length > 50)
+                throw new ApplicationException("Contraseña inválida. La contraseña no debe superar los 50 caracteres");
+        }
     }
 }

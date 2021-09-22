@@ -45,17 +45,17 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.cboTipoArticulo = new System.Windows.Forms.ComboBox();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            this.picArticulo = new System.Windows.Forms.PictureBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Plataforma = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.picArticulo = new System.Windows.Forms.PictureBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioMin)).BeginInit();
@@ -252,6 +252,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             // 
             this.dgvArticulos.AllowUserToAddRows = false;
             this.dgvArticulos.AllowUserToDeleteRows = false;
+            this.dgvArticulos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -266,48 +267,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.dgvArticulos.Size = new System.Drawing.Size(725, 200);
             this.dgvArticulos.TabIndex = 89;
             this.dgvArticulos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellClick);
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Visible = false;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 114;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            this.Precio.Width = 114;
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            this.Stock.Width = 113;
-            // 
-            // TipoArticulo
-            // 
-            this.TipoArticulo.HeaderText = "Tipo de Artículo";
-            this.TipoArticulo.Name = "TipoArticulo";
-            this.TipoArticulo.ReadOnly = true;
-            this.TipoArticulo.Width = 114;
-            // 
-            // Plataforma
-            // 
-            this.Plataforma.HeaderText = "Plataforma";
-            this.Plataforma.Name = "Plataforma";
-            this.Plataforma.ReadOnly = true;
-            this.Plataforma.Width = 114;
             // 
             // picArticulo
             // 
@@ -370,6 +329,49 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Visible = false;
+            this.Codigo.Width = 65;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 120;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            this.Precio.Width = 114;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            this.Stock.Width = 113;
+            // 
+            // TipoArticulo
+            // 
+            this.TipoArticulo.HeaderText = "Tipo de Artículo";
+            this.TipoArticulo.Name = "TipoArticulo";
+            this.TipoArticulo.ReadOnly = true;
+            this.TipoArticulo.Width = 114;
+            // 
+            // Plataforma
+            // 
+            this.Plataforma.HeaderText = "Plataforma";
+            this.Plataforma.Name = "Plataforma";
+            this.Plataforma.ReadOnly = true;
+            this.Plataforma.Width = 114;
+            // 
             // ConsultaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,17 +414,17 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private System.Windows.Forms.NumericUpDown numPrecioMin;
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.PictureBox picArticulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoArticulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Plataforma;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnReiniciarFiltros;
         private System.Windows.Forms.NumericUpDown numPrecioMax;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoArticulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Plataforma;
     }
 }

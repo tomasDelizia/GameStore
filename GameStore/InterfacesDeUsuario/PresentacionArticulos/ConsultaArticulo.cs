@@ -158,7 +158,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             if (dgvArticulos.SelectedRows.Count == 1)
             {
                 var id = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
-                // Le da el foco a editar usuario y el frm de usuarios queda en pausa.
                 new ModificacionArticulo(_unidadDeTrabajo, id).ShowDialog();
                 ConsultarArticulos();
                 return;
@@ -190,7 +189,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             }
             else if (dgvArticulos.SelectedRows.Count > 1)
                 MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
-
         }
 
         private void btnReiniciarFiltros_Click(object sender, EventArgs e)

@@ -12,11 +12,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private IServicioProveedor _servicioProveedor;
         private Proveedor _proveedorAModificar;
         private IUnidadDeTrabajo _unidadDeTrabajo;
+        private IServicioBarrio _servicioBarrio;
+
         public ModificacionProveedor(IUnidadDeTrabajo unidadDeTrabajo, int cuit)
         {
             InitializeComponent();
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioProveedor = new ServicioProveedor(_unidadDeTrabajo.RepositorioProveedor);
+            _servicioBarrio = new ServicioBarrio(_unidadDeTrabajo.RepositorioBarrio);
             _proveedorAModificar = _servicioProveedor.GetPorId(cuit);
 
         }
@@ -44,6 +47,12 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
 
         private void CargarBarrio(ComboBox cmbBarrios)
         {
+            var barrios = _servicioBarrio.ListarBarrios();
+            var bindingSource = new BindingSource();
+            bindingSource.DataSource = barrios;
+            cmbBarrios.DataSource = bindingSource;
+            cmbBarrios.DisplayMember = "Nombre";
+            cmbBarrios.ValueMember = "IdBarrio";
             cmbBarrios.SelectedItem = _proveedorAModificar.Barrio;
         }
 
@@ -119,6 +128,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
                 return true;
             return false;
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

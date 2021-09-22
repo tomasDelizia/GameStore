@@ -51,5 +51,45 @@ namespace GameStore.Entidades
         public virtual Barrio Barrio { get; set; }
 
         public virtual Cargo Cargo { get; set; }
+
+        public void ValidarNombre()
+        {
+            if (string.IsNullOrEmpty(Nombre))
+                throw new ApplicationException("El nombre es requerido.");
+            if (Nombre.Length > 50)
+                throw new ApplicationException("El nombre no debe superar los 50 caracteres.");
+        }
+        
+        public void ValidarApellido()
+        {
+            if (string.IsNullOrEmpty(Apellido))
+                throw new ApplicationException("El apellido es requerido.");
+            if (Apellido.Length > 50)
+                throw new ApplicationException("El apellido no debe superar los 50 caracteres.");
+        }
+
+        public void ValidarMail()
+        {
+            if (Email.Length > 50)
+                throw new ApplicationException("El mail no debe superar los 50 caracteres.");
+        }
+        
+        public void ValidarCalleNombre()
+        {
+            if (CalleNombre.Length > 50)
+                throw new ApplicationException("El nombre de la calle no debe superar los 50 caracteres.");
+        }
+        
+        public void ValidarCalleNumero()
+        {
+            if (CalleNumero > 10000)
+                throw new ApplicationException("La altura de la calle no debe ser mayor a 10000.");
+        }
+
+        public void ValidarDocumento()
+        {
+            if (NroDocumento > 100000000)
+                throw new ApplicationException("El documento es inválido.");
+        }
     }
 }

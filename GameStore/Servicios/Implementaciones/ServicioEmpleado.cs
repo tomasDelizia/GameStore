@@ -21,5 +21,15 @@ namespace GameStore.Servicios.Implementaciones
         {
             return _repositorioEmpleado.GetTodos().ToList();
         }
+
+        public void ValidarEmpleado(Empleado empleado)
+        {
+            empleado.ValidarNombre();
+            empleado.ValidarApellido();
+            empleado.ValidarMail();
+            empleado.ValidarCalleNombre();
+            empleado.ValidarCalleNumero();
+            empleado.ValidarDocumento();
+        }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GameStore.Servicios
 {
-    interface IServicioDesarrollador : IServicio<Desarrollador>
+    public interface IServicioDesarrollador : IServicio<Desarrollador>
     {
         List<Desarrollador> ListarDesarrolladores();
     }

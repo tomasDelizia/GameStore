@@ -12,6 +12,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private IServicioBarrio _servicioBarrio;
         private Proveedor _nuevoProveedor;
         private readonly IServicioProveedor _servicioProveedor;
+
         public AltaProveedor(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
@@ -84,6 +85,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         {
             CargarBarrios(cmbBarrios);
         }
+
         /// <summary>
         /// Carga el combo de barrios. Este metodo esta duplicado aca y en ConsultaProveedor
         /// </summary>

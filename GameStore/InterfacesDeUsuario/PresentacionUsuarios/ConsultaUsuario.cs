@@ -88,6 +88,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             var nombreUsuario = txtNombreUsuario.Text;
+            var nombreEmpleado = txtEmpleado.Text;
+
             var incluirTodos = ckbIncluirTodos.Checked;
             if (nombreUsuario.Length > 50)
                 throw new ApplicationException("El nombre no debe tener más de 50 caracteres.");
@@ -96,12 +98,13 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             if (incluirTodos == true)
             {
                 var usuariosFiltrados = _servicioUsuario.Encontrar(u => u.NombreUsuario.Contains(nombreUsuario) && u.Perfil.Nombre == perfil.Nombre
-                                        ).ToList();
+                                        && (u.Empleado.Nombre + " " + u.Empleado.Apellido).Contains(nombreEmpleado)).ToList();
                 CargarDgvUsuarios(usuariosFiltrados);
             }
             else
             {
                 var usuariosFiltrados = _servicioUsuario.Encontrar(u => u.NombreUsuario.Contains(nombreUsuario) && u.Perfil.Nombre == perfil.Nombre
+                                        && (u.Empleado.Nombre + " " + u.Empleado.Apellido).Contains(nombreEmpleado)
                                         && (bool)u.Estado).ToList();
                 CargarDgvUsuarios(usuariosFiltrados);
             }
@@ -109,7 +112,49 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //new AltaUsuario(_servicioPerfil);
+            new AltaUsuario(_unidadDeTrabajo).ShowDialog();
+            ConsultarUsuarios();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            // validar cantidad de filas seleccionadas.
+            if (dgvUsuarios.SelectedRows.Count == 1)
+            {
+                var id = Convert.ToInt32(dgvUsuarios.SelectedRows[0].Cells["IdUsuario"].Value);
+                // Le da el foco a editar usuario y el frm de usuarios queda en pausa.
+                new ModificacionUsuario(_unidadDeTrabajo, id).ShowDialog();
+                ConsultarUsuarios();
+                return;
+            }
+
+            else if (dgvUsuarios.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Debe seleccionar un registro.", "Información", MessageBoxButtons.OK);
+                return;
+            }
+            else if (dgvUsuarios.SelectedRows.Count > 1)
+                MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvUsuarios.SelectedRows.Count == 1)
+            {
+                var id = Convert.ToInt32(dgvUsuarios.SelectedRows[0].Cells["IdUsuario"].Value);
+
+                new BajaUsuario(_servicioUsuario, id).ShowDialog();
+                ConsultarUsuarios();
+                return;
+            }
+
+            else if (dgvUsuarios.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Debe seleccionar un registro.", "Información", MessageBoxButtons.OK);
+                return;
+            }
+            else if (dgvUsuarios.SelectedRows.Count > 1)
+                MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
         }
     }
 }
