@@ -29,22 +29,22 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         /// </summary>
         private void InitializeComponent()
         {
-            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // TxtNombre
+            // txtNombre
             // 
-            this.TxtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombre.Location = new System.Drawing.Point(285, 28);
-            this.TxtNombre.Margin = new System.Windows.Forms.Padding(16, 12, 16, 12);
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(444, 57);
-            this.TxtNombre.TabIndex = 48;
+            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(285, 28);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(16, 12, 16, 12);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(444, 57);
+            this.txtNombre.TabIndex = 48;
             // 
             // label3
             // 
@@ -57,15 +57,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label3.Size = new System.Drawing.Size(228, 58);
             this.label3.TabIndex = 46;
             this.label3.Text = "Nombre:";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(35, 201);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(724, 374);
-            this.richTextBox1.TabIndex = 70;
-            this.richTextBox1.Text = "";
             // 
             // label8
             // 
@@ -103,18 +94,25 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(48, 208);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(681, 38);
+            this.txtDescripcion.TabIndex = 74;
+            // 
             // ModificacionClasificacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(813, 703);
+            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.TxtNombre);
+            this.Controls.Add(this.txtNombre);
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "ModificacionClasificacion";
             this.Text = "Modificar Clasificación";
@@ -124,11 +122,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         }
 
         #endregion
-        private System.Windows.Forms.TextBox TxtNombre;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.TextBox txtDescripcion;
     }
 }

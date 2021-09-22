@@ -220,6 +220,12 @@
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaDesarrollador.Designer.cs">
       <DependentUpon>ConsultaDesarrollador.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaClasificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaClasificacion.Designer.cs">
+      <DependentUpon>ConsultaClasificacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -603,6 +609,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaDesarrollador.resx">
       <DependentUpon>ConsultaDesarrollador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaClasificacion.resx">
+      <DependentUpon>ConsultaClasificacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionArticulo.resx">
       <DependentUpon>ModificacionArticulo.cs</DependentUpon>
