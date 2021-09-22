@@ -195,6 +195,12 @@
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaArticulo.Designer.cs">
       <DependentUpon>ConsultaArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaPlataforma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaPlataforma.Designer.cs">
+      <DependentUpon>ConsultaPlataforma.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +224,12 @@
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionGenero.Designer.cs">
       <DependentUpon>ModificacionGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionPlataforma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionPlataforma.Designer.cs">
+      <DependentUpon>ModificacionPlataforma.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionCompras\AltaProveedor.cs">
       <SubType>Form</SubType>
@@ -473,11 +485,17 @@
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaArticulo.resx">
       <DependentUpon>ConsultaArticulo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaPlataforma.resx">
+      <DependentUpon>ConsultaPlataforma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionArticulo.resx">
       <DependentUpon>ModificacionArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionClasificacion.resx">
       <DependentUpon>ModificacionClasificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionPlataforma.resx">
+      <DependentUpon>ModificacionPlataforma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionCompras\AltaProveedor.resx">
       <DependentUpon>AltaProveedor.cs</DependentUpon>

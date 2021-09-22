@@ -118,7 +118,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             if (respuesta == DialogResult.Yes)
                 return true;
             return false;
-
         }
     }
 }

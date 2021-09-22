@@ -19,6 +19,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private readonly IServicioPlataforma _servicioPlataforma;
         private readonly IServicioArchivo _servicioArchivo;
         private readonly IServicioMarca _servicioMarca;
+        private IUnidadDeTrabajo _unidadDeTrabajo;
         private Archivo _nuevaImagen;
         private Articulo _articuloAModificar;
 
@@ -33,6 +34,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
             _servicioArchivo = new ServicioArchivo(unidadDeTrabajo.RepositorioArchivo);
             _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
+            _unidadDeTrabajo = unidadDeTrabajo;
 
             _articuloAModificar = _servicioArticulo.GetPorId(codigo);
         }
@@ -275,7 +277,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 
         private void btnAgregarPlataforma_Click(object sender, EventArgs e)
         {
-            Form frmAltaPlataforma = new AltaPlataforma();
+            Form frmAltaPlataforma = new AltaPlataforma(_unidadDeTrabajo);
             frmAltaPlataforma.Show();
         }
 

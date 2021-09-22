@@ -38,6 +38,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
         {
             var socios = _servicioSocio.ListarSocios();
             CargarDgvSocios(socios);
+            dgvSocios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void CargarDgvSocios(List<Socio> socios)
@@ -92,6 +93,26 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
                 ConsultarSocios();
                 return;
             }
+            else if (dgvSocios.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Debe seleccionar un registro.", "Información", MessageBoxButtons.OK);
+                return;
+            }
+            else if (dgvSocios.SelectedRows.Count > 1)
+                MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvSocios.SelectedRows.Count == 1)
+            {
+                var id = Convert.ToInt32(dgvSocios.SelectedRows[0].Cells["Id"].Value);
+
+                new BajaSocio(_servicioSocio, id).ShowDialog();
+                ConsultarSocios();
+                return;
+            }
+
             else if (dgvSocios.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Debe seleccionar un registro.", "Información", MessageBoxButtons.OK);

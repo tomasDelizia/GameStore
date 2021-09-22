@@ -49,7 +49,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
                 MessageBox.Show("Ocurrió un problema al registrar el proveedor", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            MessageBox.Show("Se registró con éxito el artículo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Se registró con éxito el proveedor", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Dispose();
         }
 
