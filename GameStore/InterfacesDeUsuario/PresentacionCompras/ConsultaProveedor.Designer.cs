@@ -34,14 +34,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvProveedores = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnReiniciarFiltros = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtRazonSocial = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnFiltrar = new System.Windows.Forms.Button();
-            this.cmbBarrio = new System.Windows.Forms.ComboBox();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CUIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +42,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Altura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReiniciarFiltros = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtRazonSocial = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnFiltrar = new System.Windows.Forms.Button();
+            this.cmbBarrio = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,10 +60,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnEliminar.Location = new System.Drawing.Point(277, 727);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.btnEliminar.Location = new System.Drawing.Point(104, 305);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(107, 95);
+            this.btnEliminar.Size = new System.Drawing.Size(40, 40);
             this.btnEliminar.TabIndex = 109;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -74,10 +73,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnModificar.Location = new System.Drawing.Point(155, 727);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.btnModificar.Location = new System.Drawing.Point(58, 305);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(107, 95);
+            this.btnModificar.Size = new System.Drawing.Size(40, 40);
             this.btnModificar.TabIndex = 108;
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -88,10 +86,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnAgregar.Location = new System.Drawing.Point(32, 727);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.btnAgregar.Location = new System.Drawing.Point(12, 305);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(107, 95);
+            this.btnAgregar.Size = new System.Drawing.Size(40, 40);
             this.btnAgregar.TabIndex = 107;
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -110,12 +107,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.Precio,
             this.Altura,
             this.Barrio});
-            this.dgvProveedores.Location = new System.Drawing.Point(32, 365);
-            this.dgvProveedores.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.dgvProveedores.Location = new System.Drawing.Point(12, 153);
             this.dgvProveedores.Name = "dgvProveedores";
             this.dgvProveedores.RowHeadersWidth = 102;
             this.dgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProveedores.Size = new System.Drawing.Size(2061, 348);
+            this.dgvProveedores.Size = new System.Drawing.Size(773, 146);
             this.dgvProveedores.TabIndex = 105;
             this.dgvProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellContentClick);
             // 
@@ -124,6 +120,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.Id.HeaderText = "Id";
             this.Id.MinimumWidth = 12;
             this.Id.Name = "Id";
+            this.Id.Visible = false;
             this.Id.Width = 250;
             // 
             // Nombre
@@ -192,20 +189,18 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnFiltrar);
             this.panel1.Controls.Add(this.cmbBarrio);
-            this.panel1.Location = new System.Drawing.Point(32, 29);
-            this.panel1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2061, 322);
+            this.panel1.Size = new System.Drawing.Size(773, 135);
             this.panel1.TabIndex = 104;
             // 
             // btnReiniciarFiltros
             // 
             this.btnReiniciarFiltros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReiniciarFiltros.ForeColor = System.Drawing.Color.DimGray;
-            this.btnReiniciarFiltros.Location = new System.Drawing.Point(1408, 224);
-            this.btnReiniciarFiltros.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.btnReiniciarFiltros.Location = new System.Drawing.Point(528, 94);
             this.btnReiniciarFiltros.Name = "btnReiniciarFiltros";
-            this.btnReiniciarFiltros.Size = new System.Drawing.Size(363, 69);
+            this.btnReiniciarFiltros.Size = new System.Drawing.Size(136, 29);
             this.btnReiniciarFiltros.TabIndex = 101;
             this.btnReiniciarFiltros.Text = "Reiniciar filtros";
             this.btnReiniciarFiltros.UseVisualStyleBackColor = true;
@@ -216,10 +211,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(1216, 145);
-            this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label1.Location = new System.Drawing.Point(456, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 58);
+            this.label1.Size = new System.Drawing.Size(66, 22);
             this.label1.TabIndex = 91;
             this.label1.Text = "Barrio:";
             // 
@@ -228,10 +222,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(779, 7);
-            this.label3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label3.Location = new System.Drawing.Point(292, 3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(363, 81);
+            this.label3.Size = new System.Drawing.Size(146, 33);
             this.label3.TabIndex = 88;
             this.label3.Text = "Búsqueda";
             // 
@@ -240,10 +233,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.txtRazonSocial.BackColor = System.Drawing.Color.White;
             this.txtRazonSocial.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRazonSocial.ForeColor = System.Drawing.Color.DimGray;
-            this.txtRazonSocial.Location = new System.Drawing.Point(397, 141);
-            this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtRazonSocial.Location = new System.Drawing.Point(149, 59);
             this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(615, 57);
+            this.txtRazonSocial.Size = new System.Drawing.Size(233, 27);
             this.txtRazonSocial.TabIndex = 71;
             // 
             // label2
@@ -251,10 +243,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(43, 145);
-            this.label2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label2.Location = new System.Drawing.Point(16, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(327, 58);
+            this.label2.Size = new System.Drawing.Size(127, 22);
             this.label2.TabIndex = 76;
             this.label2.Text = "Razón social:";
             // 
@@ -262,10 +253,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             // 
             this.btnFiltrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnFiltrar.Location = new System.Drawing.Point(1787, 224);
-            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.btnFiltrar.Location = new System.Drawing.Point(670, 94);
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(267, 69);
+            this.btnFiltrar.Size = new System.Drawing.Size(100, 29);
             this.btnFiltrar.TabIndex = 82;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
@@ -277,77 +267,26 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.cmbBarrio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBarrio.ForeColor = System.Drawing.Color.DimGray;
             this.cmbBarrio.FormattingEnabled = true;
-            this.cmbBarrio.Location = new System.Drawing.Point(1408, 141);
-            this.cmbBarrio.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.cmbBarrio.Location = new System.Drawing.Point(528, 59);
             this.cmbBarrio.Name = "cmbBarrio";
-            this.cmbBarrio.Size = new System.Drawing.Size(639, 57);
+            this.cmbBarrio.Size = new System.Drawing.Size(242, 29);
             this.cmbBarrio.TabIndex = 72;
             this.cmbBarrio.Text = "Selección";
             // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Razón social";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 114;
-            // 
-            // CUIT
-            // 
-            this.CUIT.HeaderText = "CUIT";
-            this.CUIT.Name = "CUIT";
-            this.CUIT.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // Teléfono
-            // 
-            this.Teléfono.HeaderText = "Teléfono";
-            this.Teléfono.Name = "Teléfono";
-            this.Teléfono.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Calle";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            this.Precio.Width = 114;
-            // 
-            // Altura
-            // 
-            this.Altura.HeaderText = "Altura";
-            this.Altura.Name = "Altura";
-            this.Altura.ReadOnly = true;
-            // 
-            // Barrio
-            // 
-            this.Barrio.HeaderText = "Barrio";
-            this.Barrio.Name = "Barrio";
-            this.Barrio.ReadOnly = true;
-            // 
             // ConsultaProveedor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(2133, 851);
+            this.ClientSize = new System.Drawing.Size(798, 357);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvProveedores);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "ConsultaProveedor";
-            this.Text = "Consultar Proveedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ConsultaProveedor";
             this.Load += new System.EventHandler(this.ConsultaProveedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).EndInit();
             this.panel1.ResumeLayout(false);

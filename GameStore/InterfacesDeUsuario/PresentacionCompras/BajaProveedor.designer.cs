@@ -93,7 +93,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.Controls.Add(this.btnCancelar);
             this.Name = "BajaProveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Eliminar Proveedor";
+            this.Text = "BajaProveedor";
             this.Load += new System.EventHandler(this.BajaProveedor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

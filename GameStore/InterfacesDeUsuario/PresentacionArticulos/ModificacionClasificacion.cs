@@ -19,22 +19,23 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _servicioClasificacion = new ServicioClasificacion(_unidadDeTrabajo.RepositorioClasificacion);
             _clasificacionAModificar = _servicioClasificacion.GetPorId(id);
         }
-        private void ModificacionClasificacion_Load(object sender, System.EventArgs e)
+
+        private void ModificacionClasificacion_Load_1(object sender, EventArgs e)
         {
-            CargarNombre(txtNombre);
-            CargarDescripcion(txtDescripcion);
-            
+            CargarNombre(TxtNombre);
+            CargarDescripcion(TxtDescripcion);
         }
+
         private void CargarNombre(TextBox txtNombre)
         {
             txtNombre.Text = _clasificacionAModificar.Nombre;
         }
-        private void CargarDescripcion(TextBox txtDescripcion)
+        private void CargarDescripcion(RichTextBox txtDescripcion)
         {
             txtDescripcion.Text = _clasificacionAModificar.Descripcion;
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void BtnModificar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -54,6 +55,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                 MessageBox.Show("Ha ocurrido un problema, intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private bool EsOperacionConfirmada()
         {
             var respuesta = MessageBox.Show("¿Desea confirmar la operación?", "Confirmación", MessageBoxButtons.YesNo,
@@ -71,9 +73,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         }
         private bool EsClasificacionValida()
         {
-            _clasificacionAModificar.Nombre = txtNombre.Text;
-            _clasificacionAModificar.Descripcion = txtDescripcion.Text;
+            _clasificacionAModificar.Nombre = TxtNombre.Text;
+            _clasificacionAModificar.Descripcion = TxtDescripcion.Text;
             return true;
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

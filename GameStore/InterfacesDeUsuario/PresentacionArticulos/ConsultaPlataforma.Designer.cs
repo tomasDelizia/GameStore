@@ -53,7 +53,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnEliminar.Location = new System.Drawing.Point(104, 412);
+            this.btnEliminar.Location = new System.Drawing.Point(104, 340);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(40, 40);
             this.btnEliminar.TabIndex = 114;
@@ -66,7 +66,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnModificar.Location = new System.Drawing.Point(58, 412);
+            this.btnModificar.Location = new System.Drawing.Point(58, 340);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(40, 40);
             this.btnModificar.TabIndex = 113;
@@ -79,7 +79,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnAgregar.Location = new System.Drawing.Point(12, 412);
+            this.btnAgregar.Location = new System.Drawing.Point(12, 340);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(40, 40);
             this.btnAgregar.TabIndex = 112;
@@ -95,10 +95,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Id,
             this.Nombre,
             this.Descripcion});
-            this.dgvPlataformas.Location = new System.Drawing.Point(12, 153);
+            this.dgvPlataformas.Location = new System.Drawing.Point(12, 130);
             this.dgvPlataformas.Name = "dgvPlataformas";
             this.dgvPlataformas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPlataformas.Size = new System.Drawing.Size(890, 253);
+            this.dgvPlataformas.Size = new System.Drawing.Size(691, 204);
             this.dgvPlataformas.TabIndex = 111;
             // 
             // Id
@@ -129,14 +129,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.panel1.Controls.Add(this.btnFiltrar);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(890, 135);
+            this.panel1.Size = new System.Drawing.Size(691, 112);
             this.panel1.TabIndex = 115;
             // 
             // btnReiniciarFiltros
             // 
             this.btnReiniciarFiltros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReiniciarFiltros.ForeColor = System.Drawing.Color.DimGray;
-            this.btnReiniciarFiltros.Location = new System.Drawing.Point(645, 103);
+            this.btnReiniciarFiltros.Location = new System.Drawing.Point(380, 57);
             this.btnReiniciarFiltros.Name = "btnReiniciarFiltros";
             this.btnReiniciarFiltros.Size = new System.Drawing.Size(136, 29);
             this.btnReiniciarFiltros.TabIndex = 101;
@@ -149,7 +149,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(401, 11);
+            this.label3.Location = new System.Drawing.Point(297, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 33);
             this.label3.TabIndex = 88;
@@ -180,7 +180,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             // 
             this.btnFiltrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnFiltrar.Location = new System.Drawing.Point(787, 103);
+            this.btnFiltrar.Location = new System.Drawing.Point(534, 57);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(100, 29);
             this.btnFiltrar.TabIndex = 82;
@@ -193,14 +193,15 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(914, 464);
+            this.ClientSize = new System.Drawing.Size(715, 388);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvPlataformas);
             this.Name = "ConsultaPlataforma";
-            this.Text = "Consulta Plataforma";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ConsultaPlataforma";
             this.Load += new System.EventHandler(this.ConsultaPlataforma_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlataformas)).EndInit();
             this.panel1.ResumeLayout(false);

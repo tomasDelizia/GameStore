@@ -91,7 +91,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnCancelar);
             this.Name = "BajaPlataforma";
-            this.Text = "Eliminar Plataforma";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "BajaPlataforma";
             this.Load += new System.EventHandler(this.BajaPlataforma_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

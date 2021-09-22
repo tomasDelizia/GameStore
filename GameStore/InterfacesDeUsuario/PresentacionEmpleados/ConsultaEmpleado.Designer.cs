@@ -36,6 +36,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnReiniciarFiltros = new System.Windows.Forms.Button();
             this.btnFiltrar = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtEmpleado = new System.Windows.Forms.TextBox();
+            this.cboCargos = new System.Windows.Forms.ComboBox();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.IdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,11 +48,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtEmpleado = new System.Windows.Forms.TextBox();
-            this.cboCargos = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.SuspendLayout();
@@ -130,6 +130,62 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.btnFiltrar.UseVisualStyleBackColor = true;
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DimGray;
+            this.label8.Location = new System.Drawing.Point(21, 97);
+            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 22);
+            this.label8.TabIndex = 91;
+            this.label8.Text = "Cargo:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(6, 62);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 22);
+            this.label5.TabIndex = 90;
+            this.label5.Text = "Nombre:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(229, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(146, 33);
+            this.label4.TabIndex = 89;
+            this.label4.Text = "Búsqueda";
+            // 
+            // txtEmpleado
+            // 
+            this.txtEmpleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpleado.Location = new System.Drawing.Point(95, 60);
+            this.txtEmpleado.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtEmpleado.Name = "txtEmpleado";
+            this.txtEmpleado.Size = new System.Drawing.Size(200, 27);
+            this.txtEmpleado.TabIndex = 44;
+            // 
+            // cboCargos
+            // 
+            this.cboCargos.BackColor = System.Drawing.Color.White;
+            this.cboCargos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCargos.ForeColor = System.Drawing.Color.DimGray;
+            this.cboCargos.FormattingEnabled = true;
+            this.cboCargos.Location = new System.Drawing.Point(95, 95);
+            this.cboCargos.Name = "cboCargos";
+            this.cboCargos.Size = new System.Drawing.Size(200, 29);
+            this.cboCargos.TabIndex = 54;
+            this.cboCargos.Text = "Selección";
+            // 
             // dgvEmpleados
             // 
             this.dgvEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -190,62 +246,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.Cargo.ReadOnly = true;
             this.Cargo.Width = 60;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(21, 97);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 22);
-            this.label8.TabIndex = 91;
-            this.label8.Text = "Cargo:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(6, 62);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 22);
-            this.label5.TabIndex = 90;
-            this.label5.Text = "Nombre:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(229, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(146, 33);
-            this.label4.TabIndex = 89;
-            this.label4.Text = "Búsqueda";
-            // 
-            // txtEmpleado
-            // 
-            this.txtEmpleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpleado.Location = new System.Drawing.Point(95, 60);
-            this.txtEmpleado.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.txtEmpleado.Name = "txtEmpleado";
-            this.txtEmpleado.Size = new System.Drawing.Size(200, 27);
-            this.txtEmpleado.TabIndex = 44;
-            // 
-            // cboCargos
-            // 
-            this.cboCargos.BackColor = System.Drawing.Color.White;
-            this.cboCargos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCargos.ForeColor = System.Drawing.Color.DimGray;
-            this.cboCargos.FormattingEnabled = true;
-            this.cboCargos.Location = new System.Drawing.Point(95, 95);
-            this.cboCargos.Name = "cboCargos";
-            this.cboCargos.Size = new System.Drawing.Size(200, 29);
-            this.cboCargos.TabIndex = 54;
-            this.cboCargos.Text = "Selección";
-            // 
             // ConsultaEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,7 +258,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.Controls.Add(this.dgvEmpleados);
             this.Controls.Add(this.btnEliminar);
             this.Name = "ConsultaEmpleado";
-            this.Text = "Consultar Empleados";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ConsultaEmpleado";
             this.Load += new System.EventHandler(this.ConsultaEmpleado_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

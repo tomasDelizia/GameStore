@@ -91,6 +91,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnCancelar);
             this.Name = "BajaCargo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BajaCargo";
             this.Load += new System.EventHandler(this.BajaCargo_Load);
             this.ResumeLayout(false);

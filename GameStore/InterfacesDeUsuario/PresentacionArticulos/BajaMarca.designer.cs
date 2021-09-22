@@ -91,6 +91,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnCancelar);
             this.Name = "BajaMarca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BajaMarca";
             this.Load += new System.EventHandler(this.BajaMarca_Load);
             this.ResumeLayout(false);

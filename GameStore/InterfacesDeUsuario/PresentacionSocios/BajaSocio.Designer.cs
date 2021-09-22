@@ -117,7 +117,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.Controls.Add(this.btnCancelar);
             this.Name = "BajaSocio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Eliminar Socio";
+            this.Text = "BajaSocio";
             this.Load += new System.EventHandler(this.BajaSocio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

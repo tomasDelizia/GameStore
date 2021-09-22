@@ -29,104 +29,107 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnModificar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TxtDescripcion = new System.Windows.Forms.RichTextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txtNombre
+            // BtnCancelar
             // 
-            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(285, 28);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(16, 12, 16, 12);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(444, 57);
-            this.txtNombre.TabIndex = 48;
+            this.BtnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelar.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnCancelar.Location = new System.Drawing.Point(312, 249);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(93, 29);
+            this.BtnCancelar.TabIndex = 88;
+            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
-            // label3
+            // BtnModificar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(25, 28);
-            this.label3.Margin = new System.Windows.Forms.Padding(16, 0, 16, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(228, 58);
-            this.label3.TabIndex = 46;
-            this.label3.Text = "Nombre:";
+            this.BtnModificar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnModificar.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnModificar.Location = new System.Drawing.Point(208, 249);
+            this.BtnModificar.Name = "BtnModificar";
+            this.BtnModificar.Size = new System.Drawing.Size(98, 29);
+            this.BtnModificar.TabIndex = 89;
+            this.BtnModificar.Text = "Modificar";
+            this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click_1);
             // 
-            // label8
+            // label2
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(25, 122);
-            this.label8.Margin = new System.Windows.Forms.Padding(16, 0, 16, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(298, 58);
-            this.label8.TabIndex = 71;
-            this.label8.Text = "Descripción";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(16, 39);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(116, 22);
+            this.label2.TabIndex = 87;
+            this.label2.Text = "Descripción";
             // 
-            // btnCancelar
+            // TxtDescripcion
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnCancelar.Location = new System.Drawing.Point(503, 589);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(256, 69);
-            this.btnCancelar.TabIndex = 72;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.TxtDescripcion.Location = new System.Drawing.Point(20, 64);
+            this.TxtDescripcion.Name = "TxtDescripcion";
+            this.TxtDescripcion.Size = new System.Drawing.Size(385, 179);
+            this.TxtDescripcion.TabIndex = 86;
+            this.TxtDescripcion.Text = "";
             // 
-            // btnModificar
+            // TxtNombre
             // 
-            this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnModificar.Location = new System.Drawing.Point(231, 589);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(256, 69);
-            this.btnModificar.TabIndex = 73;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.TxtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.Location = new System.Drawing.Point(116, 7);
+            this.TxtNombre.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(289, 27);
+            this.TxtNombre.TabIndex = 85;
             // 
-            // txtDescripcion
+            // label1
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(48, 208);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(681, 38);
-            this.txtDescripcion.TabIndex = 74;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(15, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 22);
+            this.label1.TabIndex = 84;
+            this.label1.Text = "Nombre:";
             // 
             // ModificacionClasificacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(813, 703);
-            this.Controls.Add(this.txtDescripcion);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtNombre);
-            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.ClientSize = new System.Drawing.Size(416, 291);
+            this.Controls.Add(this.BtnCancelar);
+            this.Controls.Add(this.BtnModificar);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.TxtDescripcion);
+            this.Controls.Add(this.TxtNombre);
+            this.Controls.Add(this.label1);
             this.Name = "ModificacionClasificacion";
-            this.Text = "Modificar Clasificación";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ModificacionClasificacion";
+            this.Load += new System.EventHandler(this.ModificacionClasificacion_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.TextBox txtDescripcion;
+
+        private System.Windows.Forms.Button BtnCancelar;
+        private System.Windows.Forms.Button BtnModificar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox TxtDescripcion;
+        private System.Windows.Forms.TextBox TxtNombre;
+        private System.Windows.Forms.Label label1;
     }
 }

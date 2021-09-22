@@ -115,7 +115,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label1);
             this.Name = "AltaGenero";
-            this.Text = "Registrar Género";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "AltaGenero";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -336,7 +336,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.Controls.Add(this.btnModificar);
             this.Name = "ModificacionEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Modificar Empleado";
+            this.Text = "ModificacionEmpleado";
             this.Load += new System.EventHandler(this.ModificacionEmpleado_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

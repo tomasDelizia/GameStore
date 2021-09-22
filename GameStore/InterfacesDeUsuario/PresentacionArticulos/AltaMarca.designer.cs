@@ -113,7 +113,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.lblNombreArticulo);
             this.Controls.Add(this.TxtNombre);
             this.Name = "AltaMarca";
-            this.Text = "Registrar Marca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "AltaMarca";
             this.ResumeLayout(false);
             this.PerformLayout();
 

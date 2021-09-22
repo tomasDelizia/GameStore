@@ -337,7 +337,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AltaEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar Empleado";
+            this.Text = "AltaEmpleado";
             this.Load += new System.EventHandler(this.AltaEmpleado_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

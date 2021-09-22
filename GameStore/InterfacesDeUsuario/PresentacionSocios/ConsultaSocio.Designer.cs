@@ -255,6 +255,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.Controls.Add(this.dgvSocios);
             this.Controls.Add(this.panel1);
             this.Name = "ConsultaSocio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaSocio";
             this.Load += new System.EventHandler(this.ConsultaSocio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSocios)).EndInit();

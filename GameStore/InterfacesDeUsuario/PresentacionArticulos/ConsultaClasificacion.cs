@@ -28,11 +28,12 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _servicioClasificacion = new ServicioClasificacion(unidadDeTrabajo.RepositorioClasificacion);
 
         }
-        private void ConsultaClasificaion_Load(object sender, EventArgs e)
+
+        private void ConsultaClasificacion_Load(object sender, EventArgs e)
         {
-            
             ConsultarClasificaciones();
         }
+
         private void ConsultarClasificaciones()
         {
             var clasificaciones = _servicioClasificacion.ListarClasificaciones();
@@ -54,11 +55,13 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                 dgvClasificacion.Rows.Add(fila);
             }
         }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             new AltaClasificacion(_unidadDeTrabajo).ShowDialog();
             ConsultarClasificaciones();
         }
+
         private void btnModificar_Click(object sender, EventArgs e)
         {
             //Validar la cantidad de filas seleccionadas
@@ -78,6 +81,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             else if (dgvClasificacion.SelectedRows.Count > 1)
                 MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
         }
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (dgvClasificacion.SelectedRows.Count == 1)
@@ -98,7 +102,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                 MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
 
         }
-        private void btnFiltrar_Click(object sender, EventArgs e)
+
+        private void btnFiltrar_Click_1(object sender, EventArgs e)
         {
             var nombre = txtNombre.Text.Trim();
             if (nombre.Length > 50)
@@ -108,15 +113,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 
             CargarDgvClasificacion(clasificacionesFiltradas);
         }
-        private void btnReiniciarFiltros_Click(object sender, EventArgs e)
-        {
-            ConsultarClasificaciones();
-        }
 
-        private void ConsultaClasificacion_Load(object sender, EventArgs e)
+        private void btnReiniciarFiltros_Click_1(object sender, EventArgs e)
         {
             ConsultarClasificaciones();
         }
     }
 }
-

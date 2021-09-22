@@ -282,7 +282,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.Controls.Add(this.label1);
             this.Name = "ModificacionSocio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Modificar Socio";
+            this.Text = "ModificacionSocio";
             this.Load += new System.EventHandler(this.ModificacionSocio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -91,6 +91,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnCancelar);
             this.Name = "BajaPerfil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BajaPerfil";
             this.Load += new System.EventHandler(this.BajaPerfil_Load);
             this.ResumeLayout(false);

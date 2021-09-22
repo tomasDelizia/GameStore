@@ -116,6 +116,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
             this.Name = "AltaCargo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaCargo";
             this.ResumeLayout(false);
             this.PerformLayout();

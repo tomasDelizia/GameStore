@@ -231,7 +231,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.Controls.Add(this.btnModificar);
             this.Name = "ModificacionProveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Modificar Proveedor";
+            this.Text = "ModificacionProveedor";
             this.Load += new System.EventHandler(this.ModificacionProveedor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

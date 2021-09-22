@@ -115,6 +115,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnCancelar);
             this.Name = "ModificacionFormaPago";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModificacionFormaPago";
             this.Load += new System.EventHandler(this.ModificacionFormaPago_Load);
             this.ResumeLayout(false);

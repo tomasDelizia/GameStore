@@ -116,7 +116,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
             this.Name = "AltaPlataforma";
-            this.Text = "Registrar Plataforma";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "AltaPlataforma";
             this.ResumeLayout(false);
             this.PerformLayout();
 

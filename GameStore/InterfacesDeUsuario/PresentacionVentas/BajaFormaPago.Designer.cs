@@ -91,6 +91,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnCancelar);
             this.Name = "BajaFormaPago";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BajaFormaPago";
             this.Load += new System.EventHandler(this.BajaFormaPago_Load);
             this.ResumeLayout(false);

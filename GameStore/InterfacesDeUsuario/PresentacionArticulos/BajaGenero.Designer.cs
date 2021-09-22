@@ -91,7 +91,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnCancelar);
             this.Name = "BajaGenero";
-            this.Text = "Eliminar Género";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "BajaGenero";
             this.Load += new System.EventHandler(this.BajaGenero_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

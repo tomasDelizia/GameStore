@@ -127,7 +127,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Name = "BajaTipoArticulo";
-            this.Text = "Eliminar Tipo de Artículo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "BajaTipoArticulo";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

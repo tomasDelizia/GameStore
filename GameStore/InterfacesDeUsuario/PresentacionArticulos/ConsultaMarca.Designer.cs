@@ -37,12 +37,12 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label2 = new System.Windows.Forms.Label();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.dgvMarca = new System.Windows.Forms.DataGridView();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.idMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarca)).BeginInit();
             this.SuspendLayout();
@@ -131,6 +131,27 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.dgvMarca.Size = new System.Drawing.Size(713, 163);
             this.dgvMarca.TabIndex = 108;
             // 
+            // idMarca
+            // 
+            this.idMarca.HeaderText = "Id";
+            this.idMarca.Name = "idMarca";
+            this.idMarca.Visible = false;
+            this.idMarca.Width = 41;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 69;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 88;
+            // 
             // btnEliminar
             // 
             this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
@@ -167,27 +188,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnAgregar.TabIndex = 109;
             this.btnAgregar.UseVisualStyleBackColor = true;
             // 
-            // idMarca
-            // 
-            this.idMarca.HeaderText = "Id";
-            this.idMarca.Name = "idMarca";
-            this.idMarca.Visible = false;
-            this.idMarca.Width = 41;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 69;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 88;
-            // 
             // ConsultaMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +200,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Name = "ConsultaMarca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaMarca";
             this.Load += new System.EventHandler(this.ConsultaMarca_Load);
             this.panel1.ResumeLayout(false);

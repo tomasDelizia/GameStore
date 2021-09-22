@@ -86,6 +86,7 @@ namespace GameStore.InterfacesDeUsuario
         {
             new ConsultaArticulo(_unidadDeTrabajo).ShowDialog();
         }
+
         private void BtnProveedores_Click(object sender, EventArgs e)
         {
             new ConsultaProveedor(_unidadDeTrabajo).ShowDialog();
@@ -95,6 +96,7 @@ namespace GameStore.InterfacesDeUsuario
         {
             new ConsultaUsuario(_unidadDeTrabajo).ShowDialog();
         }
+
         private void BtnEmpleado_Click(object sender, EventArgs e)
         {
             new ConsultaEmpleado(_unidadDeTrabajo).ShowDialog();  
@@ -105,9 +107,16 @@ namespace GameStore.InterfacesDeUsuario
             ShowSubPanel(PnlSubMenuOtros);
         }
 
-        private void BtnReporte_Click(object sender, EventArgs e)
+        private void BtnCargo_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(PnlSubMenuReporte);
+            new ConsultarCargo(_unidadDeTrabajo).ShowDialog();
+        }
+
+        //categoria
+
+        private void BtnClasificacion_Click(object sender, EventArgs e)
+        {
+            new ConsultaClasificacion(_unidadDeTrabajo).ShowDialog();
         }
 
         private void BtnDesarrollador_Click(object sender, EventArgs e)
@@ -118,11 +127,6 @@ namespace GameStore.InterfacesDeUsuario
         private void BtnFormaPago_Click(object sender, EventArgs e)
         {
             new ConsultaFormaPago(_unidadDeTrabajo).ShowDialog();
-        }
-
-        private void BtnPlataforma_Click(object sender, EventArgs e)
-        {
-            new ConsultaPlataforma(_unidadDeTrabajo).ShowDialog();
         }
 
         private void BtnGenero_Click(object sender, EventArgs e)
@@ -140,14 +144,14 @@ namespace GameStore.InterfacesDeUsuario
             new ConsultaPerfil(_unidadDeTrabajo).ShowDialog();
         }
 
-        private void BtnCargo_Click(object sender, EventArgs e)
+        private void BtnPlataforma_Click(object sender, EventArgs e)
         {
-            new ConsultarCargo(_unidadDeTrabajo).ShowDialog();
+            new ConsultaPlataforma(_unidadDeTrabajo).ShowDialog();
         }
 
-        private void BtnClasificacion_Click(object sender, EventArgs e)
+        private void BtnReporte_Click(object sender, EventArgs e)
         {
-            new ConsultaClasificacion(_unidadDeTrabajo).ShowDialog();
+            ShowSubMenu(PnlSubMenuReporte);
         }
     }
 }

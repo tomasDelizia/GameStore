@@ -82,7 +82,7 @@ namespace GameStore.InterfacesDeUsuario
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(289, 749);
+            this.MenuVertical.Size = new System.Drawing.Size(289, 785);
             this.MenuVertical.TabIndex = 2;
             // 
             // BtnCompraProveedor
@@ -592,7 +592,7 @@ namespace GameStore.InterfacesDeUsuario
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1366, 785);
             this.Controls.Add(this.MenuVertical);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.DimGray;

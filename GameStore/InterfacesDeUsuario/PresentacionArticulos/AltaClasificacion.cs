@@ -38,6 +38,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                 MessageBox.Show("Ha ocurrido un problema, intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private bool EsOperacionConfirmada()
         {
             var respuesta = MessageBox.Show("¿Desea confirmar la operación?", "Confirmación", MessageBoxButtons.YesNo,
@@ -57,8 +58,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             return true;
         }
         private void RegistrarClasificacion()
-        {
-            
+        {        
             bool insertarClasificacion = _servicioClasificacion.Insertar(_nuevaClasificacion);
             if (!insertarClasificacion)
             {
@@ -69,10 +69,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Dispose();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             this.Dispose();
         }
-
     }
 }

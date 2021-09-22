@@ -85,13 +85,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(351, 80);
+            this.ClientSize = new System.Drawing.Size(351, 84);
             this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnCancelar);
             this.Name = "BajaDesarrollador";
-            this.Text = "Eliminar Desarrollador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "BajaDesarrollador";
             this.Load += new System.EventHandler(this.BajaDesarrollador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

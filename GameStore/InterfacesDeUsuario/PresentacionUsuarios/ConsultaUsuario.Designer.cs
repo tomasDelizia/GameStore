@@ -312,7 +312,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.btnEliminar);
             this.Name = "ConsultaUsuario";
-            this.Text = "Consultar Usuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ConsultaUsuario";
             this.Load += new System.EventHandler(this.ConsultaUsuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

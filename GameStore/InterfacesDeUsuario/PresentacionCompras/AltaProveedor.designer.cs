@@ -230,7 +230,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.Controls.Add(this.label1);
             this.Name = "AltaProveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar Proveedor";
+            this.Text = "AltaProveedor";
             this.Load += new System.EventHandler(this.AltaProveedor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
