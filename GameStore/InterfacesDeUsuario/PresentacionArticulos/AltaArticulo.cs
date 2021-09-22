@@ -21,7 +21,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private readonly IServicioPlataforma _servicioPlataforma;
         private readonly IServicioArchivo _servicioArchivo;
         private readonly IServicioMarca _servicioMarca;
-        private IUnidadDeTrabajo _unidadDeTrabajo;
         private Archivo _nuevaImagen;
         private Articulo _nuevoArticulo;
 

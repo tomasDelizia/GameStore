@@ -201,6 +201,7 @@
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaPlataforma.Designer.cs">
       <DependentUpon>ConsultaPlataforma.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaDesarrollador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -527,6 +528,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaPlataforma.resx">
       <DependentUpon>ConsultaPlataforma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaDesarrollador.resx">
       <DependentUpon>ConsultaDesarrollador.cs</DependentUpon>
     </EmbeddedResource>
@@ -538,6 +540,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionPlataforma.resx">
       <DependentUpon>ModificacionPlataforma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionDesarrollador.resx">
       <DependentUpon>ModificacionDesarrollador.cs</DependentUpon>
     </EmbeddedResource>

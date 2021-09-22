@@ -102,6 +102,7 @@ namespace GameStore.InterfacesDeUsuario
             // 
             // BtnAlquiler
             // 
+            this.BtnAlquiler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnAlquiler.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnAlquiler.FlatAppearance.BorderSize = 0;
             this.BtnAlquiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -113,10 +114,11 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnAlquiler.TabIndex = 6;
             this.BtnAlquiler.Text = "Alquiler";
             this.BtnAlquiler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAlquiler.UseVisualStyleBackColor = true;
+            this.BtnAlquiler.UseVisualStyleBackColor = false;
             // 
             // BtnRegistrarVenta
             // 
+            this.BtnRegistrarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnRegistrarVenta.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnRegistrarVenta.FlatAppearance.BorderSize = 0;
             this.BtnRegistrarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -128,7 +130,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnRegistrarVenta.TabIndex = 5;
             this.BtnRegistrarVenta.Text = "Venta";
             this.BtnRegistrarVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRegistrarVenta.UseVisualStyleBackColor = true;
+            this.BtnRegistrarVenta.UseVisualStyleBackColor = false;
             // 
             // PnlSubMenuReporte
             // 
@@ -143,6 +145,7 @@ namespace GameStore.InterfacesDeUsuario
             // BtnMasFieles
             // 
             this.BtnMasFieles.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnMasFieles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnMasFieles.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.BtnMasFieles.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnMasFieles.FlatAppearance.BorderSize = 0;
@@ -157,11 +160,12 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnMasFieles.TabIndex = 8;
             this.BtnMasFieles.Text = "Más Fieles";
             this.BtnMasFieles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnMasFieles.UseVisualStyleBackColor = true;
+            this.BtnMasFieles.UseVisualStyleBackColor = false;
             // 
             // BtnMasVendidos
             // 
             this.BtnMasVendidos.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnMasVendidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnMasVendidos.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.BtnMasVendidos.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnMasVendidos.FlatAppearance.BorderSize = 0;
@@ -176,10 +180,11 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnMasVendidos.TabIndex = 7;
             this.BtnMasVendidos.Text = "Más Vendidos";
             this.BtnMasVendidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnMasVendidos.UseVisualStyleBackColor = true;
+            this.BtnMasVendidos.UseVisualStyleBackColor = false;
             // 
             // BtnReporte
             // 
+            this.BtnReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnReporte.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnReporte.FlatAppearance.BorderSize = 0;
             this.BtnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -193,7 +198,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnReporte.TabIndex = 3;
             this.BtnReporte.Text = "Reportes";
             this.BtnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnReporte.UseVisualStyleBackColor = true;
+            this.BtnReporte.UseVisualStyleBackColor = false;
             this.BtnReporte.Click += new System.EventHandler(this.BtnReporte_Click);
             // 
             // PnlSubmenuABM
@@ -232,6 +237,7 @@ namespace GameStore.InterfacesDeUsuario
             // BtnPlataforma
             // 
             this.BtnPlataforma.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnPlataforma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnPlataforma.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.BtnPlataforma.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnPlataforma.FlatAppearance.BorderSize = 0;
@@ -246,11 +252,12 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnPlataforma.TabIndex = 16;
             this.BtnPlataforma.Text = "Plataforma";
             this.BtnPlataforma.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnPlataforma.UseVisualStyleBackColor = true;
+            this.BtnPlataforma.UseVisualStyleBackColor = false;
             // 
             // BtnPerfil
             // 
             this.BtnPerfil.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnPerfil.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.BtnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnPerfil.FlatAppearance.BorderSize = 0;
@@ -265,11 +272,12 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnPerfil.TabIndex = 15;
             this.BtnPerfil.Text = "Perfil";
             this.BtnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnPerfil.UseVisualStyleBackColor = true;
+            this.BtnPerfil.UseVisualStyleBackColor = false;
             // 
             // BtnMarca
             // 
             this.BtnMarca.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnMarca.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.BtnMarca.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnMarca.FlatAppearance.BorderSize = 0;
@@ -284,11 +292,12 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnMarca.TabIndex = 14;
             this.BtnMarca.Text = "Marca";
             this.BtnMarca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnMarca.UseVisualStyleBackColor = true;
+            this.BtnMarca.UseVisualStyleBackColor = false;
             // 
             // BtnGenero
             // 
             this.BtnGenero.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnGenero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnGenero.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.BtnGenero.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnGenero.FlatAppearance.BorderSize = 0;
@@ -303,11 +312,12 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnGenero.TabIndex = 13;
             this.BtnGenero.Text = "Genero";
             this.BtnGenero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGenero.UseVisualStyleBackColor = true;
+            this.BtnGenero.UseVisualStyleBackColor = false;
             // 
             // BtnFormaPago
             // 
             this.BtnFormaPago.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnFormaPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnFormaPago.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.BtnFormaPago.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnFormaPago.FlatAppearance.BorderSize = 0;
@@ -322,12 +332,13 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnFormaPago.TabIndex = 12;
             this.BtnFormaPago.Text = "Forma De Pago";
             this.BtnFormaPago.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnFormaPago.UseVisualStyleBackColor = true;
+            this.BtnFormaPago.UseVisualStyleBackColor = false;
             this.BtnFormaPago.Click += new System.EventHandler(this.BtnFormaPago_Click);
             // 
             // BtnDesarrollador
             // 
             this.BtnDesarrollador.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnDesarrollador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnDesarrollador.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.BtnDesarrollador.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnDesarrollador.FlatAppearance.BorderSize = 0;
@@ -342,12 +353,13 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnDesarrollador.TabIndex = 11;
             this.BtnDesarrollador.Text = "Desarrollador";
             this.BtnDesarrollador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnDesarrollador.UseVisualStyleBackColor = true;
+            this.BtnDesarrollador.UseVisualStyleBackColor = false;
             this.BtnDesarrollador.Click += new System.EventHandler(this.BtnDesarrollador_Click);
             // 
             // BtnClasificacion
             // 
             this.BtnClasificacion.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnClasificacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnClasificacion.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.BtnClasificacion.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnClasificacion.FlatAppearance.BorderSize = 0;
@@ -362,11 +374,12 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnClasificacion.TabIndex = 10;
             this.BtnClasificacion.Text = "Clasificacion";
             this.BtnClasificacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnClasificacion.UseVisualStyleBackColor = true;
+            this.BtnClasificacion.UseVisualStyleBackColor = false;
             // 
             // BtnCategoriaAlquiler
             // 
             this.BtnCategoriaAlquiler.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnCategoriaAlquiler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnCategoriaAlquiler.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.BtnCategoriaAlquiler.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnCategoriaAlquiler.FlatAppearance.BorderSize = 0;
@@ -381,11 +394,12 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnCategoriaAlquiler.TabIndex = 9;
             this.BtnCategoriaAlquiler.Text = "Categoria De Alquiler";
             this.BtnCategoriaAlquiler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCategoriaAlquiler.UseVisualStyleBackColor = true;
+            this.BtnCategoriaAlquiler.UseVisualStyleBackColor = false;
             // 
             // BtnCargo
             // 
             this.BtnCargo.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnCargo.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.BtnCargo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnCargo.FlatAppearance.BorderSize = 0;
@@ -400,11 +414,12 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnCargo.TabIndex = 8;
             this.BtnCargo.Text = "Cargo";
             this.BtnCargo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCargo.UseVisualStyleBackColor = true;
+            this.BtnCargo.UseVisualStyleBackColor = false;
             // 
             // BtnOtros
             // 
             this.BtnOtros.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnOtros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnOtros.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.BtnOtros.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnOtros.FlatAppearance.BorderSize = 0;
@@ -419,12 +434,13 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnOtros.TabIndex = 10;
             this.BtnOtros.Text = "Otros";
             this.BtnOtros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnOtros.UseVisualStyleBackColor = true;
+            this.BtnOtros.UseVisualStyleBackColor = false;
             this.BtnOtros.Click += new System.EventHandler(this.BtnOtros_Click);
             // 
             // BtnEmpleado
             // 
             this.BtnEmpleado.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnEmpleado.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.BtnEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnEmpleado.FlatAppearance.BorderSize = 0;
@@ -439,12 +455,13 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnEmpleado.TabIndex = 8;
             this.BtnEmpleado.Text = "Empleados";
             this.BtnEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEmpleado.UseVisualStyleBackColor = true;
+            this.BtnEmpleado.UseVisualStyleBackColor = false;
             this.BtnEmpleado.Click += new System.EventHandler(this.BtnEmpleado_Click);
             // 
             // BtnUsuario
             // 
             this.BtnUsuario.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnUsuario.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.BtnUsuario.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnUsuario.FlatAppearance.BorderSize = 0;
@@ -459,12 +476,13 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnUsuario.TabIndex = 6;
             this.BtnUsuario.Text = "Usuarios";
             this.BtnUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnUsuario.UseVisualStyleBackColor = true;
+            this.BtnUsuario.UseVisualStyleBackColor = false;
             this.BtnUsuario.Click += new System.EventHandler(this.BtnUsuario_Click);
             // 
             // BtnProveedores
             // 
             this.BtnProveedores.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnProveedores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnProveedores.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.BtnProveedores.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnProveedores.FlatAppearance.BorderSize = 0;
@@ -479,12 +497,13 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnProveedores.TabIndex = 4;
             this.BtnProveedores.Text = "Proveedores";
             this.BtnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnProveedores.UseVisualStyleBackColor = true;
+            this.BtnProveedores.UseVisualStyleBackColor = false;
             this.BtnProveedores.Click += new System.EventHandler(this.BtnProveedores_Click);
             // 
             // BtnArticulos
             // 
             this.BtnArticulos.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.BtnArticulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnArticulos.DialogResult = System.Windows.Forms.DialogResult.Retry;
             this.BtnArticulos.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnArticulos.FlatAppearance.BorderSize = 0;
@@ -499,11 +518,12 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnArticulos.TabIndex = 2;
             this.BtnArticulos.Text = "Artículos";
             this.BtnArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnArticulos.UseVisualStyleBackColor = true;
+            this.BtnArticulos.UseVisualStyleBackColor = false;
             this.BtnArticulos.Click += new System.EventHandler(this.BtnArticulos_Click);
             // 
             // BtnSocio
             // 
+            this.BtnSocio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnSocio.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnSocio.FlatAppearance.BorderSize = 0;
             this.BtnSocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -517,11 +537,12 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnSocio.TabIndex = 0;
             this.BtnSocio.Text = "Socio";
             this.BtnSocio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSocio.UseVisualStyleBackColor = true;
+            this.BtnSocio.UseVisualStyleBackColor = false;
             this.BtnSocio.Click += new System.EventHandler(this.BtnSocio_Click);
             // 
             // BtnABM
             // 
+            this.BtnABM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BtnABM.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnABM.FlatAppearance.BorderSize = 0;
             this.BtnABM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -535,7 +556,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnABM.TabIndex = 1;
             this.BtnABM.Text = "ABM";
             this.BtnABM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnABM.UseVisualStyleBackColor = true;
+            this.BtnABM.UseVisualStyleBackColor = false;
             this.BtnABM.Click += new System.EventHandler(this.BtnABM_Click);
             // 
             // panel1
