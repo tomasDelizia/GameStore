@@ -15,9 +15,20 @@ namespace GameStore.Servicios.Implementaciones
         {
             _repositorioDesarrollador = repositorioDesarrollador;
         }
+
+        public void ValidarDesarrollador(Desarrollador desarrollador)
+        {
+            desarrollador.ValidarNombre();
+        }
         public List<Desarrollador> ListarDesarrolladores()
         {
             return _repositorioDesarrollador.GetTodos().ToList();
         }
+
+        public Desarrollador GetPorId(int id)
+        {
+            return _repositorioDesarrollador.GetPorId(id);
+        }
     }
 }
+

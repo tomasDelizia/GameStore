@@ -13,6 +13,11 @@ namespace GameStore.Servicios.Implementaciones
         {
             _repositorioClasificacion = repositorioClasificacion;
         }
+        public void ValidarClasificacion(Clasificacion clasificacion)
+        {
+            clasificacion.ValidarNombre();
+            
+        }
 
         public List<Clasificacion> ListarClasificaciones()
         {

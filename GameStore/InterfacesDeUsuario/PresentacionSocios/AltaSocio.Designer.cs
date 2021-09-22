@@ -34,20 +34,20 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.BtnConfirmar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtCalle = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtDocumento = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.dateNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.txtNroCalle = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbBarrios = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -79,12 +79,12 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(460, 58);
+            this.label3.Location = new System.Drawing.Point(450, 58);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 22);
+            this.label3.Size = new System.Drawing.Size(61, 22);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Mail:";
+            this.label3.Text = "Email:";
             // 
             // label4
             // 
@@ -110,13 +110,13 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.label5.TabIndex = 4;
             this.label5.Text = "Apellido:";
             // 
-            // TxtNombre
+            // txtNombre
             // 
-            this.TxtNombre.Location = new System.Drawing.Point(152, 14);
-            this.TxtNombre.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(231, 31);
-            this.TxtNombre.TabIndex = 8;
+            this.txtNombre.Location = new System.Drawing.Point(152, 14);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(231, 31);
+            this.txtNombre.TabIndex = 8;
             // 
             // BtnConfirmar
             // 
@@ -152,86 +152,78 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.label6.TabIndex = 12;
             this.label6.Text = "Documento:";
             // 
-            // textBox1
+            // txtCalle
             // 
-            this.textBox1.Location = new System.Drawing.Point(152, 137);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 31);
-            this.textBox1.TabIndex = 13;
+            this.txtCalle.Location = new System.Drawing.Point(152, 137);
+            this.txtCalle.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtCalle.Name = "txtCalle";
+            this.txtCalle.Size = new System.Drawing.Size(231, 31);
+            this.txtCalle.TabIndex = 13;
             // 
-            // textBox2
+            // txtEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(523, 55);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(231, 31);
-            this.textBox2.TabIndex = 14;
+            this.txtEmail.Location = new System.Drawing.Point(523, 55);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(231, 31);
+            this.txtEmail.TabIndex = 14;
             // 
-            // textBox3
+            // txtDocumento
             // 
-            this.textBox3.Location = new System.Drawing.Point(152, 55);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(231, 31);
-            this.textBox3.TabIndex = 17;
+            this.txtDocumento.Location = new System.Drawing.Point(152, 55);
+            this.txtDocumento.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.Size = new System.Drawing.Size(231, 31);
+            this.txtDocumento.TabIndex = 17;
             // 
-            // textBox4
+            // txtApellido
             // 
-            this.textBox4.Location = new System.Drawing.Point(152, 96);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(231, 31);
-            this.textBox4.TabIndex = 16;
+            this.txtApellido.Location = new System.Drawing.Point(523, 14);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(231, 31);
+            this.txtApellido.TabIndex = 15;
             // 
-            // textBox5
+            // dateNacimiento
             // 
-            this.textBox5.Location = new System.Drawing.Point(523, 14);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(231, 31);
-            this.textBox5.TabIndex = 15;
+            this.dateNacimiento.CalendarFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateNacimiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateNacimiento.Location = new System.Drawing.Point(152, 176);
+            this.dateNacimiento.Name = "dateNacimiento";
+            this.dateNacimiento.Size = new System.Drawing.Size(231, 27);
+            this.dateNacimiento.TabIndex = 18;
             // 
-            // dateTimePicker1
+            // txtNroCalle
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(152, 176);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(289, 27);
-            this.dateTimePicker1.TabIndex = 18;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(523, 137);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(231, 31);
-            this.textBox6.TabIndex = 20;
+            this.txtNroCalle.Location = new System.Drawing.Point(523, 137);
+            this.txtNroCalle.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtNroCalle.Name = "txtNroCalle";
+            this.txtNroCalle.Size = new System.Drawing.Size(231, 31);
+            this.txtNroCalle.TabIndex = 20;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(423, 143);
+            this.label7.Location = new System.Drawing.Point(440, 140);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 22);
+            this.label7.Size = new System.Drawing.Size(71, 22);
             this.label7.TabIndex = 19;
-            this.label7.Text = "Número:";
+            this.label7.Text = "Altura:";
             // 
-            // comboBox2
+            // cmbBarrios
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.White;
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(523, 97);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(231, 29);
-            this.comboBox2.TabIndex = 21;
-            this.comboBox2.Text = "Barrio";
+            this.cmbBarrios.BackColor = System.Drawing.Color.White;
+            this.cmbBarrios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBarrios.ForeColor = System.Drawing.Color.DimGray;
+            this.cmbBarrios.FormattingEnabled = true;
+            this.cmbBarrios.Location = new System.Drawing.Point(523, 97);
+            this.cmbBarrios.Name = "cmbBarrios";
+            this.cmbBarrios.Size = new System.Drawing.Size(231, 29);
+            this.cmbBarrios.TabIndex = 21;
+            this.cmbBarrios.Text = "Barrio";
             // 
             // label8
             // 
@@ -245,26 +237,34 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.label8.TabIndex = 22;
             this.label8.Text = "Nacimiento:";
             // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(152, 96);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(231, 31);
+            this.txtTelefono.TabIndex = 23;
+            // 
             // AltaSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(773, 271);
+            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.cmbBarrios);
+            this.Controls.Add(this.txtNroCalle);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dateNacimiento);
+            this.Controls.Add(this.txtDocumento);
+            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtCalle);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnConfirmar);
-            this.Controls.Add(this.TxtNombre);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -288,19 +288,19 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TxtNombre;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button BtnConfirmar;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtCalle;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtDocumento;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.DateTimePicker dateNacimiento;
+        private System.Windows.Forms.TextBox txtNroCalle;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbBarrios;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtTelefono;
     }
 }

@@ -11,6 +11,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 {
     public partial class ModificacionArticulo : Form
     {
+        private IUnidadDeTrabajo _unidadDeTrabajo;
         private readonly IServicioArticulo _servicioArticulo;
         private readonly IServicioTipoArticulo _servicioTipoArticulo;
         private readonly IServicioDesarrollador _servicioDesarrollador;
@@ -25,6 +26,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         public ModificacionArticulo(IUnidadDeTrabajo unidadDeTrabajo, int codigo)
         {
             InitializeComponent();
+            _unidadDeTrabajo = unidadDeTrabajo;
             _servicioArticulo = new ServicioArticulo(unidadDeTrabajo.RepositorioArticulo);
             _servicioTipoArticulo = new ServicioTipoArticulo(unidadDeTrabajo.RepositorioTipoArticulo);
             _servicioDesarrollador = new ServicioDesarrollador(unidadDeTrabajo.RepositorioDesarrollador);
@@ -33,6 +35,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
             _servicioArchivo = new ServicioArchivo(unidadDeTrabajo.RepositorioArchivo);
             _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
+            _unidadDeTrabajo = unidadDeTrabajo;
 
             _articuloAModificar = _servicioArticulo.GetPorId(codigo);
         }
@@ -275,7 +278,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 
         private void btnAgregarPlataforma_Click(object sender, EventArgs e)
         {
-            Form frmAltaPlataforma = new AltaPlataforma();
+            Form frmAltaPlataforma = new AltaPlataforma(_unidadDeTrabajo);
             frmAltaPlataforma.Show();
         }
 
@@ -287,7 +290,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 
         private void btnAgregarDesarrollador_Click(object sender, EventArgs e)
         {
-            Form frmAltaDesarrollador = new AltaDesarrollador();
+            Form frmAltaDesarrollador = new AltaDesarrollador(_unidadDeTrabajo);
             frmAltaDesarrollador.Show();
         }
 

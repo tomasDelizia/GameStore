@@ -46,7 +46,7 @@ namespace GameStore.Entidades
             if (string.IsNullOrEmpty(RazonSocial))
                 throw new ApplicationException("La razón social es requerida.");
             if (RazonSocial.Length > 50)
-                throw new ApplicationException("El nombre no debe superar los 50 caracteres.");
+                throw new ApplicationException("La razón social no debe superar los 50 caracteres.");
         }
 
         public void ValidarCuit()

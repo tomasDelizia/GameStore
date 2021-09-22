@@ -196,6 +196,18 @@
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaArticulo.Designer.cs">
       <DependentUpon>ConsultaArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaPlataforma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaPlataforma.Designer.cs">
+      <DependentUpon>ConsultaPlataforma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaDesarrollador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaDesarrollador.Designer.cs">
+      <DependentUpon>ConsultaDesarrollador.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +231,12 @@
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionGenero.Designer.cs">
       <DependentUpon>ModificacionGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionPlataforma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionPlataforma.Designer.cs">
+      <DependentUpon>ModificacionPlataforma.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionCompras\AltaProveedor.cs">
       <SubType>Form</SubType>
@@ -280,6 +298,12 @@
     <Compile Include="InterfacesDeUsuario\PresentacionSocios\BajaSocio.Designer.cs">
       <DependentUpon>BajaSocio.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionSocios\ConsultaSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionSocios\ConsultaSocio.Designer.cs">
+      <DependentUpon>ConsultaSocio.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionSocios\ModificacionSocio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,6 +346,18 @@
     <Compile Include="InterfacesDeUsuario\PresentacionVentas\BajaFormaPago.Designer.cs">
       <DependentUpon>BajaFormaPago.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionVentas\ConsultaFormaPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionVentas\ConsultaFormaPago.Designer.cs">
+      <DependentUpon>ConsultaFormaPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionVentas\ModificacionFormaPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionVentas\ModificacionFormaPago.Designer.cs">
+      <DependentUpon>ModificacionFormaPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entidades\Alquiler.cs" />
@@ -346,12 +382,15 @@
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioBarrio.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioCargo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioDesarrollador.cs" />
+    <Compile Include="RepositoriosBD\Implementaciones\RepositorioEmpleado.cs" />
+    <Compile Include="RepositoriosBD\Implementaciones\RepositorioFormaPago.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioGenero.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioMarca.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioPerfil.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioPlataforma.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioProveedor.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioRol.cs" />
+    <Compile Include="RepositoriosBD\Implementaciones\RepositorioSocio.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioTipoArticulo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioClasificacion.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioEmpleado.cs" />
@@ -368,11 +407,14 @@
     <Compile Include="Entidades\Plataforma.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
     <Compile Include="RepositoriosBD\IRepositorioDesarrollador.cs" />
+    <Compile Include="RepositoriosBD\IRepositorioEmpleado.cs" />
+    <Compile Include="RepositoriosBD\IRepositorioFormaPago.cs" />
     <Compile Include="RepositoriosBD\IRepositorioGenero.cs" />
     <Compile Include="RepositoriosBD\IRepositorioPerfil.cs" />
     <Compile Include="RepositoriosBD\IRepositorioPlataforma.cs" />
     <Compile Include="RepositoriosBD\IRepositorioProveedor.cs" />
     <Compile Include="RepositoriosBD\IRepositorioRol.cs" />
+    <Compile Include="RepositoriosBD\IRepositorioSocio.cs" />
     <Compile Include="RepositoriosBD\IRepositorioTipoArticulo.cs" />
     <Compile Include="RepositoriosBD\IRepositorioUsuario.cs" />
     <Compile Include="RepositoriosBD\IRepositorioEmpleado.cs" />
@@ -393,12 +435,14 @@
     <Compile Include="Servicios\Implementaciones\ServicioClasificacion.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioDesarrollador.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioEmpleado.cs" />
+    <Compile Include="Servicios\Implementaciones\ServicioFormaPago.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioGenero.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioMarca.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioPerfil.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioPlataforma.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioProveedor.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioRol.cs" />
+    <Compile Include="Servicios\Implementaciones\ServicioSocio.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioTipoArticulo.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioUsuario.cs" />
     <Compile Include="Servicios\IServicio.cs" />
@@ -409,12 +453,14 @@
     <Compile Include="Servicios\IServicioClasificacion.cs" />
     <Compile Include="Servicios\IServicioDesarrollador.cs" />
     <Compile Include="Servicios\IServicioEmpleado.cs" />
+    <Compile Include="Servicios\IServicioFormaPago.cs" />
     <Compile Include="Servicios\IServicioGenero.cs" />
     <Compile Include="Servicios\IServicioMarca.cs" />
     <Compile Include="Servicios\IServicioPerfil.cs" />
     <Compile Include="Servicios\IServicioPlataforma.cs" />
     <Compile Include="Servicios\IServicioProveedor.cs" />
     <Compile Include="Servicios\IServicioRol.cs" />
+    <Compile Include="Servicios\IServicioSocio.cs" />
     <Compile Include="Servicios\IServicioTipoArticulo.cs" />
     <Compile Include="Servicios\IServicioUsuario.cs" />
     <EmbeddedResource Include="InterfacesDeUsuario\Bienvenida.resx">
@@ -480,11 +526,23 @@
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaArticulo.resx">
       <DependentUpon>ConsultaArticulo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaPlataforma.resx">
+      <DependentUpon>ConsultaPlataforma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaDesarrollador.resx">
+      <DependentUpon>ConsultaDesarrollador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionArticulo.resx">
       <DependentUpon>ModificacionArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionClasificacion.resx">
       <DependentUpon>ModificacionClasificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionPlataforma.resx">
+      <DependentUpon>ModificacionPlataforma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionDesarrollador.resx">
+      <DependentUpon>ModificacionDesarrollador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionCompras\AltaProveedor.resx">
       <DependentUpon>AltaProveedor.cs</DependentUpon>
@@ -516,6 +574,9 @@
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionSocios\BajaSocio.resx">
       <DependentUpon>BajaSocio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionSocios\ConsultaSocio.resx">
+      <DependentUpon>ConsultaSocio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionSocios\ModificacionSocio.resx">
       <DependentUpon>ModificacionSocio.cs</DependentUpon>
     </EmbeddedResource>
@@ -536,6 +597,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionVentas\BajaFormaPago.resx">
       <DependentUpon>BajaFormaPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionVentas\ConsultaFormaPago.resx">
+      <DependentUpon>ConsultaFormaPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionVentas\ModificacionFormaPago.resx">
+      <DependentUpon>ModificacionFormaPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

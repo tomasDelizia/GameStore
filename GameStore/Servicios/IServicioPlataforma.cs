@@ -10,5 +10,6 @@ namespace GameStore.Servicios
     public interface IServicioPlataforma : IServicio<Plataforma>
     {
         List<Plataforma> ListarPlataformas();
+        void ValidarPlataforma(Plataforma plataforma);
     }
 }

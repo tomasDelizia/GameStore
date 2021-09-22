@@ -9,6 +9,9 @@ namespace GameStore.Servicios
 {
     public interface IServicioDesarrollador : IServicio<Desarrollador>
     {
+        void ValidarDesarrollador(Desarrollador desarrollador);
+        Desarrollador GetPorId(int id);
+
         List<Desarrollador> ListarDesarrolladores();
     }
 }

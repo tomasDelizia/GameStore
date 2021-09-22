@@ -21,5 +21,9 @@ namespace GameStore.Servicios.Implementaciones
         {
             return _repositorioPlataforma.GetTodos().ToList();
         }
+        public void ValidarPlataforma(Plataforma plataforma)
+        {
+            plataforma.ValidarNombre();
+        }
     }
 }
