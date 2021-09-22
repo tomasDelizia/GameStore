@@ -266,7 +266,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 
         private void btnAgregarClasificacion_Click(object sender, EventArgs e)
         {
-            Form frmAltaClasificacion = new AltaClasificacion();
+            Form frmAltaClasificacion = new AltaClasificacion(_unidadDeTrabajo);
             frmAltaClasificacion.Show();
         }
 

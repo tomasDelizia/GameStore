@@ -69,7 +69,7 @@ namespace GameStore.InterfacesDeUsuario
             // MenuVertical
             // 
             this.MenuVertical.AutoScroll = true;
-            this.MenuVertical.BackColor = System.Drawing.Color.Yellow;
+            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.MenuVertical.Controls.Add(this.BtnCompraProveedor);
             this.MenuVertical.Controls.Add(this.BtnAlquiler);
             this.MenuVertical.Controls.Add(this.BtnRegistrarVenta);
@@ -253,6 +253,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnPlataforma.Text = "Plataforma";
             this.BtnPlataforma.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnPlataforma.UseVisualStyleBackColor = false;
+            this.BtnPlataforma.Click += new System.EventHandler(this.BtnPlataforma_Click);
             // 
             // BtnPerfil
             // 

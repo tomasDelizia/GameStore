@@ -120,5 +120,10 @@ namespace GameStore.InterfacesDeUsuario
         {
             new ConsultaFormaPago(_unidadDeTrabajo).ShowDialog();
         }
+
+        private void BtnPlataforma_Click(object sender, EventArgs e)
+        {
+            new ConsultaPlataforma(_unidadDeTrabajo).ShowDialog();
+        }
     }
 }
