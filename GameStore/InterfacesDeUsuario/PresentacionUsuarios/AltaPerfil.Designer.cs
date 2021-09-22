@@ -1,7 +1,7 @@
 ﻿
-namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
+namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
 {
-    partial class AltaPlataforma
+    partial class AltaPerfil
     {
         /// <summary>
         /// Required designer variable.
@@ -44,10 +44,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnCancelar.Location = new System.Drawing.Point(312, 249);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(93, 29);
-            this.btnCancelar.TabIndex = 82;
+            this.btnCancelar.TabIndex = 88;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnRegistrar
             // 
@@ -56,7 +55,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnRegistrar.Location = new System.Drawing.Point(208, 249);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(98, 29);
-            this.btnRegistrar.TabIndex = 83;
+            this.btnRegistrar.TabIndex = 89;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -70,7 +69,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 22);
-            this.label2.TabIndex = 81;
+            this.label2.TabIndex = 87;
             this.label2.Text = "Descripción";
             // 
             // txtDescripcion
@@ -79,7 +78,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.txtDescripcion.Location = new System.Drawing.Point(20, 64);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(385, 179);
-            this.txtDescripcion.TabIndex = 80;
+            this.txtDescripcion.TabIndex = 86;
             this.txtDescripcion.Text = "";
             // 
             // txtNombre
@@ -89,7 +88,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.txtNombre.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(289, 27);
-            this.txtNombre.TabIndex = 79;
+            this.txtNombre.TabIndex = 85;
             // 
             // label1
             // 
@@ -100,10 +99,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 22);
-            this.label1.TabIndex = 78;
+            this.label1.TabIndex = 84;
             this.label1.Text = "Nombre:";
             // 
-            // AltaPlataforma
+            // AltaPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -115,8 +114,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
-            this.Name = "AltaPlataforma";
-            this.Text = "Registrar Plataforma";
+            this.Name = "AltaPerfil";
+            this.Text = "Alta Perfil";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,7 +1,7 @@
 ﻿
-namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
+namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
 {
-    partial class AltaPlataforma
+    partial class ModificacionPerfil
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private void InitializeComponent()
         {
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -44,22 +44,22 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnCancelar.Location = new System.Drawing.Point(312, 249);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(93, 29);
-            this.btnCancelar.TabIndex = 82;
+            this.btnCancelar.TabIndex = 94;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnRegistrar
+            // btnModificar
             // 
-            this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnRegistrar.Location = new System.Drawing.Point(208, 249);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(98, 29);
-            this.btnRegistrar.TabIndex = 83;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.DimGray;
+            this.btnModificar.Location = new System.Drawing.Point(208, 249);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(98, 29);
+            this.btnModificar.TabIndex = 95;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // label2
             // 
@@ -70,16 +70,15 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 22);
-            this.label2.TabIndex = 81;
+            this.label2.TabIndex = 93;
             this.label2.Text = "Descripción";
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtDescripcion.Location = new System.Drawing.Point(20, 64);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(385, 179);
-            this.txtDescripcion.TabIndex = 80;
+            this.txtDescripcion.TabIndex = 92;
             this.txtDescripcion.Text = "";
             // 
             // txtNombre
@@ -89,7 +88,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.txtNombre.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(289, 27);
-            this.txtNombre.TabIndex = 79;
+            this.txtNombre.TabIndex = 91;
             // 
             // label1
             // 
@@ -100,23 +99,24 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 22);
-            this.label1.TabIndex = 78;
+            this.label1.TabIndex = 90;
             this.label1.Text = "Nombre:";
             // 
-            // AltaPlataforma
+            // ModificacionPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(416, 292);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnRegistrar);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
-            this.Name = "AltaPlataforma";
-            this.Text = "Registrar Plataforma";
+            this.Name = "ModificacionPerfil";
+            this.Text = "Modificar Perfil";
+            this.Load += new System.EventHandler(this.ModificacionPerfil_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,7 +125,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         #endregion
 
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtNombre;

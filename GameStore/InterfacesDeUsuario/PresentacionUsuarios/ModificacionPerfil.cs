@@ -12,30 +12,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
+namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
 {
-    public partial class ModificacionPlataforma : Form
+    public partial class ModificacionPerfil : Form
     {
         private IUnidadDeTrabajo _unidadDeTrabajo;
-        private readonly IServicioPlataforma _servicioPlataforma;
-        private Plataforma _plataformaAModificar;
-        public ModificacionPlataforma(IUnidadDeTrabajo unidadDeTrabajo, int id)
+        private readonly IServicioPerfil _servicioPerfil;
+        private Perfil _perfilAModificar;
+        public ModificacionPerfil(IUnidadDeTrabajo unidadDeTrabajo, int id)
         {
             InitializeComponent();
             _unidadDeTrabajo = unidadDeTrabajo;
-            _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
-            _plataformaAModificar = _servicioPlataforma.GetPorId(id);
+            _servicioPerfil = new ServicioPerfil(_unidadDeTrabajo.RepositorioPerfil);
+            _perfilAModificar = _servicioPerfil.GetPorId(id);
         }
 
-        private void ModificacionPlataforma_Load(object sender, EventArgs e)
+        private void ModificacionPerfil_Load(object sender, EventArgs e)
         {
             CargarDatos();
         }
 
         private void CargarDatos()
         {
-            txtNombre.Text = _plataformaAModificar.Nombre;
-            txtDescripcion.Text = _plataformaAModificar.Descripcion;
+            txtNombre.Text = _perfilAModificar.Nombre;
+            txtDescripcion.Text = _perfilAModificar.Descripcion;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -49,9 +49,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             {
                 if (!EsOperacionConfirmada())
                     return;
-                if (!EsPlataformaValida())
+                if (!EsPerfilValido())
                     return;
-                ModificarPlataforma();
+                ModificarPerfil();
             }
             catch (ApplicationException aex)
             {
@@ -64,19 +64,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             }
         }
 
-        private void ModificarPlataforma()
+        private void ModificarPerfil()
         {
-            _servicioPlataforma.Actualizar(_plataformaAModificar);
-            MessageBox.Show("Se modificó con éxito la plataforma", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            _servicioPerfil.Actualizar(_perfilAModificar);
+            MessageBox.Show("Se modificó con éxito el perfil", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Dispose();
-        }
-
-        private bool EsPlataformaValida()
-        {
-            _plataformaAModificar.Nombre = txtNombre.Text;
-            _plataformaAModificar.Descripcion = txtDescripcion.Text;
-            _servicioPlataforma.ValidarPlataforma(_plataformaAModificar);
-            return true;
         }
 
         private bool EsOperacionConfirmada()
@@ -86,6 +78,13 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             if (respuesta == DialogResult.Yes)
                 return true;
             return false;
+        }
+        private bool EsPerfilValido()
+        {
+            _perfilAModificar.Nombre = txtNombre.Text;
+            _perfilAModificar.Descripcion = txtDescripcion.Text;
+            _servicioPerfil.ValidarPerfil(_perfilAModificar);
+            return true;
         }
     }
 }

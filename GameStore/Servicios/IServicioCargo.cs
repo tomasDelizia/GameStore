@@ -10,5 +10,6 @@ namespace GameStore.Servicios
     public interface IServicioCargo : IServicio<Cargo>
     {
         List<Cargo> ListarCargos();
+        void ValidarCargo(Cargo nuevoCargo);
     }
 }

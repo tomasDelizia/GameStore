@@ -12,30 +12,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
+namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
 {
-    public partial class ModificacionPlataforma : Form
+    public partial class ModificacionCargo : Form
     {
         private IUnidadDeTrabajo _unidadDeTrabajo;
-        private readonly IServicioPlataforma _servicioPlataforma;
-        private Plataforma _plataformaAModificar;
-        public ModificacionPlataforma(IUnidadDeTrabajo unidadDeTrabajo, int id)
+        private readonly IServicioCargo _servicioCargo;
+        private Cargo _cargoAModificar;
+        public ModificacionCargo(IUnidadDeTrabajo unidadDeTrabajo, int id)
         {
             InitializeComponent();
             _unidadDeTrabajo = unidadDeTrabajo;
-            _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
-            _plataformaAModificar = _servicioPlataforma.GetPorId(id);
-        }
-
-        private void ModificacionPlataforma_Load(object sender, EventArgs e)
-        {
-            CargarDatos();
-        }
-
-        private void CargarDatos()
-        {
-            txtNombre.Text = _plataformaAModificar.Nombre;
-            txtDescripcion.Text = _plataformaAModificar.Descripcion;
+            _servicioCargo = new ServicioCargo(unidadDeTrabajo.RepositorioCargo);
+            _cargoAModificar = _servicioCargo.GetPorId(id);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -49,9 +38,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             {
                 if (!EsOperacionConfirmada())
                     return;
-                if (!EsPlataformaValida())
+                if (!EsCargoValido())
                     return;
-                ModificarPlataforma();
+                ModificarCargo();
             }
             catch (ApplicationException aex)
             {
@@ -64,18 +53,18 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             }
         }
 
-        private void ModificarPlataforma()
+        private void ModificarCargo()
         {
-            _servicioPlataforma.Actualizar(_plataformaAModificar);
-            MessageBox.Show("Se modificó con éxito la plataforma", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            _servicioCargo.Actualizar(_cargoAModificar);
+            MessageBox.Show("Se modificó con éxito el cargo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Dispose();
         }
 
-        private bool EsPlataformaValida()
+        private bool EsCargoValido()
         {
-            _plataformaAModificar.Nombre = txtNombre.Text;
-            _plataformaAModificar.Descripcion = txtDescripcion.Text;
-            _servicioPlataforma.ValidarPlataforma(_plataformaAModificar);
+            _cargoAModificar.Nombre = txtNombre.Text;
+            _cargoAModificar.Descripcion = txtDescripcion.Text;
+            _servicioCargo.ValidarCargo(_cargoAModificar);
             return true;
         }
 
@@ -86,6 +75,17 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             if (respuesta == DialogResult.Yes)
                 return true;
             return false;
+        }
+
+        private void ModificacionCargo_Load(object sender, EventArgs e)
+        {
+            CargarDatos();
+        }
+
+        private void CargarDatos()
+        {
+            txtNombre.Text = _cargoAModificar.Nombre;
+            txtDescripcion.Text = _cargoAModificar.Descripcion;
         }
     }
 }

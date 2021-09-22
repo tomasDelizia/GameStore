@@ -280,11 +280,23 @@
     <Compile Include="InterfacesDeUsuario\PresentacionCompras\ModificacionProveedor.Designer.cs">
       <DependentUpon>ModificacionProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\AltaCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\AltaCargo.Designer.cs">
+      <DependentUpon>AltaCargo.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\AltaEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\AltaEmpleado.Designer.cs">
       <DependentUpon>AltaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\BajaCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\BajaCargo.Designer.cs">
+      <DependentUpon>BajaCargo.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\BajaEmpleado.cs">
       <SubType>Form</SubType>
@@ -297,6 +309,18 @@
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\ConsultaEmpleado.Designer.cs">
       <DependentUpon>ConsultaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\ConsultarCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\ConsultarCargo.Designer.cs">
+      <DependentUpon>ConsultarCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\ModificacionCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\ModificacionCargo.Designer.cs">
+      <DependentUpon>ModificacionCargo.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\ModificacionEmpleado.cs">
       <SubType>Form</SubType>
@@ -328,17 +352,35 @@
     <Compile Include="InterfacesDeUsuario\PresentacionSocios\ModificacionSocio.Designer.cs">
       <DependentUpon>ModificacionSocio.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\AltaPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\AltaPerfil.Designer.cs">
+      <DependentUpon>AltaPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\AltaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\AltaUsuario.Designer.cs">
       <DependentUpon>AltaUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\BajaPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\BajaPerfil.Designer.cs">
+      <DependentUpon>BajaPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\BajaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\BajaUsuario.designer.cs">
       <DependentUpon>BajaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\ConsultaPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\ConsultaPerfil.Designer.cs">
+      <DependentUpon>ConsultaPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\ConsultaUsuario.cs">
       <SubType>Form</SubType>
@@ -351,6 +393,12 @@
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\ModificacionUsuario.designer.cs">
       <DependentUpon>ModificacionUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\ModificacionPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionUsuarios\ModificacionPerfil.Designer.cs">
+      <DependentUpon>ModificacionPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionVentas\AltaFormaPago.cs">
       <SubType>Form</SubType>
@@ -586,14 +634,26 @@
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionCompras\ModificacionProveedor.resx">
       <DependentUpon>ModificacionProveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionEmpleados\AltaCargo.resx">
+      <DependentUpon>AltaCargo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionEmpleados\AltaEmpleado.resx">
       <DependentUpon>AltaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionEmpleados\BajaCargo.resx">
+      <DependentUpon>BajaCargo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionEmpleados\BajaEmpleado.resx">
       <DependentUpon>BajaEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionEmpleados\ConsultaEmpleado.resx">
       <DependentUpon>ConsultaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionEmpleados\ConsultarCargo.resx">
+      <DependentUpon>ConsultarCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionEmpleados\ModificacionCargo.resx">
+      <DependentUpon>ModificacionCargo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionEmpleados\ModificacionEmpleado.resx">
       <DependentUpon>ModificacionEmpleado.cs</DependentUpon>
@@ -610,17 +670,29 @@
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionSocios\ModificacionSocio.resx">
       <DependentUpon>ModificacionSocio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionUsuarios\AltaPerfil.resx">
+      <DependentUpon>AltaPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionUsuarios\AltaUsuario.resx">
       <DependentUpon>AltaUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionUsuarios\BajaPerfil.resx">
+      <DependentUpon>BajaPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionUsuarios\BajaUsuario.resx">
       <DependentUpon>BajaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionUsuarios\ConsultaPerfil.resx">
+      <DependentUpon>ConsultaPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionUsuarios\ConsultaUsuario.resx">
       <DependentUpon>ConsultaUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionUsuarios\ModificacionUsuario.resx">
       <DependentUpon>ModificacionUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionUsuarios\ModificacionPerfil.resx">
+      <DependentUpon>ModificacionPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionVentas\AltaFormaPago.resx">
       <DependentUpon>AltaFormaPago.cs</DependentUpon>
@@ -673,6 +745,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Recursos\cerrar.png" />
+    <Content Include="Recursos\logo.ico" />
     <Content Include="Recursos\logo.jpg" />
     <Content Include="Recursos\minimazar.png" />
   </ItemGroup>

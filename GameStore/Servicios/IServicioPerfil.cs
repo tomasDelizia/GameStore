@@ -10,5 +10,6 @@ namespace GameStore.Servicios
     public interface IServicioPerfil : IServicio<Perfil>
     {
         List<Perfil> ListarPerfiles();
+        void ValidarPerfil(Perfil nuevoPerfil);
     }
 }

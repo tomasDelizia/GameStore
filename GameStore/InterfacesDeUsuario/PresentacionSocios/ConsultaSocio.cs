@@ -80,6 +80,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             new AltaSocio(_unidadDeTrabajo).ShowDialog();
+            ConsultarSocios();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
