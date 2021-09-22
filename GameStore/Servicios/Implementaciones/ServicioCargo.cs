@@ -21,5 +21,9 @@ namespace GameStore.Servicios.Implementaciones
         {
             return _repositorioCargo.GetTodos().ToList();
         }
+        public void ValidarCargo(Cargo cargo)
+        {
+            cargo.ValidarNombre();
+        }
     }
 }

@@ -21,6 +21,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         public ConsultaPlataforma(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
+            dgvPlataformas.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvPlataformas.DefaultCellStyle.Font = new Font("Century Gothic", 10);
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioPlataforma = new ServicioPlataforma(_unidadDeTrabajo.RepositorioPlataforma);
         }
@@ -56,6 +58,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             new AltaPlataforma(_unidadDeTrabajo).ShowDialog();
+            ConsultarPlataformas();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -96,6 +99,18 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             }
             else if (dgvPlataformas.SelectedRows.Count > 1)
                 MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            var nombrePlataforma = txtNombre.Text;
+            var plataformasFiltradas = _servicioPlataforma.Encontrar(a => a.Nombre.Contains(nombrePlataforma)).ToList();
+            CargarDgvPlataformas(plataformasFiltradas);
+        }
+
+        private void btnReiniciarFiltros_Click(object sender, EventArgs e)
+        {
+            ConsultarPlataformas();
         }
     }
 }

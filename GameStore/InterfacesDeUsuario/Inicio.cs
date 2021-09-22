@@ -125,5 +125,15 @@ namespace GameStore.InterfacesDeUsuario
         {
             new ConsultaPlataforma(_unidadDeTrabajo).ShowDialog();
         }
+
+        private void BtnPerfil_Click(object sender, EventArgs e)
+        {
+            new ConsultaPerfil(_unidadDeTrabajo).ShowDialog();
+        }
+
+        private void BtnCargo_Click(object sender, EventArgs e)
+        {
+            new ConsultarCargo(_unidadDeTrabajo).ShowDialog();
+        }
     }
 }

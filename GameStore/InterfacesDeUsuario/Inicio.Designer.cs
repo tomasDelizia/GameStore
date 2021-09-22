@@ -274,6 +274,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnPerfil.Text = "Perfil";
             this.BtnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnPerfil.UseVisualStyleBackColor = false;
+            this.BtnPerfil.Click += new System.EventHandler(this.BtnPerfil_Click);
             // 
             // BtnMarca
             // 
@@ -416,6 +417,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnCargo.Text = "Cargo";
             this.BtnCargo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCargo.UseVisualStyleBackColor = false;
+            this.BtnCargo.Click += new System.EventHandler(this.BtnCargo_Click);
             // 
             // BtnOtros
             // 
@@ -591,6 +593,7 @@ namespace GameStore.InterfacesDeUsuario
             this.Controls.Add(this.MenuVertical);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.DimGray;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

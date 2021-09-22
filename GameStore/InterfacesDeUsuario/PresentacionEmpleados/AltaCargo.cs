@@ -12,30 +12,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
+namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
 {
-    public partial class ModificacionPlataforma : Form
+    public partial class AltaCargo : Form
     {
         private IUnidadDeTrabajo _unidadDeTrabajo;
-        private readonly IServicioPlataforma _servicioPlataforma;
-        private Plataforma _plataformaAModificar;
-        public ModificacionPlataforma(IUnidadDeTrabajo unidadDeTrabajo, int id)
+        private readonly IServicioCargo _servicioCargo;
+        private Cargo _nuevoCargo;
+        public AltaCargo(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
             _unidadDeTrabajo = unidadDeTrabajo;
-            _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
-            _plataformaAModificar = _servicioPlataforma.GetPorId(id);
-        }
-
-        private void ModificacionPlataforma_Load(object sender, EventArgs e)
-        {
-            CargarDatos();
-        }
-
-        private void CargarDatos()
-        {
-            txtNombre.Text = _plataformaAModificar.Nombre;
-            txtDescripcion.Text = _plataformaAModificar.Descripcion;
+            _servicioCargo = new ServicioCargo(unidadDeTrabajo.RepositorioCargo);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -43,15 +31,15 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Dispose();
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
             try
             {
                 if (!EsOperacionConfirmada())
                     return;
-                if (!EsPlataformaValida())
+                if (!EsCargoValido())
                     return;
-                ModificarPlataforma();
+                RegistrarCargo();
             }
             catch (ApplicationException aex)
             {
@@ -64,18 +52,25 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             }
         }
 
-        private void ModificarPlataforma()
+        private void RegistrarCargo()
         {
-            _servicioPlataforma.Actualizar(_plataformaAModificar);
-            MessageBox.Show("Se modificó con éxito la plataforma", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            bool insertarCargo = _servicioCargo.Insertar(_nuevoCargo);
+            if (!insertarCargo)
+            {
+                MessageBox.Show("Ocurrió un problema al registrar el cargo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            MessageBox.Show("Se registró con éxito el cargo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Dispose();
         }
 
-        private bool EsPlataformaValida()
+        private bool EsCargoValido()
         {
-            _plataformaAModificar.Nombre = txtNombre.Text;
-            _plataformaAModificar.Descripcion = txtDescripcion.Text;
-            _servicioPlataforma.ValidarPlataforma(_plataformaAModificar);
+            Cargo nuevoCargo = new Cargo();
+            nuevoCargo.Nombre = txtNombre.Text;
+            nuevoCargo.Descripcion = txtDescripcion.Text;
+            _servicioCargo.ValidarCargo(nuevoCargo);
+            _nuevoCargo = nuevoCargo;
             return true;
         }
 

@@ -21,5 +21,10 @@ namespace GameStore.Servicios.Implementaciones
         {
             return _repositorioPerfil.GetTodos().ToList();
         }
+        public void ValidarPerfil(Perfil perfil)
+        {
+            perfil.ValidarNombre();
+            perfil.ValidarDescripcion();
+        }
     }
 }
