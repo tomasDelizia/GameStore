@@ -21,17 +21,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
         private void BajaFormaPago_Load(object sender, EventArgs e)
         {
             CargarNombre(TxtNombre);
-            CargarDescripcion(TxtDescripcion);
         }
 
         private void CargarNombre(TextBox TxtNombre)
         {
             TxtNombre.Text = _formaPagoABorrar.Nombre;
-        }
-
-        private void CargarDescripcion(RichTextBox TxtDescripcion)
-        {
-            TxtDescripcion.Text = _formaPagoABorrar.Descripcion;
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)

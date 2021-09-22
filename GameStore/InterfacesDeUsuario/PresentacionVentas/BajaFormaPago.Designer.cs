@@ -29,33 +29,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.TxtDescripcion = new System.Windows.Forms.RichTextBox();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(8, 38);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 22);
-            this.label2.TabIndex = 86;
-            this.label2.Text = "Descripción";
-            // 
-            // TxtDescripcion
-            // 
-            this.TxtDescripcion.Location = new System.Drawing.Point(12, 63);
-            this.TxtDescripcion.Name = "TxtDescripcion";
-            this.TxtDescripcion.Size = new System.Drawing.Size(385, 179);
-            this.TxtDescripcion.TabIndex = 85;
-            this.TxtDescripcion.Text = "";
             // 
             // TxtNombre
             // 
@@ -82,7 +60,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             // 
             this.BtnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnEliminar.Location = new System.Drawing.Point(198, 248);
+            this.BtnEliminar.Location = new System.Drawing.Point(138, 43);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(97, 31);
             this.BtnEliminar.TabIndex = 82;
@@ -94,7 +72,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             // 
             this.BtnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnCancelar.Location = new System.Drawing.Point(301, 248);
+            this.BtnCancelar.Location = new System.Drawing.Point(241, 43);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(97, 31);
             this.BtnCancelar.TabIndex = 81;
@@ -107,9 +85,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(410, 287);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.TxtDescripcion);
+            this.ClientSize = new System.Drawing.Size(345, 81);
             this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnEliminar);
@@ -123,9 +99,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox TxtDescripcion;
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnEliminar;

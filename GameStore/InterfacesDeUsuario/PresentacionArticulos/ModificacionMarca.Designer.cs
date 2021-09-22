@@ -1,7 +1,7 @@
 ﻿
 namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 {
-    partial class ModificacionGenero
+    partial class ModificacionMarca
     {
         /// <summary>
         /// Required designer variable.
@@ -102,21 +102,21 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label1.TabIndex = 84;
             this.label1.Text = "Nombre:";
             // 
-            // ModificacionGenero
+            // ModificacionMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(411, 284);
+            this.ClientSize = new System.Drawing.Size(412, 286);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnModificar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtDescripcion);
             this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label1);
-            this.Name = "ModificacionGenero";
-            this.Text = "ModificacionGenero";
-            this.Load += new System.EventHandler(this.ModificacionGenero_Load);
+            this.Name = "ModificacionMarca";
+            this.Text = "ModificacionMarca";
+            this.Load += new System.EventHandler(this.ModificacionMarca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

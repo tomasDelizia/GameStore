@@ -7,32 +7,33 @@ using System.Windows.Forms;
 
 namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 {
-    public partial class ModificacionGenero : Form
+    public partial class ModificacionMarca : Form
     {
-        private IServicioGenero _servicioGenero;
-        private Genero _generoAModificar;
+        private IServicioMarca _servicioMarca;
+        private Marca _marcaAModificar;
         private IUnidadDeTrabajo _unidadDeTrabajo;
-        public ModificacionGenero(IUnidadDeTrabajo unidadDeTrabajo, int id)
+        public ModificacionMarca(IUnidadDeTrabajo unidadDeTrabajo, int id)
         {
-            InitializeComponent(); 
+            InitializeComponent();
             _unidadDeTrabajo = unidadDeTrabajo;
-            _servicioGenero = new ServicioGenero(_unidadDeTrabajo.RepositorioGenero);
-            _generoAModificar = _servicioGenero.GetPorId(id);
+            _servicioMarca = new ServicioMarca(_unidadDeTrabajo.RepositorioMarca);
+            _marcaAModificar = _servicioMarca.GetPorId(id);
         }
 
-        private void ModificacionGenero_Load(object sender, EventArgs e)
+        private void ModificacionMarca_Load(object sender, EventArgs e)
         {
             CargarNombre(TxtNombre);
             CargarDescripcion(TxtDescripcion);
         }
+
         private void CargarNombre(TextBox TxtNombre)
         {
-            TxtNombre.Text = _generoAModificar.Nombre;
+            TxtNombre.Text = _marcaAModificar.Nombre;
         }
 
         private void CargarDescripcion(RichTextBox TxtDescripcion)
         {
-            TxtDescripcion.Text = _generoAModificar.Descripcion;
+            TxtDescripcion.Text = _marcaAModificar.Descripcion;
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
@@ -41,9 +42,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             {
                 if (!EsOperacionConfirmada())
                     return;
-                if (!EsGeneroValido())
+                if (!EsMarcaValida())
                     return;
-                ModificarGenero();
+                ModificarMarca();
             }
             catch (ApplicationException aex)
             {
@@ -56,18 +57,18 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             }
         }
 
-        private void ModificarGenero()
+        private void ModificarMarca()
         {
-            _servicioGenero.Actualizar(_generoAModificar);
-            MessageBox.Show("Se modificó con éxito el genero", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            _servicioMarca.Actualizar(_marcaAModificar);
+            MessageBox.Show("Se modificó con éxito la marca", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Dispose();
         }
 
-        private bool EsGeneroValido()
+        private bool EsMarcaValida()
         {
-            _generoAModificar.Nombre = TxtNombre.Text;
-            _generoAModificar.Descripcion = TxtDescripcion.Text;
-            _servicioGenero.ValidarGenero(_generoAModificar);
+            _marcaAModificar.Nombre = TxtNombre.Text;
+            _marcaAModificar.Descripcion = TxtDescripcion.Text;
+            _servicioMarca.ValidarMarca(_marcaAModificar);
             return true;
         }
 

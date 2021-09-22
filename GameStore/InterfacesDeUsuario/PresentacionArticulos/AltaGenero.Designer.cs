@@ -29,35 +29,37 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnRegistrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.TxtDescripcion = new System.Windows.Forms.RichTextBox();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button2
+            // BtnCancelar
             // 
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DimGray;
-            this.button2.Location = new System.Drawing.Point(312, 249);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 29);
-            this.button2.TabIndex = 82;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelar.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnCancelar.Location = new System.Drawing.Point(312, 249);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(93, 29);
+            this.BtnCancelar.TabIndex = 82;
+            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
-            // button1
+            // BtnRegistrar
             // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.Location = new System.Drawing.Point(208, 249);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 29);
-            this.button1.TabIndex = 83;
-            this.button1.Text = "Registrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistrar.ForeColor = System.Drawing.Color.DimGray;
+            this.BtnRegistrar.Location = new System.Drawing.Point(208, 249);
+            this.BtnRegistrar.Name = "BtnRegistrar";
+            this.BtnRegistrar.Size = new System.Drawing.Size(98, 29);
+            this.BtnRegistrar.TabIndex = 83;
+            this.BtnRegistrar.Text = "Registrar";
+            this.BtnRegistrar.UseVisualStyleBackColor = true;
+            this.BtnRegistrar.Click += new System.EventHandler(this.BtnRegistrar_Click);
             // 
             // label2
             // 
@@ -71,13 +73,13 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label2.TabIndex = 81;
             this.label2.Text = "Descripción";
             // 
-            // richTextBox1
+            // TxtDescripcion
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(20, 64);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(385, 179);
-            this.richTextBox1.TabIndex = 80;
-            this.richTextBox1.Text = "";
+            this.TxtDescripcion.Location = new System.Drawing.Point(20, 64);
+            this.TxtDescripcion.Name = "TxtDescripcion";
+            this.TxtDescripcion.Size = new System.Drawing.Size(385, 179);
+            this.TxtDescripcion.TabIndex = 80;
+            this.TxtDescripcion.Text = "";
             // 
             // TxtNombre
             // 
@@ -106,10 +108,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(414, 287);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnCancelar);
+            this.Controls.Add(this.BtnRegistrar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.TxtDescripcion);
             this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label1);
             this.Name = "AltaGenero";
@@ -121,10 +123,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnCancelar;
+        private System.Windows.Forms.Button BtnRegistrar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox TxtDescripcion;
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Label label1;
     }

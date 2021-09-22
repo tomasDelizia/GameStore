@@ -17,9 +17,18 @@ namespace GameStore.Servicios.Implementaciones
             _repositorioMarca = repositorioMarca;
         }
 
+        public void ValidarMarca(Marca marca)
+        {
+            marca.ValidarNombre();
+        }
         public List<Marca> ListarMarcas()
         {
             return _repositorioMarca.GetTodos().ToList();
+        }
+
+        public Marca GetPorId(int id)
+        {
+            return _repositorioMarca.GetPorId(id);
         }
     }
 }

@@ -9,6 +9,8 @@ namespace GameStore.Servicios
 {
     public interface IServicioMarca : IServicio<Marca>
     {
+        void ValidarMarca(Marca marca);
+        Marca GetPorId(int id);
         List<Marca> ListarMarcas();
     }
 }

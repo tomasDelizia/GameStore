@@ -11,7 +11,6 @@ namespace GameStore.Servicios
     {
         void ValidarDesarrollador(Desarrollador desarrollador);
         Desarrollador GetPorId(int id);
-
         List<Desarrollador> ListarDesarrolladores();
     }
 }

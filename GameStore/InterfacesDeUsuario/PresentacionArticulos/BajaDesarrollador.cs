@@ -21,17 +21,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private void BajaDesarrollador_Load(object sender, EventArgs e)
         {
             CargarNombre(TxtNombre);
-            CargarDescripcion(TxtDescripcion);
         }
 
         private void CargarNombre(TextBox TxtNombre)
         {
             TxtNombre.Text = _desarrolladorABorrar.Nombre;
-        }
-
-        private void CargarDescripcion(RichTextBox TxtDescripcion)
-        {
-            TxtDescripcion.Text = _desarrolladorABorrar.Descripcion;
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)

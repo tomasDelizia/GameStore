@@ -196,6 +196,18 @@
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaArticulo.Designer.cs">
       <DependentUpon>ConsultaArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaGenero.Designer.cs">
+      <DependentUpon>ConsultaGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaMarca.Designer.cs">
+      <DependentUpon>ConsultaMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaPlataforma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +243,12 @@
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionGenero.Designer.cs">
       <DependentUpon>ModificacionGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionMarca.Designer.cs">
+      <DependentUpon>ModificacionMarca.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionPlataforma.cs">
       <SubType>Form</SubType>
@@ -526,6 +544,12 @@
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaArticulo.resx">
       <DependentUpon>ConsultaArticulo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaGenero.resx">
+      <DependentUpon>ConsultaGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaMarca.resx">
+      <DependentUpon>ConsultaMarca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaPlataforma.resx">
       <DependentUpon>ConsultaPlataforma.cs</DependentUpon>
     </EmbeddedResource>
@@ -537,6 +561,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionClasificacion.resx">
       <DependentUpon>ModificacionClasificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionGenero.resx">
+      <DependentUpon>ModificacionGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionMarca.resx">
+      <DependentUpon>ModificacionMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionPlataforma.resx">
       <DependentUpon>ModificacionPlataforma.cs</DependentUpon>

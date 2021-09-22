@@ -284,7 +284,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 
         private void btnAgregarGenero_Click(object sender, EventArgs e)
         {
-            Form frmAltaGenero = new AltaGenero();
+            Form frmAltaGenero = new AltaGenero(_unidadDeTrabajo);
             frmAltaGenero.Show();
         }
 
@@ -302,7 +302,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 
         private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
-            Form frmAltaMarca = new AltaMarca();
+            Form frmAltaMarca = new AltaMarca(_unidadDeTrabajo);
             frmAltaMarca.Show();
         }
 

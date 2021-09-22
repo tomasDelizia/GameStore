@@ -294,6 +294,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnMarca.Text = "Marca";
             this.BtnMarca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnMarca.UseVisualStyleBackColor = false;
+            this.BtnMarca.Click += new System.EventHandler(this.BtnMarca_Click);
             // 
             // BtnGenero
             // 
@@ -314,6 +315,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnGenero.Text = "Genero";
             this.BtnGenero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnGenero.UseVisualStyleBackColor = false;
+            this.BtnGenero.Click += new System.EventHandler(this.BtnGenero_Click);
             // 
             // BtnFormaPago
             // 
