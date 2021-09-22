@@ -11,6 +11,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 {
     public partial class ModificacionArticulo : Form
     {
+        private IUnidadDeTrabajo _unidadDeTrabajo;
         private readonly IServicioArticulo _servicioArticulo;
         private readonly IServicioTipoArticulo _servicioTipoArticulo;
         private readonly IServicioDesarrollador _servicioDesarrollador;
@@ -26,6 +27,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         public ModificacionArticulo(IUnidadDeTrabajo unidadDeTrabajo, int codigo)
         {
             InitializeComponent();
+            _unidadDeTrabajo = unidadDeTrabajo;
             _servicioArticulo = new ServicioArticulo(unidadDeTrabajo.RepositorioArticulo);
             _servicioTipoArticulo = new ServicioTipoArticulo(unidadDeTrabajo.RepositorioTipoArticulo);
             _servicioDesarrollador = new ServicioDesarrollador(unidadDeTrabajo.RepositorioDesarrollador);
@@ -289,7 +291,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 
         private void btnAgregarDesarrollador_Click(object sender, EventArgs e)
         {
-            Form frmAltaDesarrollador = new AltaDesarrollador();
+            Form frmAltaDesarrollador = new AltaDesarrollador(_unidadDeTrabajo);
             frmAltaDesarrollador.Show();
         }
 

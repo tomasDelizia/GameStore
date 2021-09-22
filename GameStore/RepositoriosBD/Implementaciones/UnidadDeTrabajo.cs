@@ -23,6 +23,7 @@
             RepositorioCargo = new RepositorioCargo(_contextoBd);
             RepositorioEmpleado = new RepositorioEmpleado(_contextoBd);
             RepositorioSocio = new RepositorioSocio(_contextoBd);
+            RepositorioFormaPago = new RepositorioFormaPago(_contextoBd);
         }
 
         public IRepositorioClasificacion RepositorioClasificacion { get; private set; }
@@ -41,6 +42,7 @@
         public IRepositorioEmpleado RepositorioEmpleado { get; private set; }
         public IRepositorioCargo RepositorioCargo { get; private set; }
         public IRepositorioSocio RepositorioSocio { get; private set; }
+        public IRepositorioFormaPago RepositorioFormaPago { get; private set; }
         public int Guardar()
         {
             return _contextoBd.SaveChanges();

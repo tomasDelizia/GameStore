@@ -5,22 +5,22 @@ using GameStore.Servicios.Implementaciones;
 using System;
 using System.Windows.Forms;
 
-namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
+namespace GameStore.InterfacesDeUsuario.PresentacionVentas
 {
-    public partial class ModificacionDesarrollador : Form
+    public partial class ModificacionFormaPago : Form
     {
-        private IServicioDesarrollador _servicioDesarrollador;
-        private Desarrollador _desarrolladorAModificar;
+        private IServicioFormaPago _servicioFormaPago;
+        private FormaPago _formaPagoAModificar;
         private IUnidadDeTrabajo _unidadDeTrabajo;
-        public ModificacionDesarrollador(IUnidadDeTrabajo unidadDeTrabajo, int id)
+        public ModificacionFormaPago(IUnidadDeTrabajo unidadDeTrabajo, int id)
         {
             InitializeComponent();
             _unidadDeTrabajo = unidadDeTrabajo;
-            _servicioDesarrollador = new ServicioDesarrollador(_unidadDeTrabajo.RepositorioDesarrollador);
-            _desarrolladorAModificar = _servicioDesarrollador.GetPorId(id);
+            _servicioFormaPago = new ServicioFormaPago(_unidadDeTrabajo.RepositorioFormaPago);
+            _formaPagoAModificar = _servicioFormaPago.GetPorId(id);
         }
 
-        private void ModificacionDesarrollador_Load(object sender, EventArgs e)
+        private void ModificacionFormaPago_Load(object sender, EventArgs e)
         {
             CargarNombre(TxtNombre);
             CargarDescripcion(TxtDescripcion);
@@ -28,12 +28,12 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 
         private void CargarNombre(TextBox TxtNombre)
         {
-            TxtNombre.Text = _desarrolladorAModificar.Nombre;
+            TxtNombre.Text = _formaPagoAModificar.Nombre;
         }
 
         private void CargarDescripcion(RichTextBox TxtDescripcion)
         {
-            TxtDescripcion.Text = _desarrolladorAModificar.Descripcion;
+            TxtDescripcion.Text = _formaPagoAModificar.Descripcion;
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
@@ -42,9 +42,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             {
                 if (!EsOperacionConfirmada())
                     return;
-                if (!EsDesarrolladorValido())
+                if (!EsFormaPagoValida())
                     return;
-                ModificarDesarrollador();
+                ModificarFormaPago();
             }
             catch (ApplicationException aex)
             {
@@ -57,18 +57,18 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             }
         }
 
-        private void ModificarDesarrollador()
+        private void ModificarFormaPago()
         {
-            _servicioDesarrollador.Actualizar(_desarrolladorAModificar);
-            MessageBox.Show("Se modificó con éxito el desarrollador", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            _servicioFormaPago.Actualizar(_formaPagoAModificar);
+            MessageBox.Show("Se modificó con éxito la forma de pago", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Dispose();
         }
 
-        private bool EsDesarrolladorValido()
+        private bool EsFormaPagoValida()
         {
-            _desarrolladorAModificar.Nombre = TxtNombre.Text;
-            _desarrolladorAModificar.Descripcion = TxtDescripcion.Text;
-            _servicioDesarrollador.ValidarDesarrollador(_desarrolladorAModificar);
+            _formaPagoAModificar.Nombre = TxtNombre.Text;
+            _formaPagoAModificar.Descripcion = TxtDescripcion.Text;
+            _servicioFormaPago.ValidarFormaPago(_formaPagoAModificar);
             return true;
         }
 
