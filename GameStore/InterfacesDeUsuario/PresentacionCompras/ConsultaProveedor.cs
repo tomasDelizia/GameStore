@@ -141,5 +141,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         {
             ConsultarProveedores();
         }
+
+        private void dgvProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
