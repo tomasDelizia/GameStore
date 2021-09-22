@@ -149,5 +149,10 @@ namespace GameStore.InterfacesDeUsuario
         {
             new ConsultaClasificacion(_unidadDeTrabajo).ShowDialog();
         }
+
+        private void BtnCategoriaAlquiler_Click(object sender, EventArgs e)
+        {
+            new ConsultaCategoriaAlquiler(_unidadDeTrabajo).ShowDialog();
+        }
     }
 }

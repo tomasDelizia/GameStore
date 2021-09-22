@@ -400,6 +400,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnCategoriaAlquiler.Text = "Categoria De Alquiler";
             this.BtnCategoriaAlquiler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCategoriaAlquiler.UseVisualStyleBackColor = false;
+            this.BtnCategoriaAlquiler.Click += new System.EventHandler(this.BtnCategoriaAlquiler_Click);
             // 
             // BtnCargo
             // 
