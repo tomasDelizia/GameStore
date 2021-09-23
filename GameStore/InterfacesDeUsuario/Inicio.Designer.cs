@@ -82,7 +82,7 @@ namespace GameStore.InterfacesDeUsuario
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(289, 785);
+            this.MenuVertical.Size = new System.Drawing.Size(289, 749);
             this.MenuVertical.TabIndex = 2;
             // 
             // BtnCompraProveedor
@@ -250,7 +250,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnPlataforma.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.BtnPlataforma.Size = new System.Drawing.Size(272, 40);
             this.BtnPlataforma.TabIndex = 16;
-            this.BtnPlataforma.Text = "Plataforma";
+            this.BtnPlataforma.Text = "Plataformas";
             this.BtnPlataforma.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnPlataforma.UseVisualStyleBackColor = false;
             this.BtnPlataforma.Click += new System.EventHandler(this.BtnPlataforma_Click);
@@ -271,7 +271,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnPerfil.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.BtnPerfil.Size = new System.Drawing.Size(272, 40);
             this.BtnPerfil.TabIndex = 15;
-            this.BtnPerfil.Text = "Perfil";
+            this.BtnPerfil.Text = "Perfiles";
             this.BtnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnPerfil.UseVisualStyleBackColor = false;
             this.BtnPerfil.Click += new System.EventHandler(this.BtnPerfil_Click);
@@ -292,7 +292,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnMarca.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.BtnMarca.Size = new System.Drawing.Size(272, 40);
             this.BtnMarca.TabIndex = 14;
-            this.BtnMarca.Text = "Marca";
+            this.BtnMarca.Text = "Marcas";
             this.BtnMarca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnMarca.UseVisualStyleBackColor = false;
             this.BtnMarca.Click += new System.EventHandler(this.BtnMarca_Click);
@@ -313,7 +313,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnGenero.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.BtnGenero.Size = new System.Drawing.Size(272, 40);
             this.BtnGenero.TabIndex = 13;
-            this.BtnGenero.Text = "Genero";
+            this.BtnGenero.Text = "Géneros";
             this.BtnGenero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnGenero.UseVisualStyleBackColor = false;
             this.BtnGenero.Click += new System.EventHandler(this.BtnGenero_Click);
@@ -334,7 +334,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnFormaPago.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.BtnFormaPago.Size = new System.Drawing.Size(272, 40);
             this.BtnFormaPago.TabIndex = 12;
-            this.BtnFormaPago.Text = "Forma De Pago";
+            this.BtnFormaPago.Text = "Formas de Pago";
             this.BtnFormaPago.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFormaPago.UseVisualStyleBackColor = false;
             this.BtnFormaPago.Click += new System.EventHandler(this.BtnFormaPago_Click);
@@ -355,7 +355,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnDesarrollador.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.BtnDesarrollador.Size = new System.Drawing.Size(272, 40);
             this.BtnDesarrollador.TabIndex = 11;
-            this.BtnDesarrollador.Text = "Desarrollador";
+            this.BtnDesarrollador.Text = "Desarrolladores";
             this.BtnDesarrollador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnDesarrollador.UseVisualStyleBackColor = false;
             this.BtnDesarrollador.Click += new System.EventHandler(this.BtnDesarrollador_Click);
@@ -376,7 +376,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnClasificacion.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.BtnClasificacion.Size = new System.Drawing.Size(272, 40);
             this.BtnClasificacion.TabIndex = 10;
-            this.BtnClasificacion.Text = "Clasificacion";
+            this.BtnClasificacion.Text = "Clasificaciones";
             this.BtnClasificacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnClasificacion.UseVisualStyleBackColor = false;
             this.BtnClasificacion.Click += new System.EventHandler(this.BtnClasificacion_Click);
@@ -397,7 +397,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnCategoriaAlquiler.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.BtnCategoriaAlquiler.Size = new System.Drawing.Size(272, 40);
             this.BtnCategoriaAlquiler.TabIndex = 9;
-            this.BtnCategoriaAlquiler.Text = "Categoria De Alquiler";
+            this.BtnCategoriaAlquiler.Text = "Categorías de Alquiler";
             this.BtnCategoriaAlquiler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCategoriaAlquiler.UseVisualStyleBackColor = false;
             this.BtnCategoriaAlquiler.Click += new System.EventHandler(this.BtnCategoriaAlquiler_Click);
@@ -418,7 +418,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnCargo.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.BtnCargo.Size = new System.Drawing.Size(272, 40);
             this.BtnCargo.TabIndex = 8;
-            this.BtnCargo.Text = "Cargo";
+            this.BtnCargo.Text = "Cargos";
             this.BtnCargo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCargo.UseVisualStyleBackColor = false;
             this.BtnCargo.Click += new System.EventHandler(this.BtnCargo_Click);
@@ -542,7 +542,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnSocio.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.BtnSocio.Size = new System.Drawing.Size(272, 40);
             this.BtnSocio.TabIndex = 0;
-            this.BtnSocio.Text = "Socio";
+            this.BtnSocio.Text = "Socios";
             this.BtnSocio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnSocio.UseVisualStyleBackColor = false;
             this.BtnSocio.Click += new System.EventHandler(this.BtnSocio_Click);
@@ -561,7 +561,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnABM.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.BtnABM.Size = new System.Drawing.Size(272, 45);
             this.BtnABM.TabIndex = 1;
-            this.BtnABM.Text = "ABM";
+            this.BtnABM.Text = "Consultas";
             this.BtnABM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnABM.UseVisualStyleBackColor = false;
             this.BtnABM.Click += new System.EventHandler(this.BtnABM_Click);
@@ -593,7 +593,7 @@ namespace GameStore.InterfacesDeUsuario
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1366, 785);
+            this.ClientSize = new System.Drawing.Size(1366, 749);
             this.Controls.Add(this.MenuVertical);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.DimGray;

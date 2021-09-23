@@ -94,7 +94,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.Controls.Add(this.label1);
             this.Name = "BajaUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BajaUsuario";
+            this.Text = "Eliminar Usuario";
             this.Load += new System.EventHandler(this.BajaUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

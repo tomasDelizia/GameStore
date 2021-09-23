@@ -98,6 +98,12 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             combo.DataSource = bindingSource;
             combo.DisplayMember = "Nombre";
             combo.ValueMember = "IdBarrio";
+            combo.Text = "Selección";
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

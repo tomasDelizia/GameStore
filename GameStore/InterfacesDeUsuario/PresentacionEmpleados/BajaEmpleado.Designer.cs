@@ -119,7 +119,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.Controls.Add(this.label1);
             this.Name = "BajaEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BajaEmpleado";
+            this.Text = "Eliminar Empleado";
             this.Load += new System.EventHandler(this.BajaEmpleado_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

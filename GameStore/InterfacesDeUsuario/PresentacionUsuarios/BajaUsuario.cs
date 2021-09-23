@@ -54,7 +54,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
 
         private void DarBajaUsuario()
         {
-            _servicioUsuario.Borrar(_usuarioAEliminar);
+            _servicioUsuario.BorrarUsuario(_usuarioAEliminar);
             MessageBox.Show("La operación se realizó con éxito", "Información");
         }
     }

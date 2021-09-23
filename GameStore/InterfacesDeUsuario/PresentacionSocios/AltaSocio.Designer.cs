@@ -48,6 +48,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.cmbBarrios = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -223,7 +224,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.cmbBarrios.Name = "cmbBarrios";
             this.cmbBarrios.Size = new System.Drawing.Size(231, 29);
             this.cmbBarrios.TabIndex = 21;
-            this.cmbBarrios.Text = "Barrio";
+            this.cmbBarrios.Text = "Selección";
             // 
             // label8
             // 
@@ -245,12 +246,25 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.txtTelefono.Size = new System.Drawing.Size(231, 31);
             this.txtTelefono.TabIndex = 23;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.DimGray;
+            this.label9.Location = new System.Drawing.Point(440, 99);
+            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 22);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Barrio:";
+            // 
             // AltaSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(773, 271);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cmbBarrios);
@@ -275,7 +289,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "AltaSocio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AltaSocio";
+            this.Text = "Registrar Socio";
+            this.Load += new System.EventHandler(this.AltaSocio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,5 +317,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
         private System.Windows.Forms.ComboBox cmbBarrios;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.Label label9;
     }
 }

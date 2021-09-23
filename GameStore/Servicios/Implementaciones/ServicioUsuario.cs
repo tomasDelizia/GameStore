@@ -42,5 +42,11 @@ namespace GameStore.Servicios.Implementaciones
             usuario.ValidarNombre();
             usuario.ValidarContrasenia();
         }
+
+        public void BorrarUsuario(Usuario usuario)
+        {
+            usuario.Estado = false;
+            _repositorioUsuario.Actualizar(usuario);
+        }
     }
 }

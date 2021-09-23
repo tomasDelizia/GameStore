@@ -139,5 +139,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
         {
             txtNombre.Text = _socioAModificar.Nombre;
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
