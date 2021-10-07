@@ -479,7 +479,6 @@
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioCargo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioCategoriaAlquiler.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioDesarrollador.cs" />
-    <Compile Include="RepositoriosBD\Implementaciones\RepositorioEmpleado.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioFormaPago.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioGenero.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioMarca.cs" />
@@ -515,7 +514,6 @@
     <Compile Include="RepositoriosBD\IRepositorioSocio.cs" />
     <Compile Include="RepositoriosBD\IRepositorioTipoArticulo.cs" />
     <Compile Include="RepositoriosBD\IRepositorioUsuario.cs" />
-    <Compile Include="RepositoriosBD\IRepositorioEmpleado.cs" />
     <Compile Include="RepositoriosBD\IUnidadDeTrabajo.cs" />
     <Compile Include="Entidades\Rol.cs" />
     <Compile Include="Entidades\Sesion.cs" />

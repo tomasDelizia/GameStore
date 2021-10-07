@@ -321,6 +321,15 @@ CREATE TABLE Alquileres (
     ON UPDATE NO ACTION ON DELETE CASCADE,
 );
 
+CREATE TABLE CategoriasDeAlquiler (
+	IdCategoriaAlquiler INT IDENTITY,
+	Nombre VARCHAR(30) NOT NULL,
+	Descripcion VARCHAR(MAX),
+	MontoAlquilerPorDia DECIMAL(9,2) NOT NULL,
+	MontoDevolucionTardiaPorDia DECIMAL(9,2) NOT NULL,
+	CONSTRAINT categorias_de_alquiler_id_categoria_ok PRIMARY KEY (IdCategoriaAlquiler)
+);
+
 CREATE TABLE DetallesDeAlquiler (
 	NroAlquiler INT NOT NULL,
 	Codigo INT NOT NULL,
@@ -334,15 +343,6 @@ CREATE TABLE DetallesDeAlquiler (
     ON UPDATE CASCADE ON DELETE CASCADE,
 	CONSTRAINT detalles_de_alquiler_categoria_fk FOREIGN KEY(Categoria) REFERENCES CategoriasDeAlquiler (IdCategoriaAlquiler)
     ON UPDATE CASCADE ON DELETE CASCADE,
-);
-
-CREATE TABLE CategoriasDeAlquiler (
-	IdCategoriaAlquiler INT NOT NULL,
-	Nombre VARCHAR(30) NOT NULL,
-	Descripcion VARCHAR(MAX),
-	MontoAlquilerPorDia DECIMAL(9,2) NOT NULL,
-	MontoDevolucionTardiaPorDia DECIMAL(9,2) NOT NULL,
-	CONSTRAINT categorias_de_alquiler_id_categoria_ok PRIMARY KEY (IdCategoriaAlquiler)
 );
 
 CREATE TABLE Proveedores (

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GameStore.Servicios
 {
-    interface IServicioBarrio : IServicio<Barrio>
+    public interface IServicioBarrio : IServicio<Barrio>
     {
         List<Barrio> ListarBarrios();
     }
