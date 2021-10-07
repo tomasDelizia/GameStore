@@ -14,5 +14,7 @@ namespace GameStore.Servicios
         Usuario Login(string nombreUsuario, string contrasenia);
 
         void ValidarUsuario(Usuario usuario);
+
+        void BorrarUsuario(Usuario usuario);
     }
 }

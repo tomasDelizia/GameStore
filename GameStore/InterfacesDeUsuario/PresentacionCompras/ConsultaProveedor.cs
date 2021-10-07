@@ -70,6 +70,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             combo.DataSource = bindingSource;
             combo.DisplayMember = "Nombre";
             combo.ValueMember = "IdBarrio";
+            combo.Text = "Selección";
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -139,6 +140,16 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private void btnReiniciarFiltros_Click(object sender, EventArgs e)
         {
             ConsultarProveedores();
+        }
+
+        private void dgvProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

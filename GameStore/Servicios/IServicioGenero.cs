@@ -9,6 +9,8 @@ namespace GameStore.Servicios
 {
     public interface IServicioGenero : IServicio<Genero>
     {
+        void ValidarGenero(Genero genero);
+        Genero GetPorId(int id);
         List<Genero> ListarGeneros();
     }
 }

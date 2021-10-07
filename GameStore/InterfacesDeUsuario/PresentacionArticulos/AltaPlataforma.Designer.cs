@@ -75,6 +75,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtDescripcion.Location = new System.Drawing.Point(20, 64);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(385, 179);
@@ -115,7 +116,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
             this.Name = "AltaPlataforma";
-            this.Text = "Registrar Plataforma";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "AltaPlataforma";
             this.ResumeLayout(false);
             this.PerformLayout();
 

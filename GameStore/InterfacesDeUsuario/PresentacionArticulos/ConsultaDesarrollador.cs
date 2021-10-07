@@ -63,8 +63,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             if (nombreDesarrollador.Length > 50)
                 throw new ApplicationException("El nombre no debe tener más de 50 caracteres.");
 
-            var Descripcion = txtDescripcion.Text.Trim();
-
             var DesarrolladoresFiltrados = _servicioDesarrollador.Encontrar(a => a.Nombre.Contains(nombreDesarrollador)).ToList();
 
             CargarDgvDesarrollador(DesarrolladoresFiltrados);

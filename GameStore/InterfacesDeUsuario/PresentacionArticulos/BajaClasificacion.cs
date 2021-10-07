@@ -15,7 +15,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _servicioClasificacion = servicioClasificacion;
             _clasificacionABorrar = _servicioClasificacion.GetPorId(id);
         }
-        private void BajaClasificacion_Load(object sender, System.EventArgs e)
+
+        private void BajaClasificacion_Load_1(object sender, EventArgs e)
         {
             CargarDatos();
         }
@@ -24,6 +25,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         {
             TxtNombre.Text = _clasificacionABorrar.Nombre;
         }
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try
@@ -43,11 +45,13 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                 MessageBox.Show("Ha ocurrido un problema", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void DarBajaClasificacion()
         {
             _servicioClasificacion.Borrar(_clasificacionABorrar);
             MessageBox.Show("La operación se realizó con éxito", "Información");
         }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();

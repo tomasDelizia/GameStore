@@ -113,7 +113,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label1);
             this.Name = "AltaTipoArticulo";
-            this.Text = "Registrar Tipo de Artículo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "AltaTipoArticulo";
             this.ResumeLayout(false);
             this.PerformLayout();
 

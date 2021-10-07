@@ -217,6 +217,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.dgvUsuarios.AllowUserToAddRows = false;
             this.dgvUsuarios.AllowUserToDeleteRows = false;
             this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvUsuarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdUsuario,
@@ -312,7 +313,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.btnEliminar);
             this.Name = "ConsultaUsuario";
-            this.Text = "Consultar Usuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ConsultaUsuario";
             this.Load += new System.EventHandler(this.ConsultaUsuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

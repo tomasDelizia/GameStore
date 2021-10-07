@@ -11,13 +11,32 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
     {
         private IUnidadDeTrabajo _unidadDeTrabajo;
         private IServicioSocio _servicioSocio;
+        private IServicioBarrio _servicioBarrio;
         private Socio _nuevoSocio;
+
         public AltaSocio(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
+            _servicioBarrio = new ServicioBarrio(_unidadDeTrabajo.RepositorioBarrio);
 
+        }
+
+        private void AltaSocio_Load(object sender, EventArgs e)
+        {
+            CargarBarrios(cmbBarrios);
+        }
+
+        private void CargarBarrios(ComboBox combo)
+        {
+            var barrios = _servicioBarrio.ListarBarrios();
+            var bindingSource = new BindingSource();
+            bindingSource.DataSource = barrios;
+            combo.DataSource = bindingSource;
+            combo.DisplayMember = "Nombre";
+            combo.ValueMember = "IdBarrio";
+            combo.Text = "Selección";
         }
 
         private void BtnConfirmar_Click(object sender, EventArgs e)
@@ -88,5 +107,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             return true;
             
         }
+
+
     }
 }

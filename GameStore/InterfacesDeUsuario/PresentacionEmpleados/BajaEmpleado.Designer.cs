@@ -41,7 +41,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnEliminar.Location = new System.Drawing.Point(85, 82);
+            this.btnEliminar.Location = new System.Drawing.Point(85, 89);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(97, 31);
             this.btnEliminar.TabIndex = 64;
@@ -53,7 +53,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnCancelar.Location = new System.Drawing.Point(188, 82);
+            this.btnCancelar.Location = new System.Drawing.Point(188, 89);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(97, 31);
             this.btnCancelar.TabIndex = 63;
@@ -87,7 +87,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             // 
             this.txtApellido.Enabled = false;
             this.txtApellido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(95, 37);
+            this.txtApellido.Location = new System.Drawing.Point(95, 44);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(188, 27);
@@ -98,7 +98,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(8, 39);
+            this.label3.Location = new System.Drawing.Point(8, 46);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 22);
@@ -110,7 +110,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(309, 144);
+            this.ClientSize = new System.Drawing.Size(297, 136);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnEliminar);

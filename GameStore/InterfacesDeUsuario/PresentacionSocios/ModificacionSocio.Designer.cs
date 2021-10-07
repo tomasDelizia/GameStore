@@ -48,6 +48,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtCalle = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label8
@@ -72,7 +73,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.cmbBarrios.Name = "cmbBarrios";
             this.cmbBarrios.Size = new System.Drawing.Size(231, 29);
             this.cmbBarrios.TabIndex = 40;
-            this.cmbBarrios.Text = "Barrio";
+            this.cmbBarrios.Text = "Selección";
             // 
             // label7
             // 
@@ -118,6 +119,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.btnCancelar.TabIndex = 30;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnModificar
             // 
@@ -255,12 +257,25 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.txtNombre.Size = new System.Drawing.Size(231, 31);
             this.txtNombre.TabIndex = 42;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.DimGray;
+            this.label9.Location = new System.Drawing.Point(456, 99);
+            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 22);
+            this.label9.TabIndex = 49;
+            this.label9.Text = "Barrio:";
+            // 
             // ModificacionSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(775, 266);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtNroCalle);
             this.Controls.Add(this.txtDocumento);
             this.Controls.Add(this.txtTelefono);
@@ -310,5 +325,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtCalle;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label label9;
     }
 }

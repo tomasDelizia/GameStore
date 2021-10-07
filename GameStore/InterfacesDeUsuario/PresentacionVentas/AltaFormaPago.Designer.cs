@@ -113,6 +113,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.Controls.Add(this.lblNombreArticulo);
             this.Controls.Add(this.TxtNombre);
             this.Name = "AltaFormaPago";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaFormaPago";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -67,7 +67,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private void ModificarPlataforma()
         {
             _servicioPlataforma.Actualizar(_plataformaAModificar);
-            MessageBox.Show("Se modificó con éxito el proveedor", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Se modificó con éxito la plataforma", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Dispose();
         }
 

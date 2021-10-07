@@ -44,6 +44,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.label8 = new System.Windows.Forms.Label();
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -76,11 +77,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.cmbBarrios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBarrios.ForeColor = System.Drawing.Color.DimGray;
             this.cmbBarrios.FormattingEnabled = true;
-            this.cmbBarrios.Location = new System.Drawing.Point(47, 79);
+            this.cmbBarrios.Location = new System.Drawing.Point(144, 79);
             this.cmbBarrios.Name = "cmbBarrios";
-            this.cmbBarrios.Size = new System.Drawing.Size(266, 29);
+            this.cmbBarrios.Size = new System.Drawing.Size(169, 29);
             this.cmbBarrios.TabIndex = 66;
-            this.cmbBarrios.Text = "Barrio";
+            this.cmbBarrios.Text = "Selección";
             // 
             // txtNroCalle
             // 
@@ -96,7 +97,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(44, 118);
+            this.label2.Location = new System.Drawing.Point(61, 116);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 22);
@@ -208,12 +209,25 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.label13.TabIndex = 68;
             this.label13.Text = "Razón social:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(71, 81);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 22);
+            this.label1.TabIndex = 79;
+            this.label1.Text = "Barrio:";
+            // 
             // ModificacionProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(589, 204);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbBarrios);
             this.Controls.Add(this.txtNroCalle);
             this.Controls.Add(this.label2);
@@ -254,5 +268,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtRazonSocial;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label1;
     }
 }

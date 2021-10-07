@@ -33,8 +33,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label1 = new System.Windows.Forms.Label();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.TxtDescripcion = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // TxtNombre
@@ -62,7 +60,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             // 
             this.BtnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnEliminar.Location = new System.Drawing.Point(205, 247);
+            this.BtnEliminar.Location = new System.Drawing.Point(145, 42);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(97, 31);
             this.BtnEliminar.TabIndex = 76;
@@ -74,7 +72,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             // 
             this.BtnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnCancelar.Location = new System.Drawing.Point(308, 247);
+            this.BtnCancelar.Location = new System.Drawing.Point(248, 42);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(97, 31);
             this.BtnCancelar.TabIndex = 75;
@@ -82,40 +80,19 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.BtnCancelar.UseVisualStyleBackColor = true;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(15, 37);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 22);
-            this.label2.TabIndex = 80;
-            this.label2.Text = "Descripción";
-            // 
-            // TxtDescripcion
-            // 
-            this.TxtDescripcion.Location = new System.Drawing.Point(19, 62);
-            this.TxtDescripcion.Name = "TxtDescripcion";
-            this.TxtDescripcion.Size = new System.Drawing.Size(385, 179);
-            this.TxtDescripcion.TabIndex = 79;
-            this.TxtDescripcion.Text = "";
-            // 
             // BajaDesarrollador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(419, 287);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.TxtDescripcion);
+            this.ClientSize = new System.Drawing.Size(351, 84);
             this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnCancelar);
             this.Name = "BajaDesarrollador";
-            this.Text = "Eliminar Desarrollador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "BajaDesarrollador";
             this.Load += new System.EventHandler(this.BajaDesarrollador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -127,7 +104,5 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button BtnCancelar;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox TxtDescripcion;
     }
 }

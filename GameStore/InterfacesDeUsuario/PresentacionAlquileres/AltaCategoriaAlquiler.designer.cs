@@ -29,137 +29,169 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.lblNombreArticulo = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.RichTextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.numMontoAlquiler = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.numMontoTardio = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.numMontoAlquiler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMontoTardio)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btnCancelar
             // 
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DimGray;
-            this.button2.Location = new System.Drawing.Point(346, 312);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 29);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.DimGray;
+            this.btnCancelar.Location = new System.Drawing.Point(497, 370);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(93, 29);
+            this.btnCancelar.TabIndex = 76;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // button1
+            // btnRegistrar
             // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.Location = new System.Drawing.Point(242, 312);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 29);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Registrar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(12, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 22);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Descripción";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(16, 127);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(421, 179);
-            this.richTextBox1.TabIndex = 22;
-            this.richTextBox1.Text = "";
-            // 
-            // lblNombreArticulo
-            // 
-            this.lblNombreArticulo.AutoSize = true;
-            this.lblNombreArticulo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreArticulo.ForeColor = System.Drawing.Color.DimGray;
-            this.lblNombreArticulo.Location = new System.Drawing.Point(172, 14);
-            this.lblNombreArticulo.Name = "lblNombreArticulo";
-            this.lblNombreArticulo.Size = new System.Drawing.Size(89, 22);
-            this.lblNombreArticulo.TabIndex = 21;
-            this.lblNombreArticulo.Text = "Nombre:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(267, 12);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 27);
-            this.textBox2.TabIndex = 20;
+            this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.Color.DimGray;
+            this.btnRegistrar.Location = new System.Drawing.Point(398, 370);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(98, 29);
+            this.btnRegistrar.TabIndex = 77;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(116, 47);
+            this.label2.Location = new System.Drawing.Point(16, 160);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 22);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Monto por día:";
+            this.label2.Size = new System.Drawing.Size(116, 22);
+            this.label2.TabIndex = 75;
+            this.label2.Text = "Descripción";
             // 
-            // textBox1
+            // txtDescripcion
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(267, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 27);
-            this.textBox1.TabIndex = 26;
+            this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtDescripcion.Location = new System.Drawing.Point(20, 185);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(570, 179);
+            this.txtDescripcion.TabIndex = 74;
+            this.txtDescripcion.Text = "";
+            // 
+            // TxtNombre
+            // 
+            this.TxtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.Location = new System.Drawing.Point(340, 9);
+            this.TxtNombre.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(250, 27);
+            this.TxtNombre.TabIndex = 73;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(245, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 22);
+            this.label1.TabIndex = 72;
+            this.label1.Text = "Nombre:";
+            // 
+            // numMontoAlquiler
+            // 
+            this.numMontoAlquiler.DecimalPlaces = 2;
+            this.numMontoAlquiler.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numMontoAlquiler.ForeColor = System.Drawing.Color.DimGray;
+            this.numMontoAlquiler.Location = new System.Drawing.Point(340, 48);
+            this.numMontoAlquiler.Maximum = new decimal(new int[] {
+            500000,
+            0,
+            0,
+            0});
+            this.numMontoAlquiler.Name = "numMontoAlquiler";
+            this.numMontoAlquiler.Size = new System.Drawing.Size(250, 27);
+            this.numMontoAlquiler.TabIndex = 79;
+            this.numMontoAlquiler.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(98, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(236, 22);
+            this.label5.TabIndex = 78;
+            this.label5.Text = "Monto por alquiler diario:";
+            // 
+            // numMontoTardio
+            // 
+            this.numMontoTardio.DecimalPlaces = 2;
+            this.numMontoTardio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numMontoTardio.ForeColor = System.Drawing.Color.DimGray;
+            this.numMontoTardio.Location = new System.Drawing.Point(340, 84);
+            this.numMontoTardio.Maximum = new decimal(new int[] {
+            500000,
+            0,
+            0,
+            0});
+            this.numMontoTardio.Name = "numMontoTardio";
+            this.numMontoTardio.Size = new System.Drawing.Size(250, 27);
+            this.numMontoTardio.TabIndex = 81;
+            this.numMontoTardio.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(10, 80);
+            this.label3.Location = new System.Drawing.Point(-1, 85);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(251, 22);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Monto por entrega tardía:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(267, 78);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(170, 27);
-            this.textBox3.TabIndex = 28;
+            this.label3.Size = new System.Drawing.Size(335, 22);
+            this.label3.TabIndex = 80;
+            this.label3.Text = "Monto por devolución tardía diario:";
             // 
             // AltaCategoriaAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(451, 353);
+            this.ClientSize = new System.Drawing.Size(609, 411);
+            this.Controls.Add(this.numMontoTardio);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.numMontoAlquiler);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.lblNombreArticulo);
-            this.Controls.Add(this.textBox2);
             this.Name = "AltaCategoriaAlquiler";
-            this.Text = "Registrar Categoría de Alquiler";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "AltaCategoriaAlquiler";
+            ((System.ComponentModel.ISupportInitialize)(this.numMontoAlquiler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMontoTardio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,15 +199,15 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label lblNombreArticulo;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox txtDescripcion;
+        private System.Windows.Forms.TextBox TxtNombre;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown numMontoAlquiler;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown numMontoTardio;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
     }
 }

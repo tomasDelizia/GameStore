@@ -62,8 +62,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             if (nombreFormaPago.Length > 50)
                 throw new ApplicationException("El nombre no debe tener más de 50 caracteres.");
 
-            var Descripcion = txtDescripcion.Text.Trim();
-
             var FormaPagoFiltradas = _servicioFormaPago.Encontrar(a => a.Nombre.Contains(nombreFormaPago)).ToList();
 
             CargarDgvFormaPago(FormaPagoFiltradas);

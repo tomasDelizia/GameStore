@@ -120,7 +120,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
 
         private void btnAgregarCargo_Click(object sender, EventArgs e)
         {
-            // new AltaCargo(_unidadDeTrabajo).ShowDialog();
+            new AltaCargo(_unidadDeTrabajo).ShowDialog();
             CargarCargos(cboCargos);
         }
     }

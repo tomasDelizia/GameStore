@@ -490,7 +490,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.txtNombre);
             this.Name = "AltaArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar Artículo";
+            this.Text = "AltaArticulo";
             this.Load += new System.EventHandler(this.AltaArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gAMESTOREDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tiposDeArticuloBindingSource)).EndInit();

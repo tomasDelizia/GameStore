@@ -43,7 +43,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.label6 = new System.Windows.Forms.Label();
             this.cmbBarrios = new System.Windows.Forms.ComboBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtRazonSocial
@@ -52,7 +53,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.txtRazonSocial.Location = new System.Drawing.Point(153, 14);
             this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(133, 27);
+            this.txtRazonSocial.Size = new System.Drawing.Size(182, 27);
             this.txtRazonSocial.TabIndex = 40;
             // 
             // label1
@@ -73,7 +74,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.txtCuit.Location = new System.Drawing.Point(153, 51);
             this.txtCuit.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtCuit.Name = "txtCuit";
-            this.txtCuit.Size = new System.Drawing.Size(133, 27);
+            this.txtCuit.Size = new System.Drawing.Size(182, 27);
             this.txtCuit.TabIndex = 42;
             // 
             // label2
@@ -94,7 +95,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.txtEmail.Location = new System.Drawing.Point(459, 49);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(133, 27);
+            this.txtEmail.Size = new System.Drawing.Size(180, 27);
             this.txtEmail.TabIndex = 44;
             // 
             // label3
@@ -115,7 +116,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.txtTelefono.Location = new System.Drawing.Point(459, 14);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(133, 27);
+            this.txtTelefono.Size = new System.Drawing.Size(180, 27);
             this.txtTelefono.TabIndex = 46;
             // 
             // label4
@@ -136,7 +137,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.txtCalle.Location = new System.Drawing.Point(153, 88);
             this.txtCalle.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtCalle.Name = "txtCalle";
-            this.txtCalle.Size = new System.Drawing.Size(133, 27);
+            this.txtCalle.Size = new System.Drawing.Size(182, 27);
             this.txtCalle.TabIndex = 48;
             // 
             // label5
@@ -157,7 +158,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.txtNroCalle.Location = new System.Drawing.Point(459, 86);
             this.txtNroCalle.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtNroCalle.Name = "txtNroCalle";
-            this.txtNroCalle.Size = new System.Drawing.Size(133, 27);
+            this.txtNroCalle.Size = new System.Drawing.Size(180, 27);
             this.txtNroCalle.TabIndex = 50;
             // 
             // label6
@@ -180,15 +181,15 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.cmbBarrios.FormattingEnabled = true;
             this.cmbBarrios.Location = new System.Drawing.Point(153, 122);
             this.cmbBarrios.Name = "cmbBarrios";
-            this.cmbBarrios.Size = new System.Drawing.Size(133, 29);
+            this.cmbBarrios.Size = new System.Drawing.Size(182, 29);
             this.cmbBarrios.TabIndex = 52;
-            this.cmbBarrios.Text = "Barrio";
+            this.cmbBarrios.Text = "Selección";
             // 
             // btnRegistrar
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnRegistrar.Location = new System.Drawing.Point(392, 174);
+            this.btnRegistrar.Location = new System.Drawing.Point(439, 174);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(97, 31);
             this.btnRegistrar.TabIndex = 55;
@@ -196,25 +197,39 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // button2
+            // btnCancelar
             // 
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DimGray;
-            this.button2.Location = new System.Drawing.Point(495, 174);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 31);
-            this.button2.TabIndex = 54;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.DimGray;
+            this.btnCancelar.Location = new System.Drawing.Point(542, 174);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(97, 31);
+            this.btnCancelar.TabIndex = 54;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.Location = new System.Drawing.Point(80, 124);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 22);
+            this.label7.TabIndex = 56;
+            this.label7.Text = "Barrio:";
             // 
             // AltaProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(604, 217);
+            this.ClientSize = new System.Drawing.Size(651, 217);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnRegistrar);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.cmbBarrios);
             this.Controls.Add(this.txtNroCalle);
             this.Controls.Add(this.label6);
@@ -253,6 +268,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbBarrios;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -53,8 +53,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
                     socio.Apellido,
                     socio.Telefono,
                     socio.Email,
-                    socio.FechaAlta.ToString(),
-                    socio.FechaNacimiento.ToString(),
+                    socio.FechaAlta.ToString().Substring(0,10),
+                    socio.FechaNacimiento.ToString().Substring(0,10),
                 };
                 dgvSocios.Rows.Add(fila);
             }
@@ -80,6 +80,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             new AltaSocio(_unidadDeTrabajo).ShowDialog();
+            ConsultarSocios();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -120,6 +121,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             }
             else if (dgvSocios.SelectedRows.Count > 1)
                 MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
