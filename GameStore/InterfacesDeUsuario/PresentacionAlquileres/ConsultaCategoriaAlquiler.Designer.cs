@@ -1,5 +1,5 @@
 ﻿
-namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
+namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
 {
     partial class ConsultaCategoriaAlquiler
     {

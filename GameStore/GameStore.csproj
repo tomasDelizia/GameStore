@@ -88,34 +88,16 @@
     <Compile Include="InterfacesDeUsuario\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\AltaCategoriaAlquiler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\AltaCategoriaAlquiler.designer.cs">
-      <DependentUpon>AltaCategoriaAlquiler.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\BajaCategoriaAlquiler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\BajaCategoriaAlquiler.designer.cs">
-      <DependentUpon>BajaCategoriaAlquiler.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ModificacionCategoriaAlquiler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ModificacionCategoriaAlquiler.designer.cs">
-      <DependentUpon>ModificacionCategoriaAlquiler.cs</DependentUpon>
-    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaArticulo.designer.cs">
       <DependentUpon>AltaArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaCategoriaAlquiler.cs">
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\AltaCategoriaAlquiler.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaCategoriaAlquiler.Designer.cs">
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\AltaCategoriaAlquiler.Designer.cs">
       <DependentUpon>AltaCategoriaAlquiler.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaClasificacion.cs">
@@ -160,10 +142,10 @@
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaArticulo.designer.cs">
       <DependentUpon>BajaArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaCategoriaAlquiler.cs">
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\BajaCategoriaAlquiler.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaCategoriaAlquiler.Designer.cs">
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\BajaCategoriaAlquiler.Designer.cs">
       <DependentUpon>BajaCategoriaAlquiler.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaClasificacion.cs">
@@ -208,10 +190,10 @@
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaArticulo.Designer.cs">
       <DependentUpon>ConsultaArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaCategoriaAlquiler.cs">
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultaCategoriaAlquiler.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaCategoriaAlquiler.Designer.cs">
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultaCategoriaAlquiler.Designer.cs">
       <DependentUpon>ConsultaCategoriaAlquiler.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaGenero.cs">
@@ -250,10 +232,10 @@
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionArticulo.designer.cs">
       <DependentUpon>ModificacionArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionCategoriaAlquiler.cs">
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ModificacionCategoriaAlquiler.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionCategoriaAlquiler.Designer.cs">
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ModificacionCategoriaAlquiler.Designer.cs">
       <DependentUpon>ModificacionCategoriaAlquiler.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionClasificacion.cs">
@@ -570,19 +552,10 @@
     <EmbeddedResource Include="InterfacesDeUsuario\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\AltaCategoriaAlquiler.resx">
-      <DependentUpon>AltaCategoriaAlquiler.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\BajaCategoriaAlquiler.resx">
-      <DependentUpon>BajaCategoriaAlquiler.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\ModificacionCategoriaAlquiler.resx">
-      <DependentUpon>ModificacionCategoriaAlquiler.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\AltaArticulo.resx">
       <DependentUpon>AltaArticulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\AltaCategoriaAlquiler.resx">
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\AltaCategoriaAlquiler.resx">
       <DependentUpon>AltaCategoriaAlquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\AltaClasificacion.resx">
@@ -606,7 +579,7 @@
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\BajaArticulo.resx">
       <DependentUpon>BajaArticulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\BajaCategoriaAlquiler.resx">
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\BajaCategoriaAlquiler.resx">
       <DependentUpon>BajaCategoriaAlquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\BajaClasificacion.resx">
@@ -630,7 +603,7 @@
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaArticulo.resx">
       <DependentUpon>ConsultaArticulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaCategoriaAlquiler.resx">
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultaCategoriaAlquiler.resx">
       <DependentUpon>ConsultaCategoriaAlquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaGenero.resx">
@@ -651,7 +624,7 @@
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionArticulo.resx">
       <DependentUpon>ModificacionArticulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionCategoriaAlquiler.resx">
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\ModificacionCategoriaAlquiler.resx">
       <DependentUpon>ModificacionCategoriaAlquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionClasificacion.resx">

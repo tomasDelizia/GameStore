@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
+namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
 {
     public partial class ConsultaCategoriaAlquiler : Form
     {

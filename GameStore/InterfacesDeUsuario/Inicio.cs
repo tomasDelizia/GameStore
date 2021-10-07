@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using GameStore.InterfacesDeUsuario.PresentacionAlquileres;
 using GameStore.InterfacesDeUsuario.PresentacionArticulos;
 using GameStore.InterfacesDeUsuario.PresentacionCompras;
 using GameStore.InterfacesDeUsuario.PresentacionEmpleados;
@@ -112,7 +113,10 @@ namespace GameStore.InterfacesDeUsuario
             new ConsultarCargo(_unidadDeTrabajo).ShowDialog();
         }
 
-        //categoria
+        private void BtnCategoriaAlquiler_Click(object sender, EventArgs e)
+        {
+            new ConsultaCategoriaAlquiler(_unidadDeTrabajo).ShowDialog();
+        }
 
         private void BtnClasificacion_Click(object sender, EventArgs e)
         {
@@ -152,11 +156,6 @@ namespace GameStore.InterfacesDeUsuario
         private void BtnReporte_Click(object sender, EventArgs e)
         {
             ShowSubMenu(PnlSubMenuReporte);
-        }
-
-        private void BtnCategoriaAlquiler_Click(object sender, EventArgs e)
-        {
-            new ConsultaCategoriaAlquiler(_unidadDeTrabajo).ShowDialog();
         }
     }
 }
