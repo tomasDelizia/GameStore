@@ -384,6 +384,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Visible = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // ConsultaArticulo
             // 

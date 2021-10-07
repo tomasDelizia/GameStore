@@ -23,24 +23,25 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private Proveedor _proveedor;
         private IServicioProveedor _servicioProveedor;
         private ConsultaArticulo _consultaArticulo;
+        private List<Articulo> _Articulos;
+        private IServicioArticulo _servicioArticulo;
+        private Empleado _empleadoLogueado;       
         public RegistrarCompra(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
+            dgvArticulos.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvArticulos.DefaultCellStyle.Font = new Font("Century Gothic", 10);
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioProveedor = new ServicioProveedor(_unidadDeTrabajo.RepositorioProveedor);
+            _servicioArticulo = new ServicioArticulo(_unidadDeTrabajo.RepositorioArticulo);
+            _Articulos = new List<Articulo>();
+            IServicioUsuario servicioUsuario = new ServicioUsuario(_unidadDeTrabajo.RepositorioUsuario);
+            _empleadoLogueado = servicioUsuario.GetEmpleadoLogueado();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Dispose();
-        }
-        private void btnAgregarProveedor_Click(object sender, EventArgs e)
-        {
-            _consultaProveedor = new ConsultaProveedor(_unidadDeTrabajo, this);
-            _consultaProveedor.ShowDialog();
-            _proveedor = _servicioProveedor.GetPorId(_idProveedor);
-            string datosProveedor = _proveedor.GetRazonSocial();
-            lblProveedor.Text = datosProveedor;
         }
 
         internal void setIdProveedor(int id)
@@ -50,9 +51,93 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
 
         private void btnAgregarArticulo_Click(object sender, EventArgs e)
         {
-            _consultaArticulo = new ConsultaArticulo(_unidadDeTrabajo);
+            _consultaArticulo = new ConsultaArticulo(_unidadDeTrabajo, this);
             _consultaArticulo.ShowDialog();
-            //_consultaArticulo.CargarBotones();
+            ConsultarArticulos();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            _consultaProveedor = new ConsultaProveedor(_unidadDeTrabajo, this);
+            _consultaProveedor.ShowDialog();
+            _proveedor = _servicioProveedor.GetPorId(_idProveedor);
+            string datosProveedor = _proveedor.GetRazonSocial();
+            lblProveedor.Text = datosProveedor;
+        }
+
+        private void RegistrarCompra_Load(object sender, EventArgs e)
+        {
+            lblFechaActual.Text = "Fecha actual: " + DateTime.Today.ToShortDateString();
+        }
+
+        internal void AgregarArticulo(Articulo articulo)
+        {
+            _Articulos.Add(articulo);
+        }
+        private void ConsultarArticulos()
+        {
+            CargarDgvArticulos(_Articulos);
+            dgvArticulos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+        private void CargarDgvArticulos(List<Articulo> articulos)
+        {
+            dgvArticulos.Rows.Clear();
+
+            foreach (var articulo in articulos)
+            {
+                var fila = new string[]
+                {
+                    articulo.Codigo.ToString(),
+                    articulo.Nombre,
+                    "$ " + articulo.PrecioUnitario.ToString(),
+                    articulo.Stock.ToString(),
+                    articulo.TipoArticulo.Nombre,
+                    articulo.Plataforma.Nombre.ToString(),
+                };
+                dgvArticulos.Rows.Add(fila);
+            }
+        }
+        public List<Articulo> GetArticulos()
+        {
+            return this._Articulos;
+        }
+
+        private void btnEliminarArticulo_Click(object sender, EventArgs e)
+        {
+            
+            if (dgvArticulos.SelectedRows.Count == 1)
+            {
+                int idArticulo = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
+                Articulo articuloSeleccionado = _servicioArticulo.GetPorId(idArticulo);
+                dgvArticulos.Rows.Remove(dgvArticulos.SelectedRows[0]);
+                _Articulos.Remove(articuloSeleccionado);
+                return;
+            }
+            if (dgvArticulos.SelectedRows.Count > 1)
+                MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
+        }
+        public void AgregarArticulo(string[] fila)
+        {
+            dgvArticulos.Rows.Add(fila);
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Compra nuevaCompra = new Compra()
+                {
+                    Empleado = _empleadoLogueado,
+                    FechaCompra = DateTime.Today,
+                    Proveedor = _proveedor,
+                    //agregar tipo de factura
+
+                };
+            }
+            catch(Exception ex)
+            {
+
+            }
         }
     }
 }

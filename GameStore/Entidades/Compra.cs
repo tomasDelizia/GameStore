@@ -30,7 +30,6 @@ namespace GameStore.Entidades
         public virtual Empleado Empleado { get; set; }
 
         public virtual Proveedor Proveedor { get; set; }
-
         public virtual TipoFactura TipoFactura { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
