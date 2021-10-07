@@ -52,6 +52,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         {
             _consultaArticulo = new ConsultaArticulo(_unidadDeTrabajo);
             _consultaArticulo.ShowDialog();
+            _consultaArticulo.CargarBotones();
         }
     }
 }
