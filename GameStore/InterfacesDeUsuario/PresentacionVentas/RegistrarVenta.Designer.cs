@@ -31,7 +31,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
         {
             this.lblFechaActual = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnAgregarTipoFactura = new System.Windows.Forms.Button();
             this.cboTiposFactura = new System.Windows.Forms.ComboBox();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,17 +64,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.label4.Size = new System.Drawing.Size(155, 22);
             this.label4.TabIndex = 40;
             this.label4.Text = "Tipo de factura:";
-            // 
-            // btnAgregarTipoFactura
-            // 
-            this.btnAgregarTipoFactura.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarTipoFactura.ForeColor = System.Drawing.Color.DimGray;
-            this.btnAgregarTipoFactura.Location = new System.Drawing.Point(378, 7);
-            this.btnAgregarTipoFactura.Name = "btnAgregarTipoFactura";
-            this.btnAgregarTipoFactura.Size = new System.Drawing.Size(32, 29);
-            this.btnAgregarTipoFactura.TabIndex = 39;
-            this.btnAgregarTipoFactura.Text = "+";
-            this.btnAgregarTipoFactura.UseVisualStyleBackColor = true;
             // 
             // cboTiposFactura
             // 
@@ -168,11 +156,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(749, 450);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnAgregarTipoFactura);
             this.Controls.Add(this.cboTiposFactura);
             this.Controls.Add(this.lblFechaActual);
             this.Name = "RegistrarVenta";
@@ -188,7 +175,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
 
         private System.Windows.Forms.Label lblFechaActual;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnAgregarTipoFactura;
         private System.Windows.Forms.ComboBox cboTiposFactura;
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;

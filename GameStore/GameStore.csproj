@@ -467,6 +467,7 @@
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioCargo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioCategoriaAlquiler.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioDesarrollador.cs" />
+    <Compile Include="RepositoriosBD\Implementaciones\RepositorioDetalleVenta.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioFormaPago.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioGenero.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioMarca.cs" />
@@ -478,6 +479,8 @@
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioTipoArticulo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioClasificacion.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioEmpleado.cs" />
+    <Compile Include="RepositoriosBD\Implementaciones\RepositorioTipoFactura.cs" />
+    <Compile Include="RepositoriosBD\Implementaciones\RepositorioVenta.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\UnidadDeTrabajo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioUsuario.cs" />
     <Compile Include="RepositoriosBD\IRepositorio.cs" />
@@ -492,6 +495,7 @@
     <Compile Include="Entidades\Plataforma.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
     <Compile Include="RepositoriosBD\IRepositorioDesarrollador.cs" />
+    <Compile Include="RepositoriosBD\IRepositorioDetalleVenta.cs" />
     <Compile Include="RepositoriosBD\IRepositorioEmpleado.cs" />
     <Compile Include="RepositoriosBD\IRepositorioFormaPago.cs" />
     <Compile Include="RepositoriosBD\IRepositorioGenero.cs" />
@@ -501,8 +505,9 @@
     <Compile Include="RepositoriosBD\IRepositorioRol.cs" />
     <Compile Include="RepositoriosBD\IRepositorioSocio.cs" />
     <Compile Include="RepositoriosBD\IRepositorioTipoArticulo.cs" />
+    <Compile Include="RepositoriosBD\IRepositorioTipoFactura.cs" />
     <Compile Include="RepositoriosBD\IRepositorioUsuario.cs" />
-    <Compile Include="RepositoriosBD\IServicioTipoFactura.cs" />
+    <Compile Include="RepositoriosBD\IRepositorioVenta.cs" />
     <Compile Include="RepositoriosBD\IUnidadDeTrabajo.cs" />
     <Compile Include="Entidades\Rol.cs" />
     <Compile Include="Entidades\Sesion.cs" />
@@ -520,6 +525,7 @@
     <Compile Include="Servicios\Implementaciones\ServicioCategoriaAlquiler.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioClasificacion.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioDesarrollador.cs" />
+    <Compile Include="Servicios\Implementaciones\ServicioDetalleVenta.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioEmpleado.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioFormaPago.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioGenero.cs" />
@@ -530,7 +536,9 @@
     <Compile Include="Servicios\Implementaciones\ServicioRol.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioSocio.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioTipoArticulo.cs" />
+    <Compile Include="Servicios\Implementaciones\ServicioTipoFactura.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioUsuario.cs" />
+    <Compile Include="Servicios\Implementaciones\ServicioVenta.cs" />
     <Compile Include="Servicios\IServicio.cs" />
     <Compile Include="Servicios\IServicioArchivo.cs" />
     <Compile Include="Servicios\IServicioArticulo.cs" />
@@ -539,6 +547,7 @@
     <Compile Include="Servicios\IServicioCategoriaAlquiler.cs" />
     <Compile Include="Servicios\IServicioClasificacion.cs" />
     <Compile Include="Servicios\IServicioDesarrollador.cs" />
+    <Compile Include="Servicios\IServicioDetalleVenta.cs" />
     <Compile Include="Servicios\IServicioEmpleado.cs" />
     <Compile Include="Servicios\IServicioFormaPago.cs" />
     <Compile Include="Servicios\IServicioGenero.cs" />
@@ -549,7 +558,9 @@
     <Compile Include="Servicios\IServicioRol.cs" />
     <Compile Include="Servicios\IServicioSocio.cs" />
     <Compile Include="Servicios\IServicioTipoArticulo.cs" />
+    <Compile Include="Servicios\IServicioTipoFactura.cs" />
     <Compile Include="Servicios\IServicioUsuario.cs" />
+    <Compile Include="Servicios\IServicioVenta.cs" />
     <Compile Include="Utils\FormUtils.cs" />
     <EmbeddedResource Include="InterfacesDeUsuario\Bienvenida.resx">
       <DependentUpon>Bienvenida.cs</DependentUpon>
