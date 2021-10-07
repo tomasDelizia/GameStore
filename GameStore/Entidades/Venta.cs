@@ -34,7 +34,7 @@ namespace GameStore.Entidades
 
         public virtual Empleado Empleado { get; set; }
 
-        public virtual FormaPago FormasDePago { get; set; }
+        public virtual FormaPago FormaPago { get; set; }
 
         public virtual Socio Socio { get; set; }
 

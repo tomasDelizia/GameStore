@@ -56,6 +56,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioMin)).BeginInit();
@@ -372,12 +373,25 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.ForeColor = System.Drawing.Color.DimGray;
+            this.btnSeleccionar.Location = new System.Drawing.Point(693, 426);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(110, 29);
+            this.btnSeleccionar.TabIndex = 105;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Visible = false;
+            // 
             // ConsultaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(914, 464);
+            this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
@@ -387,7 +401,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.panel1);
             this.Name = "ConsultaArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConsultaArticulo";
+            this.Text = "Consultar Artículo";
             this.Load += new System.EventHandler(this.ConsultaArticulo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -427,5 +441,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoArticulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Plataforma;
+        private System.Windows.Forms.Button btnSeleccionar;
     }
 }

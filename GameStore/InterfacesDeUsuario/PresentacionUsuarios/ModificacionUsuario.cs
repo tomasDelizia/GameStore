@@ -137,6 +137,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             var repassword = txtRecontrasenia.Text;
             if (password != repassword)
                 throw new ApplicationException("La contraseña no coincide");
+            _usuarioAModificar.NombreUsuario = txtNombreUsuario.Text;
             _usuarioAModificar.Contrasenia = password;
             _usuarioAModificar.Perfil = (Perfil)cboPerfiles.SelectedItem;
             var idEmpleadoSeleccionado = Convert.ToInt32(dgvEmpleados.CurrentRow.Cells["IdEmpleado"].Value);
