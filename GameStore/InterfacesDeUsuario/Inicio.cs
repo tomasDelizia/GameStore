@@ -157,5 +157,11 @@ namespace GameStore.InterfacesDeUsuario
         {
             ShowSubMenu(PnlSubMenuReporte);
         }
+
+        private void BtnCompraProveedor_Click(object sender, EventArgs e)
+        {
+            new RegistrarCompra(_unidadDeTrabajo).ShowDialog();
+
+        }
     }
 }

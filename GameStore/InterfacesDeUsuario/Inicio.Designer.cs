@@ -99,6 +99,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnCompraProveedor.Text = "Compra a proveedor";
             this.BtnCompraProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCompraProveedor.UseVisualStyleBackColor = true;
+            this.BtnCompraProveedor.Click += new System.EventHandler(this.BtnCompraProveedor_Click);
             // 
             // BtnAlquiler
             // 
