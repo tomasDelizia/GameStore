@@ -132,6 +132,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnRegistrarVenta.Text = "Venta";
             this.BtnRegistrarVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnRegistrarVenta.UseVisualStyleBackColor = false;
+            this.BtnRegistrarVenta.Click += new System.EventHandler(this.BtnRegistrarVenta_Click);
             // 
             // PnlSubMenuReporte
             // 

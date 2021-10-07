@@ -161,7 +161,11 @@ namespace GameStore.InterfacesDeUsuario
         private void BtnCompraProveedor_Click(object sender, EventArgs e)
         {
             new RegistrarCompra(_unidadDeTrabajo).ShowDialog();
+	}
 
+        private void BtnRegistrarVenta_Click(object sender, EventArgs e)
+        {
+            new RegistrarVenta(_unidadDeTrabajo).ShowDialog();
         }
     }
 }

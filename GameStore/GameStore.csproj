@@ -442,6 +442,12 @@
     <Compile Include="InterfacesDeUsuario\PresentacionVentas\ModificacionFormaPago.Designer.cs">
       <DependentUpon>ModificacionFormaPago.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionVentas\RegistrarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionVentas\RegistrarVenta.Designer.cs">
+      <DependentUpon>RegistrarVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entidades\Alquiler.cs" />
@@ -502,6 +508,7 @@
     <Compile Include="RepositoriosBD\IRepositorioSocio.cs" />
     <Compile Include="RepositoriosBD\IRepositorioTipoArticulo.cs" />
     <Compile Include="RepositoriosBD\IRepositorioUsuario.cs" />
+    <Compile Include="RepositoriosBD\IServicioTipoFactura.cs" />
     <Compile Include="RepositoriosBD\IUnidadDeTrabajo.cs" />
     <Compile Include="Entidades\Rol.cs" />
     <Compile Include="Entidades\Sesion.cs" />
@@ -549,6 +556,7 @@
     <Compile Include="Servicios\IServicioSocio.cs" />
     <Compile Include="Servicios\IServicioTipoArticulo.cs" />
     <Compile Include="Servicios\IServicioUsuario.cs" />
+    <Compile Include="Utils\FormUtils.cs" />
     <EmbeddedResource Include="InterfacesDeUsuario\Bienvenida.resx">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </EmbeddedResource>
@@ -734,6 +742,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionVentas\ModificacionFormaPago.resx">
       <DependentUpon>ModificacionFormaPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionVentas\RegistrarVenta.resx">
+      <DependentUpon>RegistrarVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

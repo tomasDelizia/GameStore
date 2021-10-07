@@ -200,5 +200,12 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         {
             this.Dispose();
         }
+
+        public void SetBotonesParaVenta()
+        {
+            btnEliminar.Visible = false;
+            btnModificar.Visible = false;
+            btnSeleccionar.Visible = true;
+        }
     }
 }
