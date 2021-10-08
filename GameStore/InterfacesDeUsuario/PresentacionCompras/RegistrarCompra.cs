@@ -25,7 +25,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private ConsultaArticulo _consultaArticulo;
         private List<Articulo> _Articulos;
         private IServicioArticulo _servicioArticulo;
-        private Empleado _empleadoLogueado;       
+        private Empleado _empleadoLogueado;
+        private ICollection<DetalleCompra> _detallesCompra;
         public RegistrarCompra(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
@@ -125,19 +126,33 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         {
             try
             {
+                ICollection<DetalleCompra> detallesCompra = CrearDetallesCompra();
                 Compra nuevaCompra = new Compra()
                 {
                     Empleado = _empleadoLogueado,
                     FechaCompra = DateTime.Today,
                     Proveedor = _proveedor,
                     //agregar tipo de factura
-
+                    DetallesDeCompra = detallesCompra,
                 };
             }
             catch(Exception ex)
             {
 
             }
+        }
+
+        private ICollection<DetalleCompra> CrearDetallesCompra()
+        {
+            foreach (Articulo articulo in _Articulos)
+            {
+                DetalleCompra detalle = new DetalleCompra()
+                {
+                    Articulo = articulo,
+                    PrecioUnitario = articulo.PrecioUnitario,
+                    Cantidad = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Cantidad"]),
+                };
+            };
         }
     }
 }
