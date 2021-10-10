@@ -27,6 +27,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private IServicioArticulo _servicioArticulo;
         private Empleado _empleadoLogueado;
         private ICollection<DetalleCompra> _detallesCompra;
+
         public RegistrarCompra(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();

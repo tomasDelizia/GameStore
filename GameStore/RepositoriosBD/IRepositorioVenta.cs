@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GameStore.Entidades;
 
 namespace GameStore.RepositoriosBD
 {
-    public interface IServicioTipoFactura
+    public interface IRepositorioVenta : IRepositorio<Venta>
     {
     }
 }

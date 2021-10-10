@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GameStore.InterfacesDeUsuario.PresentacionArticulos;
 using GameStore.RepositoriosBD;
+using GameStore.Servicios;
+using GameStore.Servicios.Implementaciones;
+using GameStore.Utils;
 
 namespace GameStore.InterfacesDeUsuario.PresentacionVentas
 {
@@ -22,6 +25,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
         {
             InitializeComponent();
             _unidadDeTrabajo = unidadDeTrabajo;
+            _servicioTipoFactura = new ServicioTipoFactura(_unidadDeTrabajo.RepositorioTipoFactura);
         }
 
         private void NuevaVenta_Load(object sender, EventArgs e)
@@ -32,7 +36,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
 
         private void CargarTiposFactura()
         {
-            
+            var tiposFactura = _servicioTipoFactura.ListarTiposDeFactura();
+            FormUtils.CargarCombo(ref cboTiposFactura, new BindingSource() { DataSource = tiposFactura }, "Nombre", "IdTipoFactura");
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -43,3 +48,4 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
         }
     }
 }
+

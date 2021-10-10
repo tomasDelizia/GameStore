@@ -116,6 +116,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnAlquiler.Text = "Alquiler";
             this.BtnAlquiler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAlquiler.UseVisualStyleBackColor = false;
+            this.BtnAlquiler.Click += new System.EventHandler(this.BtnAlquiler_Click);
             // 
             // BtnRegistrarVenta
             // 

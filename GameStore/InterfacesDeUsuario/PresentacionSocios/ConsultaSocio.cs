@@ -1,4 +1,5 @@
 ﻿using GameStore.Entidades;
+using GameStore.InterfacesDeUsuario.PresentacionAlquileres;
 using GameStore.RepositoriosBD;
 using GameStore.Servicios;
 using GameStore.Servicios.Implementaciones;
@@ -19,6 +20,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
         private IUnidadDeTrabajo _unidadDeTrabajo;
         private IServicioSocio _servicioSocio;
         private IServicioEmpleado _servicioEmpleado;
+        private RegistrarAlquiler _registrarAlquiler;
+
         public ConsultaSocio(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
@@ -27,6 +30,20 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
             _servicioEmpleado = new ServicioEmpleado(_unidadDeTrabajo.RepositorioEmpleado);
+            btnSeleccionar.Visible = false;
+        }
+
+        public ConsultaSocio(IUnidadDeTrabajo unidadDeTrabajo, RegistrarAlquiler frmRegistrarAlquiler)
+        {
+            InitializeComponent();
+            dgvSocios.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvSocios.DefaultCellStyle.Font = new Font("Century Gothic", 10);
+            _unidadDeTrabajo = unidadDeTrabajo;
+            _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
+            _servicioEmpleado = new ServicioEmpleado(_unidadDeTrabajo.RepositorioEmpleado);
+            btnModificar.Visible = false;
+            btnEliminar.Visible = false;
+            _registrarAlquiler = frmRegistrarAlquiler;
         }
 
         private void ConsultaSocio_Load(object sender, EventArgs e)

@@ -167,5 +167,10 @@ namespace GameStore.InterfacesDeUsuario
         {
             new RegistrarVenta(_unidadDeTrabajo).ShowDialog();
         }
+
+        private void BtnAlquiler_Click(object sender, EventArgs e)
+        {
+            new RegistrarAlquiler(_unidadDeTrabajo).ShowDialog();
+        }
     }
 }

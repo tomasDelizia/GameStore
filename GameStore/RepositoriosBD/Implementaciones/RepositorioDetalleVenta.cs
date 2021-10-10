@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace GameStore.RepositoriosBD.Implementaciones
 {
-    public class RepositorioDetalleVenta : Repositorio<DetalleVenta>
+    public class RepositorioDetalleVenta : Repositorio<DetalleVenta>, IRepositorioDetalleVenta
     {
         public RepositorioDetalleVenta(ContextoGameStore contextoBd) : base(contextoBd)
         {
+
         }
     }
 }
