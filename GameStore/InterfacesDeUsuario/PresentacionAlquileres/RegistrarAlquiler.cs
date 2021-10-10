@@ -39,6 +39,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             dgvJuegos.DefaultCellStyle.Font = new Font("Century Gothic", 10);
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioArticulo = new ServicioArticulo(_unidadDeTrabajo.RepositorioArticulo);
+            _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
             _servicioTipoFactura = new ServicioTipoFactura(_unidadDeTrabajo.RepositorioTipoFactura);
             _servicioFormaPago = new ServicioFormaPago(_unidadDeTrabajo.RepositorioFormaPago);
             _Articulos = new List<Articulo>();
@@ -49,15 +50,19 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         private void RegistrarAlquiler_Load(object sender, EventArgs e)
         {
             lblFechaActual.Text = "Fecha actual: " + DateTime.Today.ToShortDateString();
-            lblSocio.Text = "asd";
             CargarTiposFactura();
             CargarFormasPago();
         }
 
+        internal void setIdSocio(int id)
+        {
+            this.idSocio = id;
+        }
+
         private void CargarFormasPago()
         {
-            var formaPago = _servicioTipoFactura.ListarTiposDeFactura();
-            FormUtils.CargarCombo(ref cboTiposFactura, new BindingSource() { DataSource = formaPago }, "Nombre", "IdFormaPago");
+            var formaPago = _servicioFormaPago.ListarFormaPago();
+            FormUtils.CargarCombo(ref cboFormaPago, new BindingSource() { DataSource = formaPago }, "Nombre", "IdFormaPago");
         }
 
         private void CargarTiposFactura()
@@ -71,7 +76,43 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             _consultaSocio = new ConsultaSocio(_unidadDeTrabajo, this);
             _consultaSocio.ShowDialog();
             _socio = _servicioSocio.GetPorId(idSocio);
-            lblSocio.Text = _socio.Nombre;
+            string datos = _socio.GetApellidoYNombre();
+            lblSocio.Text = datos;
         }
+
+        private void btnAgregarArticulo_Click(object sender, EventArgs e)
+        {
+            //_consultaArticulo = new ConsultaArticulo(_unidadDeTrabajo, this);
+            _consultaArticulo.ShowDialog();
+            ConsultarArticulos();
+        }
+
+        private void ConsultarArticulos()
+        {
+            CargarDgvJuegos(_Articulos);
+            dgvJuegos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        //falta terminar de completar esto que nose que mas poner y preguntar que son los metodos de abajo que 
+        //uso gaston en su transaccion y agregarle el tipo de factura a su transaccion
+        private void CargarDgvJuegos(List<Articulo> articulos)
+        {
+            dgvJuegos.Rows.Clear();
+
+            foreach (var articulo in articulos)
+            {
+                var fila = new string[]
+                {
+                    articulo.Codigo.ToString(),
+                    articulo.Nombre,
+                    "$ " + articulo.PrecioUnitario.ToString(),
+                    articulo.TipoArticulo.Nombre,
+                    articulo.Plataforma.Nombre.ToString(),
+                };
+                dgvJuegos.Rows.Add(fila);
+            }
+        }
+
+
     }
 }

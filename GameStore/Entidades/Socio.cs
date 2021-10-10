@@ -69,6 +69,14 @@ namespace GameStore.Entidades
             if (Nombre.Length > 50)
                 throw new ApplicationException("El apellido no debe superar los 50 caracteres.");
         }
+
+        internal string GetApellidoYNombre()
+        {
+            string Datos = this.Apellido + " " + this.Nombre;
+            return Datos;
+        }
+
+
         public void ValidarDocumento()
         {
             string documento = NroDocumento.ToString();

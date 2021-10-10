@@ -91,13 +91,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.btnAgregarArticulo.TabIndex = 126;
             this.btnAgregarArticulo.Text = "Agregar";
             this.btnAgregarArticulo.UseVisualStyleBackColor = true;
+            this.btnAgregarArticulo.Click += new System.EventHandler(this.btnAgregarArticulo_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(327, 135);
+            this.label3.Location = new System.Drawing.Point(334, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 22);
             this.label3.TabIndex = 125;
@@ -256,17 +257,16 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.label4.ForeColor = System.Drawing.Color.DimGray;
             this.label4.Location = new System.Drawing.Point(382, 92);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 22);
+            this.label4.Size = new System.Drawing.Size(77, 22);
             this.label4.TabIndex = 131;
-            this.label4.Text = "Seña:";
+            this.label4.Text = "Seña: $";
             // 
             // lblSeña
             // 
-            this.lblSeña.Location = new System.Drawing.Point(459, 94);
+            this.lblSeña.Location = new System.Drawing.Point(465, 94);
             this.lblSeña.Name = "lblSeña";
             this.lblSeña.Size = new System.Drawing.Size(100, 20);
             this.lblSeña.TabIndex = 133;
-            this.lblSeña.Text = "$...";
             // 
             // label5
             // 
@@ -324,7 +324,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(775, 450);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lblSocio);
@@ -346,6 +346,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvJuegos);
             this.Name = "RegistrarAlquiler";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrarAlquiler";
             this.Load += new System.EventHandler(this.RegistrarAlquiler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvJuegos)).EndInit();

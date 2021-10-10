@@ -140,9 +140,28 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
                 MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
         }
 
+
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            if (dgvSocios.SelectedRows.Count == 1)
+            {
+                int id = Convert.ToInt32(dgvSocios.SelectedRows[0].Cells["Id"].Value);
+                _registrarAlquiler.setIdSocio(id);
+                this.Dispose();
+                return;
+            }
+            else if (dgvSocios.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Debe seleccionar un registro.", "Información", MessageBoxButtons.OK);
+            }
+            else if (dgvSocios.SelectedRows.Count > 1)
+                MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
         }
     }
 }

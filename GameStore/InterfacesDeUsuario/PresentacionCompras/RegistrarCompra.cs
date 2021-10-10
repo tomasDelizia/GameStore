@@ -127,14 +127,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         {
             try
             {
-                ICollection<DetalleCompra> detallesCompra = CrearDetallesCompra();
+                //ICollection<DetalleCompra> detallesCompra = CrearDetallesCompra();
                 Compra nuevaCompra = new Compra()
                 {
                     Empleado = _empleadoLogueado,
                     FechaCompra = DateTime.Today,
                     Proveedor = _proveedor,
                     //agregar tipo de factura
-                    DetallesDeCompra = detallesCompra,
+                    //DetallesDeCompra = detallesCompra,
                 };
             }
             catch(Exception ex)
@@ -143,17 +143,17 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             }
         }
 
-        private ICollection<DetalleCompra> CrearDetallesCompra()
-        {
-            foreach (Articulo articulo in _Articulos)
-            {
-                DetalleCompra detalle = new DetalleCompra()
-                {
-                    Articulo = articulo,
-                    PrecioUnitario = articulo.PrecioUnitario,
-                    Cantidad = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Cantidad"]),
-                };
-            };
-        }
+        //private ICollection<DetalleCompra> CrearDetallesCompra()
+        //{
+        //    foreach (Articulo articulo in _Articulos)
+        //    {
+        //        DetalleCompra detalle = new DetalleCompra()
+        //        {
+        //            Articulo = articulo,
+        //            PrecioUnitario = articulo.PrecioUnitario,
+        //            Cantidad = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Cantidad"]),
+        //        };
+        //    };
+        //}
     }
 }

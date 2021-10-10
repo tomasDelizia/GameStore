@@ -267,6 +267,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.btnSeleccionar.TabIndex = 116;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // ConsultaSocio
             // 
