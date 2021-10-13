@@ -5,6 +5,7 @@ using GameStore.Servicios;
 using GameStore.Servicios.Implementaciones;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -144,15 +145,18 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
 
         private ICollection<DetalleCompra> CrearDetallesCompra()
         {
+            ICollection<DetalleCompra> detalles = new Collection<DetalleCompra>();
             foreach (Articulo articulo in _Articulos)
             {
                 DetalleCompra detalle = new DetalleCompra()
                 {
                     Articulo = articulo,
                     PrecioUnitario = articulo.PrecioUnitario,
-                    Cantidad = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Cantidad"]),
+                    Cantidad = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Cantidad"].Value),
                 };
+                detalles.Add(detalle);
             };
+            return detalles;
         }
     }
 }
