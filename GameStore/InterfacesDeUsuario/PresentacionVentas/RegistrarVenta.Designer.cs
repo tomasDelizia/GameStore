@@ -34,12 +34,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.label4 = new System.Windows.Forms.Label();
             this.cboTiposFactura = new System.Windows.Forms.ComboBox();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
-            this.btnConsultarSocio = new System.Windows.Forms.Button();
-            this.lblSocio = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cboFormasPago = new System.Windows.Forms.ComboBox();
-            this.btnEliminarArticulo = new System.Windows.Forms.Button();
-            this.btnAgregarArticulo = new System.Windows.Forms.Button();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +41,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.TipoArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Plataforma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantidadComprada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnConsultarSocio = new System.Windows.Forms.Button();
+            this.lblSocio = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboFormasPago = new System.Windows.Forms.ComboBox();
+            this.btnEliminarArticulo = new System.Windows.Forms.Button();
+            this.btnAgregarArticulo = new System.Windows.Forms.Button();
+            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,6 +105,47 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(725, 200);
             this.dgvArticulos.TabIndex = 90;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Visible = false;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            // 
+            // TipoArticulo
+            // 
+            this.TipoArticulo.HeaderText = "Tipo de Artículo";
+            this.TipoArticulo.Name = "TipoArticulo";
+            this.TipoArticulo.ReadOnly = true;
+            // 
+            // Plataforma
+            // 
+            this.Plataforma.HeaderText = "Plataforma";
+            this.Plataforma.Name = "Plataforma";
+            this.Plataforma.ReadOnly = true;
+            // 
+            // CantidadComprada
+            // 
+            this.CantidadComprada.HeaderText = "Cantidad Comprada";
+            this.CantidadComprada.Name = "CantidadComprada";
             // 
             // btnConsultarSocio
             // 
@@ -175,53 +218,37 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.btnAgregarArticulo.UseVisualStyleBackColor = true;
             this.btnAgregarArticulo.Click += new System.EventHandler(this.btnAgregarArticulo_Click);
             // 
-            // Codigo
+            // btnConfirmar
             // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Visible = false;
+            this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.ForeColor = System.Drawing.Color.DimGray;
+            this.btnConfirmar.Location = new System.Drawing.Point(530, 443);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(108, 29);
+            this.btnConfirmar.TabIndex = 119;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = true;
             // 
-            // Nombre
+            // btnSalir
             // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            // 
-            // TipoArticulo
-            // 
-            this.TipoArticulo.HeaderText = "Tipo de Artículo";
-            this.TipoArticulo.Name = "TipoArticulo";
-            this.TipoArticulo.ReadOnly = true;
-            // 
-            // Plataforma
-            // 
-            this.Plataforma.HeaderText = "Plataforma";
-            this.Plataforma.Name = "Plataforma";
-            this.Plataforma.ReadOnly = true;
-            // 
-            // CantidadComprada
-            // 
-            this.CantidadComprada.HeaderText = "Cantidad Comprada";
-            this.CantidadComprada.Name = "CantidadComprada";
+            this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.DimGray;
+            this.btnSalir.Location = new System.Drawing.Point(644, 443);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(93, 29);
+            this.btnSalir.TabIndex = 118;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // RegistrarVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(749, 450);
+            this.ClientSize = new System.Drawing.Size(749, 484);
+            this.Controls.Add(this.btnConfirmar);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminarArticulo);
             this.Controls.Add(this.btnAgregarArticulo);
             this.Controls.Add(this.label1);
@@ -261,5 +288,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoArticulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Plataforma;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadComprada;
+        private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
