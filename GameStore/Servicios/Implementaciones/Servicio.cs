@@ -56,5 +56,10 @@ namespace GameStore.Servicios.Implementaciones
         {
             _repositorio.Actualizar(entidad);
         }
+
+        public void Guardar(TEntidad entidad)
+        {
+            _repositorio.Guardar(entidad);
+        }
     }
 }
