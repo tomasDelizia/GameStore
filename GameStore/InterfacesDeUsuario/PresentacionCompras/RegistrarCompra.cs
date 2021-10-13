@@ -3,15 +3,10 @@ using GameStore.InterfacesDeUsuario.PresentacionArticulos;
 using GameStore.RepositoriosBD;
 using GameStore.Servicios;
 using GameStore.Servicios.Implementaciones;
-<<<<<<< HEAD
 using GameStore.Utils;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-=======
-using System;
-using System.Collections.Generic;
->>>>>>> tomas
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -44,10 +39,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioProveedor = new ServicioProveedor(_unidadDeTrabajo.RepositorioProveedor);
             _servicioArticulo = new ServicioArticulo(_unidadDeTrabajo.RepositorioArticulo);
+            IServicioUsuario servicioUsuario = new ServicioUsuario(_unidadDeTrabajo.RepositorioUsuario);
             _empleadoLogueado = servicioUsuario.GetEmpleadoLogueado();
             _servicioTipoFactura = new ServicioTipoFactura(_unidadDeTrabajo.RepositorioTipoFactura);
             _Articulos = new List<Articulo>();
-            IServicioUsuario servicioUsuario = new ServicioUsuario(_unidadDeTrabajo.RepositorioUsuario);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -86,11 +81,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private void CargarTiposFactura()
         {
             var tiposFactura = _servicioTipoFactura.ListarTiposDeFactura();
-            FormUtils.CargarCombo(ref cboTiposFactura, new BindingSource() { DataSource = tiposFactura }, "Nombre", "IdTipoFactura");
+            FormUtils.CargarCombo(ref cboTipoFactura, new BindingSource() { DataSource = tiposFactura }, "Nombre", "IdTipoFactura");
         }
         public void AgregarArticulo(Articulo articulo)
         {
-            _articulos.Add(articulo);
+            _Articulos.Add(articulo);
         }
         private void ConsultarArticulos()
         {
@@ -141,9 +136,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         {
             try
             {
-                _tipoFactura = (TipoFactura)cboTiposFactura.SelectedItem;
+                _tipoFactura = (TipoFactura)cboTipoFactura.SelectedItem;
                 ICollection<DetalleCompra> detallesCompra = CrearDetallesCompra();
-
                 Compra nuevaCompra = new Compra()
                 {
                     Empleado = _empleadoLogueado,
@@ -158,11 +152,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
 
             }
         }
-
         private ICollection<DetalleCompra> CrearDetallesCompra()
         {
             ICollection<DetalleCompra> detalles = new Collection<DetalleCompra>();
-            foreach (Articulo articulo in _articulos)
+            foreach (Articulo articulo in _Articulos)
             {
                 DetalleCompra detalle = new DetalleCompra()
                 {

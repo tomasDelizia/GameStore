@@ -40,19 +40,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
             _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
         }
-        public ConsultaArticulo(IUnidadDeTrabajo unidadDeTrabajo, RegistrarCompra frmRegistrarCompra)
-        {
-            InitializeComponent();
-            dgvArticulos.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
-            dgvArticulos.DefaultCellStyle.Font = new Font("Century Gothic", 10);
-            _unidadDeTrabajo = unidadDeTrabajo;
-            _servicioArticulo = new ServicioArticulo(unidadDeTrabajo.RepositorioArticulo);
-            _servicioTipoArticulo = new ServicioTipoArticulo(unidadDeTrabajo.RepositorioTipoArticulo);
-            _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
-            _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
-            SetBotonesParaVenta();
-            _registrarCompra = frmRegistrarCompra;
-        }
         public ConsultaArticulo(IUnidadDeTrabajo unidadDeTrabajo, RegistrarVenta registrarVenta)
         {
             InitializeComponent();
@@ -80,21 +67,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             SetBotonesParaVenta();
             _registrarCompra = frmRegistrarCompra;
         }
-
-        public ConsultaArticulo(IUnidadDeTrabajo unidadDeTrabajo, RegistrarVenta registrarVenta)
-        {
-            InitializeComponent();
-            dgvArticulos.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
-            dgvArticulos.DefaultCellStyle.Font = new Font("Century Gothic", 10);
-            _unidadDeTrabajo = unidadDeTrabajo;
-            _servicioArticulo = new ServicioArticulo(unidadDeTrabajo.RepositorioArticulo);
-            _servicioTipoArticulo = new ServicioTipoArticulo(unidadDeTrabajo.RepositorioTipoArticulo);
-            _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
-            _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
-            SetBotonesParaVenta();
-            _registrarVenta = registrarVenta;
-        }
-
         private void ConsultaArticulo_Load(object sender, EventArgs e)
         {
             CargarTipoArticulos(cboTipoArticulo);

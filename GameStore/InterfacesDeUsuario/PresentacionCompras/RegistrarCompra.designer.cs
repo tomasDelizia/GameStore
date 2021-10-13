@@ -32,7 +32,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrarCompra));
             this.btnSalir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.cboTipoArticulo = new System.Windows.Forms.ComboBox();
+            this.cboTipoFactura = new System.Windows.Forms.ComboBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblProveedor = new System.Windows.Forms.Label();
@@ -75,17 +75,17 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.label1.TabIndex = 107;
             this.label1.Text = "Tipo de factura:";
             // 
-            // cboTipoArticulo
+            // cboTipoFactura
             // 
-            this.cboTipoArticulo.BackColor = System.Drawing.Color.White;
-            this.cboTipoArticulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboTipoArticulo.ForeColor = System.Drawing.Color.DimGray;
-            this.cboTipoArticulo.FormattingEnabled = true;
-            this.cboTipoArticulo.Location = new System.Drawing.Point(172, 12);
-            this.cboTipoArticulo.Name = "cboTipoArticulo";
-            this.cboTipoArticulo.Size = new System.Drawing.Size(154, 29);
-            this.cboTipoArticulo.TabIndex = 106;
-            this.cboTipoArticulo.Text = "Selección";
+            this.cboTipoFactura.BackColor = System.Drawing.Color.White;
+            this.cboTipoFactura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTipoFactura.ForeColor = System.Drawing.Color.DimGray;
+            this.cboTipoFactura.FormattingEnabled = true;
+            this.cboTipoFactura.Location = new System.Drawing.Point(172, 12);
+            this.cboTipoFactura.Name = "cboTipoFactura";
+            this.cboTipoFactura.Size = new System.Drawing.Size(154, 29);
+            this.cboTipoFactura.TabIndex = 106;
+            this.cboTipoFactura.Text = "Selección";
             // 
             // btnAgregar
             // 
@@ -263,7 +263,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cboTipoArticulo);
+            this.Controls.Add(this.cboTipoFactura);
             this.Controls.Add(this.btnSalir);
             this.Name = "RegistrarCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -279,7 +279,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
 
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cboTipoArticulo;
+        private System.Windows.Forms.ComboBox cboTipoFactura;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblProveedor;
