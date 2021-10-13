@@ -1,4 +1,6 @@
-﻿namespace GameStore.RepositoriosBD.Implementaciones
+﻿using System.Data.Entity;
+
+namespace GameStore.RepositoriosBD.Implementaciones
 {
     public class UnidadDeTrabajo : IUnidadDeTrabajo
     {
@@ -25,6 +27,9 @@
             RepositorioSocio = new RepositorioSocio(_contextoBd);
             RepositorioFormaPago = new RepositorioFormaPago(_contextoBd);
             RepositorioCategoriaAlquiler = new RepositorioCategoriaAlquiler(_contextoBd);
+            RepositorioTipoFactura = new RepositorioTipoFactura(_contextoBd);
+            RepositorioVenta = new RepositorioVenta(_contextoBd);
+            RepositorioDetalleVenta = new RepositorioDetalleVenta(_contextoBd);
         }
 
         public IRepositorioClasificacion RepositorioClasificacion { get; private set; }
@@ -45,6 +50,10 @@
         public IRepositorioSocio RepositorioSocio { get; private set; }
         public IRepositorioFormaPago RepositorioFormaPago { get; private set; }
         public IRepositorioCategoriaAlquiler RepositorioCategoriaAlquiler { get; private set; }
+        public IRepositorioTipoFactura RepositorioTipoFactura { get; private set; }
+        public IRepositorioDetalleVenta RepositorioDetalleVenta { get; private set; }
+        public IRepositorioVenta RepositorioVenta { get; private set; }
+
         public int Guardar()
         {
             return _contextoBd.SaveChanges();
@@ -53,6 +62,11 @@
         public void Dispose()
         {
             _contextoBd.Dispose();
+        }
+
+        public void Deshacer()
+        {
+            Dispose();
         }
     }
 }

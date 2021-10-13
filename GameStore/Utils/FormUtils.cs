@@ -18,6 +18,7 @@ namespace GameStore.Utils
             cb.DataSource = conector;
             cb.DisplayMember = displayMember;
             cb.ValueMember = valueMember;
+            cb.Text = "Selección";
         }
     }
 }
