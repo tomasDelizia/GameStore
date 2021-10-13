@@ -26,6 +26,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private readonly IServicioMarca _servicioMarca;
         private RegistrarCompra _registrarCompra;
         private RegistrarVenta _registrarVenta;
+        private Articulo _nuevoArticuloSeleccionado;
+        private List<Articulo> articulosSeleccionados;
 
         public ConsultaArticulo(IUnidadDeTrabajo unidadDeTrabajo)
         {
@@ -65,23 +67,39 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _registrarVenta = registrarVenta;
         }
 
+        public ConsultaArticulo(IUnidadDeTrabajo unidadDeTrabajo, RegistrarCompra frmRegistrarCompra)
+        {
+            InitializeComponent();
+            dgvArticulos.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvArticulos.DefaultCellStyle.Font = new Font("Century Gothic", 10);
+            _unidadDeTrabajo = unidadDeTrabajo;
+            _servicioArticulo = new ServicioArticulo(unidadDeTrabajo.RepositorioArticulo);
+            _servicioTipoArticulo = new ServicioTipoArticulo(unidadDeTrabajo.RepositorioTipoArticulo);
+            _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
+            _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
+            SetBotonesParaVenta();
+            _registrarCompra = frmRegistrarCompra;
+        }
+
+        public ConsultaArticulo(IUnidadDeTrabajo unidadDeTrabajo, RegistrarVenta registrarVenta)
+        {
+            InitializeComponent();
+            dgvArticulos.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvArticulos.DefaultCellStyle.Font = new Font("Century Gothic", 10);
+            _unidadDeTrabajo = unidadDeTrabajo;
+            _servicioArticulo = new ServicioArticulo(unidadDeTrabajo.RepositorioArticulo);
+            _servicioTipoArticulo = new ServicioTipoArticulo(unidadDeTrabajo.RepositorioTipoArticulo);
+            _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
+            _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
+            SetBotonesParaVenta();
+            _registrarVenta = registrarVenta;
+        }
+
         private void ConsultaArticulo_Load(object sender, EventArgs e)
         {
             CargarTipoArticulos(cboTipoArticulo);
             CargarPlataformas(cboPlataforma);
-            //CargarMarcas(cboMarca);
             ConsultarArticulos();
-        }
-
-        private void CargarMarcas(ComboBox combo)
-        {
-            var marcas = _servicioMarca.ListarMarcas();
-            var bindingSource = new BindingSource();
-            bindingSource.DataSource = marcas;
-            combo.DataSource = bindingSource;
-            combo.DisplayMember = "Nombre";
-            combo.ValueMember = "IdMarca";
-            combo.Text = "Selección";
         }
 
         private void CargarPlataformas(ComboBox combo)
@@ -258,7 +276,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                 }
                 else if (_registrarVenta != null)
                 {
-                    List<Articulo> articulos = _registrarCompra.GetArticulos();
+                    List<Articulo> articulos = _registrarVenta.GetArticulos();
                     var id = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
                     var articulo = _servicioArticulo.GetPorId(id);
                     if (articulos.Contains(articulo))

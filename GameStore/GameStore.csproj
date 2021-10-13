@@ -295,7 +295,7 @@
     <Compile Include="InterfacesDeUsuario\PresentacionCompras\RegistrarCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionCompras\RegistrarCompra.Designer.cs">
+    <Compile Include="InterfacesDeUsuario\PresentacionCompras\RegistrarCompra.designer.cs">
       <DependentUpon>RegistrarCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\AltaCargo.cs">
@@ -447,6 +447,10 @@
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionVentas\RegistrarVenta.Designer.cs">
       <DependentUpon>RegistrarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\ITransaccionBase.cs" />
+    <Compile Include="InterfacesDeUsuario\TransaccionBase.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
