@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GameStore.Entidades;
 using GameStore.InterfacesDeUsuario.PresentacionCompras;
+using GameStore.InterfacesDeUsuario.PresentacionVentas;
 using GameStore.RepositoriosBD;
 using GameStore.Servicios;
 using GameStore.Servicios.Implementaciones;
@@ -24,6 +25,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private readonly IServicioPlataforma _servicioPlataforma;
         private readonly IServicioMarca _servicioMarca;
         private RegistrarCompra _registrarCompra;
+        private RegistrarVenta _registrarVenta;
 
         public ConsultaArticulo(IUnidadDeTrabajo unidadDeTrabajo)
         {
@@ -48,6 +50,19 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
             SetBotonesParaVenta();
             _registrarCompra = frmRegistrarCompra;
+        }
+        public ConsultaArticulo(IUnidadDeTrabajo unidadDeTrabajo, RegistrarVenta registrarVenta)
+        {
+            InitializeComponent();
+            dgvArticulos.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvArticulos.DefaultCellStyle.Font = new Font("Century Gothic", 10);
+            _unidadDeTrabajo = unidadDeTrabajo;
+            _servicioArticulo = new ServicioArticulo(unidadDeTrabajo.RepositorioArticulo);
+            _servicioTipoArticulo = new ServicioTipoArticulo(unidadDeTrabajo.RepositorioTipoArticulo);
+            _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
+            _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
+            SetBotonesParaVenta();
+            _registrarVenta = registrarVenta;
         }
 
         private void ConsultaArticulo_Load(object sender, EventArgs e)
@@ -227,17 +242,35 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         {
             if (dgvArticulos.SelectedRows.Count == 1)
             {
-                List<Articulo> articulos = _registrarCompra.GetArticulos();
-                var id = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
-                var articulo = _servicioArticulo.GetPorId(id);
-                if (articulos.Contains(articulo))
+                if (_registrarCompra != null)
                 {
-                    MessageBox.Show("Ya seleccionó este artículo.", "Información", MessageBoxButtons.OK);
+                    List<Articulo> articulos = _registrarCompra.GetArticulos();
+                    var id = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
+                    var articulo = _servicioArticulo.GetPorId(id);
+                    if (articulos.Contains(articulo))
+                    {
+                        MessageBox.Show("Ya seleccionó este artículo.", "Información", MessageBoxButtons.OK);
+                        return;
+                    }
+                    _registrarCompra.AgregarArticulo(articulo);
+                    this.Dispose();
                     return;
                 }
-                _registrarCompra.AgregarArticulo(articulo);
-                this.Dispose();
-                return;
+                else if (_registrarVenta != null)
+                {
+                    List<Articulo> articulos = _registrarCompra.GetArticulos();
+                    var id = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
+                    var articulo = _servicioArticulo.GetPorId(id);
+                    if (articulos.Contains(articulo))
+                    {
+                        MessageBox.Show("Ya seleccionó este artículo.", "Información", MessageBoxButtons.OK);
+                        return;
+                    }
+                    _registrarVenta.AgregarArticulo(articulo);
+                    this.Dispose();
+                    return;
+                }
+
             }
 
             else if (dgvArticulos.SelectedRows.Count == 0)
