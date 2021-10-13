@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GameStore.Entidades;
 using GameStore.InterfacesDeUsuario.PresentacionArticulos;
+using GameStore.InterfacesDeUsuario.PresentacionSocios;
 using GameStore.RepositoriosBD;
 using GameStore.Servicios;
 using GameStore.Servicios.Implementaciones;
@@ -18,20 +20,28 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
     public partial class RegistrarVenta : Form
     {
         private IServicioTipoFactura _servicioTipoFactura;
-        private ConsultaArticulo consultaArticulo;
+        private IServicioSocio _servicioSocio;
+        private IServicioFormaPago _servicioFormaPago;
+        private ConsultaArticulo _consultaArticulo;
+        private ConsultaSocio _consultaSocio;
         private IUnidadDeTrabajo _unidadDeTrabajo;
+        private Socio _socio;
+        private List<Articulo> _articulosSeleccionados;
 
         public RegistrarVenta(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioTipoFactura = new ServicioTipoFactura(_unidadDeTrabajo.RepositorioTipoFactura);
+            _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
+            _servicioFormaPago = new ServicioFormaPago(_unidadDeTrabajo.RepositorioFormaPago);
         }
 
-        private void NuevaVenta_Load(object sender, EventArgs e)
+        private void RegistrarVenta_Load(object sender, EventArgs e)
         {
             lblFechaActual.Text = "Fecha actual: " + DateTime.Today.ToShortDateString();
             CargarTiposFactura();
+            CargarFormasDePago();
         }
 
         private void CargarTiposFactura()
@@ -40,11 +50,46 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             FormUtils.CargarCombo(ref cboTiposFactura, new BindingSource() { DataSource = tiposFactura}, "Nombre", "IdTipoFactura");
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void CargarFormasDePago()
         {
-            consultaArticulo = new ConsultaArticulo(_unidadDeTrabajo);
-            consultaArticulo.SetBotonesParaVenta();
-            consultaArticulo.ShowDialog();
+            var formasPago = _servicioFormaPago.ListarFormaPago();
+            FormUtils.CargarCombo(ref cboFormasPago, new BindingSource() { DataSource = formasPago }, "Nombre", "IdFormaPago");
+        }
+
+        private void btnConsultarSocio_Click(object sender, EventArgs e)
+        {
+            _consultaSocio = new ConsultaSocio(_unidadDeTrabajo, this);
+            _consultaSocio.ShowDialog();
+            string datos = _socio.GetApellidoYNombre();
+            lblSocio.Text = "Socio: " + datos;
+
+        }
+
+        public void BuscarSocio(int idSocio)
+        {
+            _socio = _servicioSocio.GetPorId(idSocio);
+        }
+
+        private void btnAgregarArticulo_Click(object sender, EventArgs e)
+        {
+            _consultaArticulo = new ConsultaArticulo(_unidadDeTrabajo, this);
+            _consultaArticulo.ShowDialog();
+
+        }
+
+        private void btnEliminarArticulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        internal void AgregarArticulo(Articulo articulo)
+        {
+            _articulosSeleccionados.Add(articulo);
+        }
+
+        internal List<Articulo> GetArticulos()
+        {
+            return _articulosSeleccionados;
         }
     }
 }

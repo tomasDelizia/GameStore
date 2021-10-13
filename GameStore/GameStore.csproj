@@ -292,6 +292,12 @@
     <Compile Include="InterfacesDeUsuario\PresentacionCompras\ModificacionProveedor.Designer.cs">
       <DependentUpon>ModificacionProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionCompras\RegistrarCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionCompras\RegistrarCompra.designer.cs">
+      <DependentUpon>RegistrarCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionEmpleados\AltaCargo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -441,6 +447,10 @@
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionVentas\RegistrarVenta.Designer.cs">
       <DependentUpon>RegistrarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\ITransaccionBase.cs" />
+    <Compile Include="InterfacesDeUsuario\TransaccionBase.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -672,6 +682,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionCompras\ModificacionProveedor.resx">
       <DependentUpon>ModificacionProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionCompras\RegistrarCompra.resx">
+      <DependentUpon>RegistrarCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionEmpleados\AltaCargo.resx">
       <DependentUpon>AltaCargo.cs</DependentUpon>

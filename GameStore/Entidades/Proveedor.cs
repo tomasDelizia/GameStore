@@ -49,6 +49,11 @@ namespace GameStore.Entidades
                 throw new ApplicationException("La razón social no debe superar los 50 caracteres.");
         }
 
+        internal string GetRazonSocial()
+        {
+            return this.RazonSocial;
+        }
+
         public void ValidarCuit()
         {
             string cuit = Cuit.ToString();

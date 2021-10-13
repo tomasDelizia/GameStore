@@ -19,6 +19,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private IServicioProveedor _servicioProveedor;
         private IUnidadDeTrabajo _unidadDeTrabajo;
         private IServicioBarrio _servicioBarrio;
+        private RegistrarCompra _registrarCompra;
         public ConsultaProveedor(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
@@ -27,6 +28,19 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioBarrio = new ServicioBarrio(unidadDeTrabajo.RepositorioBarrio);
             _servicioProveedor = new ServicioProveedor(unidadDeTrabajo.RepositorioProveedor);
+            btnSeleccionar.Visible = false;
+        }
+        public ConsultaProveedor(IUnidadDeTrabajo unidadDeTrabajo, RegistrarCompra frmRegistrarCompra)
+        {
+            InitializeComponent();
+            dgvProveedores.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvProveedores.DefaultCellStyle.Font = new Font("Century Gothic", 10);
+            _unidadDeTrabajo = unidadDeTrabajo;
+            _servicioBarrio = new ServicioBarrio(unidadDeTrabajo.RepositorioBarrio);
+            _servicioProveedor = new ServicioProveedor(unidadDeTrabajo.RepositorioProveedor);
+            btnModificar.Visible = false;
+            btnEliminar.Visible = false;
+            _registrarCompra = frmRegistrarCompra;
         }
 
         private void ConsultaProveedor_Load(object sender, EventArgs e)
@@ -150,6 +164,23 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            if (dgvProveedores.SelectedRows.Count == 1)
+            {
+                int id = Convert.ToInt32(dgvProveedores.SelectedRows[0].Cells["Id"].Value);
+                _registrarCompra.setIdProveedor(id);
+                this.Dispose();
+                return;
+            }
+            else if (dgvProveedores.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Debe seleccionar un registro.", "Información", MessageBoxButtons.OK);
+            }
+            else if (dgvProveedores.SelectedRows.Count > 1)
+                MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
         }
     }
 }

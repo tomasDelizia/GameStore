@@ -16,5 +16,6 @@ namespace GameStore.Servicios
         void ValidarUsuario(Usuario usuario);
 
         void BorrarUsuario(Usuario usuario);
+        Empleado GetEmpleadoLogueado();
     }
 }

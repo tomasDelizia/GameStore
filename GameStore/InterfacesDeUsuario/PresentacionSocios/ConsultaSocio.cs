@@ -1,4 +1,5 @@
 ﻿using GameStore.Entidades;
+using GameStore.InterfacesDeUsuario.PresentacionVentas;
 using GameStore.RepositoriosBD;
 using GameStore.Servicios;
 using GameStore.Servicios.Implementaciones;
@@ -19,6 +20,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
         private IUnidadDeTrabajo _unidadDeTrabajo;
         private IServicioSocio _servicioSocio;
         private IServicioEmpleado _servicioEmpleado;
+        private RegistrarVenta _registrarVenta;
+
         public ConsultaSocio(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
@@ -27,6 +30,25 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
             _servicioEmpleado = new ServicioEmpleado(_unidadDeTrabajo.RepositorioEmpleado);
+        }
+
+        public ConsultaSocio(IUnidadDeTrabajo unidadDeTrabajo, RegistrarVenta registrarVenta)
+        {
+            InitializeComponent();
+            dgvSocios.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvSocios.DefaultCellStyle.Font = new Font("Century Gothic", 10);
+            _unidadDeTrabajo = unidadDeTrabajo;
+            _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
+            _servicioEmpleado = new ServicioEmpleado(_unidadDeTrabajo.RepositorioEmpleado);
+            setBotonesParaVenta();
+            _registrarVenta = registrarVenta;
+
+        }
+
+        private void setBotonesParaVenta()
+        {
+            btnModificar.Visible = false;
+            btnEliminar.Visible = false;
         }
 
         private void ConsultaSocio_Load(object sender, EventArgs e)
@@ -127,5 +149,23 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
         {
             this.Dispose();
         }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            if (dgvSocios.SelectedRows.Count == 1)
+            {
+                int id = Convert.ToInt32(dgvSocios.SelectedRows[0].Cells["Id"].Value);
+                _registrarVenta.BuscarSocio(id);
+                this.Dispose();
+                return;
+            }
+            else if (dgvSocios.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Debe seleccionar un registro.", "Información", MessageBoxButtons.OK);
+            }
+            else if (dgvSocios.SelectedRows.Count > 1)
+                MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
+        }
+
     }
 }

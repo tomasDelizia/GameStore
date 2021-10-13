@@ -48,5 +48,9 @@ namespace GameStore.Servicios.Implementaciones
             usuario.Estado = false;
             _repositorioUsuario.Actualizar(usuario);
         }
+        public Empleado GetEmpleadoLogueado()
+        {
+            return UsuarioLogueado.Empleado;
+        }
     }
 }
