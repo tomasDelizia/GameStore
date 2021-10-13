@@ -14,6 +14,7 @@ using GameStore.InterfacesDeUsuario.PresentacionVentas;
 using GameStore.RepositoriosBD;
 using GameStore.Servicios;
 using GameStore.Servicios.Implementaciones;
+using GameStore.Utils;
 
 namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 {
@@ -242,7 +243,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                         MessageBox.Show("Ya seleccionó este artículo.", "Información", MessageBoxButtons.OK);
                         return;
                     }
-                    _registrarCompra.AgregarArticulo(articulo);
+                    IngresarCantidad frmCantidad = new IngresarCantidad();
+                    frmCantidad.ShowDialog();
+                    int cantidad = frmCantidad.GetCantidad();
+                    frmCantidad.Dispose();
+                    _registrarCompra.AgregarArticulo(articulo, cantidad);
                     this.Dispose();
                     return;
                 }

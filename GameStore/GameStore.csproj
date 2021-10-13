@@ -476,6 +476,7 @@
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioBarrio.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioCargo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioCategoriaAlquiler.cs" />
+    <Compile Include="RepositoriosBD\Implementaciones\RepositorioCompra.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioDesarrollador.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioDetalleVenta.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioFormaPago.cs" />
@@ -504,6 +505,7 @@
     <Compile Include="Entidades\Permiso.cs" />
     <Compile Include="Entidades\Plataforma.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
+    <Compile Include="RepositoriosBD\IRepositorioCompra.cs" />
     <Compile Include="RepositoriosBD\IRepositorioDesarrollador.cs" />
     <Compile Include="RepositoriosBD\IRepositorioDetalleVenta.cs" />
     <Compile Include="RepositoriosBD\IRepositorioEmpleado.cs" />
@@ -518,6 +520,7 @@
     <Compile Include="RepositoriosBD\IRepositorioTipoFactura.cs" />
     <Compile Include="RepositoriosBD\IRepositorioUsuario.cs" />
     <Compile Include="RepositoriosBD\IRepositorioVenta.cs" />
+    <Compile Include="RepositoriosBD\IServicioCompra.cs" />
     <Compile Include="RepositoriosBD\IUnidadDeTrabajo.cs" />
     <Compile Include="Entidades\Rol.cs" />
     <Compile Include="Entidades\Sesion.cs" />
@@ -534,6 +537,7 @@
     <Compile Include="Servicios\Implementaciones\ServicioCargo.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioCategoriaAlquiler.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioClasificacion.cs" />
+    <Compile Include="Servicios\Implementaciones\ServicioCompra.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioDesarrollador.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioDetalleVenta.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioEmpleado.cs" />
@@ -572,6 +576,12 @@
     <Compile Include="Servicios\IServicioUsuario.cs" />
     <Compile Include="Servicios\IServicioVenta.cs" />
     <Compile Include="Utils\FormUtils.cs" />
+    <Compile Include="Utils\IngresarCantidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\IngresarCantidad.Designer.cs">
+      <DependentUpon>IngresarCantidad.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="InterfacesDeUsuario\Bienvenida.resx">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </EmbeddedResource>
@@ -770,6 +780,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Utils\IngresarCantidad.resx">
+      <DependentUpon>IngresarCantidad.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="GAMESTOREDataSet.xsc">
       <DependentUpon>GAMESTOREDataSet.xsd</DependentUpon>
     </None>

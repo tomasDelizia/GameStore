@@ -20,6 +20,8 @@ namespace GameStore.Servicios
 
         void BorrarRango(IEnumerable<TEntidad> entidadesABorrar);
 
-        void Actualizar(TEntidad entidad); 
+        void Actualizar(TEntidad entidad);
+
+        void Guardar(TEntidad entidad);
     }
 }
