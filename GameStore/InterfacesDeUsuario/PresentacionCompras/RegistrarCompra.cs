@@ -25,7 +25,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private Proveedor _proveedor;
         private IServicioProveedor _servicioProveedor;
         private ConsultaArticulo _consultaArticulo;
-        private ICollection<DetalleCompra> _detallesCompra;
         private IServicioTipoFactura _servicioTipoFactura;
         private TipoFactura _tipoFactura;
         private List<Articulo> _Articulos;
@@ -116,20 +115,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
                 if (_ArticulosSeleccionados[i] != null)
                     dgvArticulos.Rows.Add(_ArticulosSeleccionados[i]);
             }
-            //for (s)
-            //{
-            //    var fila = new string[]
-            //    {
-            //        articulo.Codigo.ToString(),
-            //        articulo.Nombre,
-            //        "$ " + articulo.PrecioUnitario.ToString(),
-            //        articulo.Stock.ToString(),
-            //        articulo.TipoArticulo.Nombre,
-            //        articulo.Plataforma.Nombre.ToString(),
-            //        dgvArticulos.SelectedRows[0].Cells["Cantidad"].Value.ToString(),
-            //    };
-            //    dgvArticulos.Rows.Add(fila);
-            //}
         }
         public List<Articulo> GetArticulos()
         {
@@ -191,21 +176,5 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             };
             return nuevaCompra;
         }
-
-        //private ICollection<DetalleCompra> CrearDetallesCompra()
-        //{
-        //    ICollection<DetalleCompra> detalles = new Collection<DetalleCompra>();
-        //    foreach (Articulo articulo in _Articulos)
-        //    {
-        //        DetalleCompra detalle = new DetalleCompra()
-        //        {
-        //            Articulo = articulo,
-        //            PrecioUnitario = articulo.PrecioUnitario,
-        //            Cantidad = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Cantidad"].Value),
-        //        };
-        //        detalles.Add(detalle);
-        //    };
-        //    return detalles;
-        //}
     }
 }
