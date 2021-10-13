@@ -42,6 +42,19 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
             _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
         }
+        public ConsultaArticulo(IUnidadDeTrabajo unidadDeTrabajo, RegistrarVenta registrarVenta)
+        {
+            InitializeComponent();
+            dgvArticulos.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvArticulos.DefaultCellStyle.Font = new Font("Century Gothic", 10);
+            _unidadDeTrabajo = unidadDeTrabajo;
+            _servicioArticulo = new ServicioArticulo(unidadDeTrabajo.RepositorioArticulo);
+            _servicioTipoArticulo = new ServicioTipoArticulo(unidadDeTrabajo.RepositorioTipoArticulo);
+            _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
+            _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
+            SetBotonesParaVenta();
+            _registrarVenta = registrarVenta;
+        }
 
         public ConsultaArticulo(IUnidadDeTrabajo unidadDeTrabajo, RegistrarCompra frmRegistrarCompra)
         {
@@ -57,7 +70,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _registrarCompra = frmRegistrarCompra;
         }
 
-        public ConsultaArticulo(IUnidadDeTrabajo unidadDeTrabajo, RegistrarVenta registrarVenta)
+        public ConsultaArticulo(IUnidadDeTrabajo unidadDeTrabajo, RegistrarAlquiler frmRegistrarAlquiler)
         {
             InitializeComponent();
             dgvArticulos.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
@@ -68,21 +81,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
             _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
             SetBotonesParaVenta();
-            _registrarVenta = registrarVenta;
-        }
-
-        public ConsultaArticulo(IUnidadDeTrabajo unidadDeTrabajo, RegistrarAlquiler frmRegistraralquiler)
-        {
-            InitializeComponent();
-            dgvArticulos.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
-            dgvArticulos.DefaultCellStyle.Font = new Font("Century Gothic", 10);
-            _unidadDeTrabajo = unidadDeTrabajo;
-            _servicioArticulo = new ServicioArticulo(unidadDeTrabajo.RepositorioArticulo);
-            _servicioTipoArticulo = new ServicioTipoArticulo(unidadDeTrabajo.RepositorioTipoArticulo);
-            _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
-            _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
-            SetBotonesParaVenta();
-            _registrarAlquiler = frmRegistraralquiler;
+            _registrarAlquiler = frmRegistrarAlquiler;
         }
 
         private void ConsultaArticulo_Load(object sender, EventArgs e)
@@ -275,12 +274,12 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                         MessageBox.Show("Ya seleccionó este artículo.", "Información", MessageBoxButtons.OK);
                         return;
                     }
-                   _registrarVenta.AgregarArticulo(articulo);
+                    _registrarVenta.AgregarArticulo(articulo);
                     this.Dispose();
                     return;
                 }
 
-                else if (_registrarVenta != null)
+                else if (_registrarAlquiler != null)
                 {
                     List<Articulo> articulos = _registrarAlquiler.GetArticulos();
                     var id = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);

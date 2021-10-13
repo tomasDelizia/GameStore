@@ -634,11 +634,11 @@
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\BajaTipoArticulo.resx">
       <DependentUpon>BajaTipoArticulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaArticulo.resx">
-      <DependentUpon>ConsultaArticulo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultaCategoriaAlquiler.resx">
       <DependentUpon>ConsultaCategoriaAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaArticulo.resx">
+      <DependentUpon>ConsultaArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaGenero.resx">
       <DependentUpon>ConsultaGenero.cs</DependentUpon>
@@ -774,6 +774,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="GAMESTOREDataSet.xsc">
       <DependentUpon>GAMESTOREDataSet.xsd</DependentUpon>
@@ -805,6 +806,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Recursos\cerrar.png" />
+    <None Include="Recursos\delete.png" />
     <Content Include="Recursos\logo.ico" />
     <Content Include="Recursos\logo.jpg" />
     <Content Include="Recursos\minimazar.png" />

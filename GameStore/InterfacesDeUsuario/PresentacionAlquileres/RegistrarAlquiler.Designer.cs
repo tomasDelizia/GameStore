@@ -34,19 +34,12 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
             this.btnAgregarArticulo = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Plataforma = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblFechaActual = new System.Windows.Forms.Label();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblProveedor = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cboTiposFactura = new System.Windows.Forms.ComboBox();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvJuegos = new System.Windows.Forms.DataGridView();
             this.cboFormaPago = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,6 +49,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.label6 = new System.Windows.Forms.Label();
             this.lblSocio = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Plataforma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioPorDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJuegos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnConfirmar.Location = new System.Drawing.Point(538, 409);
+            this.btnConfirmar.Location = new System.Drawing.Point(538, 414);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(108, 29);
             this.btnConfirmar.TabIndex = 129;
@@ -74,7 +75,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             this.btnEliminarArticulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarArticulo.ForeColor = System.Drawing.Color.DimGray;
-            this.btnEliminarArticulo.Location = new System.Drawing.Point(553, 366);
+            this.btnEliminarArticulo.Location = new System.Drawing.Point(20, 370);
             this.btnEliminarArticulo.Name = "btnEliminarArticulo";
             this.btnEliminarArticulo.Size = new System.Drawing.Size(93, 29);
             this.btnEliminarArticulo.TabIndex = 127;
@@ -86,7 +87,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             this.btnAgregarArticulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarArticulo.ForeColor = System.Drawing.Color.DimGray;
-            this.btnAgregarArticulo.Location = new System.Drawing.Point(652, 366);
+            this.btnAgregarArticulo.Location = new System.Drawing.Point(119, 370);
             this.btnAgregarArticulo.Name = "btnAgregarArticulo";
             this.btnAgregarArticulo.Size = new System.Drawing.Size(93, 29);
             this.btnAgregarArticulo.TabIndex = 126;
@@ -105,32 +106,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.label3.TabIndex = 125;
             this.label3.Text = "JUEGOS";
             // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad comprada";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // Plataforma
-            // 
-            this.Plataforma.HeaderText = "Plataforma";
-            this.Plataforma.Name = "Plataforma";
-            this.Plataforma.ReadOnly = true;
-            this.Plataforma.Width = 114;
-            // 
-            // TipoArticulo
-            // 
-            this.TipoArticulo.HeaderText = "Tipo de Artículo";
-            this.TipoArticulo.Name = "TipoArticulo";
-            this.TipoArticulo.ReadOnly = true;
-            this.TipoArticulo.Width = 114;
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            this.Stock.Width = 113;
-            // 
             // lblFechaActual
             // 
             this.lblFechaActual.AutoSize = true;
@@ -141,21 +116,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.lblFechaActual.Size = new System.Drawing.Size(138, 22);
             this.lblFechaActual.TabIndex = 128;
             this.lblFechaActual.Text = "Fecha actual:";
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            this.Precio.Width = 114;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Visible = false;
-            this.Codigo.Width = 65;
             // 
             // lblProveedor
             // 
@@ -205,20 +165,13 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.DimGray;
-            this.btnSalir.Location = new System.Drawing.Point(652, 409);
+            this.btnSalir.Location = new System.Drawing.Point(652, 414);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(93, 29);
             this.btnSalir.TabIndex = 118;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 120;
             // 
             // dgvJuegos
             // 
@@ -229,11 +182,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.dgvJuegos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Nombre,
-            this.Precio,
             this.Stock,
             this.TipoArticulo,
             this.Plataforma,
-            this.Cantidad});
+            this.PrecioPorDia});
             this.dgvJuegos.Location = new System.Drawing.Point(20, 160);
             this.dgvJuegos.Name = "dgvJuegos";
             this.dgvJuegos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -322,12 +274,73 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.Location = new System.Drawing.Point(559, 377);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(74, 22);
+            this.label7.TabIndex = 139;
+            this.label7.Text = "Total: $";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(645, 377);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 140;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Visible = false;
+            this.Codigo.Width = 65;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 120;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            this.Stock.Width = 113;
+            // 
+            // TipoArticulo
+            // 
+            this.TipoArticulo.HeaderText = "Tipo de Artículo";
+            this.TipoArticulo.Name = "TipoArticulo";
+            this.TipoArticulo.ReadOnly = true;
+            this.TipoArticulo.Width = 114;
+            // 
+            // Plataforma
+            // 
+            this.Plataforma.HeaderText = "Plataforma";
+            this.Plataforma.Name = "Plataforma";
+            this.Plataforma.ReadOnly = true;
+            this.Plataforma.Width = 114;
+            // 
+            // PrecioPorDia
+            // 
+            this.PrecioPorDia.HeaderText = "Precio por Dia";
+            this.PrecioPorDia.Name = "PrecioPorDia";
+            // 
             // RegistrarAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(775, 450);
+            this.ClientSize = new System.Drawing.Size(774, 464);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lblSocio);
             this.Controls.Add(this.label6);
@@ -363,19 +376,12 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         private System.Windows.Forms.Button btnEliminarArticulo;
         private System.Windows.Forms.Button btnAgregarArticulo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Plataforma;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoArticulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
         private System.Windows.Forms.Label lblFechaActual;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.Label lblProveedor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboTiposFactura;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridView dgvJuegos;
         private System.Windows.Forms.ComboBox cboFormaPago;
         private System.Windows.Forms.Label label4;
@@ -385,5 +391,13 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblSocio;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoArticulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Plataforma;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioPorDia;
     }
 }
