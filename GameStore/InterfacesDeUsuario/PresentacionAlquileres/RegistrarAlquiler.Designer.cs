@@ -52,7 +52,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.label4 = new System.Windows.Forms.Label();
             this.lblSeña = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtPicker = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.lblSocio = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -80,6 +80,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.btnEliminarArticulo.TabIndex = 127;
             this.btnEliminarArticulo.Text = "Eliminar";
             this.btnEliminarArticulo.UseVisualStyleBackColor = true;
+            this.btnEliminarArticulo.Click += new System.EventHandler(this.btnEliminarArticulo_Click);
             // 
             // btnAgregarArticulo
             // 
@@ -210,6 +211,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.btnSalir.TabIndex = 118;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Nombre
             // 
@@ -279,12 +281,12 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.label5.TabIndex = 134;
             this.label5.Text = "Fecha devolucion:";
             // 
-            // dateTimePicker1
+            // dtPicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(565, 50);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 135;
+            this.dtPicker.Location = new System.Drawing.Point(565, 50);
+            this.dtPicker.Name = "dtPicker";
+            this.dtPicker.Size = new System.Drawing.Size(200, 20);
+            this.dtPicker.TabIndex = 135;
             // 
             // label6
             // 
@@ -329,7 +331,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lblSocio);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtPicker);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblSeña);
             this.Controls.Add(this.label4);
@@ -379,7 +381,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox lblSeña;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtPicker;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblSocio;
         private System.Windows.Forms.Button btnAgregar;

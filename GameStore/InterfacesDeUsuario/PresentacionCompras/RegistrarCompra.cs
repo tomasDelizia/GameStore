@@ -76,11 +76,13 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         {
             _Articulos.Add(articulo);
         }
+
         private void ConsultarArticulos()
         {
             CargarDgvArticulos(_Articulos);
             dgvArticulos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+
         private void CargarDgvArticulos(List<Articulo> articulos)
         {
             dgvArticulos.Rows.Clear();
@@ -118,6 +120,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             if (dgvArticulos.SelectedRows.Count > 1)
                 MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
         }
+
         public void AgregarArticulo(string[] fila)
         {
             dgvArticulos.Rows.Add(fila);

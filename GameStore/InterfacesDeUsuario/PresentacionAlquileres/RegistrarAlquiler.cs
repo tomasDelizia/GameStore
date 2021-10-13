@@ -59,6 +59,21 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.idSocio = id;
         }
 
+        public List<Articulo> GetArticulos()
+        {
+            return this._Articulos;
+        }
+
+        public void AgregarArticulo(string[] fila)
+        {
+            dgvJuegos.Rows.Add(fila);
+        }
+
+        internal void AgregarArticulo(Articulo articulo)
+        {
+            _Articulos.Add(articulo);
+        }
+
         private void CargarFormasPago()
         {
             var formaPago = _servicioFormaPago.ListarFormaPago();
@@ -82,7 +97,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
 
         private void btnAgregarArticulo_Click(object sender, EventArgs e)
         {
-            //_consultaArticulo = new ConsultaArticulo(_unidadDeTrabajo, this);
+            _consultaArticulo = new ConsultaArticulo(_unidadDeTrabajo, this);
             _consultaArticulo.ShowDialog();
             ConsultarArticulos();
         }
@@ -93,8 +108,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             dgvJuegos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        //falta terminar de completar esto que nose que mas poner y preguntar que son los metodos de abajo que 
-        //uso gaston en su transaccion y agregarle el tipo de factura a su transaccion
         private void CargarDgvJuegos(List<Articulo> articulos)
         {
             dgvJuegos.Rows.Clear();
@@ -106,6 +119,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
                     articulo.Codigo.ToString(),
                     articulo.Nombre,
                     "$ " + articulo.PrecioUnitario.ToString(),
+                    articulo.Stock.ToString(),
                     articulo.TipoArticulo.Nombre,
                     articulo.Plataforma.Nombre.ToString(),
                 };
@@ -113,6 +127,23 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             }
         }
 
+        private void btnEliminarArticulo_Click(object sender, EventArgs e)
+        {
+            if (dgvJuegos.SelectedRows.Count == 1)
+            {
+                int idArticulo = Convert.ToInt32(dgvJuegos.SelectedRows[0].Cells["Codigo"].Value);
+                Articulo articuloSeleccionado = _servicioArticulo.GetPorId(idArticulo);
+                dgvJuegos.Rows.Remove(dgvJuegos.SelectedRows[0]);
+                _Articulos.Remove(articuloSeleccionado);
+                return;
+            }
+            if (dgvJuegos.SelectedRows.Count > 1)
+                MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
+        }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

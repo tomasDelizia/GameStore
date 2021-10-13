@@ -36,13 +36,13 @@ namespace GameStore.Entidades
 
         public int? IdVendedor { get; set; }
 
-        public virtual FormaPago FormasDePago { get; set; }
+        public virtual FormaPago FormaDePago { get; set; }
 
         public virtual Socio Socio { get; set; }
 
         public virtual TipoFactura TiposDeFactura { get; set; }
 
-        public virtual Empleado Empleado { get; set; }
+        public virtual Empleado Vendedor { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetalleAlquiler> DetallesDeAlquiler { get; set; }
