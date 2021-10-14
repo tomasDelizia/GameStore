@@ -18,7 +18,17 @@ namespace GameStore.Utils
             cb.DataSource = conector;
             cb.DisplayMember = displayMember;
             cb.ValueMember = valueMember;
+            cb.SelectedItem = null;
             cb.Text = "Selección";
+        }
+
+        public static bool EsOperacionConfirmada()
+        {
+            var respuesta = MessageBox.Show("¿Desea confirmar la operación?", "Confirmación", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
+                return true;
+            return false;
         }
     }
 }

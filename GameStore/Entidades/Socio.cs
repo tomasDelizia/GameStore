@@ -48,6 +48,8 @@ namespace GameStore.Entidades
 
         public int? IdBarrio { get; set; }
 
+        public bool? Estado { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Alquiler> Alquileres { get; set; }
 
@@ -83,7 +85,7 @@ namespace GameStore.Entidades
             if (string.IsNullOrEmpty(documento))
                 throw new ApplicationException("El documento es requerido");
             if (NroDocumento < 0)
-                throw new ApplicationException("Ingrese un documento válido.");
+                throw new ApplicationException("Ingrese un documento vlido.");
         }
         /// <summary>
         /// Este metodo esta replicado en Proveedor. Corregir.
@@ -91,7 +93,7 @@ namespace GameStore.Entidades
         public void ValidarTelefono()
         {
             if (Telefono.Length > 30)
-                throw new ApplicationException("El teléfono no debe superar los 30 caracteres.");
+                throw new ApplicationException("El telfono no debe superar los 30 caracteres.");
         }
         /// <summary>
         /// Este metodo esta replicado en Proveedor. Corregir.
@@ -107,7 +109,7 @@ namespace GameStore.Entidades
         public void ValidarNumeroCalle()
         {
             if (CalleNumero < 0)
-                throw new ApplicationException("No existen alturas de calles negativas. Debe ingresar un valor válido.");
+                throw new ApplicationException("No existen alturas de calles negativas. Debe ingresar un valor vlido.");
         }
 
         public void ValidarEmail()

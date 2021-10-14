@@ -59,5 +59,10 @@ namespace GameStore.RepositoriosBD.Implementaciones
             _contextoBd.Entry(entidad).State = EntityState.Modified;
             _contextoBd.SaveChanges();
         }
+
+        public void Guardar(TEntidad entidad)
+        {
+            _contextoBd.Set<TEntidad>().Add(entidad);
+        }
     }
 }

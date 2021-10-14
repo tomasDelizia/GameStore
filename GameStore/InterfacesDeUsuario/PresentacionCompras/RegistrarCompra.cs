@@ -3,8 +3,10 @@ using GameStore.InterfacesDeUsuario.PresentacionArticulos;
 using GameStore.RepositoriosBD;
 using GameStore.Servicios;
 using GameStore.Servicios.Implementaciones;
+using GameStore.Utils;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -23,10 +25,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private Proveedor _proveedor;
         private IServicioProveedor _servicioProveedor;
         private ConsultaArticulo _consultaArticulo;
+        private IServicioTipoFactura _servicioTipoFactura;
+        private TipoFactura _tipoFactura;
         private List<Articulo> _Articulos;
         private IServicioArticulo _servicioArticulo;
         private Empleado _empleadoLogueado;
         private ICollection<DetalleCompra> _detallesCompra;
+        private IServicioCompra _servicioCompra;
+        private string[][] _ArticulosSeleccionados;
 
         public RegistrarCompra(IUnidadDeTrabajo unidadDeTrabajo)
         {
@@ -36,9 +42,12 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioProveedor = new ServicioProveedor(_unidadDeTrabajo.RepositorioProveedor);
             _servicioArticulo = new ServicioArticulo(_unidadDeTrabajo.RepositorioArticulo);
-            _Articulos = new List<Articulo>();
             IServicioUsuario servicioUsuario = new ServicioUsuario(_unidadDeTrabajo.RepositorioUsuario);
             _empleadoLogueado = servicioUsuario.GetEmpleadoLogueado();
+            _servicioTipoFactura = new ServicioTipoFactura(_unidadDeTrabajo.RepositorioTipoFactura);
+            _Articulos = new List<Articulo>();
+            _servicioCompra = new ServicioCompra(_unidadDeTrabajo.RepositorioCompra);
+            _ArticulosSeleccionados = new string[999999][];
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -70,26 +79,20 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private void RegistrarCompra_Load(object sender, EventArgs e)
         {
             lblFechaActual.Text = "Fecha actual: " + DateTime.Today.ToShortDateString();
+            dgvArticulos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            CargarTiposFactura();
         }
 
-        internal void AgregarArticulo(Articulo articulo)
+        private void CargarTiposFactura()
+        {
+            var tiposFactura = _servicioTipoFactura.ListarTiposDeFactura();
+            FormUtils.CargarCombo(ref cboTipoFactura, new BindingSource() { DataSource = tiposFactura }, "Nombre", "IdTipoFactura");
+        }
+
+        public void AgregarArticulo(Articulo articulo, int cantidad)
         {
             _Articulos.Add(articulo);
-        }
-
-        private void ConsultarArticulos()
-        {
-            CargarDgvArticulos(_Articulos);
-            dgvArticulos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        }
-
-        private void CargarDgvArticulos(List<Articulo> articulos)
-        {
-            dgvArticulos.Rows.Clear();
-
-            foreach (var articulo in articulos)
-            {
-                var fila = new string[]
+            string[] tupla = new string[]
                 {
                     articulo.Codigo.ToString(),
                     articulo.Nombre,
@@ -97,10 +100,27 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
                     articulo.Stock.ToString(),
                     articulo.TipoArticulo.Nombre,
                     articulo.Plataforma.Nombre.ToString(),
+                    cantidad.ToString(),
                 };
-                dgvArticulos.Rows.Add(fila);
+            _ArticulosSeleccionados[_Articulos.Count-1] = tupla;
+        }
+		
+        private void ConsultarArticulos()
+        {
+            CargarDgvArticulos();
+		}
+		
+        private void CargarDgvArticulos()
+        {
+            dgvArticulos.Rows.Clear();
+            int length = _ArticulosSeleccionados.Count();
+            for (int i = 0; i < length; i++)
+            {
+                if (_ArticulosSeleccionados[i] != null)
+                    dgvArticulos.Rows.Add(_ArticulosSeleccionados[i]);
             }
         }
+		
         public List<Articulo> GetArticulos()
         {
             return this._Articulos;
@@ -125,38 +145,54 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         {
             dgvArticulos.Rows.Add(fila);
         }
-
+		
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             try
             {
-                //ICollection<DetalleCompra> detallesCompra = CrearDetallesCompra();
-                Compra nuevaCompra = new Compra()
-                {
-                    Empleado = _empleadoLogueado,
-                    FechaCompra = DateTime.Today,
-                    Proveedor = _proveedor,
-                    //agregar tipo de factura
-                    //DetallesDeCompra = detallesCompra,
-                };
+                Compra compra = CrearCompra();
+                _servicioCompra.Guardar(compra);
+                _unidadDeTrabajo.Guardar();
+                MessageBox.Show("Se registró la compra con éxito", "Información", MessageBoxButtons.OK);
+                this.Dispose();
             }
             catch(Exception ex)
             {
-
+                MessageBox.Show("No se pudo concretar la transacción", "Error", MessageBoxButtons.OK);
+                //_unidadDeTrabajo.Deshacer();
             }
         }
 
-        //private ICollection<DetalleCompra> CrearDetallesCompra()
-        //{
-        //    foreach (Articulo articulo in _Articulos)
-        //    {
-        //        DetalleCompra detalle = new DetalleCompra()
-        //        {
-        //            Articulo = articulo,
-        //            PrecioUnitario = articulo.PrecioUnitario,
-        //            Cantidad = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Cantidad"]),
-        //        };
-        //    };
-        //}
+        private Compra CrearCompra()
+        {
+            _tipoFactura = (TipoFactura)cboTipoFactura.SelectedItem;
+            Compra nuevaCompra = new Compra()
+            {
+                EncargadoCompra = _empleadoLogueado,
+                FechaCompra = DateTime.Today,
+                Proveedor = _proveedor,
+                TipoFactura = _tipoFactura,
+            };
+            int length = _Articulos.Count;
+            for (int i = 0; i < length; i++)
+            {
+                int cant = Convert.ToInt32(dgvArticulos.Rows[i].Cells["Cantidad"].Value);
+                Articulo articulo = _Articulos[i];
+                DetalleCompra detalle = new DetalleCompra()
+                {
+                    Articulo = articulo,
+                    PrecioUnitario = articulo.PrecioUnitario,
+                    Cantidad = cant,
+                };
+                nuevaCompra.AddDetalle(detalle);
+                ActualizarStock(articulo, cant);
+            }       
+            return nuevaCompra;
+        }
+
+        private void ActualizarStock(Articulo articulo, int cantidad)
+        {
+            articulo.Stock += cantidad;
+        }
     }
 }

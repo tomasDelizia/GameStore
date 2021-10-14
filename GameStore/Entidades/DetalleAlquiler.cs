@@ -18,14 +18,10 @@ namespace GameStore.Entidades
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Codigo { get; set; }
 
-        public int? Categoria { get; set; }
-
         public decimal MontoAlquilerPorDia { get; set; }
 
         public decimal MontoDevolucionTardiaPorDia { get; set; }
 
         public virtual Articulo Articulo { get; set; }
-
-        public virtual CategoriaAlquiler CategoriaAlquiler { get; set; }
     }
 }

@@ -15,6 +15,7 @@ using GameStore.InterfacesDeUsuario.PresentacionAlquileres;
 using GameStore.RepositoriosBD;
 using GameStore.Servicios;
 using GameStore.Servicios.Implementaciones;
+using GameStore.Utils;
 
 namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 {
@@ -120,6 +121,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         {
             var articulos = _servicioArticulo.ListarArticulos();
             CargarDgvArticulos(articulos);
+            MostrarImagenArticuloSeleccionado();
             dgvArticulos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
@@ -174,6 +176,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         }
 
         private void dgvArticulos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MostrarImagenArticuloSeleccionado();
+        }
+
+        private void MostrarImagenArticuloSeleccionado()
         {
             var idArticulo = Convert.ToInt32(dgvArticulos.CurrentRow.Cells["Codigo"].Value);
             var articulo = _servicioArticulo.GetPorId(idArticulo);
@@ -259,8 +266,15 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                         MessageBox.Show("Ya seleccionó este artículo.", "Información", MessageBoxButtons.OK);
                         return;
                     }
-                    _registrarCompra.AgregarArticulo(articulo);
-                    this.Dispose();
+                    IngresarCantidad frmCantidad = new IngresarCantidad();
+                    frmCantidad.ShowDialog();
+                    int cantidad = frmCantidad.GetCantidad();
+                    frmCantidad.Dispose();
+                    if (cantidad > 0)
+                    {
+                        _registrarCompra.AgregarArticulo(articulo, cantidad);
+                        this.Dispose();
+                    }
                     return;
                 }
 
@@ -274,12 +288,24 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                         MessageBox.Show("Ya seleccionó este artículo.", "Información", MessageBoxButtons.OK);
                         return;
                     }
-                    _registrarVenta.AgregarArticulo(articulo);
-                    this.Dispose();
+                    if (articulo.Stock == 0)
+                    {
+                        MessageBox.Show("El artículo seleccionado no cuenta con stock en este momento.", "Información", MessageBoxButtons.OK);
+                        return;
+                    }
+                    IngresarCantidad frmCantidad = new IngresarCantidad(articulo.Stock);
+                    frmCantidad.ShowDialog();
+                    int cantidad = frmCantidad.GetCantidad();
+                    frmCantidad.Dispose();
+                    if (cantidad > 0)
+                    {
+                        _registrarVenta.AgregarArticulo(articulo, cantidad);
+                        this.Dispose();
+                    }
                     return;
                 }
-
-                else if (_registrarAlquiler != null)
+				
+				else if (_registrarAlquiler != null)
                 {
                     List<Articulo> articulos = _registrarAlquiler.GetArticulos();
                     var id = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
@@ -291,9 +317,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                     }
                     _registrarAlquiler.AgregarArticulo(articulo);
                     this.Dispose();
-                    return;
-                }
-
+				}
             }
 
             else if (dgvArticulos.SelectedRows.Count == 0)

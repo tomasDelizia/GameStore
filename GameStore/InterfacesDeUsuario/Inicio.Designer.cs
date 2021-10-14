@@ -564,7 +564,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnABM.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.BtnABM.Size = new System.Drawing.Size(272, 45);
             this.BtnABM.TabIndex = 1;
-            this.BtnABM.Text = "Consultas";
+            this.BtnABM.Text = "Gestiones";
             this.BtnABM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnABM.UseVisualStyleBackColor = false;
             this.BtnABM.Click += new System.EventHandler(this.BtnABM_Click);

@@ -52,6 +52,8 @@ namespace GameStore.Entidades
 
         public virtual Cargo Cargo { get; set; }
 
+        public bool? Estado { get; set; }
+
         public void ValidarNombre()
         {
             if (string.IsNullOrEmpty(Nombre))

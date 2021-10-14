@@ -64,6 +64,10 @@ namespace GameStore.Entidades
 
         public virtual Archivo Archivo { get; set; }
 
+        public int? IdCategoriaAlquiler { get; set; }
+
+        public virtual CategoriaAlquiler CategoriasDeAlquiler { get; set; }
+
         public void ValidarNombre()
         {
             if (string.IsNullOrEmpty(Nombre))

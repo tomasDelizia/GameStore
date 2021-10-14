@@ -24,15 +24,20 @@ namespace GameStore.Entidades
         public DateTime FechaCompra { get; set; }
 
         public int? IdProveedor { get; set; }
-
+        [ForeignKey("EncargadoCompra")]
         public int? IdEncargadoCompra { get; set; }
 
-        public virtual Empleado Empleado { get; set; }
+        public virtual Empleado EncargadoCompra { get; set; }
 
         public virtual Proveedor Proveedor { get; set; }
         public virtual TipoFactura TipoFactura { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetalleCompra> DetallesDeCompra { get; set; }
+
+        internal void AddDetalle(DetalleCompra detalle)
+        {
+            DetallesDeCompra.Add(detalle);
+        }
     }
 }

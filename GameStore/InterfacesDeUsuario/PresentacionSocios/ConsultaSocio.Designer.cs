@@ -261,9 +261,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnSeleccionar.Location = new System.Drawing.Point(634, 372);
+            this.btnSeleccionar.Location = new System.Drawing.Point(641, 372);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(115, 29);
+            this.btnSeleccionar.Size = new System.Drawing.Size(108, 29);
             this.btnSeleccionar.TabIndex = 116;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;

@@ -1,5 +1,6 @@
 ﻿using GameStore.Entidades;
 using GameStore.InterfacesDeUsuario.PresentacionAlquileres;
+using GameStore.InterfacesDeUsuario.PresentacionVentas;
 using GameStore.RepositoriosBD;
 using GameStore.Servicios;
 using GameStore.Servicios.Implementaciones;
@@ -21,6 +22,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
         private IServicioSocio _servicioSocio;
         private IServicioEmpleado _servicioEmpleado;
         private RegistrarAlquiler _registrarAlquiler;
+        private RegistrarVenta _registrarVenta;
 
         public ConsultaSocio(IUnidadDeTrabajo unidadDeTrabajo)
         {
@@ -44,6 +46,24 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             btnModificar.Visible = false;
             btnEliminar.Visible = false;
             _registrarAlquiler = frmRegistrarAlquiler;
+        }
+
+        public ConsultaSocio(IUnidadDeTrabajo unidadDeTrabajo, RegistrarVenta registrarVenta)
+        {
+            InitializeComponent();
+            dgvSocios.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvSocios.DefaultCellStyle.Font = new Font("Century Gothic", 10);
+            _unidadDeTrabajo = unidadDeTrabajo;
+            _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
+            _servicioEmpleado = new ServicioEmpleado(_unidadDeTrabajo.RepositorioEmpleado);
+            setBotonesParaVenta();
+            _registrarVenta = registrarVenta;
+        }
+
+        private void setBotonesParaVenta()
+        {
+            btnModificar.Visible = false;
+            btnEliminar.Visible = false;
         }
 
         private void ConsultaSocio_Load(object sender, EventArgs e)
@@ -152,7 +172,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             if (dgvSocios.SelectedRows.Count == 1)
             {
                 int id = Convert.ToInt32(dgvSocios.SelectedRows[0].Cells["Id"].Value);
-                _registrarAlquiler.setIdSocio(id);
+				if (!_registrarAlquiler == null)
+					_registrarAlquiler.setIdSocio(id);
+				else if (!_registrarVenta == null)
+					_registrarVenta.BuscarSocio(id);
                 this.Dispose();
                 return;
             }
@@ -162,6 +185,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             }
             else if (dgvSocios.SelectedRows.Count > 1)
                 MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
-        }
-    }
+			}
+		}
+	}
 }
