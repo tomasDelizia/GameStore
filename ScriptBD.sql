@@ -311,7 +311,7 @@ CREATE TABLE Alquileres (
 	IdTipoFactura INT,
 	IdFormaPago INT,
 	MontoSenia DECIMAL(9,2) NOT NULL,
-	FechaInicio INT NOT NULL,
+	FechaInicio DATE NOT NULL,
 	FechaFin DATE NOT NULL,
 	FechaFinReal DATE,
 	IdSocio INT,

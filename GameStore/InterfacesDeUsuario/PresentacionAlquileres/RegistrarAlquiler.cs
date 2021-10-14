@@ -47,7 +47,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             _servicioTipoFactura = new ServicioTipoFactura(_unidadDeTrabajo.RepositorioTipoFactura);
             _servicioUsuario = new ServicioUsuario(_unidadDeTrabajo.RepositorioUsuario);
             _servicioFormaPago = new ServicioFormaPago(_unidadDeTrabajo.RepositorioFormaPago);
-            _Articulos = new List<Articulo>();
             _detalleAlquilers = new List<DetalleAlquiler>();
             IServicioUsuario servicioUsuario = new ServicioUsuario(_unidadDeTrabajo.RepositorioUsuario);
             _servicioAlquiler = new ServicioAlquiler(_unidadDeTrabajo.RepositorioAlquiler);
@@ -91,7 +90,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         {
             try
             {
-                if (lblDias.Text == "")
+                if (txtDias.Text == "")
                     throw new ApplicationException("Ingrese cantidad de dias de alquiler");
                 _consultaArticulo = new ConsultaArticulo(_unidadDeTrabajo, this);
                 _consultaArticulo.ShowDialog();
@@ -109,7 +108,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
                 int idArticulo = Convert.ToInt32(dgvJuegos.SelectedRows[0].Cells["Codigo"].Value);
                 Articulo articuloSeleccionado = _servicioArticulo.GetPorId(idArticulo);
                 dgvJuegos.Rows.Remove(dgvJuegos.SelectedRows[0]);
-                _Articulos.Remove(articuloSeleccionado);
+                _detalleAlquilers.RemoveAll(detalle => detalle.Articulo == articuloSeleccionado);
                 return;
             }
             if (dgvJuegos.SelectedRows.Count > 1)
@@ -138,17 +137,16 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         private void CalcularTotal()
         {
             decimal total = 0;
-            decimal seña = 0;
             decimal porcentajeSeña = 0.30m;
-            int cantidadDias = Convert.ToInt32(lblDias.Text);
+            int cantidadDias = Convert.ToInt32(txtDias.Text);
             foreach (var detalle in _detalleAlquilers)
             {
                 var subtotal = detalle.MontoAlquilerPorDia * cantidadDias;
                 total += subtotal;
             }
-            lblTotal.Text = total.ToString();
-            seña = total * porcentajeSeña;
-            lblSeña.Text = seña.ToString();
+            txtTotal.Text = total.ToString();
+            _MontoSenia = Decimal.Round(total * porcentajeSeña, 2);
+            txtSeña.Text = _MontoSenia.ToString();
         }
 
         private void CargarDgvJuegos(List<DetalleAlquiler> detalles)
@@ -198,8 +196,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             }
             catch (Exception ex)
             {
+                var mensaje = ex.Message;
                 MessageBox.Show("No se pudo concretar la transacción", "Error", MessageBoxButtons.OK);
-                _unidadDeTrabajo.Deshacer();
+                //_unidadDeTrabajo.Deshacer();
             }
         }
 
@@ -213,8 +212,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
                 MontoSenia = _MontoSenia,
                 Vendedor = _empleadoLogueado,
                 FechaInicio = DateTime.Today,
-                FechaFin = DateTime.Today.AddDays(Convert.ToInt32(lblDias))
-
+                FechaFin = DateTime.Today.AddDays(Convert.ToDouble(txtDias.Text))
             };
             foreach (var detalle in _detalleAlquilers)
             {
@@ -230,7 +228,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             foreach (var detalle in _detalleAlquilers)
             {
                 var articulo = detalle.Articulo;
-                articulo.Stock -= 1;
+                articulo.Stock --;
                 _servicioArticulo.Actualizar(articulo);
             }
             _servicioAlquiler.Guardar(_nuevoAlquiler);

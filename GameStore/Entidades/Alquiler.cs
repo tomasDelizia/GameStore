@@ -34,7 +34,7 @@ namespace GameStore.Entidades
         public DateTime? FechaFinReal { get; set; }
 
         public int? IdSocio { get; set; }
-
+        [ForeignKey("Vendedor")]
         public int? IdVendedor { get; set; }
 
         public virtual FormaPago FormaPago { get; set; }

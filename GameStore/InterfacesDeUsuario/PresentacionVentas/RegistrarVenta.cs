@@ -179,7 +179,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             catch (Exception ex)
             {
                 MessageBox.Show("No se pudo concretar la transacción", "Error", MessageBoxButtons.OK);
-                _unidadDeTrabajo.Deshacer();
+                //_unidadDeTrabajo.Deshacer();
             }
         }
 

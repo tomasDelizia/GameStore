@@ -41,22 +41,22 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.cboTiposFactura = new System.Windows.Forms.ComboBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.dgvJuegos = new System.Windows.Forms.DataGridView();
-            this.cboFormaPago = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblSeña = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblSocio = new System.Windows.Forms.Label();
-            this.btnConsultarSocio = new System.Windows.Forms.Button();
-            this.lblTotal = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblDias = new System.Windows.Forms.TextBox();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Plataforma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioPorDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cboFormaPago = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSeña = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblSocio = new System.Windows.Forms.Label();
+            this.btnConsultarSocio = new System.Windows.Forms.Button();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtDias = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJuegos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -113,7 +113,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.lblFechaActual.AutoSize = true;
             this.lblFechaActual.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaActual.ForeColor = System.Drawing.Color.DimGray;
-            this.lblFechaActual.Location = new System.Drawing.Point(377, 9);
+            this.lblFechaActual.Location = new System.Drawing.Point(414, 9);
             this.lblFechaActual.Name = "lblFechaActual";
             this.lblFechaActual.Size = new System.Drawing.Size(138, 22);
             this.lblFechaActual.TabIndex = 128;
@@ -193,6 +193,40 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.dgvJuegos.Size = new System.Drawing.Size(725, 200);
             this.dgvJuegos.TabIndex = 124;
             // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Visible = false;
+            this.Codigo.Width = 65;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 120;
+            // 
+            // TipoArticulo
+            // 
+            this.TipoArticulo.HeaderText = "Tipo de Artículo";
+            this.TipoArticulo.Name = "TipoArticulo";
+            this.TipoArticulo.ReadOnly = true;
+            this.TipoArticulo.Width = 114;
+            // 
+            // Plataforma
+            // 
+            this.Plataforma.HeaderText = "Plataforma";
+            this.Plataforma.Name = "Plataforma";
+            this.Plataforma.ReadOnly = true;
+            this.Plataforma.Width = 114;
+            // 
+            // PrecioPorDia
+            // 
+            this.PrecioPorDia.HeaderText = "Precio por Dia";
+            this.PrecioPorDia.Name = "PrecioPorDia";
+            // 
             // cboFormaPago
             // 
             this.cboFormaPago.BackColor = System.Drawing.Color.White;
@@ -210,19 +244,20 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(382, 92);
+            this.label4.Location = new System.Drawing.Point(362, 256);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 22);
             this.label4.TabIndex = 131;
             this.label4.Text = "Seña: $";
             // 
-            // lblSeña
+            // txtSeña
             // 
-            this.lblSeña.Location = new System.Drawing.Point(465, 94);
-            this.lblSeña.Name = "lblSeña";
-            this.lblSeña.ReadOnly = true;
-            this.lblSeña.Size = new System.Drawing.Size(100, 20);
-            this.lblSeña.TabIndex = 133;
+            this.txtSeña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSeña.Location = new System.Drawing.Point(446, 254);
+            this.txtSeña.Name = "txtSeña";
+            this.txtSeña.ReadOnly = true;
+            this.txtSeña.Size = new System.Drawing.Size(94, 27);
+            this.txtSeña.TabIndex = 133;
             // 
             // label5
             // 
@@ -233,7 +268,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(175, 22);
             this.label5.TabIndex = 134;
-            this.label5.Text = "Cantidad de dias:";
+            this.label5.Text = "Cantidad de días:";
             // 
             // label6
             // 
@@ -269,20 +304,21 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.btnConsultarSocio.UseVisualStyleBackColor = true;
             this.btnConsultarSocio.Click += new System.EventHandler(this.btnConsultarSocio_Click);
             // 
-            // lblTotal
+            // txtTotal
             // 
-            this.lblTotal.Location = new System.Drawing.Point(633, 254);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.ReadOnly = true;
-            this.lblTotal.Size = new System.Drawing.Size(100, 20);
-            this.lblTotal.TabIndex = 140;
+            this.txtTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Location = new System.Drawing.Point(633, 254);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(100, 27);
+            this.txtTotal.TabIndex = 140;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(549, 254);
+            this.label7.Location = new System.Drawing.Point(553, 256);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 22);
             this.label7.TabIndex = 139;
@@ -291,57 +327,26 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.Controls.Add(this.lblTotal);
+            this.panel1.Controls.Add(this.txtTotal);
             this.panel1.Controls.Add(this.btnEliminarArticulo);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.btnAgregarArticulo);
             this.panel1.Controls.Add(this.dgvJuegos);
+            this.panel1.Controls.Add(this.txtSeña);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(12, 135);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(740, 289);
             this.panel1.TabIndex = 141;
             // 
-            // lblDias
+            // txtDias
             // 
-            this.lblDias.Location = new System.Drawing.Point(565, 48);
-            this.lblDias.Name = "lblDias";
-            this.lblDias.Size = new System.Drawing.Size(94, 20);
-            this.lblDias.TabIndex = 142;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Visible = false;
-            this.Codigo.Width = 65;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 120;
-            // 
-            // TipoArticulo
-            // 
-            this.TipoArticulo.HeaderText = "Tipo de Artículo";
-            this.TipoArticulo.Name = "TipoArticulo";
-            this.TipoArticulo.ReadOnly = true;
-            this.TipoArticulo.Width = 114;
-            // 
-            // Plataforma
-            // 
-            this.Plataforma.HeaderText = "Plataforma";
-            this.Plataforma.Name = "Plataforma";
-            this.Plataforma.ReadOnly = true;
-            this.Plataforma.Width = 114;
-            // 
-            // PrecioPorDia
-            // 
-            this.PrecioPorDia.HeaderText = "Precio por Dia";
-            this.PrecioPorDia.Name = "PrecioPorDia";
+            this.txtDias.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDias.Location = new System.Drawing.Point(559, 48);
+            this.txtDias.Name = "txtDias";
+            this.txtDias.Size = new System.Drawing.Size(94, 27);
+            this.txtDias.TabIndex = 142;
             // 
             // RegistrarAlquiler
             // 
@@ -349,13 +354,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(762, 490);
-            this.Controls.Add(this.lblDias);
+            this.Controls.Add(this.txtDias);
             this.Controls.Add(this.btnConsultarSocio);
             this.Controls.Add(this.lblSocio);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.lblSeña);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.cboFormaPago);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.lblFechaActual);
@@ -392,15 +395,15 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         private System.Windows.Forms.DataGridView dgvJuegos;
         private System.Windows.Forms.ComboBox cboFormaPago;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox lblSeña;
+        private System.Windows.Forms.TextBox txtSeña;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblSocio;
         private System.Windows.Forms.Button btnConsultarSocio;
-        private System.Windows.Forms.TextBox lblTotal;
+        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox lblDias;
+        private System.Windows.Forms.TextBox txtDias;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoArticulo;
