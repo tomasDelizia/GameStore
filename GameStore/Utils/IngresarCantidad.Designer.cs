@@ -75,7 +75,10 @@ namespace GameStore.Utils
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.lblNombreArticulo);
             this.Controls.Add(this.txtCantidad);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "IngresarCantidad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingresar Cantidad";
             this.ResumeLayout(false);
             this.PerformLayout();
