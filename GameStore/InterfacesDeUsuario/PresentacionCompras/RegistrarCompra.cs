@@ -146,11 +146,13 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
                 Compra compra = CrearCompra();
                 _servicioCompra.Guardar(compra);
                 _unidadDeTrabajo.Guardar();
+                MessageBox.Show("Se registró la compra con éxito", "Información", MessageBoxButtons.OK);
+                this.Dispose();
             }
             catch(Exception ex)
             {
                 MessageBox.Show("No se pudo concretar la transacción", "Error", MessageBoxButtons.OK);
-                _unidadDeTrabajo.Deshacer();
+                //_unidadDeTrabajo.Deshacer();
             }
         }
 
@@ -164,17 +166,26 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
                 Proveedor = _proveedor,
                 TipoFactura = _tipoFactura,
             };
-            foreach (Articulo articulo in _Articulos)
+            int length = _Articulos.Count;
+            for (int i = 0; i < length; i++)
             {
+                int cant = Convert.ToInt32(dgvArticulos.Rows[i].Cells["Cantidad"].Value);
+                Articulo articulo = _Articulos[i];
                 DetalleCompra detalle = new DetalleCompra()
                 {
                     Articulo = articulo,
                     PrecioUnitario = articulo.PrecioUnitario,
-                    Cantidad = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Cantidad"].Value),
+                    Cantidad = cant,
                 };
                 nuevaCompra.AddDetalle(detalle);
-            };
+                ActualizarStock(articulo, cant);
+            }       
             return nuevaCompra;
+        }
+
+        private void ActualizarStock(Articulo articulo, int cantidad)
+        {
+            articulo.Stock += cantidad;
         }
     }
 }
