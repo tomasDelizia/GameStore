@@ -21,6 +21,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private readonly IServicioPlataforma _servicioPlataforma;
         private readonly IServicioArchivo _servicioArchivo;
         private readonly IServicioMarca _servicioMarca;
+        private readonly IServicioCategoriaAlquiler _ServicioCategoriaAlquiler;
         private Archivo _nuevaImagen;
         private Articulo _nuevoArticulo;
 
@@ -36,6 +37,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
             _servicioArchivo = new ServicioArchivo(unidadDeTrabajo.RepositorioArchivo);
             _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
+            _ServicioCategoriaAlquiler = new ServicioCategoriaAlquiler(_unidadDeTrabajo.RepositorioCategoriaAlquiler);
             _unidadDeTrabajo = unidadDeTrabajo;
         }
 
@@ -182,6 +184,15 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             articuloNuevo.FechaSalida = dateTimePicker.Value;
             articuloNuevo.Plataforma = (Plataforma)cboPlataforma.SelectedItem;
             articuloNuevo.TipoArticulo = (TipoArticulo)cboTipoArticulo.SelectedItem;
+            var diferenciaDias = articuloNuevo.GetDiferenciaDias();
+
+            if (diferenciaDias < 90)
+                articuloNuevo.CategoriaAlquiler = _ServicioCategoriaAlquiler.GetPorNombre("Estreno");
+            else if (diferenciaDias >= 90 && diferenciaDias <= 365)
+                articuloNuevo.CategoriaAlquiler = _ServicioCategoriaAlquiler.GetPorNombre("Viejos");
+            else if (diferenciaDias > 365)
+                articuloNuevo.CategoriaAlquiler = _ServicioCategoriaAlquiler.GetPorNombre(" Muy viejos");
+
             if (articuloNuevo.TipoArticulo.Nombre == "Videojuego")
             {
                 articuloNuevo.Genero = (Genero)cboGenero.SelectedItem;

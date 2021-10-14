@@ -19,18 +19,22 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
 {
     public partial class RegistrarAlquiler : Form
     {
-        private IUnidadDeTrabajo _unidadDeTrabajo;
         private IServicioTipoFactura _servicioTipoFactura;
-        private IServicioFormaPago _servicioFormaPago;
         private IServicioSocio _servicioSocio;
+        private IServicioFormaPago _servicioFormaPago;
+        private IServicioUsuario _servicioUsuario;
         private IServicioArticulo _servicioArticulo;
+        private IServicioAlquiler _servicioAlquiler;
+        private IUnidadDeTrabajo _unidadDeTrabajo;        
         private ConsultaSocio _consultaSocio;
         private ConsultaArticulo _consultaArticulo;
         private List<Articulo> _Articulos;
+        private List<DetalleAlquiler> _detalleAlquilers;
         private Empleado _empleadoLogueado;
         private Socio _socio;
-        private ICollection<Alquiler> _detalleAlquiler;
+        private Alquiler _nuevoAlquiler;
         private int idSocio;
+        private decimal _MontoSenia;
 
         public RegistrarAlquiler(IUnidadDeTrabajo unidadDeTrabajo)
         {
@@ -41,9 +45,12 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             _servicioArticulo = new ServicioArticulo(_unidadDeTrabajo.RepositorioArticulo);
             _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
             _servicioTipoFactura = new ServicioTipoFactura(_unidadDeTrabajo.RepositorioTipoFactura);
+            _servicioUsuario = new ServicioUsuario(_unidadDeTrabajo.RepositorioUsuario);
             _servicioFormaPago = new ServicioFormaPago(_unidadDeTrabajo.RepositorioFormaPago);
             _Articulos = new List<Articulo>();
+            _detalleAlquilers = new List<DetalleAlquiler>();
             IServicioUsuario servicioUsuario = new ServicioUsuario(_unidadDeTrabajo.RepositorioUsuario);
+            _servicioAlquiler = new ServicioAlquiler(_unidadDeTrabajo.RepositorioAlquiler);
             _empleadoLogueado = servicioUsuario.GetEmpleadoLogueado();
         }
 
@@ -52,26 +59,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             lblFechaActual.Text = "Fecha actual: " + DateTime.Today.ToShortDateString();
             CargarTiposFactura();
             CargarFormasPago();
-        }
-
-        internal void setIdSocio(int id)
-        {
-            this.idSocio = id;
-        }
-
-        public List<Articulo> GetArticulos()
-        {
-            return this._Articulos;
-        }
-
-        public void AgregarArticulo(string[] fila)
-        {
-            dgvJuegos.Rows.Add(fila);
-        }
-
-        internal void AgregarArticulo(Articulo articulo)
-        {
-            _Articulos.Add(articulo);
         }
 
         private void CargarFormasPago()
@@ -86,7 +73,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             FormUtils.CargarCombo(ref cboTiposFactura, new BindingSource() { DataSource = tiposFactura }, "Nombre", "IdTipoFactura");
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnConsultarSocio_Click(object sender, EventArgs e)
         {
             _consultaSocio = new ConsultaSocio(_unidadDeTrabajo, this);
             _consultaSocio.ShowDialog();
@@ -95,35 +82,23 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             lblSocio.Text = datos;
         }
 
+        internal void setIdSocio(int id)
+        {
+            this.idSocio = id;
+        }
+
         private void btnAgregarArticulo_Click(object sender, EventArgs e)
         {
-            _consultaArticulo = new ConsultaArticulo(_unidadDeTrabajo, this);
-            _consultaArticulo.ShowDialog();
-            ConsultarArticulos();
-        }
-
-        private void ConsultarArticulos()
-        {
-            CargarDgvJuegos(_Articulos);
-            dgvJuegos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        }
-
-        private void CargarDgvJuegos(List<Articulo> articulos)
-        {
-            dgvJuegos.Rows.Clear();
-
-            foreach (var articulo in articulos)
+            try
             {
-                var fila = new string[]
-                {
-                    articulo.Codigo.ToString(),
-                    articulo.Nombre,
-                    "$ " + articulo.PrecioUnitario.ToString(),
-                    articulo.Stock.ToString(),
-                    articulo.TipoArticulo.Nombre,
-                    articulo.Plataforma.Nombre.ToString(),
-                };
-                dgvJuegos.Rows.Add(fila);
+                if (lblDias.Text == "")
+                    throw new ApplicationException("Ingrese cantidad de dias de alquiler");
+                _consultaArticulo = new ConsultaArticulo(_unidadDeTrabajo, this);
+                _consultaArticulo.ShowDialog();
+                ConsultarArticulos();
+            }
+            catch (ApplicationException aex){
+                MessageBox.Show(aex.Message, "Error", MessageBoxButtons.OK);
             }
         }
 
@@ -141,8 +116,126 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
                 MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
         }
 
+        internal void AgregarArticulo(Articulo articulo)
+        {
+            DetalleAlquiler nuevoDetalle = new DetalleAlquiler
+            {
+                Articulo = articulo,
+                MontoAlquilerPorDia = articulo.GetMontoAlquiler(),
+                MontoDevolucionTardiaPorDia = articulo.GetMontoAlquilerTardio()
+            };
+            _detalleAlquilers.Add(nuevoDetalle);
+        }
+
+        private void ConsultarArticulos()
+        {
+            CargarDgvJuegos(_detalleAlquilers);
+            dgvJuegos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            CalcularTotal();
+
+        }
+
+        private void CalcularTotal()
+        {
+            decimal total = 0;
+            decimal seña = 0;
+            decimal porcentajeSeña = 0.30m;
+            int cantidadDias = Convert.ToInt32(lblDias.Text);
+            foreach (var detalle in _detalleAlquilers)
+            {
+                var subtotal = detalle.MontoAlquilerPorDia * cantidadDias;
+                total += subtotal;
+            }
+            lblTotal.Text = total.ToString();
+            seña = total * porcentajeSeña;
+            lblSeña.Text = seña.ToString();
+        }
+
+        private void CargarDgvJuegos(List<DetalleAlquiler> detalles)
+        {
+            dgvJuegos.Rows.Clear();
+
+            foreach (var detalle in detalles)
+            {
+                var fila = new string[]
+                {
+                    detalle.Articulo.Codigo.ToString(),
+                    detalle.Articulo.Nombre,
+                    detalle.Articulo.TipoArticulo.Nombre,
+                    detalle.Articulo.Plataforma.Nombre.ToString(),
+                    "$ " + detalle.MontoAlquilerPorDia.ToString(),
+                };
+                dgvJuegos.Rows.Add(fila);
+            }
+        }
+
+        public List<Articulo> GetArticulos()
+        {
+            var articulosSeleccionados = new List<Articulo>();
+            foreach (var detalle in _detalleAlquilers)
+                articulosSeleccionados.Add(detalle.Articulo);
+            return articulosSeleccionados;
+        }
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            this.Dispose();
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!FormUtils.EsOperacionConfirmada())
+                    return;
+                if (!EsAlquilerValido())
+                    return;
+                CrearAlquiler();
+            }
+            catch (ApplicationException aex)
+            {
+                MessageBox.Show(aex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo concretar la transacción", "Error", MessageBoxButtons.OK);
+                _unidadDeTrabajo.Deshacer();
+            }
+        }
+
+        private bool EsAlquilerValido()
+        {
+            Alquiler nuevoAlquiler = new Alquiler()
+            {
+                TipoFactura = (TipoFactura)cboTiposFactura.SelectedItem,
+                FormaPago = (FormaPago)cboFormaPago.SelectedItem,
+                Socio = _socio,
+                MontoSenia = _MontoSenia,
+                Vendedor = _empleadoLogueado,
+                FechaInicio = DateTime.Today,
+                FechaFin = DateTime.Today.AddDays(Convert.ToInt32(lblDias))
+
+            };
+            foreach (var detalle in _detalleAlquilers)
+            {
+                nuevoAlquiler.AgregarDetalle(detalle);
+            }
+            _servicioAlquiler.ValidarAlquiler(nuevoAlquiler);
+            _nuevoAlquiler = nuevoAlquiler;
+            return true;
+        }
+
+        private void CrearAlquiler()
+        {
+            foreach (var detalle in _detalleAlquilers)
+            {
+                var articulo = detalle.Articulo;
+                articulo.Stock -= 1;
+                _servicioArticulo.Actualizar(articulo);
+            }
+            _servicioAlquiler.Guardar(_nuevoAlquiler);
+            _unidadDeTrabajo.Guardar();
+            MessageBox.Show("Se registró con éxito el alquiler", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Dispose();
         }
     }

@@ -11,5 +11,7 @@ namespace GameStore.Servicios
     {
         List<CategoriaAlquiler> ListarCategorias();
         void ValidarCategoria(CategoriaAlquiler categoria);
+
+        CategoriaAlquiler GetPorNombre(string nombre);
     }
 }

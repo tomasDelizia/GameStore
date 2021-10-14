@@ -31,6 +31,7 @@ namespace GameStore.RepositoriosBD.Implementaciones
             RepositorioVenta = new RepositorioVenta(_contextoBd);
             RepositorioDetalleVenta = new RepositorioDetalleVenta(_contextoBd);
             RepositorioCompra = new RepositorioCompra(_contextoBd);
+            RepositorioAlquiler = new RepositorioAlquiler(_contextoBd);
         }
 
         public IRepositorioClasificacion RepositorioClasificacion { get; private set; }
@@ -55,6 +56,7 @@ namespace GameStore.RepositoriosBD.Implementaciones
         public IRepositorioDetalleVenta RepositorioDetalleVenta { get; private set; }
         public IRepositorioVenta RepositorioVenta { get; private set; }
         public IRepositorioCompra RepositorioCompra { get; private set; }
+        public IRepositorioAlquiler RepositorioAlquiler { get; private set; }
 
         public int Guardar()
         {

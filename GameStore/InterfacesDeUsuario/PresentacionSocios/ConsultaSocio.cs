@@ -172,9 +172,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             if (dgvSocios.SelectedRows.Count == 1)
             {
                 int id = Convert.ToInt32(dgvSocios.SelectedRows[0].Cells["Id"].Value);
-				if (!_registrarAlquiler == null)
+				if (_registrarAlquiler != null)
 					_registrarAlquiler.setIdSocio(id);
-				else if (!_registrarVenta == null)
+				else if (_registrarVenta != null)
 					_registrarVenta.BuscarSocio(id);
                 this.Dispose();
                 return;
@@ -188,4 +188,3 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
 			}
 		}
 	}
-}

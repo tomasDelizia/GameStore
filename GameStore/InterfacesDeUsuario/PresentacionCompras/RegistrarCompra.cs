@@ -86,7 +86,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private void CargarTiposFactura()
         {
             var tiposFactura = _servicioTipoFactura.ListarTiposDeFactura();
-            FormUtils.CargarCombo(ref cboTipoFactura, new BindingSource() { DataSource = tiposFactura }, "Nombre", "IdTipoFactura");
+            FormUtils.CargarCombo(ref cboTiposFactura, new BindingSource() { DataSource = tiposFactura }, "Nombre", "IdTipoFactura");
         }
 
         public void AgregarArticulo(Articulo articulo, int cantidad)
@@ -165,7 +165,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
 
         private Compra CrearCompra()
         {
-            _tipoFactura = (TipoFactura)cboTipoFactura.SelectedItem;
+            _tipoFactura = (TipoFactura)cboTiposFactura.SelectedItem;
             Compra nuevaCompra = new Compra()
             {
                 EncargadoCompra = _empleadoLogueado,

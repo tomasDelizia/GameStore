@@ -66,7 +66,7 @@ namespace GameStore.Entidades
 
         public int? IdCategoriaAlquiler { get; set; }
 
-        public virtual CategoriaAlquiler CategoriasDeAlquiler { get; set; }
+        public virtual CategoriaAlquiler CategoriaAlquiler { get; set; }
 
         public void ValidarNombre()
         {
@@ -80,6 +80,33 @@ namespace GameStore.Entidades
         {
             if (PrecioUnitario <= 0 || PrecioUnitario >= 10000000)
                 throw new ApplicationException("Ingrese un precio válido.");
+        }
+
+        public int GetDiferenciaDias()
+        {
+            var fechaActual = DateTime.Today;
+            return (fechaActual - (DateTime) FechaSalida).Days;
+        }
+
+        public decimal GetMontoAlquilerTardio()
+        {
+            decimal monto = 0;
+            if (EsVideojuego())
+                monto = CategoriaAlquiler.MontoDevolucionTardiaPorDia;
+            return monto;
+        }
+
+        public decimal GetMontoAlquiler()
+        {
+            decimal monto = 0;
+            if (EsVideojuego())
+                monto = CategoriaAlquiler.MontoAlquilerPorDia;
+            return monto;
+        }
+
+        public bool EsVideojuego()
+        {
+            return TipoArticulo.Nombre.Equals("Videojuego");
         }
     }
 }

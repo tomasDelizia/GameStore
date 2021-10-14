@@ -10,6 +10,7 @@ namespace GameStore.Servicios
     public interface IServicioVenta : IServicio<Venta>
     {
         List<Venta> ListarVentas();
+
         void ValidarVenta(Venta nuevaVenta);
     }
 }

@@ -477,6 +477,7 @@
     <Compile Include="Entidades\CategoriaAlquiler.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\ContextoGameStore.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\Repositorio.cs" />
+    <Compile Include="RepositoriosBD\Implementaciones\RepositorioAlquiler.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioArchivo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioArticulo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioBarrio.cs" />
@@ -501,6 +502,7 @@
     <Compile Include="RepositoriosBD\Implementaciones\UnidadDeTrabajo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioUsuario.cs" />
     <Compile Include="RepositoriosBD\IRepositorio.cs" />
+    <Compile Include="RepositoriosBD\IRepositorioAlquiler.cs" />
     <Compile Include="RepositoriosBD\IRepositorioArchivo.cs" />
     <Compile Include="RepositoriosBD\IRepositorioArticulo.cs" />
     <Compile Include="RepositoriosBD\IRepositorioBarrio.cs" />
@@ -536,6 +538,8 @@
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Entidades\Venta.cs" />
     <Compile Include="RepositoriosBD\IRepositorioMarca.cs" />
+    <Compile Include="Servicios\Implementaciones\ServicioAlquiler.cs" />
+    <Compile Include="Servicios\IServicioAlquiler.cs" />
     <Compile Include="Servicios\Implementaciones\Servicio.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioArchivo.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioArticulo.cs" />

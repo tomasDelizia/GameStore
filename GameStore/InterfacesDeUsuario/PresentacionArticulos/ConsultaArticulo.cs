@@ -315,6 +315,19 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                         MessageBox.Show("Ya seleccionó este artículo.", "Información", MessageBoxButtons.OK);
                         return;
                     }
+
+                    if (!articulo.EsVideojuego())
+                    {
+                        MessageBox.Show("Solo se pueden alquilar Videojuegos.", "Información", MessageBoxButtons.OK);
+                        return;
+                    }
+
+                    if (!(articulo.Stock > 0))
+                    {
+                        MessageBox.Show("La cantidad en stock no es suficiente.", "Información", MessageBoxButtons.OK);
+                        return;
+                    }
+
                     _registrarAlquiler.AgregarArticulo(articulo);
                     this.Dispose();
 				}

@@ -26,5 +26,13 @@ namespace GameStore.Servicios.Implementaciones
             categoria.ValidarMontoAlquilerDiario();
             categoria.ValidarMontoAlquilerTardio();
         }
+
+        public CategoriaAlquiler GetPorNombre(string nombre)
+        {
+            var Categorias = ListarCategorias();
+            var categoriaBuscada = Encontrar(c => c.EsTuNombre(nombre)).ToList();
+            var primeraCategoria = categoriaBuscada[0];
+            return primeraCategoria;         
+        }
     }
 }
