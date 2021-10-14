@@ -1,4 +1,7 @@
 ﻿
+using GameStore.Entidades;
+using System.Collections.Generic;
+
 namespace GameStore.InterfacesDeUsuario.PresentacionCompras
 {
     partial class RegistrarCompra
@@ -32,16 +35,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrarCompra));
             this.btnSalir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.cboTipoFactura = new System.Windows.Forms.ComboBox();
+            this.cboTiposFactura = new System.Windows.Forms.ComboBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblProveedor = new System.Windows.Forms.Label();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnAgregarArticulo = new System.Windows.Forms.Button();
-            this.btnEliminarArticulo = new System.Windows.Forms.Button();
-            this.lblFechaActual = new System.Windows.Forms.Label();
-            this.btnConfirmar = new System.Windows.Forms.Button();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +47,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.TipoArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Plataforma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnAgregarArticulo = new System.Windows.Forms.Button();
+            this.btnEliminarArticulo = new System.Windows.Forms.Button();
+            this.lblFechaActual = new System.Windows.Forms.Label();
+            this.btnConfirmar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,17 +78,17 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.label1.TabIndex = 107;
             this.label1.Text = "Tipo de factura:";
             // 
-            // cboTipoFactura
+            // cboTiposFactura
             // 
-            this.cboTipoFactura.BackColor = System.Drawing.Color.White;
-            this.cboTipoFactura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboTipoFactura.ForeColor = System.Drawing.Color.DimGray;
-            this.cboTipoFactura.FormattingEnabled = true;
-            this.cboTipoFactura.Location = new System.Drawing.Point(172, 12);
-            this.cboTipoFactura.Name = "cboTipoFactura";
-            this.cboTipoFactura.Size = new System.Drawing.Size(154, 29);
-            this.cboTipoFactura.TabIndex = 106;
-            this.cboTipoFactura.Text = "Selección";
+            this.cboTiposFactura.BackColor = System.Drawing.Color.White;
+            this.cboTiposFactura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTiposFactura.ForeColor = System.Drawing.Color.DimGray;
+            this.cboTiposFactura.FormattingEnabled = true;
+            this.cboTiposFactura.Location = new System.Drawing.Point(172, 12);
+            this.cboTiposFactura.Name = "cboTiposFactura";
+            this.cboTiposFactura.Size = new System.Drawing.Size(154, 29);
+            this.cboTiposFactura.TabIndex = 106;
+            this.cboTiposFactura.Text = "Selección";
             // 
             // btnAgregar
             // 
@@ -140,6 +143,54 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(725, 200);
             this.dgvArticulos.TabIndex = 112;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Visible = false;
+            this.Codigo.Width = 65;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 120;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            this.Precio.Width = 114;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            this.Stock.Width = 113;
+            // 
+            // TipoArticulo
+            // 
+            this.TipoArticulo.HeaderText = "Tipo de Artículo";
+            this.TipoArticulo.Name = "TipoArticulo";
+            this.TipoArticulo.ReadOnly = true;
+            this.TipoArticulo.Width = 114;
+            // 
+            // Plataforma
+            // 
+            this.Plataforma.HeaderText = "Plataforma";
+            this.Plataforma.Name = "Plataforma";
+            this.Plataforma.ReadOnly = true;
+            this.Plataforma.Width = 114;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad comprada";
+            this.Cantidad.Name = "Cantidad";
             // 
             // label3
             // 
@@ -199,55 +250,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.btnConfirmar.UseVisualStyleBackColor = true;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Visible = false;
-            this.Codigo.Width = 65;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 120;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            this.Precio.Width = 114;
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            this.Stock.Width = 113;
-            // 
-            // TipoArticulo
-            // 
-            this.TipoArticulo.HeaderText = "Tipo de Artículo";
-            this.TipoArticulo.Name = "TipoArticulo";
-            this.TipoArticulo.ReadOnly = true;
-            this.TipoArticulo.Width = 114;
-            // 
-            // Plataforma
-            // 
-            this.Plataforma.HeaderText = "Plataforma";
-            this.Plataforma.Name = "Plataforma";
-            this.Plataforma.ReadOnly = true;
-            this.Plataforma.Width = 114;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad comprada";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
             // RegistrarCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,7 +266,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cboTipoFactura);
+            this.Controls.Add(this.cboTiposFactura);
             this.Controls.Add(this.btnSalir);
             this.Name = "RegistrarCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -280,16 +282,13 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
 
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cboTipoFactura;
+        private System.Windows.Forms.ComboBox cboTiposFactura;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblProveedor;
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAgregarArticulo;
-        private System.Windows.Forms.Button btnEliminarArticulo;
-        private System.Windows.Forms.Label lblFechaActual;
-        private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
@@ -297,5 +296,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoArticulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Plataforma;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.Button btnEliminarArticulo;
+        private System.Windows.Forms.Label lblFechaActual;
+        private System.Windows.Forms.Button btnConfirmar;
     }
 }
