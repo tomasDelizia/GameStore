@@ -134,6 +134,7 @@ CREATE TABLE Articulos (
 	IdPlataforma INT,
 	IdImagen INT,
 	Descripcion VARCHAR(MAX),
+	IdCategoriaAlquiler INT,
 	CONSTRAINT articulos_codigo_pk PRIMARY KEY(Codigo),
 	CONSTRAINT articulos_id_tipo_articulo_fk FOREIGN KEY(IdTipoArticulo) REFERENCES TiposDeArticulo (IdTipoArticulo)
     ON UPDATE CASCADE ON DELETE SET NULL,
@@ -154,6 +155,11 @@ CREATE TABLE Articulos (
 	CONSTRAINT articulos_imagen_fk FOREIGN KEY(Imagen) REFERENCES Archivos(IdArchivo)
     ON UPDATE CASCADE ON DELETE SET NULL
 	);
+
+ALTER TABLE Articulos
+ADD CONSTRAINT articulos_id_categoria_alquiler_fk FOREIGN KEY(IdCategoriaAlquiler) REFERENCES CategoriasDeAlquiler(IdCategoriaAlquiler)
+    ON UPDATE CASCADE ON DELETE SET NULL;
+
 
 CREATE TABLE TiposDeFactura (
 	IdTipoFactura INT IDENTITY,
@@ -333,7 +339,7 @@ CREATE TABLE CategoriasDeAlquiler (
 CREATE TABLE DetallesDeAlquiler (
 	NroAlquiler INT NOT NULL,
 	Codigo INT NOT NULL,
-	Categoria INT,
+	-- Categoria INT,
 	MontoAlquilerPorDia DECIMAL(9,2) NOT NULL,
 	MontoDevolucionTardiaPorDia DECIMAL(9,2) NOT NULL,
 	CONSTRAINT detalles_de_alquiler_nro_alquiler_codigo_pk PRIMARY KEY(NroAlquiler, Codigo),
@@ -341,8 +347,8 @@ CREATE TABLE DetallesDeAlquiler (
     ON UPDATE CASCADE ON DELETE CASCADE,
 	CONSTRAINT detalles_de_alquiler_codigo_fk FOREIGN KEY(Codigo) REFERENCES Articulos (Codigo)
     ON UPDATE CASCADE ON DELETE CASCADE,
-	CONSTRAINT detalles_de_alquiler_categoria_fk FOREIGN KEY(Categoria) REFERENCES CategoriasDeAlquiler (IdCategoriaAlquiler)
-    ON UPDATE CASCADE ON DELETE CASCADE,
+	--CONSTRAINT detalles_de_alquiler_categoria_fk FOREIGN KEY(Categoria) REFERENCES CategoriasDeAlquiler (IdCategoriaAlquiler)
+    --ON UPDATE CASCADE ON DELETE CASCADE,
 );
 
 CREATE TABLE Proveedores (

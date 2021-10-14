@@ -22,5 +22,13 @@ namespace GameStore.Servicios.Implementaciones
         {
             return _repositorioVenta.GetTodos().ToList();
         }
+
+        public void ValidarVenta(Venta nuevaVenta)
+        {
+            nuevaVenta.ValidarSocio();
+            nuevaVenta.ValidarFormaPago();
+            nuevaVenta.ValidarTipoFactura();
+            nuevaVenta.ValidarDetallesDeVenta();
+        }
     }
 }

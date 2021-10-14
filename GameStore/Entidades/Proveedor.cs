@@ -41,6 +41,8 @@ namespace GameStore.Entidades
 
         public virtual Barrio Barrio { get; set; }
 
+        public bool? Estado { get; set; }
+
         public void ValidarRazonSocial()
         {
             if (string.IsNullOrEmpty(RazonSocial))
