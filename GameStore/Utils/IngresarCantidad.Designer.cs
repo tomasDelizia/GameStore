@@ -51,18 +51,18 @@ namespace GameStore.Utils
             this.txtCantidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(122, 7);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(277, 27);
+            this.txtCantidad.Size = new System.Drawing.Size(95, 27);
             this.txtCantidad.TabIndex = 16;
             // 
             // btnConfirmar
             // 
             this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnConfirmar.Location = new System.Drawing.Point(291, 40);
+            this.btnConfirmar.Location = new System.Drawing.Point(122, 40);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(108, 29);
+            this.btnConfirmar.Size = new System.Drawing.Size(95, 29);
             this.btnConfirmar.TabIndex = 118;
-            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.Text = "Ingresar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
@@ -71,7 +71,8 @@ namespace GameStore.Utils
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(406, 77);
+            this.ClientSize = new System.Drawing.Size(233, 77);
+            this.ControlBox = false;
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.lblNombreArticulo);
             this.Controls.Add(this.txtCantidad);
