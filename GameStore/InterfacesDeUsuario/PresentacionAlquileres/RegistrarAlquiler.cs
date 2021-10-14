@@ -22,13 +22,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         private IServicioTipoFactura _servicioTipoFactura;
         private IServicioSocio _servicioSocio;
         private IServicioFormaPago _servicioFormaPago;
-        private IServicioUsuario _servicioUsuario;
         private IServicioArticulo _servicioArticulo;
         private IServicioAlquiler _servicioAlquiler;
         private IUnidadDeTrabajo _unidadDeTrabajo;        
         private ConsultaSocio _consultaSocio;
         private ConsultaArticulo _consultaArticulo;
-        private List<Articulo> _Articulos;
         private List<DetalleAlquiler> _detalleAlquilers;
         private Empleado _empleadoLogueado;
         private Socio _socio;
@@ -45,7 +43,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             _servicioArticulo = new ServicioArticulo(_unidadDeTrabajo.RepositorioArticulo);
             _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
             _servicioTipoFactura = new ServicioTipoFactura(_unidadDeTrabajo.RepositorioTipoFactura);
-            _servicioUsuario = new ServicioUsuario(_unidadDeTrabajo.RepositorioUsuario);
             _servicioFormaPago = new ServicioFormaPago(_unidadDeTrabajo.RepositorioFormaPago);
             _detalleAlquilers = new List<DetalleAlquiler>();
             IServicioUsuario servicioUsuario = new ServicioUsuario(_unidadDeTrabajo.RepositorioUsuario);
@@ -196,7 +193,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             }
             catch (Exception ex)
             {
-                var mensaje = ex.Message;
                 MessageBox.Show("No se pudo concretar la transacción", "Error", MessageBoxButtons.OK);
                 //_unidadDeTrabajo.Deshacer();
             }
@@ -204,6 +200,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
 
         private bool EsAlquilerValido()
         {
+            if (string.IsNullOrEmpty(txtDias.Text))
+                throw new ApplicationException("La cantidad de días es requerida");
+            double cantidadDias = Convert.ToDouble(txtDias.Text);
             Alquiler nuevoAlquiler = new Alquiler()
             {
                 TipoFactura = (TipoFactura)cboTiposFactura.SelectedItem,

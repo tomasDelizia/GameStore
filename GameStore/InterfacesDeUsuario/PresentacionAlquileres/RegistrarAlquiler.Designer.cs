@@ -41,11 +41,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.cboTiposFactura = new System.Windows.Forms.ComboBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.dgvJuegos = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Plataforma = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioPorDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboFormaPago = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSeña = new System.Windows.Forms.TextBox();
@@ -57,6 +52,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtDias = new System.Windows.Forms.TextBox();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Plataforma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioPorDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJuegos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -193,40 +193,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.dgvJuegos.Size = new System.Drawing.Size(725, 200);
             this.dgvJuegos.TabIndex = 124;
             // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Visible = false;
-            this.Codigo.Width = 65;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 120;
-            // 
-            // TipoArticulo
-            // 
-            this.TipoArticulo.HeaderText = "Tipo de Artículo";
-            this.TipoArticulo.Name = "TipoArticulo";
-            this.TipoArticulo.ReadOnly = true;
-            this.TipoArticulo.Width = 114;
-            // 
-            // Plataforma
-            // 
-            this.Plataforma.HeaderText = "Plataforma";
-            this.Plataforma.Name = "Plataforma";
-            this.Plataforma.ReadOnly = true;
-            this.Plataforma.Width = 114;
-            // 
-            // PrecioPorDia
-            // 
-            this.PrecioPorDia.HeaderText = "Precio por Dia";
-            this.PrecioPorDia.Name = "PrecioPorDia";
-            // 
             // cboFormaPago
             // 
             this.cboFormaPago.BackColor = System.Drawing.Color.White;
@@ -348,6 +314,40 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.txtDias.Size = new System.Drawing.Size(94, 27);
             this.txtDias.TabIndex = 142;
             // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Visible = false;
+            this.Codigo.Width = 65;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 120;
+            // 
+            // TipoArticulo
+            // 
+            this.TipoArticulo.HeaderText = "Tipo de Artículo";
+            this.TipoArticulo.Name = "TipoArticulo";
+            this.TipoArticulo.ReadOnly = true;
+            this.TipoArticulo.Width = 114;
+            // 
+            // Plataforma
+            // 
+            this.Plataforma.HeaderText = "Plataforma";
+            this.Plataforma.Name = "Plataforma";
+            this.Plataforma.ReadOnly = true;
+            this.Plataforma.Width = 114;
+            // 
+            // PrecioPorDia
+            // 
+            this.PrecioPorDia.HeaderText = "Precio por Día";
+            this.PrecioPorDia.Name = "PrecioPorDia";
+            // 
             // RegistrarAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,7 +370,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.Controls.Add(this.panel1);
             this.Name = "RegistrarAlquiler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RegistrarAlquiler";
+            this.Text = "Registrar un Nuevo Alquiler";
             this.Load += new System.EventHandler(this.RegistrarAlquiler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvJuegos)).EndInit();
             this.panel1.ResumeLayout(false);

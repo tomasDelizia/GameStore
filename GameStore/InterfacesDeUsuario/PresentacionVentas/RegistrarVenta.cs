@@ -22,16 +22,16 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
         private IServicioTipoFactura _servicioTipoFactura;
         private IServicioSocio _servicioSocio;
         private IServicioFormaPago _servicioFormaPago;
-        private IServicioUsuario _servicioUsuario;
+        private Empleado _empleadoLogueado;
         private IServicioArticulo _servicioArticulo;
         private IServicioVenta _servicioVenta;
         private ConsultaArticulo _consultaArticulo;
         private ConsultaSocio _consultaSocio;
         private IUnidadDeTrabajo _unidadDeTrabajo;
         private Socio _socio;
-        private List<Articulo> _articulosSeleccionados;
         private List<DetalleVenta> _detallesDeVenta;
         private Venta _nuevaVenta;
+
         public RegistrarVenta(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
@@ -41,7 +41,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             _servicioTipoFactura = new ServicioTipoFactura(_unidadDeTrabajo.RepositorioTipoFactura);
             _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
             _servicioFormaPago = new ServicioFormaPago(_unidadDeTrabajo.RepositorioFormaPago);
-            _servicioUsuario = new ServicioUsuario(_unidadDeTrabajo.RepositorioUsuario);
+            IServicioUsuario servicioUsuario = new ServicioUsuario(_unidadDeTrabajo.RepositorioUsuario);
+            _empleadoLogueado = servicioUsuario.GetEmpleadoLogueado();
             _servicioArticulo = new ServicioArticulo(_unidadDeTrabajo.RepositorioArticulo);
             _detallesDeVenta = new List<DetalleVenta>();
             _servicioVenta = new ServicioVenta(_unidadDeTrabajo.RepositorioVenta);
@@ -190,7 +191,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
                 TipoFactura = (TipoFactura)cboTiposFactura.SelectedItem,
                 FormaPago = (FormaPago)cboFormasPago.SelectedItem,
                 Socio = _socio,
-                Vendedor = _servicioUsuario.GetEmpleadoLogueado(),
+                Vendedor = _empleadoLogueado,
                 FechaVenta = DateTime.Today,
             };
             foreach (var detalle in _detallesDeVenta)

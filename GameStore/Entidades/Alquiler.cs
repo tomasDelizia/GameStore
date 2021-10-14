@@ -74,7 +74,7 @@ namespace GameStore.Entidades
         public void ValidarDetallesDeVenta()
         {
             if (DetallesDeAlquiler.Count == 0)
-                throw new ApplicationException("Debe seleccionar al menos un artículo.");
+                throw new ApplicationException("Debe seleccionar al menos un videojuego.");
         }
     }
 }
