@@ -10,5 +10,6 @@ namespace GameStore.RepositoriosBD
 {
     public interface IServicioCompra : IServicio<Compra>
     {
+        void ValidarCompra(Compra nuevaCompra);
     }
 }

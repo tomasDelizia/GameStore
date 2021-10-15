@@ -171,7 +171,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             if (dgvProveedores.SelectedRows.Count == 1)
             {
                 int id = Convert.ToInt32(dgvProveedores.SelectedRows[0].Cells["Id"].Value);
-                _registrarCompra.setIdProveedor(id);
+                _registrarCompra.BuscarProveedor(id);
                 this.Dispose();
                 return;
             }

@@ -111,7 +111,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
                 PrecioUnitario = articulo.PrecioUnitario
             };
             _detallesDeVenta.Add(nuevoDetalle);
-
         }
 
         private void ConsultarArticulos()
