@@ -822,9 +822,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controladores\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Recursos\cerrar.png" />
     <None Include="Recursos\delete.png" />

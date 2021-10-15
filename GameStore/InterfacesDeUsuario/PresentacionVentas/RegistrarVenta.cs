@@ -128,7 +128,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
                 var subtotal = detalle.CalcularSubtotal();
                 total += subtotal;
             }
-            txtTotal.Text = "$ " + total;    
+            txtTotal.Text = total.ToString();    
         }
 
         private void CargarDgvArticulos(List<DetalleVenta> detalles)

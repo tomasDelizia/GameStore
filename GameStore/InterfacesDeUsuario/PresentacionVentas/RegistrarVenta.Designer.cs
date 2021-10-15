@@ -252,11 +252,11 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.DimGray;
-            this.lblTotal.Location = new System.Drawing.Point(515, 253);
+            this.lblTotal.Location = new System.Drawing.Point(499, 254);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(58, 22);
+            this.lblTotal.Size = new System.Drawing.Size(74, 22);
             this.lblTotal.TabIndex = 121;
-            this.lblTotal.Text = "Total:";
+            this.lblTotal.Text = "Total: $";
             // 
             // txtTotal
             // 

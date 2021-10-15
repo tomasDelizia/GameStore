@@ -87,14 +87,19 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         {
             try
             {
-                if (txtDias.Text == "")
-                    throw new ApplicationException("Ingrese cantidad de dias de alquiler");
+                var cantDias = Convert.ToInt32(txtDias.Text);
+                if (cantDias <= 0)
+                    throw new ApplicationException("Ingrese cantidad de días de alquiler mayor a 0");
                 _consultaArticulo = new ConsultaArticulo(_unidadDeTrabajo, this);
                 _consultaArticulo.ShowDialog();
                 ConsultarArticulos();
             }
             catch (ApplicationException aex){
                 MessageBox.Show(aex.Message, "Error", MessageBoxButtons.OK);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ingrese una cantidad de días válida", "Error", MessageBoxButtons.OK);
             }
         }
 
