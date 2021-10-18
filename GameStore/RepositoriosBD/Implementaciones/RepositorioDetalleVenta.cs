@@ -11,6 +11,7 @@ namespace GameStore.RepositoriosBD.Implementaciones
     {
         public RepositorioDetalleVenta(ContextoGameStore contextoBd) : base(contextoBd)
         {
+
         }
     }
 }

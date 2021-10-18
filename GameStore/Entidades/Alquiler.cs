@@ -24,7 +24,8 @@ namespace GameStore.Entidades
 
         public decimal MontoSenia { get; set; }
 
-        public int FechaInicio { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime FechaInicio { get; set; } 
 
         [Column(TypeName = "date")]
         public DateTime FechaFin { get; set; }
@@ -33,18 +34,47 @@ namespace GameStore.Entidades
         public DateTime? FechaFinReal { get; set; }
 
         public int? IdSocio { get; set; }
-
+        [ForeignKey("Vendedor")]
         public int? IdVendedor { get; set; }
 
-        public virtual FormaPago FormasDePago { get; set; }
+        public virtual FormaPago FormaPago { get; set; }
 
         public virtual Socio Socio { get; set; }
 
-        public virtual TipoFactura TiposDeFactura { get; set; }
+        public virtual TipoFactura TipoFactura { get; set; }
 
-        public virtual Empleado Empleado { get; set; }
+        public virtual Empleado Vendedor { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetalleAlquiler> DetallesDeAlquiler { get; set; }
+
+        public void AgregarDetalle(DetalleAlquiler detalle)
+        {
+            DetallesDeAlquiler.Add(detalle);
+        }
+
+        public void ValidarFormaPago()
+        {
+            if (FormaPago == null)
+                throw new ApplicationException("La forma de pago es requerida.");
+        }
+
+        public void ValidarTipoFactura()
+        {
+            if (TipoFactura == null)
+                throw new ApplicationException("El tipo de factura es requerido.");
+        }
+
+        public void ValidarSocio()
+        {
+            if (Socio == null)
+                throw new ApplicationException("El socio es requerido.");
+        }
+
+        public void ValidarDetallesDeVenta()
+        {
+            if (DetallesDeAlquiler.Count == 0)
+                throw new ApplicationException("Debe seleccionar al menos un videojuego.");
+        }
     }
 }

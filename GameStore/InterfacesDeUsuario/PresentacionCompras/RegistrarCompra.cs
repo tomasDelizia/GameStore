@@ -27,9 +27,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private IServicioTipoFactura _servicioTipoFactura;
         private IServicioArticulo _servicioArticulo;
         private Empleado _empleadoLogueado;
+        private ICollection<DetalleCompra> _detallesCompra;
         private IServicioCompra _servicioCompra;
         private Compra _nuevaCompra;
         private List<DetalleCompra> _detallesDeCompra;
+        private string[][] _ArticulosSeleccionados;
         public RegistrarCompra(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
@@ -99,6 +101,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             };
             _detallesDeCompra.Add(nuevoDetalle);
         }
+		
         private void ConsultarArticulos()
         {
             CargarDgvArticulos(_detallesDeCompra);

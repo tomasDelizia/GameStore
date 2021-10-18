@@ -16,7 +16,7 @@ namespace GameStore.RepositoriosBD
         IRepositorioRol RepositorioRol { get; }
         IRepositorioProveedor RepositorioProveedor { get; }
         IRepositorioBarrio RepositorioBarrio { get; }
-	    IRepositorioPerfil RepositorioPerfil { get; }
+        IRepositorioPerfil RepositorioPerfil { get; }
         IRepositorioEmpleado RepositorioEmpleado { get; }
         IRepositorioCargo RepositorioCargo { get; }
         IRepositorioSocio RepositorioSocio { get; }
@@ -26,6 +26,7 @@ namespace GameStore.RepositoriosBD
         IRepositorioDetalleVenta RepositorioDetalleVenta { get; }
         IRepositorioVenta RepositorioVenta { get; }
         IRepositorioCompra RepositorioCompra { get; }
+        IRepositorioAlquiler RepositorioAlquiler { get; }
         int Guardar();
         void Deshacer();
     }

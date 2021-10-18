@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using GameStore.Entidades;
 using GameStore.InterfacesDeUsuario.PresentacionCompras;
 using GameStore.InterfacesDeUsuario.PresentacionVentas;
+using GameStore.InterfacesDeUsuario.PresentacionAlquileres;
 using GameStore.RepositoriosBD;
 using GameStore.Servicios;
 using GameStore.Servicios.Implementaciones;
@@ -27,6 +28,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private readonly IServicioMarca _servicioMarca;
         private RegistrarCompra _registrarCompra;
         private RegistrarVenta _registrarVenta;
+        private RegistrarAlquiler _registrarAlquiler;
         private Articulo _nuevoArticuloSeleccionado;
         private List<Articulo> articulosSeleccionados;
 
@@ -68,6 +70,21 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             SetBotonesParaVenta();
             _registrarCompra = frmRegistrarCompra;
         }
+
+        public ConsultaArticulo(IUnidadDeTrabajo unidadDeTrabajo, RegistrarAlquiler frmRegistrarAlquiler)
+        {
+            InitializeComponent();
+            dgvArticulos.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvArticulos.DefaultCellStyle.Font = new Font("Century Gothic", 10);
+            _unidadDeTrabajo = unidadDeTrabajo;
+            _servicioArticulo = new ServicioArticulo(unidadDeTrabajo.RepositorioArticulo);
+            _servicioTipoArticulo = new ServicioTipoArticulo(unidadDeTrabajo.RepositorioTipoArticulo);
+            _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
+            _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
+            SetBotonesParaVenta();
+            _registrarAlquiler = frmRegistrarAlquiler;
+        }
+
         private void ConsultaArticulo_Load(object sender, EventArgs e)
         {
             CargarTipoArticulos(cboTipoArticulo);
@@ -260,6 +277,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                     }
                     return;
                 }
+
                 else if (_registrarVenta != null)
                 {
                     List<Articulo> articulos = _registrarVenta.GetArticulos();
@@ -286,7 +304,33 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                     }
                     return;
                 }
+				
+				else if (_registrarAlquiler != null)
+                {
+                    List<Articulo> articulos = _registrarAlquiler.GetArticulos();
+                    var id = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
+                    var articulo = _servicioArticulo.GetPorId(id);
+                    if (articulos.Contains(articulo))
+                    {
+                        MessageBox.Show("Ya seleccionó este artículo.", "Información", MessageBoxButtons.OK);
+                        return;
+                    }
 
+                    if (!articulo.EsVideojuego())
+                    {
+                        MessageBox.Show("Solo se pueden alquilar Videojuegos.", "Información", MessageBoxButtons.OK);
+                        return;
+                    }
+
+                    if (!(articulo.Stock > 0))
+                    {
+                        MessageBox.Show("La cantidad en stock no es suficiente.", "Información", MessageBoxButtons.OK);
+                        return;
+                    }
+
+                    _registrarAlquiler.AgregarArticulo(articulo);
+                    this.Dispose();
+				}
             }
 
             else if (dgvArticulos.SelectedRows.Count == 0)
