@@ -12,6 +12,14 @@ namespace GameStore.Servicios.Implementaciones
     {
         public ServicioCompra(IRepositorioCompra repositorio) : base(repositorio)
         {
+
+        }
+        public void ValidarCompra(Compra nuevaCompra)
+        {
+            nuevaCompra.ValidarProveedor();
+            nuevaCompra.ValidarTipoFactura();
+            nuevaCompra.ValidarDetallesDeCompra();
+
         }
     }
 }

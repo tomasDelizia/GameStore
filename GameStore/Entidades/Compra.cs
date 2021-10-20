@@ -15,8 +15,26 @@ namespace GameStore.Entidades
             DetallesDeCompra = new HashSet<DetalleCompra>();
         }
 
+        internal void ValidarTipoFactura()
+        {
+            if (TipoFactura == null)
+                throw new ApplicationException("El tipo de factura es requerido.");
+        }
+
+        internal void ValidarProveedor()
+        {
+            if (Proveedor == null)
+                throw new ApplicationException("El proveedor es requerido");
+        }
+
         [Key]
         public int NroFactura { get; set; }
+
+        internal void ValidarDetallesDeCompra()
+        {
+            if (DetallesDeCompra.Count == 0)
+                throw new ApplicationException("Debe seleccionar al menos un artículo.");
+        }
 
         public int? IdTipoFactura { get; set; }
 
@@ -35,7 +53,7 @@ namespace GameStore.Entidades
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetalleCompra> DetallesDeCompra { get; set; }
 
-        internal void AddDetalle(DetalleCompra detalle)
+        internal void AgregarDetalle(DetalleCompra detalle)
         {
             DetallesDeCompra.Add(detalle);
         }
