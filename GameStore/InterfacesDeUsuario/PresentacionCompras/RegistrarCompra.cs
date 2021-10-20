@@ -22,23 +22,20 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private IUnidadDeTrabajo _unidadDeTrabajo;
         private ConsultaProveedor _consultaProveedor;
         private Proveedor _proveedor;
-        private IServicioProveedor _servicioProveedor;
         private ConsultaArticulo _consultaArticulo;
         private IServicioTipoFactura _servicioTipoFactura;
         private IServicioArticulo _servicioArticulo;
         private Empleado _empleadoLogueado;
-        private ICollection<DetalleCompra> _detallesCompra;
         private IServicioCompra _servicioCompra;
         private Compra _nuevaCompra;
         private List<DetalleCompra> _detallesDeCompra;
-        private string[][] _ArticulosSeleccionados;
+
         public RegistrarCompra(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
             dgvArticulos.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
             dgvArticulos.DefaultCellStyle.Font = new Font("Century Gothic", 10);
             _unidadDeTrabajo = unidadDeTrabajo;
-            _servicioProveedor = new ServicioProveedor(_unidadDeTrabajo.RepositorioProveedor);
             _servicioArticulo = new ServicioArticulo(_unidadDeTrabajo.RepositorioArticulo);
             IServicioUsuario servicioUsuario = new ServicioUsuario(_unidadDeTrabajo.RepositorioUsuario);
             _empleadoLogueado = servicioUsuario.GetEmpleadoLogueado();
@@ -65,9 +62,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             string datosProveedor = _proveedor.GetRazonSocial();
             lblProveedor.Text = "Proveedor: " + datosProveedor;
         }
-        public void BuscarProveedor(int id)
+        public void SetProveedor(Proveedor proveedor)
         {
-            _proveedor = _servicioProveedor.GetPorId(id);
+            _proveedor = proveedor;
         }
 
         private void btnAgregarArticulo_Click(object sender, EventArgs e)

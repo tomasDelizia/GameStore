@@ -49,6 +49,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.SuspendLayout();
@@ -260,12 +261,25 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.ForeColor = System.Drawing.Color.DimGray;
+            this.btnSeleccionar.Location = new System.Drawing.Point(511, 304);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(115, 29);
+            this.btnSeleccionar.TabIndex = 117;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
             // ConsultaEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(737, 347);
+            this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnModificar);
@@ -303,5 +317,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
         private System.Windows.Forms.TextBox txtEmpleado;
         private System.Windows.Forms.ComboBox cboCargos;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnSeleccionar;
     }
 }

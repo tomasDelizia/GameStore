@@ -69,5 +69,16 @@ namespace GameStore.Entidades
             if (DetallesDeVenta.Count == 0)
                 throw new ApplicationException("Debe seleccionar al menos un artículo.");
         }
+
+        public decimal CalcularTotal()
+        {
+            decimal total = 0;
+            foreach(var detalle in DetallesDeVenta)
+            {
+                total += detalle.CalcularSubtotal();
+            }
+            return total;
+
+        }
     }
 }

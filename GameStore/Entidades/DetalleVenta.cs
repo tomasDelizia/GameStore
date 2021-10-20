@@ -25,8 +25,6 @@ namespace GameStore.Entidades
 
         public virtual Articulo Articulo { get; set; }
 
-        // public virtual Venta Venta { get; set; }
-
         public decimal CalcularSubtotal()
         {
             return Cantidad * PrecioUnitario;

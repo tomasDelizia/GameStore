@@ -115,7 +115,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.dgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProveedores.Size = new System.Drawing.Size(773, 146);
             this.dgvProveedores.TabIndex = 105;
-            this.dgvProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellContentClick);
             // 
             // Id
             // 

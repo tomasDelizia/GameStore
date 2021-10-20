@@ -20,7 +20,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
     public partial class RegistrarVenta : Form
     {
         private IServicioTipoFactura _servicioTipoFactura;
-        private IServicioSocio _servicioSocio;
         private IServicioFormaPago _servicioFormaPago;
         private Empleado _empleadoLogueado;
         private IServicioArticulo _servicioArticulo;
@@ -39,7 +38,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             dgvArticulos.DefaultCellStyle.Font = new Font("Century Gothic", 10);
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioTipoFactura = new ServicioTipoFactura(_unidadDeTrabajo.RepositorioTipoFactura);
-            _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
             _servicioFormaPago = new ServicioFormaPago(_unidadDeTrabajo.RepositorioFormaPago);
             IServicioUsuario servicioUsuario = new ServicioUsuario(_unidadDeTrabajo.RepositorioUsuario);
             _empleadoLogueado = servicioUsuario.GetEmpleadoLogueado();
@@ -71,14 +69,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
         {
             _consultaSocio = new ConsultaSocio(_unidadDeTrabajo, this);
             _consultaSocio.ShowDialog();
-            string datos = _socio.GetApellidoYNombre();
+            string datos = _socio.GetNombreYApellido();
             lblSocio.Text = "Socio: " + datos;
 
         }
 
-        public void BuscarSocio(int idSocio)
+        public void SetSocio(Socio socio)
         {
-            _socio = _servicioSocio.GetPorId(idSocio);
+            _socio = socio;
         }
 
         private void btnAgregarArticulo_Click(object sender, EventArgs e)

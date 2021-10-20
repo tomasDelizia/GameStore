@@ -20,7 +20,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
     public partial class RegistrarAlquiler : Form
     {
         private IServicioTipoFactura _servicioTipoFactura;
-        private IServicioSocio _servicioSocio;
         private IServicioFormaPago _servicioFormaPago;
         private IServicioArticulo _servicioArticulo;
         private IServicioAlquiler _servicioAlquiler;
@@ -31,7 +30,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         private Empleado _empleadoLogueado;
         private Socio _socio;
         private Alquiler _nuevoAlquiler;
-        private int idSocio;
         private decimal _MontoSenia;
 
         public RegistrarAlquiler(IUnidadDeTrabajo unidadDeTrabajo)
@@ -41,7 +39,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             dgvJuegos.DefaultCellStyle.Font = new Font("Century Gothic", 10);
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioArticulo = new ServicioArticulo(_unidadDeTrabajo.RepositorioArticulo);
-            _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
             _servicioTipoFactura = new ServicioTipoFactura(_unidadDeTrabajo.RepositorioTipoFactura);
             _servicioFormaPago = new ServicioFormaPago(_unidadDeTrabajo.RepositorioFormaPago);
             _detalleAlquilers = new List<DetalleAlquiler>();
@@ -73,14 +70,13 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         {
             _consultaSocio = new ConsultaSocio(_unidadDeTrabajo, this);
             _consultaSocio.ShowDialog();
-            _socio = _servicioSocio.GetPorId(idSocio);
-            string datos = _socio.GetApellidoYNombre();
+            string datos = _socio.GetNombreYApellido();
             lblSocio.Text = datos;
         }
 
-        internal void setIdSocio(int id)
+        internal void SetSocio(Socio socio)
         {
-            this.idSocio = id;
+            _socio = socio;
         }
 
         private void btnAgregarArticulo_Click(object sender, EventArgs e)

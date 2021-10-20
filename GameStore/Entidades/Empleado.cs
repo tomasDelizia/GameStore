@@ -101,5 +101,15 @@ namespace GameStore.Entidades
             if (Telefono.Length > 30)
                 throw new ApplicationException("El teléfono no debe superar los 30 caracteres.");
         }
+
+        public string GetNombreYApellido()
+        {
+            return Nombre + " " + Apellido;
+        }
+
+        public bool ContieneMismoNombreYApellido(Empleado empleadoAComparar)
+        {
+            return Nombre.Contains(empleadoAComparar.Nombre) && Apellido.Contains(empleadoAComparar.Apellido);
+        }
     }
 }

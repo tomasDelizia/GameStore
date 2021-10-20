@@ -25,12 +25,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private readonly IServicioArticulo _servicioArticulo;
         private readonly IServicioTipoArticulo _servicioTipoArticulo;
         private readonly IServicioPlataforma _servicioPlataforma;
-        private readonly IServicioMarca _servicioMarca;
         private RegistrarCompra _registrarCompra;
         private RegistrarVenta _registrarVenta;
         private RegistrarAlquiler _registrarAlquiler;
-        private Articulo _nuevoArticuloSeleccionado;
-        private List<Articulo> articulosSeleccionados;
 
         public ConsultaArticulo(IUnidadDeTrabajo unidadDeTrabajo)
         {
@@ -41,7 +38,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _servicioArticulo = new ServicioArticulo(unidadDeTrabajo.RepositorioArticulo);
             _servicioTipoArticulo = new ServicioTipoArticulo(unidadDeTrabajo.RepositorioTipoArticulo);
             _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
-            _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
         }
         public ConsultaArticulo(IUnidadDeTrabajo unidadDeTrabajo, RegistrarVenta registrarVenta)
         {
@@ -52,7 +48,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _servicioArticulo = new ServicioArticulo(unidadDeTrabajo.RepositorioArticulo);
             _servicioTipoArticulo = new ServicioTipoArticulo(unidadDeTrabajo.RepositorioTipoArticulo);
             _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
-            _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
             SetBotonesParaVenta();
             _registrarVenta = registrarVenta;
         }
@@ -66,7 +61,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _servicioArticulo = new ServicioArticulo(unidadDeTrabajo.RepositorioArticulo);
             _servicioTipoArticulo = new ServicioTipoArticulo(unidadDeTrabajo.RepositorioTipoArticulo);
             _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
-            _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
             SetBotonesParaVenta();
             _registrarCompra = frmRegistrarCompra;
         }
@@ -80,7 +74,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _servicioArticulo = new ServicioArticulo(unidadDeTrabajo.RepositorioArticulo);
             _servicioTipoArticulo = new ServicioTipoArticulo(unidadDeTrabajo.RepositorioTipoArticulo);
             _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
-            _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
             SetBotonesParaVenta();
             _registrarAlquiler = frmRegistrarAlquiler;
         }
@@ -127,33 +120,40 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-            var nombreArticulo = txtNombre.Text.Trim();
-            if (nombreArticulo.Length > 50)
-                throw new ApplicationException("El nombre no debe tener más de 50 caracteres.");
-
-            var tipoArticulo = (TipoArticulo)cboTipoArticulo.SelectedItem;
-            if (tipoArticulo == null)
+            try
             {
-                tipoArticulo = new TipoArticulo();
-                tipoArticulo.Nombre = "";
-            }
+                var nombreArticulo = txtNombre.Text.Trim();
+                if (nombreArticulo.Length > 50)
+                    throw new ApplicationException("El nombre no debe tener más de 50 caracteres.");
 
-            var plataforma = (Plataforma)cboPlataforma.SelectedItem;
-            if (plataforma == null)
+                var tipoArticulo = (TipoArticulo)cboTipoArticulo.SelectedItem;
+                if (tipoArticulo == null)
+                {
+                    tipoArticulo = new TipoArticulo();
+                    tipoArticulo.Nombre = "";
+                }
+
+                var plataforma = (Plataforma)cboPlataforma.SelectedItem;
+                if (plataforma == null)
+                {
+                    plataforma = new Plataforma();
+                    plataforma.Nombre = "";
+                }
+
+                var precioMin = numPrecioMin.Value;
+                var precioMax = numPrecioMax.Value;
+                if (precioMin > precioMax)
+                    throw new ApplicationException("Ingrese un rango de precios válido.");
+
+                var articulosFiltrados = _servicioArticulo.Encontrar(a => a.Nombre.Contains(nombreArticulo) && a.PrecioUnitario >= precioMin
+                && a.PrecioUnitario <= precioMax && a.TipoArticulo.Nombre == tipoArticulo.Nombre && a.Plataforma.Nombre == plataforma.Nombre).ToList();
+
+                CargarDgvArticulos(articulosFiltrados);
+            } catch (ApplicationException aex)
             {
-                plataforma = new Plataforma();
-                plataforma.Nombre = "";
+                MessageBox.Show(aex.Message, "Información", MessageBoxButtons.OK);
             }
-
-            var precioMin = numPrecioMin.Value;
-            var precioMax = numPrecioMax.Value;
-            if (precioMin > precioMax)
-                throw new ApplicationException("Ingrese un rango de precios válido.");
-
-            var articulosFiltrados = _servicioArticulo.Encontrar(a => a.Nombre.Contains(nombreArticulo) && a.PrecioUnitario >= precioMin
-            && a.PrecioUnitario <= precioMax && a.TipoArticulo.Nombre == tipoArticulo.Nombre && a.Plataforma.Nombre == plataforma.Nombre).ToList();
-
-            CargarDgvArticulos(articulosFiltrados);
+            
         }
 
         private void CargarDgvArticulos(List<Articulo> articulos)

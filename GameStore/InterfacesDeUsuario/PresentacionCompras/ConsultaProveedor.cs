@@ -20,6 +20,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private IUnidadDeTrabajo _unidadDeTrabajo;
         private IServicioBarrio _servicioBarrio;
         private RegistrarCompra _registrarCompra;
+
         public ConsultaProveedor(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
@@ -30,6 +31,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             _servicioProveedor = new ServicioProveedor(unidadDeTrabajo.RepositorioProveedor);
             btnSeleccionar.Visible = false;
         }
+
         public ConsultaProveedor(IUnidadDeTrabajo unidadDeTrabajo, RegistrarCompra frmRegistrarCompra)
         {
             InitializeComponent();
@@ -171,7 +173,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             if (dgvProveedores.SelectedRows.Count == 1)
             {
                 int id = Convert.ToInt32(dgvProveedores.SelectedRows[0].Cells["Id"].Value);
-                _registrarCompra.BuscarProveedor(id);
+                var proveedor = _servicioProveedor.GetPorId(id);
+                _registrarCompra.SetProveedor(proveedor);
                 this.Dispose();
                 return;
             }

@@ -72,10 +72,9 @@ namespace GameStore.Entidades
                 throw new ApplicationException("El apellido no debe superar los 50 caracteres.");
         }
 
-        internal string GetApellidoYNombre()
+        internal string GetNombreYApellido()
         {
-            string Datos = this.Apellido + " " + this.Nombre;
-            return Datos;
+            return Nombre + " " + Apellido;
         }
 
 
@@ -118,6 +117,11 @@ namespace GameStore.Entidades
                 throw new ApplicationException("El email es requerido.");
             if (Email.Length > 50)
                 throw new ApplicationException("El email no debe superar los 50 caracteres.");
+        }
+
+        public bool ContieneMismoNombreYApellido(Socio socioAComparar)
+        {
+            return Nombre.Contains(socioAComparar.Nombre) && Apellido.Contains(socioAComparar.Apellido);
         }
     }
 }

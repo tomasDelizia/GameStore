@@ -20,9 +20,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
     {
         private IUnidadDeTrabajo _unidadDeTrabajo;
         private IServicioSocio _servicioSocio;
-        private IServicioEmpleado _servicioEmpleado;
         private RegistrarAlquiler _registrarAlquiler;
         private RegistrarVenta _registrarVenta;
+        private ConsultaVenta _consultaVenta;
 
         public ConsultaSocio(IUnidadDeTrabajo unidadDeTrabajo)
         {
@@ -31,7 +31,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             dgvSocios.DefaultCellStyle.Font = new Font("Century Gothic", 10);
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
-            _servicioEmpleado = new ServicioEmpleado(_unidadDeTrabajo.RepositorioEmpleado);
             btnSeleccionar.Visible = false;
         }
 
@@ -42,7 +41,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             dgvSocios.DefaultCellStyle.Font = new Font("Century Gothic", 10);
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
-            _servicioEmpleado = new ServicioEmpleado(_unidadDeTrabajo.RepositorioEmpleado);
             btnModificar.Visible = false;
             btnEliminar.Visible = false;
             _registrarAlquiler = frmRegistrarAlquiler;
@@ -55,12 +53,23 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             dgvSocios.DefaultCellStyle.Font = new Font("Century Gothic", 10);
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
-            _servicioEmpleado = new ServicioEmpleado(_unidadDeTrabajo.RepositorioEmpleado);
-            setBotonesParaVenta();
+            ocultarBotonesDeConsulta();
             _registrarVenta = registrarVenta;
         }
 
-        private void setBotonesParaVenta()
+        public ConsultaSocio(IUnidadDeTrabajo unidadDeTrabajo, ConsultaVenta consultaVenta)
+        {
+            InitializeComponent();
+            dgvSocios.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvSocios.DefaultCellStyle.Font = new Font("Century Gothic", 10);
+            _unidadDeTrabajo = unidadDeTrabajo;
+            _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
+            ocultarBotonesDeConsulta();
+            _consultaVenta = consultaVenta;
+
+        }
+
+        private void ocultarBotonesDeConsulta()
         {
             btnModificar.Visible = false;
             btnEliminar.Visible = false;
@@ -172,10 +181,13 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             if (dgvSocios.SelectedRows.Count == 1)
             {
                 int id = Convert.ToInt32(dgvSocios.SelectedRows[0].Cells["Id"].Value);
-				if (_registrarAlquiler != null)
-					_registrarAlquiler.setIdSocio(id);
-				else if (_registrarVenta != null)
-					_registrarVenta.BuscarSocio(id);
+                var socio = _servicioSocio.GetPorId(id);
+                if (_registrarAlquiler != null)
+                    _registrarAlquiler.SetSocio(socio);
+                else if (_registrarVenta != null)
+                    _registrarVenta.SetSocio(socio);
+                else if (_consultaVenta != null)
+                    _consultaVenta.SetSocioFiltro(socio);
                 this.Dispose();
                 return;
             }

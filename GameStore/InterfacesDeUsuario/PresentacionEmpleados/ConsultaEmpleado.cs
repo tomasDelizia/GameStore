@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GameStore.Entidades;
+using GameStore.InterfacesDeUsuario.PresentacionVentas;
 using GameStore.RepositoriosBD;
 using GameStore.Servicios;
 using GameStore.Servicios.Implementaciones;
@@ -19,6 +20,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
         private readonly IUnidadDeTrabajo _unidadDeTrabajo;
         private readonly IServicioEmpleado _servicioEmpleado;
         private readonly IServicioCargo _servicioCargo;
+        private ConsultaVenta _consultaVenta;
 
         public ConsultaEmpleado(IUnidadDeTrabajo unidadDeTrabajo)
         {
@@ -28,6 +30,20 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioCargo = new ServicioCargo(unidadDeTrabajo.RepositorioCargo);
             _servicioEmpleado = new ServicioEmpleado(unidadDeTrabajo.RepositorioEmpleado);
+            btnSeleccionar.Visible = false;
+        }
+
+        public ConsultaEmpleado(IUnidadDeTrabajo unidadDeTrabajo, ConsultaVenta consultaVenta)
+        {
+            InitializeComponent();
+            dgvEmpleados.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvEmpleados.DefaultCellStyle.Font = new Font("Century Gothic", 10);
+            _unidadDeTrabajo = unidadDeTrabajo;
+            _servicioCargo = new ServicioCargo(unidadDeTrabajo.RepositorioCargo);
+            _servicioEmpleado = new ServicioEmpleado(unidadDeTrabajo.RepositorioEmpleado);
+            btnModificar.Visible = false;
+            btnEliminar.Visible = false;
+            _consultaVenta = consultaVenta;
         }
 
         private void ConsultaEmpleado_Load(object sender, EventArgs e)
@@ -134,6 +150,25 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            if (dgvEmpleados.SelectedRows.Count == 1)
+            {
+                int id = Convert.ToInt32(dgvEmpleados.SelectedRows[0].Cells["IdEmpleado"].Value);
+                var empleado = _servicioEmpleado.GetPorId(id);
+                if (_consultaVenta != null)
+                    _consultaVenta.SetVendedorFiltro(empleado);
+                this.Dispose();
+                return;
+            }
+            else if (dgvEmpleados.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Debe seleccionar un registro.", "Información", MessageBoxButtons.OK);
+            }
+            else if (dgvEmpleados.SelectedRows.Count > 1)
+                MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
         }
     }
 }
