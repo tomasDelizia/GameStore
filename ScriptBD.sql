@@ -377,7 +377,7 @@ CREATE TABLE Compras (
     ON UPDATE CASCADE ON DELETE SET NULL,
 	CONSTRAINT compras_id_proveedor_fk FOREIGN KEY(IdProveedor) REFERENCES Proveedores (IdProveedor)
     ON UPDATE NO ACTION ON DELETE CASCADE,
-	CONSTRAINT compras_id_encargado_fk FOREIGN KEY(IdProveedor) REFERENCES Empleados (IdEmpleado)
+	CONSTRAINT compras_id_encargado_fk FOREIGN KEY(IdEncargadoCompra) REFERENCES Empleados (IdEmpleado)
     ON UPDATE NO ACTION ON DELETE CASCADE,
 );
 

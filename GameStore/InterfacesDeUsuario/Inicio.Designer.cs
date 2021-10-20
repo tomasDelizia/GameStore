@@ -604,7 +604,7 @@ namespace GameStore.InterfacesDeUsuario
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Inicio";
+            this.Text = "GameStore  - Inicio";
             this.Load += new System.EventHandler(this.Inicio_Load);
             this.MenuVertical.ResumeLayout(false);
             this.PnlSubMenuReporte.ResumeLayout(false);
