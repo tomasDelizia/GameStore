@@ -286,6 +286,18 @@
     <Compile Include="InterfacesDeUsuario\PresentacionCompras\BajaProveedor.designer.cs">
       <DependentUpon>BajaProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionCompras\ConsultaCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionCompras\ConsultaCompra.Designer.cs">
+      <DependentUpon>ConsultaCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionCompras\ConsultaDetalleCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionCompras\ConsultaDetalleCompra.Designer.cs">
+      <DependentUpon>ConsultaDetalleCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionCompras\ConsultaProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -711,6 +723,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionCompras\BajaProveedor.resx">
       <DependentUpon>BajaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionCompras\ConsultaCompra.resx">
+      <DependentUpon>ConsultaCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionCompras\ConsultaDetalleCompra.resx">
+      <DependentUpon>ConsultaDetalleCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionCompras\ConsultaProveedor.resx">
       <DependentUpon>ConsultaProveedor.cs</DependentUpon>

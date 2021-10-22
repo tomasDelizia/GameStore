@@ -57,5 +57,16 @@ namespace GameStore.Entidades
         {
             DetallesDeCompra.Add(detalle);
         }
+
+        public decimal CalcularTotal()
+        {
+            decimal total = 0;
+            foreach (var detalle in DetallesDeCompra)
+            {
+                total += detalle.CalcularSubtotal();
+            }
+            return total;
+
+        }
     }
 }

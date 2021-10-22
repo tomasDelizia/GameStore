@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GameStore.Entidades;
+using GameStore.InterfacesDeUsuario.PresentacionCompras;
 using GameStore.InterfacesDeUsuario.PresentacionVentas;
 using GameStore.RepositoriosBD;
 using GameStore.Servicios;
@@ -21,6 +22,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
         private readonly IServicioEmpleado _servicioEmpleado;
         private readonly IServicioCargo _servicioCargo;
         private ConsultaVenta _consultaVenta;
+        private ConsultaCompra _consultaCompra;
 
         public ConsultaEmpleado(IUnidadDeTrabajo unidadDeTrabajo)
         {
@@ -44,6 +46,18 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             btnModificar.Visible = false;
             btnEliminar.Visible = false;
             _consultaVenta = consultaVenta;
+        }
+        public ConsultaEmpleado(IUnidadDeTrabajo unidadDeTrabajo, ConsultaCompra consultaCompra)
+        {
+            InitializeComponent();
+            dgvEmpleados.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvEmpleados.DefaultCellStyle.Font = new Font("Century Gothic", 10);
+            _unidadDeTrabajo = unidadDeTrabajo;
+            _servicioCargo = new ServicioCargo(unidadDeTrabajo.RepositorioCargo);
+            _servicioEmpleado = new ServicioEmpleado(unidadDeTrabajo.RepositorioEmpleado);
+            btnModificar.Visible = false;
+            btnEliminar.Visible = false;
+            _consultaCompra = consultaCompra;
         }
 
         private void ConsultaEmpleado_Load(object sender, EventArgs e)

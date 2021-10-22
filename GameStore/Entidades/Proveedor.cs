@@ -82,5 +82,10 @@ namespace GameStore.Entidades
             if (CalleNumero < 0)
                 throw new ApplicationException("No existen alturas de calles negativas. Debe ingresar un valor válido.");
         }
+
+        internal bool ContieneMismaRazonSocial(Proveedor proveedorAComparar)
+        {
+            return RazonSocial.Contains(proveedorAComparar.RazonSocial);
+        }
     }
 }
