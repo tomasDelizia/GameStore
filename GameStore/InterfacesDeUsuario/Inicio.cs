@@ -170,7 +170,7 @@ namespace GameStore.InterfacesDeUsuario
 
         private void BtnAlquiler_Click(object sender, EventArgs e)
         {
-            new RegistrarAlquiler(_unidadDeTrabajo).ShowDialog();
+            new ConsultaAlquiler(_unidadDeTrabajo).ShowDialog();
         }
     }
 }

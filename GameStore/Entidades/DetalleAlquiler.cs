@@ -23,5 +23,11 @@ namespace GameStore.Entidades
         public decimal MontoDevolucionTardiaPorDia { get; set; }
 
         public virtual Articulo Articulo { get; set; }
+
+        public decimal CalcularSubtotal()
+        {
+            // puse 10 para que ande el metodo pero tenemos que cambiar esto
+            return 10 * MontoAlquilerPorDia;
+        }
     }
 }

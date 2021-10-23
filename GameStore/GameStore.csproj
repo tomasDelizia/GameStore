@@ -88,6 +88,18 @@
     <Compile Include="InterfacesDeUsuario\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultaAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultaAlquiler.Designer.cs">
+      <DependentUpon>ConsultaAlquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultarDetalleAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultarDetalleAlquiler.Designer.cs">
+      <DependentUpon>ConsultarDetalleAlquiler.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\RegistrarAlquiler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -624,6 +636,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultaAlquiler.resx">
+      <DependentUpon>ConsultaAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultarDetalleAlquiler.resx">
+      <DependentUpon>ConsultarDetalleAlquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\RegistrarAlquiler.resx">
       <DependentUpon>RegistrarAlquiler.cs</DependentUpon>

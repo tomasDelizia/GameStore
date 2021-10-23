@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using GameStore.Entidades;
 using GameStore.InterfacesDeUsuario.PresentacionCompras;
 using GameStore.InterfacesDeUsuario.PresentacionVentas;
+using GameStore.InterfacesDeUsuario.PresentacionAlquileres;
 using GameStore.RepositoriosBD;
 using GameStore.Servicios;
 using GameStore.Servicios.Implementaciones;
@@ -23,6 +24,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
         private readonly IServicioCargo _servicioCargo;
         private ConsultaVenta _consultaVenta;
         private ConsultaCompra _consultaCompra;
+        private ConsultaAlquiler _consultaAlquiler;
 
         public ConsultaEmpleado(IUnidadDeTrabajo unidadDeTrabajo)
         {
@@ -47,6 +49,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             btnEliminar.Visible = false;
             _consultaVenta = consultaVenta;
         }
+
         public ConsultaEmpleado(IUnidadDeTrabajo unidadDeTrabajo, ConsultaCompra consultaCompra)
         {
             InitializeComponent();
@@ -58,6 +61,19 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             btnModificar.Visible = false;
             btnEliminar.Visible = false;
             _consultaCompra = consultaCompra;
+        }
+
+        public ConsultaEmpleado(IUnidadDeTrabajo unidadDeTrabajo, ConsultaAlquiler consultaAlquiler)
+        {
+            InitializeComponent();
+            dgvEmpleados.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvEmpleados.DefaultCellStyle.Font = new Font("Century Gothic", 10);
+            _unidadDeTrabajo = unidadDeTrabajo;
+            _servicioCargo = new ServicioCargo(unidadDeTrabajo.RepositorioCargo);
+            _servicioEmpleado = new ServicioEmpleado(unidadDeTrabajo.RepositorioEmpleado);
+            btnModificar.Visible = false;
+            btnEliminar.Visible = false;
+            _consultaAlquiler = consultaAlquiler;
         }
 
         private void ConsultaEmpleado_Load(object sender, EventArgs e)
@@ -174,6 +190,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
                 var empleado = _servicioEmpleado.GetPorId(id);
                 if (_consultaVenta != null)
                     _consultaVenta.SetVendedorFiltro(empleado);
+                else if (_consultaAlquiler != null)
+                    _consultaAlquiler.SetVendedorFiltro(empleado);
                 this.Dispose();
                 return;
             }
