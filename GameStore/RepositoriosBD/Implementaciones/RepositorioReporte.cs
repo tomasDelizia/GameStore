@@ -14,7 +14,7 @@ namespace GameStore.RepositoriosBD.Implementaciones
 
         public DataTable GetVideojuegosPorCantidadVendida()
         {
-            var sentenciaSql = "SELECT SUM(det.Cantidad) AS Cantidad, art.Nombre AS Nombre " +
+            var sentenciaSql = "SELECT TOP 5 SUM(det.Cantidad) AS Cantidad, art.Nombre AS Nombre " +
                 "FROM DetallesDeVenta det JOIN Articulos art ON(det.Codigo = art.Codigo) " +
                 "WHERE art.IdTipoArticulo = 1 " +
                 "GROUP BY art.Nombre " +
@@ -25,7 +25,7 @@ namespace GameStore.RepositoriosBD.Implementaciones
 
         public DataTable GetPerifericosPorCantidadVendida()
         {
-            var sentenciaSql = "SELECT SUM(det.Cantidad) AS Cantidad, art.Nombre AS Nombre " +
+            var sentenciaSql = "SELECT TOP 5 SUM(det.Cantidad) AS Cantidad, art.Nombre AS Nombre " +
                 "FROM DetallesDeVenta det JOIN Articulos art ON(det.Codigo = art.Codigo) " +
                 "WHERE art.IdTipoArticulo = 2 " +
                 "GROUP BY art.Nombre " +
@@ -36,7 +36,7 @@ namespace GameStore.RepositoriosBD.Implementaciones
 
         public DataTable GetConsolasPorCantidadVendida()
         {
-            var sentenciaSql = "SELECT SUM(det.Cantidad) AS Cantidad, art.Nombre AS Nombre " +
+            var sentenciaSql = "SELECT TOP 5 SUM(det.Cantidad) AS Cantidad, art.Nombre AS Nombre " +
                 "FROM DetallesDeVenta det JOIN Articulos art ON(det.Codigo = art.Codigo) " +
                 "WHERE art.IdTipoArticulo = 3 " +
                 "GROUP BY art.Nombre " +
