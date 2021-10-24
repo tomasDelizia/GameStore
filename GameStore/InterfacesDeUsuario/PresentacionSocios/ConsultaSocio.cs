@@ -23,6 +23,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
         private RegistrarAlquiler _registrarAlquiler;
         private RegistrarVenta _registrarVenta;
         private ConsultaVenta _consultaVenta;
+        private ConsultaAlquiler _consultaAlquiler;
 
         public ConsultaSocio(IUnidadDeTrabajo unidadDeTrabajo)
         {
@@ -66,6 +67,18 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
             ocultarBotonesDeConsulta();
             _consultaVenta = consultaVenta;
+
+        }
+
+        public ConsultaSocio(IUnidadDeTrabajo unidadDeTrabajo, ConsultaAlquiler consultaAlquiler)
+        {
+            InitializeComponent();
+            dgvSocios.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvSocios.DefaultCellStyle.Font = new Font("Century Gothic", 10);
+            _unidadDeTrabajo = unidadDeTrabajo;
+            _servicioSocio = new ServicioSocio(_unidadDeTrabajo.RepositorioSocio);
+            ocultarBotonesDeConsulta();
+            _consultaAlquiler = consultaAlquiler;
 
         }
 
@@ -184,6 +197,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
                 var socio = _servicioSocio.GetPorId(id);
                 if (_registrarAlquiler != null)
                     _registrarAlquiler.SetSocio(socio);
+                else if (_consultaAlquiler != null)
+                    _consultaAlquiler.SetSocioFiltro(socio);
                 else if (_registrarVenta != null)
                     _registrarVenta.SetSocio(socio);
                 else if (_consultaVenta != null)

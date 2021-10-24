@@ -28,7 +28,7 @@ namespace GameStore.Servicios.Implementaciones
             nuevoAlquiler.ValidarSocio();
             nuevoAlquiler.ValidarFormaPago();
             nuevoAlquiler.ValidarTipoFactura();
-            nuevoAlquiler.ValidarDetallesDeVenta();
+            nuevoAlquiler.ValidarDetallesDeAlquiler();
         }
     }
 }

@@ -15,12 +15,12 @@ using GameStore.Servicios;
 using GameStore.Servicios.Implementaciones;
 using GameStore.Utils;
 
-namespace GameStore.InterfacesDeUsuario.PresentacionVentas
+namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
 {
-    public partial class ConsultaVenta : Form
+    public partial class ConsultaAlquiler : Form
     {
         private IUnidadDeTrabajo _unidadDeTrabajo;
-        private IServicioVenta _servicioVenta;
+        private IServicioAlquiler _servicioAlquiler;
         private IServicioTipoFactura _servicioTipoFactura;
         private IServicioFormaPago _servicioFormaPago;
         private ConsultaSocio _consultaSocio;
@@ -28,23 +28,22 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
         private Socio _socioFiltro;
         private Empleado _vendedorFiltro;
 
-
-        public ConsultaVenta(IUnidadDeTrabajo unidadDeTrabajo)
+        public ConsultaAlquiler(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
-            dgvVentas.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
-            dgvVentas.DefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvAlquiler.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvAlquiler.DefaultCellStyle.Font = new Font("Century Gothic", 10);
             _unidadDeTrabajo = unidadDeTrabajo;
-            _servicioVenta = new ServicioVenta(unidadDeTrabajo.RepositorioVenta);
+            _servicioAlquiler = new ServicioAlquiler(unidadDeTrabajo.RepositorioAlquiler);
             _servicioFormaPago = new ServicioFormaPago(unidadDeTrabajo.RepositorioFormaPago);
             _servicioTipoFactura = new ServicioTipoFactura(unidadDeTrabajo.RepositorioTipoFactura);
         }
 
-        private void ConsultaVenta_Load(object sender, EventArgs e)
+        private void ConsultaAlquiler_Load(object sender, EventArgs e)
         {
             CargarFormasDePago();
             CargarTiposDeFactura();
-            ConsultarVentas();
+            ConsultarAlquileres();
         }
 
         private void CargarTiposDeFactura()
@@ -53,42 +52,43 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             FormUtils.CargarCombo(ref cboTiposFactura, new BindingSource() { DataSource = tiposFactura }, "Nombre", "IdTipoFactura");
         }
 
+
         private void CargarFormasDePago()
         {
             var formasPago = _servicioFormaPago.ListarFormaPago();
             FormUtils.CargarCombo(ref cboFormasPago, new BindingSource() { DataSource = formasPago }, "Nombre", "IdFormaPago");
         }
 
-        private void ConsultarVentas()
+        private void ConsultarAlquileres()
         {
-            var ventas = _servicioVenta.ListarVentas();
-            CargarDgvVentas(ventas);
-            dgvVentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            var alquileres = _servicioAlquiler.ListarAlquileres();
+            CargarDgvAlquileres(alquileres);
+            dgvAlquiler.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        private void CargarDgvVentas(List<Venta> ventas)
+        private void CargarDgvAlquileres(List<Alquiler> alquileres)
         {
-            dgvVentas.Rows.Clear();
-            foreach (var venta in ventas)
+            dgvAlquiler.Rows.Clear();
+            foreach (var alquiler in alquileres)
             {
                 var fila = new string[]
                 {
-                    venta.NroFactura.ToString(),
-                    venta.TipoFactura.Nombre,
-                    venta.FormaPago.Nombre,
-                    venta.Socio.Nombre + " " + venta.Socio.Apellido,
-                    venta.Vendedor.Nombre + " " + venta.Vendedor.Apellido,
-                    venta.FechaVenta.ToShortDateString(),
-                    "$ "  + venta.CalcularTotal().ToString()
+                    alquiler.NroAlquiler.ToString(),
+                    alquiler.TipoFactura.Nombre,
+                    alquiler.FormaPago.Nombre,
+                    alquiler.Socio.Nombre + " " + alquiler.Socio.Apellido,
+                    alquiler.Vendedor.Nombre + " " + alquiler.Vendedor.Apellido,
+                    alquiler.FechaInicio.ToShortDateString(),
+                    "$ "  + alquiler.CalcularTotal().ToString()
                 };
-                dgvVentas.Rows.Add(fila);
+                dgvAlquiler.Rows.Add(fila);
             }
         }
 
-        private void btnNuevaVenta_Click(object sender, EventArgs e)
+        private void btnNuevoAlquiler_Click(object sender, EventArgs e)
         {
-            new RegistrarVenta(_unidadDeTrabajo).ShowDialog();
-            ConsultarVentas();
+            new RegistrarAlquiler(_unidadDeTrabajo).ShowDialog();
+            ConsultarAlquileres();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -104,14 +104,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             _socioFiltro = null;
             lblVendedor.Text = "Vendedor: ";
             _vendedorFiltro = null;
-            ConsultarVentas();
+            ConsultarAlquileres();
         }
 
         private void btnVerDetalle_Click(object sender, EventArgs e)
         {
-            var nroFactura = Convert.ToInt32(dgvVentas.CurrentRow.Cells["NroFactura"].Value);
-            var venta = _servicioVenta.GetPorId(nroFactura);
-            new ConsultaDetalleVenta(venta.DetallesDeVenta).ShowDialog();
+            var nroAlquiler = Convert.ToInt32(dgvAlquiler.CurrentRow.Cells["NroAlquiler"].Value);
+            var alquiler = _servicioAlquiler.GetPorId(nroAlquiler);
+            new ConsultarDetalleAlquiler(alquiler.DetallesDeAlquiler, alquiler.CantidadDias()).ShowDialog();
         }
 
         private void btnConsultarSocio_Click(object sender, EventArgs e)
@@ -144,20 +144,21 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
         {
             try
             {
-                List<Venta> ventasFiltradas;
-                if (!string.IsNullOrEmpty(txtNroFactura.Text))
+                List<Alquiler> alquileresFiltrados;
+                if (!string.IsNullOrEmpty(txtNroAlquiler.Text))
                 {
-                    var nroFactura = Convert.ToInt32(txtNroFactura.Text);
-                    ventasFiltradas = _servicioVenta.Encontrar(v => v.NroFactura == nroFactura).ToList();
-                    CargarDgvVentas(ventasFiltradas);
+                    var nroAlquiler = Convert.ToInt32(txtNroAlquiler.Text);
+                    alquileresFiltrados = _servicioAlquiler.Encontrar(alq => alq.NroAlquiler == nroAlquiler).ToList();
+                    CargarDgvAlquileres(alquileresFiltrados);
                     return;
                 }
+
                 if (_socioFiltro == null)
                     _socioFiltro = new Socio() { Nombre = "", Apellido = "" };
 
                 if (_vendedorFiltro == null)
                     _vendedorFiltro = new Empleado() { Nombre = "", Apellido = "" };
-                
+
                 var precioMin = numPrecioMin.Value;
                 var precioMax = numPrecioMax.Value;
                 if (precioMin > precioMax)
@@ -176,18 +177,18 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
                 if (formaPago == null)
                     formaPago = new FormaPago { Nombre = "" };
 
-                var ventas = _servicioVenta.ListarVentas();
-                ventasFiltradas = new List<Venta>();
-                foreach(var v in ventas)
+                var alquileres = _servicioAlquiler.ListarAlquileres();
+                alquileresFiltrados = new List<Alquiler>();
+                foreach (var alq in alquileres)
                 {
-                    if (v.Socio.ContieneMismoNombreYApellido(_socioFiltro)
-                   && v.Vendedor.ContieneMismoNombreYApellido(_vendedorFiltro)
-                   && v.TipoFactura.Nombre.Contains(tipoFactura.Nombre) && v.FormaPago.Nombre.Contains(formaPago.Nombre)
-                   && v.CalcularTotal() >= precioMin && v.CalcularTotal() <= precioMax
-                   && v.FechaVenta >= fechaDesde && v.FechaVenta <= fechaHasta)
-                        ventasFiltradas.Add(v);
+                    if (alq.Socio.ContieneMismoNombreYApellido(_socioFiltro)
+                   && alq.Vendedor.ContieneMismoNombreYApellido(_vendedorFiltro)
+                   && alq.TipoFactura.Nombre.Contains(tipoFactura.Nombre) && alq.FormaPago.Nombre.Contains(formaPago.Nombre)
+                   && alq.CalcularTotal() >= precioMin && alq.CalcularTotal() <= precioMax
+                   && alq.FechaInicio >= fechaDesde && alq.FechaInicio <= fechaHasta)
+                        alquileresFiltrados.Add(alq);
                 }
-                CargarDgvVentas(ventasFiltradas);
+                CargarDgvAlquileres(alquileresFiltrados);
 
             } 
             
@@ -200,7 +201,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             {
                 MessageBox.Show("Ingrese un número válido", "Información", MessageBoxButtons.OK);
             }
-
         }
     }
 }

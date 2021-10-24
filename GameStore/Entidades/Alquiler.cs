@@ -71,10 +71,26 @@ namespace GameStore.Entidades
                 throw new ApplicationException("El socio es requerido.");
         }
 
-        public void ValidarDetallesDeVenta()
+        public void ValidarDetallesDeAlquiler()
         {
             if (DetallesDeAlquiler.Count == 0)
                 throw new ApplicationException("Debe seleccionar al menos un videojuego.");
+        }
+
+        public decimal CalcularTotal()
+        {
+            int dias = CantidadDias();
+            decimal total = 0;
+            foreach (var detalle in DetallesDeAlquiler)
+            {
+                total += detalle.CalcularSubtotal(dias);
+            }
+            return total;
+        }
+
+        public int CantidadDias()
+        {
+            return (FechaFin - FechaInicio).Days; 
         }
     }
 }

@@ -184,6 +184,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnMasVendidos.Text = "Más Vendidos";
             this.BtnMasVendidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnMasVendidos.UseVisualStyleBackColor = false;
+            this.BtnMasVendidos.Click += new System.EventHandler(this.BtnMasVendidos_Click);
             // 
             // BtnReporte
             // 

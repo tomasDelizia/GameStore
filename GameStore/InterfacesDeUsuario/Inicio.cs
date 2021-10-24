@@ -7,6 +7,7 @@ using GameStore.InterfacesDeUsuario.PresentacionEmpleados;
 using GameStore.InterfacesDeUsuario.PresentacionSocios;
 using GameStore.InterfacesDeUsuario.PresentacionUsuarios;
 using GameStore.InterfacesDeUsuario.PresentacionVentas;
+using GameStore.InterfacesDeUsuario.Reportes;
 using GameStore.RepositoriosBD;
 
 namespace GameStore.InterfacesDeUsuario
@@ -160,7 +161,7 @@ namespace GameStore.InterfacesDeUsuario
 
         private void BtnCompraProveedor_Click(object sender, EventArgs e)
         {
-            new RegistrarCompra(_unidadDeTrabajo).ShowDialog();
+            new ConsultaCompra(_unidadDeTrabajo).ShowDialog();
 	}
 
         private void BtnRegistrarVenta_Click(object sender, EventArgs e)
@@ -170,7 +171,13 @@ namespace GameStore.InterfacesDeUsuario
 
         private void BtnAlquiler_Click(object sender, EventArgs e)
         {
-            new RegistrarAlquiler(_unidadDeTrabajo).ShowDialog();
+            new ConsultaAlquiler(_unidadDeTrabajo).ShowDialog();
+        }
+
+        private void BtnMasVendidos_Click(object sender, EventArgs e)
+        {
+            var repo = new MasVendidos();
+            repo.ShowDialog();
         }
     }
 }

@@ -20,6 +20,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private IUnidadDeTrabajo _unidadDeTrabajo;
         private IServicioBarrio _servicioBarrio;
         private RegistrarCompra _registrarCompra;
+        private ConsultaCompra _consultaCompra;
 
         public ConsultaProveedor(IUnidadDeTrabajo unidadDeTrabajo)
         {
@@ -43,6 +44,24 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             btnModificar.Visible = false;
             btnEliminar.Visible = false;
             _registrarCompra = frmRegistrarCompra;
+        }
+
+        public ConsultaProveedor(IUnidadDeTrabajo unidadDeTrabajo, ConsultaCompra consultaVenta)
+        {
+            InitializeComponent();
+            dgvProveedores.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
+            dgvProveedores.DefaultCellStyle.Font = new Font("Century Gothic", 10);
+            _unidadDeTrabajo = unidadDeTrabajo;
+            _servicioProveedor = new ServicioProveedor(_unidadDeTrabajo.RepositorioProveedor);
+            ocultarBotonesDeConsulta();
+            _consultaCompra = consultaVenta;
+
+        }
+
+        private void ocultarBotonesDeConsulta()
+        {
+            btnModificar.Visible = false;
+            btnEliminar.Visible = false;
         }
 
         private void ConsultaProveedor_Load(object sender, EventArgs e)
