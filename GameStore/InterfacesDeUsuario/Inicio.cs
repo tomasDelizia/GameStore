@@ -7,6 +7,7 @@ using GameStore.InterfacesDeUsuario.PresentacionEmpleados;
 using GameStore.InterfacesDeUsuario.PresentacionSocios;
 using GameStore.InterfacesDeUsuario.PresentacionUsuarios;
 using GameStore.InterfacesDeUsuario.PresentacionVentas;
+using GameStore.InterfacesDeUsuario.Reportes;
 using GameStore.RepositoriosBD;
 
 namespace GameStore.InterfacesDeUsuario
@@ -171,6 +172,12 @@ namespace GameStore.InterfacesDeUsuario
         private void BtnAlquiler_Click(object sender, EventArgs e)
         {
             new ConsultaAlquiler(_unidadDeTrabajo).ShowDialog();
+        }
+
+        private void BtnMasVendidos_Click(object sender, EventArgs e)
+        {
+            var repo = new MasVendidos();
+            repo.ShowDialog();
         }
     }
 }

@@ -15,13 +15,15 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
     public partial class ConsultarDetalleAlquiler : Form
     {
         private ICollection<DetalleAlquiler> _detallesDeAlquiler;
+        private int dias; 
 
-        public ConsultarDetalleAlquiler(ICollection<DetalleAlquiler> detallesDeAlquiler)
+        public ConsultarDetalleAlquiler(ICollection<DetalleAlquiler> detallesDeAlquiler, int cantidadDias)
         {
             InitializeComponent();
             dgvDetallesDeAlquileres.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
             dgvDetallesDeAlquileres.DefaultCellStyle.Font = new Font("Century Gothic", 10);
             _detallesDeAlquiler = detallesDeAlquiler;
+            dias = cantidadDias;
         }
 
         private void ConsultarDetalleAlquiler_Load(object sender, EventArgs e)
@@ -42,7 +44,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             decimal total = 0;
             foreach (var detalle in _detallesDeAlquiler)
             {
-                var subtotal = detalle.CalcularSubtotal();
+                var subtotal = detalle.CalcularSubtotal(dias);
                 total += subtotal;
             }
             txtTotal.Text = total.ToString();
@@ -80,7 +82,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
                     detalle.Codigo.ToString(),
                     detalle.Articulo.Nombre,
                     "$ " + detalle.MontoAlquilerPorDia.ToString(),
-                    "$ " + detalle.CalcularSubtotal(),
+                    "$ " + detalle.CalcularSubtotal(dias),
                     detalle.Articulo.TipoArticulo.Nombre,
                     detalle.Articulo.Plataforma.Nombre
 

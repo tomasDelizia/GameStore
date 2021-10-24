@@ -31,7 +31,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         public ConsultaAlquiler(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
-            InitializeComponent();
             dgvAlquiler.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 10);
             dgvAlquiler.DefaultCellStyle.Font = new Font("Century Gothic", 10);
             _unidadDeTrabajo = unidadDeTrabajo;
@@ -52,6 +51,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             var tiposFactura = _servicioTipoFactura.ListarTiposDeFactura();
             FormUtils.CargarCombo(ref cboTiposFactura, new BindingSource() { DataSource = tiposFactura }, "Nombre", "IdTipoFactura");
         }
+
 
         private void CargarFormasDePago()
         {
@@ -111,7 +111,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         {
             var nroAlquiler = Convert.ToInt32(dgvAlquiler.CurrentRow.Cells["NroAlquiler"].Value);
             var alquiler = _servicioAlquiler.GetPorId(nroAlquiler);
-            new ConsultarDetalleAlquiler(alquiler.DetallesDeAlquiler).ShowDialog();
+            new ConsultarDetalleAlquiler(alquiler.DetallesDeAlquiler, alquiler.CantidadDias()).ShowDialog();
         }
 
         private void btnConsultarSocio_Click(object sender, EventArgs e)

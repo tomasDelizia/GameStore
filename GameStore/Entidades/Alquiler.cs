@@ -79,13 +79,18 @@ namespace GameStore.Entidades
 
         public decimal CalcularTotal()
         {
+            int dias = CantidadDias();
             decimal total = 0;
             foreach (var detalle in DetallesDeAlquiler)
             {
-                total += detalle.CalcularSubtotal();
+                total += detalle.CalcularSubtotal(dias);
             }
             return total;
+        }
 
+        public int CantidadDias()
+        {
+            return (FechaFin - FechaInicio).Days; 
         }
     }
 }
