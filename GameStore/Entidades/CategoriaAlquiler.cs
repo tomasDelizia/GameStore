@@ -47,10 +47,5 @@ namespace GameStore.Entidades
             if (Nombre.Length > 50)
                 throw new ApplicationException("El nombre no debe superar los 50 caracteres.");
         }
-
-        public bool EsTuNombre(string nombre)
-        {
-            return Nombre.Equals(nombre);
-        }
     }
 }

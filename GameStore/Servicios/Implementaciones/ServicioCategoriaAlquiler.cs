@@ -30,7 +30,7 @@ namespace GameStore.Servicios.Implementaciones
         public CategoriaAlquiler GetPorNombre(string nombre)
         {
             var Categorias = ListarCategorias();
-            var categoriaBuscada = Encontrar(c => c.EsTuNombre(nombre)).ToList();
+            var categoriaBuscada = Encontrar(c => c.Nombre == nombre).ToList();
             var primeraCategoria = categoriaBuscada[0];
             return primeraCategoria;         
         }

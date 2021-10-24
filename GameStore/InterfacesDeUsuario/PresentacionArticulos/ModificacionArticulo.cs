@@ -272,40 +272,32 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 
         private void btnAgregarTipoArticulo_Click(object sender, EventArgs e)
         {
-            Form frmAltaTipoArticulo = new AltaTipoArticulo();
-            frmAltaTipoArticulo.Show();
+            new AltaTipoArticulo().ShowDialog();
         }
 
         private void btnAgregarPlataforma_Click(object sender, EventArgs e)
         {
-            Form frmAltaPlataforma = new AltaPlataforma(_unidadDeTrabajo);
-            frmAltaPlataforma.Show();
+            new AltaPlataforma(_unidadDeTrabajo).ShowDialog();
         }
 
         private void btnAgregarGenero_Click(object sender, EventArgs e)
         {
-            Form frmAltaGenero = new AltaGenero(_unidadDeTrabajo);
-            frmAltaGenero.Show();
+            new AltaGenero(_unidadDeTrabajo).ShowDialog();
         }
 
         private void btnAgregarDesarrollador_Click(object sender, EventArgs e)
         {
-            Form frmAltaDesarrollador = new AltaDesarrollador(_unidadDeTrabajo);
-            frmAltaDesarrollador.Show();
+            new AltaDesarrollador(_unidadDeTrabajo).ShowDialog();
         }
 
         private void btnAgregarClasificacion_Click(object sender, EventArgs e)
         {
-            Form frmAltaClasificacion = new AltaClasificacion(_unidadDeTrabajo);
-            frmAltaClasificacion.Show();
+            new AltaClasificacion(_unidadDeTrabajo).ShowDialog();
         }
 
         private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
-            Form frmAltaMarca = new AltaMarca(_unidadDeTrabajo);
-            frmAltaMarca.Show();
+            new AltaMarca(_unidadDeTrabajo).ShowDialog();
         }
-
-
     }
 }

@@ -111,6 +111,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnAgregarMarca.TabIndex = 75;
             this.btnAgregarMarca.Text = "+";
             this.btnAgregarMarca.UseVisualStyleBackColor = true;
+            this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
             // 
             // gAMESTOREDataSet
             // 
@@ -224,6 +225,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnAgregarPlataforma.TabIndex = 66;
             this.btnAgregarPlataforma.Text = "+";
             this.btnAgregarPlataforma.UseVisualStyleBackColor = true;
+            this.btnAgregarPlataforma.Click += new System.EventHandler(this.btnAgregarPlataforma_Click);
             // 
             // btnModificar
             // 
@@ -280,6 +282,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnSubirImagen.TabIndex = 56;
             this.btnSubirImagen.Text = "Cambiar imagen";
             this.btnSubirImagen.UseVisualStyleBackColor = true;
+            this.btnSubirImagen.Click += new System.EventHandler(this.btnSubirImagen_Click);
             // 
             // label5
             // 
@@ -336,6 +339,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnAgregarClasificacion.TabIndex = 62;
             this.btnAgregarClasificacion.Text = "+";
             this.btnAgregarClasificacion.UseVisualStyleBackColor = true;
+            this.btnAgregarClasificacion.Click += new System.EventHandler(this.btnAgregarClasificacion_Click);
             // 
             // btnAgregarDesarrollador
             // 
@@ -347,6 +351,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnAgregarDesarrollador.TabIndex = 61;
             this.btnAgregarDesarrollador.Text = "+";
             this.btnAgregarDesarrollador.UseVisualStyleBackColor = true;
+            this.btnAgregarDesarrollador.Click += new System.EventHandler(this.btnAgregarDesarrollador_Click);
             // 
             // btnAgregarTipoArticulo
             // 
@@ -358,6 +363,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnAgregarTipoArticulo.TabIndex = 60;
             this.btnAgregarTipoArticulo.Text = "+";
             this.btnAgregarTipoArticulo.UseVisualStyleBackColor = true;
+            this.btnAgregarTipoArticulo.Click += new System.EventHandler(this.btnAgregarTipoArticulo_Click);
             // 
             // btnAgregarGenero
             // 
@@ -369,6 +375,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnAgregarGenero.TabIndex = 53;
             this.btnAgregarGenero.Text = "+";
             this.btnAgregarGenero.UseVisualStyleBackColor = true;
+            this.btnAgregarGenero.Click += new System.EventHandler(this.btnAgregarGenero_Click);
             // 
             // cboPlataforma
             // 
