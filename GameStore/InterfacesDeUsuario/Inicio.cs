@@ -179,5 +179,10 @@ namespace GameStore.InterfacesDeUsuario
             var repo = new MasVendidos();
             repo.ShowDialog();
         }
+
+        private void BtnMasFieles_Click(object sender, EventArgs e)
+        {
+            new MasFieles().ShowDialog();
+        }
     }
 }

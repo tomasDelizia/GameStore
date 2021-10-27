@@ -164,6 +164,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnMasFieles.Text = "Más Fieles";
             this.BtnMasFieles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnMasFieles.UseVisualStyleBackColor = false;
+            this.BtnMasFieles.Click += new System.EventHandler(this.BtnMasFieles_Click);
             // 
             // BtnMasVendidos
             // 

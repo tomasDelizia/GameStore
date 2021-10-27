@@ -12,5 +12,7 @@ namespace GameStore.RepositoriosBD
         DataTable GetVideojuegosPorCantidadVendida();
         DataTable GetPerifericosPorCantidadVendida();
         DataTable GetConsolasPorCantidadVendida();
+        DataTable GetSociosPorCantidadComprada();
+        DataTable GetSociosPorCantidadAlquilada();
     }
 }

@@ -524,6 +524,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSReportes.xsd</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\Reportes\MasFieles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\Reportes\MasFieles.Designer.cs">
+      <DependentUpon>MasFieles.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\Reportes\MasVendidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -881,10 +887,14 @@
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionVentas\RegistrarVenta.resx">
       <DependentUpon>RegistrarVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\Reportes\MasFieles.resx">
+      <DependentUpon>MasFieles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\Reportes\MasVendidos.resx">
       <DependentUpon>MasVendidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\Reportes\ReporteMasVendidos.rdlc" />
+    <EmbeddedResource Include="InterfacesDeUsuario\Reportes\ReportesMasFieles.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

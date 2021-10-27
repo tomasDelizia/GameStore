@@ -45,5 +45,25 @@ namespace GameStore.RepositoriosBD.Implementaciones
             return tabla3;
         }
 
+        public DataTable GetSociosPorCantidadComprada()
+        {
+            var sentenciaSql = "SELECT TOP 5 SUM (det.cantidad) Cantidad, soc.Nombre Nombre " +
+                "FROM DetallesDeVenta det JOIN Ventas v ON(v.NroFactura = det.NroFactura) " +
+                "JOIN Socios soc ON(v.IdSocio = soc.IdSocio) " +
+                "GROUP BY soc.IdSocio, soc.nombre " +
+                "ORDER BY 1 DESC";
+            var tabla4 = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
+            return tabla4;
+        }
+
+        public DataTable GetSociosPorCantidadAlquilada()
+        {
+            var sentenciaSql = "SELECT TOP 5 COUNT(soc.Nombre) Cantidad, soc.Nombre Nombre " +
+                "FROM Alquileres a JOIN Socios soc ON(soc.IdSocio = a.IdSocio) " +
+                "GROUP BY soc.IdSocio, soc.Nombre " +
+                "ORDER BY 1 DESC";
+            var tabla5 = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
+            return tabla5;
+        }
     }
 }
