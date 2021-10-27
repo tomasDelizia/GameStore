@@ -9,8 +9,8 @@
     <Shape ID="DesignTable:DTCantidadesJuegos" ZOrder="5" X="70" Y="70" Height="67" Width="186" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="86" />
     <Shape ID="DesignTable:DTCantidadesPerifericos" ZOrder="4" X="326" Y="70" Height="67" Width="208" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="86" />
     <Shape ID="DesignTable:DTCantidadesConsolas" ZOrder="3" X="604" Y="70" Height="67" Width="197" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="86" />
-    <Shape ID="DesignTable:DTCantidadesCompradas" ZOrder="2" X="121" Y="376" Height="68" Width="212" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="24" SplitterPosition="64" />
-    <Shape ID="DesignTable:DTCantidadesAlquiladas" ZOrder="1" X="392" Y="376" Height="68" Width="207" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
+    <Shape ID="DesignTable:DTCantidadesCompradas" ZOrder="2" X="121" Y="376" Height="86" Width="212" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="24" SplitterPosition="82" />
+    <Shape ID="DesignTable:DTCantidadesAlquiladas" ZOrder="1" X="392" Y="376" Height="86" Width="207" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="82" />
   </Shapes>
   <Connectors />
 </DiagramLayout>

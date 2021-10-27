@@ -50,7 +50,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.Controls.Add(this.RwMasVendidos);
             this.Name = "MasVendidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MasVendidos";
+            this.Text = "Artículos más Vendidos";
             this.Load += new System.EventHandler(this.MasVendidos_Load);
             this.ResumeLayout(false);
 

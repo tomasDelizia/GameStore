@@ -1206,6 +1206,8 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             
             private global::System.Data.DataColumn columnNombre;
             
+            private global::System.Data.DataColumn columnApellido;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public DTCantidadesCompradasDataTable() {
@@ -1257,6 +1259,14 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ApellidoColumn {
+                get {
+                    return this.columnApellido;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1292,11 +1302,12 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DTCantidadesCompradasRow AddDTCantidadesCompradasRow(string Cantidad, string Nombre) {
+            public DTCantidadesCompradasRow AddDTCantidadesCompradasRow(string Cantidad, string Nombre, string Apellido) {
                 DTCantidadesCompradasRow rowDTCantidadesCompradasRow = ((DTCantidadesCompradasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Cantidad,
-                        Nombre};
+                        Nombre,
+                        Apellido};
                 rowDTCantidadesCompradasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDTCantidadesCompradasRow);
                 return rowDTCantidadesCompradasRow;
@@ -1321,6 +1332,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             internal void InitVars() {
                 this.columnCantidad = base.Columns["Cantidad"];
                 this.columnNombre = base.Columns["Nombre"];
+                this.columnApellido = base.Columns["Apellido"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1330,6 +1342,8 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
                 base.Columns.Add(this.columnCantidad);
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
+                this.columnApellido = new global::System.Data.DataColumn("Apellido", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnApellido);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1467,6 +1481,8 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             
             private global::System.Data.DataColumn columnNombre;
             
+            private global::System.Data.DataColumn columnApellido;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public DTCantidadesAlquiladasDataTable() {
@@ -1518,6 +1534,14 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ApellidoColumn {
+                get {
+                    return this.columnApellido;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1553,11 +1577,12 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DTCantidadesAlquiladasRow AddDTCantidadesAlquiladasRow(string Cantidad, string Nombre) {
+            public DTCantidadesAlquiladasRow AddDTCantidadesAlquiladasRow(string Cantidad, string Nombre, string Apellido) {
                 DTCantidadesAlquiladasRow rowDTCantidadesAlquiladasRow = ((DTCantidadesAlquiladasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Cantidad,
-                        Nombre};
+                        Nombre,
+                        Apellido};
                 rowDTCantidadesAlquiladasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDTCantidadesAlquiladasRow);
                 return rowDTCantidadesAlquiladasRow;
@@ -1582,6 +1607,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             internal void InitVars() {
                 this.columnCantidad = base.Columns["Cantidad"];
                 this.columnNombre = base.Columns["Nombre"];
+                this.columnApellido = base.Columns["Apellido"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1591,6 +1617,8 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
                 base.Columns.Add(this.columnCantidad);
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
+                this.columnApellido = new global::System.Data.DataColumn("Apellido", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnApellido);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1978,6 +2006,22 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Apellido {
+                get {
+                    try {
+                        return ((string)(this[this.tableDTCantidadesCompradas.ApellidoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Apellido\' in table \'DTCantidadesCompradas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDTCantidadesCompradas.ApellidoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsCantidadNull() {
                 return this.IsNull(this.tableDTCantidadesCompradas.CantidadColumn);
             }
@@ -1998,6 +2042,18 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetNombreNull() {
                 this[this.tableDTCantidadesCompradas.NombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsApellidoNull() {
+                return this.IsNull(this.tableDTCantidadesCompradas.ApellidoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetApellidoNull() {
+                this[this.tableDTCantidadesCompradas.ApellidoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2049,6 +2105,22 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Apellido {
+                get {
+                    try {
+                        return ((string)(this[this.tableDTCantidadesAlquiladas.ApellidoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Apellido\' in table \'DTCantidadesAlquiladas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDTCantidadesAlquiladas.ApellidoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsCantidadNull() {
                 return this.IsNull(this.tableDTCantidadesAlquiladas.CantidadColumn);
             }
@@ -2069,6 +2141,18 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetNombreNull() {
                 this[this.tableDTCantidadesAlquiladas.NombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsApellidoNull() {
+                return this.IsNull(this.tableDTCantidadesAlquiladas.ApellidoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetApellidoNull() {
+                this[this.tableDTCantidadesAlquiladas.ApellidoColumn] = global::System.Convert.DBNull;
             }
         }
         

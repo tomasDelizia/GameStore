@@ -34,11 +34,12 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             // 
             // RwMasFieles
             // 
+            this.RwMasFieles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RwMasFieles.LocalReport.ReportEmbeddedResource = "GameStore.InterfacesDeUsuario.Reportes.ReportesMasFieles.rdlc";
-            this.RwMasFieles.Location = new System.Drawing.Point(0, 1);
+            this.RwMasFieles.Location = new System.Drawing.Point(0, 0);
             this.RwMasFieles.Name = "RwMasFieles";
             this.RwMasFieles.ServerReport.BearerToken = null;
-            this.RwMasFieles.Size = new System.Drawing.Size(774, 376);
+            this.RwMasFieles.Size = new System.Drawing.Size(984, 461);
             this.RwMasFieles.TabIndex = 0;
             // 
             // MasFieles
@@ -46,11 +47,11 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(774, 377);
+            this.ClientSize = new System.Drawing.Size(984, 461);
             this.Controls.Add(this.RwMasFieles);
             this.Name = "MasFieles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Mas Fieles";
+            this.Text = "Socios más Fieles";
             this.Load += new System.EventHandler(this.MasFieles_Load);
             this.ResumeLayout(false);
 

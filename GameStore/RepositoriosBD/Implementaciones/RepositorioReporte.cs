@@ -47,10 +47,10 @@ namespace GameStore.RepositoriosBD.Implementaciones
 
         public DataTable GetSociosPorCantidadComprada()
         {
-            var sentenciaSql = "SELECT TOP 5 SUM (det.cantidad) Cantidad, soc.Nombre Nombre " +
+            var sentenciaSql = "SELECT TOP 5 SUM (det.cantidad) Cantidad, soc.Nombre Nombre, soc.Apellido Apellido " +
                 "FROM DetallesDeVenta det JOIN Ventas v ON(v.NroFactura = det.NroFactura) " +
                 "JOIN Socios soc ON(v.IdSocio = soc.IdSocio) " +
-                "GROUP BY soc.IdSocio, soc.nombre " +
+                "GROUP BY soc.IdSocio, soc.Nombre, soc.Apellido " +
                 "ORDER BY 1 DESC";
             var tabla4 = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
             return tabla4;
@@ -58,9 +58,9 @@ namespace GameStore.RepositoriosBD.Implementaciones
 
         public DataTable GetSociosPorCantidadAlquilada()
         {
-            var sentenciaSql = "SELECT TOP 5 COUNT(soc.Nombre) Cantidad, soc.Nombre Nombre " +
+            var sentenciaSql = "SELECT TOP 5 COUNT(soc.Nombre) Cantidad, soc.Nombre Nombre, soc.Apellido Apellido " +
                 "FROM Alquileres a JOIN Socios soc ON(soc.IdSocio = a.IdSocio) " +
-                "GROUP BY soc.IdSocio, soc.Nombre " +
+                "GROUP BY soc.IdSocio, soc.Nombre, soc.Apellido " +
                 "ORDER BY 1 DESC";
             var tabla5 = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
             return tabla5;
