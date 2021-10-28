@@ -37,6 +37,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.label1 = new System.Windows.Forms.Label();
             this.cboTiposFactura = new System.Windows.Forms.ComboBox();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblProveedor = new System.Windows.Forms.Label();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,18 +52,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
             this.lblFechaActual = new System.Windows.Forms.Label();
             this.btnConfirmar = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.txtTotal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.DimGray;
-            this.btnSalir.Location = new System.Drawing.Point(669, 418);
+            this.btnSalir.Location = new System.Drawing.Point(648, 409);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(93, 29);
             this.btnSalir.TabIndex = 105;
@@ -104,18 +101,28 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.btnAgregar.Size = new System.Drawing.Size(30, 30);
             this.btnAgregar.TabIndex = 108;
             this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnConsultarProveedor_Click);
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(12, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 22);
+            this.label2.TabIndex = 110;
+            this.label2.Text = "Proveedor:";
             // 
             // lblProveedor
             // 
             this.lblProveedor.AutoSize = true;
             this.lblProveedor.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProveedor.ForeColor = System.Drawing.Color.DimGray;
-            this.lblProveedor.Location = new System.Drawing.Point(11, 56);
+            this.lblProveedor.Location = new System.Drawing.Point(130, 59);
             this.lblProveedor.Name = "lblProveedor";
-            this.lblProveedor.Size = new System.Drawing.Size(117, 22);
+            this.lblProveedor.Size = new System.Drawing.Size(0, 22);
             this.lblProveedor.TabIndex = 111;
-            this.lblProveedor.Text = "Proveedor: ";
             // 
             // dgvArticulos
             // 
@@ -131,10 +138,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.TipoArticulo,
             this.Plataforma,
             this.Cantidad});
-            this.dgvArticulos.Location = new System.Drawing.Point(19, 120);
+            this.dgvArticulos.Location = new System.Drawing.Point(16, 120);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArticulos.Size = new System.Drawing.Size(740, 250);
+            this.dgvArticulos.Size = new System.Drawing.Size(725, 200);
             this.dgvArticulos.TabIndex = 112;
             // 
             // Codigo
@@ -190,7 +197,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(309, 7);
+            this.label3.Location = new System.Drawing.Point(304, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 22);
             this.label3.TabIndex = 113;
@@ -200,7 +207,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             // 
             this.btnAgregarArticulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarArticulo.ForeColor = System.Drawing.Color.DimGray;
-            this.btnAgregarArticulo.Location = new System.Drawing.Point(102, 282);
+            this.btnAgregarArticulo.Location = new System.Drawing.Point(648, 326);
             this.btnAgregarArticulo.Name = "btnAgregarArticulo";
             this.btnAgregarArticulo.Size = new System.Drawing.Size(93, 29);
             this.btnAgregarArticulo.TabIndex = 114;
@@ -212,7 +219,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             // 
             this.btnEliminarArticulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarArticulo.ForeColor = System.Drawing.Color.DimGray;
-            this.btnEliminarArticulo.Location = new System.Drawing.Point(3, 282);
+            this.btnEliminarArticulo.Location = new System.Drawing.Point(549, 326);
             this.btnEliminarArticulo.Name = "btnEliminarArticulo";
             this.btnEliminarArticulo.Size = new System.Drawing.Size(93, 29);
             this.btnEliminarArticulo.TabIndex = 115;
@@ -235,7 +242,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             // 
             this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnConfirmar.Location = new System.Drawing.Point(555, 418);
+            this.btnConfirmar.Location = new System.Drawing.Point(534, 409);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(108, 29);
             this.btnConfirmar.TabIndex = 117;
@@ -243,62 +250,29 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.btnConfirmar.UseVisualStyleBackColor = true;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.Controls.Add(this.lblTotal);
-            this.panel1.Controls.Add(this.txtTotal);
-            this.panel1.Controls.Add(this.btnEliminarArticulo);
-            this.panel1.Controls.Add(this.btnAgregarArticulo);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(16, 88);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(746, 324);
-            this.panel1.TabIndex = 123;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.Color.DimGray;
-            this.lblTotal.Location = new System.Drawing.Point(547, 285);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(58, 22);
-            this.lblTotal.TabIndex = 121;
-            this.lblTotal.Text = "Total:";
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.BackColor = System.Drawing.Color.White;
-            this.txtTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(611, 284);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(132, 27);
-            this.txtTotal.TabIndex = 120;
-            // 
             // RegistrarCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(774, 459);
+            this.ClientSize = new System.Drawing.Size(755, 450);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.lblFechaActual);
+            this.Controls.Add(this.btnEliminarArticulo);
+            this.Controls.Add(this.btnAgregarArticulo);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.lblProveedor);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboTiposFactura);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.panel1);
             this.Name = "RegistrarCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar una Nueva Compra";
+            this.Text = "Registrar Compra";
             this.Load += new System.EventHandler(this.RegistrarCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,6 +284,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboTiposFactura;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblProveedor;
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.Label label3;
@@ -324,8 +299,5 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private System.Windows.Forms.Button btnEliminarArticulo;
         private System.Windows.Forms.Label lblFechaActual;
         private System.Windows.Forms.Button btnConfirmar;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.TextBox txtTotal;
     }
 }
