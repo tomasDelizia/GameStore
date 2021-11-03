@@ -65,5 +65,18 @@ namespace GameStore.RepositoriosBD.Implementaciones
             var tabla5 = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
             return tabla5;
         }
+
+        public DataTable GetComprasPorFecha(string desde, string hasta)
+        {
+            string fechaDesde = desde.ToString();
+            string fechaHasta = hasta.ToString();
+            var sentenciaSql = "SELECT detc.PrecioUnitario MontoCompras, c.FechaCompra Fecha, detv.PrecioUnitario MontoVentas " +
+                "FROM Compras c JOIN DetallesDeCompra detc ON(detc.NroFactura = c.NroFactura) JOIN " +
+                "Ventas v ON(v.FechaVenta = c.FechaCompra) JOIN DetallesDeVenta detv ON(v.NroFactura = detv.NroFactura) " +
+                $"WHERE c.FechaCompra BETWEEN '{fechaDesde}' AND '{fechaHasta}' " +
+                "ORDER BY 2; ";
+            var tabla6 = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
+            return tabla6;
+        }
     }
 }

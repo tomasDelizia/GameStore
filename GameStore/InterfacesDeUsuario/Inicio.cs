@@ -116,7 +116,7 @@ namespace GameStore.InterfacesDeUsuario
 
         private void BtnCategoriaAlquiler_Click(object sender, EventArgs e)
         {
-            new ConsultaCategoriaAlquiler(_unidadDeTrabajo).ShowDialog();
+            new ConsultaTarifaAlquiler(_unidadDeTrabajo).ShowDialog();
         }
 
         private void BtnClasificacion_Click(object sender, EventArgs e)
@@ -183,6 +183,11 @@ namespace GameStore.InterfacesDeUsuario
         private void BtnMasFieles_Click(object sender, EventArgs e)
         {
             new MasFieles().ShowDialog();
+        }
+
+        private void btnResumen_Click(object sender, EventArgs e)
+        {
+            new Resumen().ShowDialog();
         }
     }
 }

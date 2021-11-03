@@ -17,7 +17,7 @@ namespace GameStore.Entidades
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int Codigo { get; set; }
+        public long Codigo { get; set; }
 
         public int Cantidad { get; set; }
 

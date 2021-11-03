@@ -29,7 +29,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.cboTipoArticulo = new System.Windows.Forms.ComboBox();
             this.cboGenero = new System.Windows.Forms.ComboBox();
@@ -37,7 +36,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.cboClasificacion = new System.Windows.Forms.ComboBox();
             this.cboPlataforma = new System.Windows.Forms.ComboBox();
             this.btnAgregarGenero = new System.Windows.Forms.Button();
-            this.btnAgregarTipoArticulo = new System.Windows.Forms.Button();
             this.btnAgregarDesarrollador = new System.Windows.Forms.Button();
             this.btnAgregarClasificacion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,9 +49,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnAgregarPlataforma = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.gAMESTOREDataSet = new GameStore.GAMESTOREDataSet();
-            this.tiposDeArticuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tiposDeArticuloTableAdapter = new GameStore.GAMESTOREDataSetTableAdapters.TiposDeArticuloTableAdapter();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -64,8 +59,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnAgregarMarca = new System.Windows.Forms.Button();
             this.cboMarca = new System.Windows.Forms.ComboBox();
             this.numPrecioUnitario = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.gAMESTOREDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tiposDeArticuloBindingSource)).BeginInit();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtUPC = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioUnitario)).BeginInit();
             this.SuspendLayout();
@@ -75,7 +70,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.txtNombre.BackColor = System.Drawing.Color.White;
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNombre.Location = new System.Drawing.Point(590, 14);
+            this.txtNombre.Location = new System.Drawing.Point(586, 44);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(279, 27);
             this.txtNombre.TabIndex = 0;
@@ -156,18 +151,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnAgregarGenero.UseVisualStyleBackColor = true;
             this.btnAgregarGenero.Click += new System.EventHandler(this.btnAgregarGenero_Click);
             // 
-            // btnAgregarTipoArticulo
-            // 
-            this.btnAgregarTipoArticulo.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarTipoArticulo.ForeColor = System.Drawing.Color.DimGray;
-            this.btnAgregarTipoArticulo.Location = new System.Drawing.Point(378, 12);
-            this.btnAgregarTipoArticulo.Name = "btnAgregarTipoArticulo";
-            this.btnAgregarTipoArticulo.Size = new System.Drawing.Size(32, 29);
-            this.btnAgregarTipoArticulo.TabIndex = 26;
-            this.btnAgregarTipoArticulo.Text = "+";
-            this.btnAgregarTipoArticulo.UseVisualStyleBackColor = true;
-            this.btnAgregarTipoArticulo.Click += new System.EventHandler(this.btnAgregarTipoArticulo_Click);
-            // 
             // btnAgregarDesarrollador
             // 
             this.btnAgregarDesarrollador.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -197,7 +180,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(12, 213);
+            this.label1.Location = new System.Drawing.Point(8, 229);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 22);
             this.label1.TabIndex = 25;
@@ -209,7 +192,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.txtDescripcion.BackColor = System.Drawing.Color.White;
             this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.ForeColor = System.Drawing.Color.DimGray;
-            this.txtDescripcion.Location = new System.Drawing.Point(16, 238);
+            this.txtDescripcion.Location = new System.Drawing.Point(12, 254);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(568, 136);
             this.txtDescripcion.TabIndex = 25;
@@ -220,7 +203,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(495, 16);
+            this.label2.Location = new System.Drawing.Point(491, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 22);
             this.label2.TabIndex = 30;
@@ -231,7 +214,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(440, 49);
+            this.label5.Location = new System.Drawing.Point(436, 79);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(144, 22);
             this.label5.TabIndex = 33;
@@ -241,7 +224,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             // 
             this.btnSubirImagen.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubirImagen.ForeColor = System.Drawing.Color.DimGray;
-            this.btnSubirImagen.Location = new System.Drawing.Point(590, 113);
+            this.btnSubirImagen.Location = new System.Drawing.Point(586, 143);
             this.btnSubirImagen.Name = "btnSubirImagen";
             this.btnSubirImagen.Size = new System.Drawing.Size(279, 31);
             this.btnSubirImagen.TabIndex = 25;
@@ -254,7 +237,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(424, 80);
+            this.label6.Location = new System.Drawing.Point(420, 110);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(160, 22);
             this.label6.TabIndex = 34;
@@ -265,7 +248,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.dateTimePicker.CalendarForeColor = System.Drawing.Color.DimGray;
             this.dateTimePicker.CalendarTitleForeColor = System.Drawing.Color.DimGray;
             this.dateTimePicker.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker.Location = new System.Drawing.Point(590, 80);
+            this.dateTimePicker.Location = new System.Drawing.Point(586, 110);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(279, 27);
             this.dateTimePicker.TabIndex = 25;
@@ -274,7 +257,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnCancelar.Location = new System.Drawing.Point(484, 380);
+            this.btnCancelar.Location = new System.Drawing.Point(480, 396);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 34);
             this.btnCancelar.TabIndex = 25;
@@ -286,7 +269,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnRegistrar.Location = new System.Drawing.Point(378, 380);
+            this.btnRegistrar.Location = new System.Drawing.Point(374, 396);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(100, 34);
             this.btnRegistrar.TabIndex = 25;
@@ -311,25 +294,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(497, 117);
+            this.label3.Location = new System.Drawing.Point(493, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 22);
             this.label3.TabIndex = 36;
             this.label3.Text = "Imagen:";
-            // 
-            // gAMESTOREDataSet
-            // 
-            this.gAMESTOREDataSet.DataSetName = "GAMESTOREDataSet";
-            this.gAMESTOREDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tiposDeArticuloBindingSource
-            // 
-            this.tiposDeArticuloBindingSource.DataMember = "TiposDeArticulo";
-            this.tiposDeArticuloBindingSource.DataSource = this.gAMESTOREDataSet;
-            // 
-            // tiposDeArticuloTableAdapter
-            // 
-            this.tiposDeArticuloTableAdapter.ClearBeforeFill = true;
             // 
             // label4
             // 
@@ -389,7 +358,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             // pictureBox
             // 
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox.Location = new System.Drawing.Point(628, 150);
+            this.pictureBox.Location = new System.Drawing.Point(624, 180);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(200, 250);
             this.pictureBox.TabIndex = 42;
@@ -436,7 +405,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.numPrecioUnitario.DecimalPlaces = 2;
             this.numPrecioUnitario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPrecioUnitario.ForeColor = System.Drawing.Color.DimGray;
-            this.numPrecioUnitario.Location = new System.Drawing.Point(590, 47);
+            this.numPrecioUnitario.Location = new System.Drawing.Point(586, 77);
             this.numPrecioUnitario.Maximum = new decimal(new int[] {
             500000,
             0,
@@ -451,12 +420,35 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             0,
             0});
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DimGray;
+            this.label12.Location = new System.Drawing.Point(527, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 22);
+            this.label12.TabIndex = 81;
+            this.label12.Text = "UPC:";
+            // 
+            // txtUPC
+            // 
+            this.txtUPC.BackColor = System.Drawing.Color.White;
+            this.txtUPC.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUPC.ForeColor = System.Drawing.Color.DimGray;
+            this.txtUPC.Location = new System.Drawing.Point(586, 11);
+            this.txtUPC.Name = "txtUPC";
+            this.txtUPC.Size = new System.Drawing.Size(279, 27);
+            this.txtUPC.TabIndex = 80;
+            // 
             // AltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(877, 423);
+            this.ClientSize = new System.Drawing.Size(877, 437);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtUPC);
             this.Controls.Add(this.numPrecioUnitario);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnAgregarMarca);
@@ -480,7 +472,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAgregarClasificacion);
             this.Controls.Add(this.btnAgregarDesarrollador);
-            this.Controls.Add(this.btnAgregarTipoArticulo);
             this.Controls.Add(this.btnAgregarGenero);
             this.Controls.Add(this.cboPlataforma);
             this.Controls.Add(this.cboClasificacion);
@@ -490,10 +481,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.txtNombre);
             this.Name = "AltaArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AltaArticulo";
+            this.Text = "Registrar artículo";
             this.Load += new System.EventHandler(this.AltaArticulo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gAMESTOREDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tiposDeArticuloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioUnitario)).EndInit();
             this.ResumeLayout(false);
@@ -510,7 +499,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private System.Windows.Forms.ComboBox cboClasificacion;
         private System.Windows.Forms.ComboBox cboPlataforma;
         private System.Windows.Forms.Button btnAgregarGenero;
-        private System.Windows.Forms.Button btnAgregarTipoArticulo;
         private System.Windows.Forms.Button btnAgregarDesarrollador;
         private System.Windows.Forms.Button btnAgregarClasificacion;
         private System.Windows.Forms.Label label1;
@@ -524,9 +512,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnAgregarPlataforma;
         private System.Windows.Forms.Label label3;
-        private GAMESTOREDataSet gAMESTOREDataSet;
-        private System.Windows.Forms.BindingSource tiposDeArticuloBindingSource;
-        private GAMESTOREDataSetTableAdapters.TiposDeArticuloTableAdapter tiposDeArticuloTableAdapter;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -537,5 +522,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private System.Windows.Forms.Button btnAgregarMarca;
         private System.Windows.Forms.ComboBox cboMarca;
         private System.Windows.Forms.NumericUpDown numPrecioUnitario;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtUPC;
     }
 }

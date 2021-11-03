@@ -53,6 +53,12 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             CargarPrecio(numPrecioUnitario);
             CargarLanzamiento(dateLanzamiento);
             CargarImagen(imgArticulo);
+            CargarUPC(txtUPC);
+        }
+
+        private void CargarUPC(TextBox txtUPC)
+        {
+            txtUPC.Text = _articuloAModificar.Codigo.ToString();
         }
 
         private void CargarImagen(PictureBox imgArticulo)
@@ -268,11 +274,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
-        }
-
-        private void btnAgregarTipoArticulo_Click(object sender, EventArgs e)
-        {
-            new AltaTipoArticulo().ShowDialog();
         }
 
         private void btnAgregarPlataforma_Click(object sender, EventArgs e)

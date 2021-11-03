@@ -58,6 +58,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnABM = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnResumen = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             this.PnlSubMenuReporte.SuspendLayout();
             this.PnlSubmenuABM.SuspendLayout();
@@ -91,10 +92,10 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnCompraProveedor.FlatAppearance.BorderSize = 0;
             this.BtnCompraProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCompraProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCompraProveedor.Location = new System.Drawing.Point(0, 970);
+            this.BtnCompraProveedor.Location = new System.Drawing.Point(0, 833);
             this.BtnCompraProveedor.Name = "BtnCompraProveedor";
             this.BtnCompraProveedor.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.BtnCompraProveedor.Size = new System.Drawing.Size(272, 40);
+            this.BtnCompraProveedor.Size = new System.Drawing.Size(272, 37);
             this.BtnCompraProveedor.TabIndex = 7;
             this.BtnCompraProveedor.Text = "Compra a proveedor";
             this.BtnCompraProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -108,10 +109,10 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnAlquiler.FlatAppearance.BorderSize = 0;
             this.BtnAlquiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAlquiler.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAlquiler.Location = new System.Drawing.Point(0, 930);
+            this.BtnAlquiler.Location = new System.Drawing.Point(0, 799);
             this.BtnAlquiler.Name = "BtnAlquiler";
             this.BtnAlquiler.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.BtnAlquiler.Size = new System.Drawing.Size(272, 40);
+            this.BtnAlquiler.Size = new System.Drawing.Size(272, 34);
             this.BtnAlquiler.TabIndex = 6;
             this.BtnAlquiler.Text = "Alquiler";
             this.BtnAlquiler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -125,10 +126,10 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnRegistrarVenta.FlatAppearance.BorderSize = 0;
             this.BtnRegistrarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRegistrarVenta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRegistrarVenta.Location = new System.Drawing.Point(0, 890);
+            this.BtnRegistrarVenta.Location = new System.Drawing.Point(0, 765);
             this.BtnRegistrarVenta.Name = "BtnRegistrarVenta";
             this.BtnRegistrarVenta.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.BtnRegistrarVenta.Size = new System.Drawing.Size(272, 40);
+            this.BtnRegistrarVenta.Size = new System.Drawing.Size(272, 34);
             this.BtnRegistrarVenta.TabIndex = 5;
             this.BtnRegistrarVenta.Text = "Venta";
             this.BtnRegistrarVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -137,12 +138,13 @@ namespace GameStore.InterfacesDeUsuario
             // 
             // PnlSubMenuReporte
             // 
+            this.PnlSubMenuReporte.Controls.Add(this.btnResumen);
             this.PnlSubMenuReporte.Controls.Add(this.BtnMasFieles);
             this.PnlSubMenuReporte.Controls.Add(this.BtnMasVendidos);
             this.PnlSubMenuReporte.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlSubMenuReporte.Location = new System.Drawing.Point(0, 804);
+            this.PnlSubMenuReporte.Location = new System.Drawing.Point(0, 669);
             this.PnlSubMenuReporte.Name = "PnlSubMenuReporte";
-            this.PnlSubMenuReporte.Size = new System.Drawing.Size(272, 86);
+            this.PnlSubMenuReporte.Size = new System.Drawing.Size(272, 96);
             this.PnlSubMenuReporte.TabIndex = 4;
             // 
             // BtnMasFieles
@@ -155,11 +157,11 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnMasFieles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMasFieles.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnMasFieles.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnMasFieles.Location = new System.Drawing.Point(0, 40);
+            this.BtnMasFieles.Location = new System.Drawing.Point(0, 32);
             this.BtnMasFieles.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnMasFieles.Name = "BtnMasFieles";
             this.BtnMasFieles.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.BtnMasFieles.Size = new System.Drawing.Size(272, 40);
+            this.BtnMasFieles.Size = new System.Drawing.Size(272, 35);
             this.BtnMasFieles.TabIndex = 8;
             this.BtnMasFieles.Text = "Más Fieles";
             this.BtnMasFieles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -180,7 +182,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnMasVendidos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnMasVendidos.Name = "BtnMasVendidos";
             this.BtnMasVendidos.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.BtnMasVendidos.Size = new System.Drawing.Size(272, 40);
+            this.BtnMasVendidos.Size = new System.Drawing.Size(272, 32);
             this.BtnMasVendidos.TabIndex = 7;
             this.BtnMasVendidos.Text = "Más Vendidos";
             this.BtnMasVendidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -195,11 +197,11 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnReporte.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnReporte.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnReporte.Location = new System.Drawing.Point(0, 767);
+            this.BtnReporte.Location = new System.Drawing.Point(0, 635);
             this.BtnReporte.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnReporte.Name = "BtnReporte";
             this.BtnReporte.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.BtnReporte.Size = new System.Drawing.Size(272, 37);
+            this.BtnReporte.Size = new System.Drawing.Size(272, 34);
             this.BtnReporte.TabIndex = 3;
             this.BtnReporte.Text = "Reportes";
             this.BtnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -216,10 +218,10 @@ namespace GameStore.InterfacesDeUsuario
             this.PnlSubmenuABM.Controls.Add(this.BtnArticulos);
             this.PnlSubmenuABM.Controls.Add(this.BtnSocio);
             this.PnlSubmenuABM.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlSubmenuABM.Location = new System.Drawing.Point(0, 160);
+            this.PnlSubmenuABM.Location = new System.Drawing.Point(0, 150);
             this.PnlSubmenuABM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PnlSubmenuABM.Name = "PnlSubmenuABM";
-            this.PnlSubmenuABM.Size = new System.Drawing.Size(272, 607);
+            this.PnlSubmenuABM.Size = new System.Drawing.Size(272, 485);
             this.PnlSubmenuABM.TabIndex = 2;
             // 
             // PnlSubMenuOtros
@@ -234,9 +236,9 @@ namespace GameStore.InterfacesDeUsuario
             this.PnlSubMenuOtros.Controls.Add(this.BtnCategoriaAlquiler);
             this.PnlSubMenuOtros.Controls.Add(this.BtnCargo);
             this.PnlSubMenuOtros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlSubMenuOtros.Location = new System.Drawing.Point(0, 240);
+            this.PnlSubMenuOtros.Location = new System.Drawing.Point(0, 193);
             this.PnlSubMenuOtros.Name = "PnlSubMenuOtros";
-            this.PnlSubMenuOtros.Size = new System.Drawing.Size(272, 364);
+            this.PnlSubMenuOtros.Size = new System.Drawing.Size(272, 292);
             this.PnlSubMenuOtros.TabIndex = 11;
             // 
             // BtnPlataforma
@@ -249,11 +251,11 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnPlataforma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPlataforma.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPlataforma.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnPlataforma.Location = new System.Drawing.Point(0, 320);
+            this.BtnPlataforma.Location = new System.Drawing.Point(0, 256);
             this.BtnPlataforma.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnPlataforma.Name = "BtnPlataforma";
             this.BtnPlataforma.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.BtnPlataforma.Size = new System.Drawing.Size(272, 40);
+            this.BtnPlataforma.Size = new System.Drawing.Size(272, 36);
             this.BtnPlataforma.TabIndex = 16;
             this.BtnPlataforma.Text = "Plataformas";
             this.BtnPlataforma.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -270,11 +272,11 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPerfil.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPerfil.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnPerfil.Location = new System.Drawing.Point(0, 280);
+            this.BtnPerfil.Location = new System.Drawing.Point(0, 224);
             this.BtnPerfil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnPerfil.Name = "BtnPerfil";
             this.BtnPerfil.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.BtnPerfil.Size = new System.Drawing.Size(272, 40);
+            this.BtnPerfil.Size = new System.Drawing.Size(272, 32);
             this.BtnPerfil.TabIndex = 15;
             this.BtnPerfil.Text = "Perfiles";
             this.BtnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -291,11 +293,11 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMarca.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnMarca.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnMarca.Location = new System.Drawing.Point(0, 240);
+            this.BtnMarca.Location = new System.Drawing.Point(0, 192);
             this.BtnMarca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnMarca.Name = "BtnMarca";
             this.BtnMarca.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.BtnMarca.Size = new System.Drawing.Size(272, 40);
+            this.BtnMarca.Size = new System.Drawing.Size(272, 32);
             this.BtnMarca.TabIndex = 14;
             this.BtnMarca.Text = "Marcas";
             this.BtnMarca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -312,11 +314,11 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnGenero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGenero.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGenero.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnGenero.Location = new System.Drawing.Point(0, 200);
+            this.BtnGenero.Location = new System.Drawing.Point(0, 160);
             this.BtnGenero.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnGenero.Name = "BtnGenero";
             this.BtnGenero.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.BtnGenero.Size = new System.Drawing.Size(272, 40);
+            this.BtnGenero.Size = new System.Drawing.Size(272, 32);
             this.BtnGenero.TabIndex = 13;
             this.BtnGenero.Text = "Géneros";
             this.BtnGenero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -333,11 +335,11 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnFormaPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnFormaPago.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnFormaPago.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnFormaPago.Location = new System.Drawing.Point(0, 160);
+            this.BtnFormaPago.Location = new System.Drawing.Point(0, 128);
             this.BtnFormaPago.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnFormaPago.Name = "BtnFormaPago";
             this.BtnFormaPago.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.BtnFormaPago.Size = new System.Drawing.Size(272, 40);
+            this.BtnFormaPago.Size = new System.Drawing.Size(272, 32);
             this.BtnFormaPago.TabIndex = 12;
             this.BtnFormaPago.Text = "Formas de Pago";
             this.BtnFormaPago.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -354,11 +356,11 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnDesarrollador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDesarrollador.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDesarrollador.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnDesarrollador.Location = new System.Drawing.Point(0, 120);
+            this.BtnDesarrollador.Location = new System.Drawing.Point(0, 96);
             this.BtnDesarrollador.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnDesarrollador.Name = "BtnDesarrollador";
             this.BtnDesarrollador.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.BtnDesarrollador.Size = new System.Drawing.Size(272, 40);
+            this.BtnDesarrollador.Size = new System.Drawing.Size(272, 32);
             this.BtnDesarrollador.TabIndex = 11;
             this.BtnDesarrollador.Text = "Desarrolladores";
             this.BtnDesarrollador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -375,11 +377,11 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnClasificacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnClasificacion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnClasificacion.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnClasificacion.Location = new System.Drawing.Point(0, 80);
+            this.BtnClasificacion.Location = new System.Drawing.Point(0, 64);
             this.BtnClasificacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnClasificacion.Name = "BtnClasificacion";
             this.BtnClasificacion.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.BtnClasificacion.Size = new System.Drawing.Size(272, 40);
+            this.BtnClasificacion.Size = new System.Drawing.Size(272, 32);
             this.BtnClasificacion.TabIndex = 10;
             this.BtnClasificacion.Text = "Clasificaciones";
             this.BtnClasificacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -396,11 +398,11 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnCategoriaAlquiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCategoriaAlquiler.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCategoriaAlquiler.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnCategoriaAlquiler.Location = new System.Drawing.Point(0, 40);
+            this.BtnCategoriaAlquiler.Location = new System.Drawing.Point(0, 32);
             this.BtnCategoriaAlquiler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnCategoriaAlquiler.Name = "BtnCategoriaAlquiler";
             this.BtnCategoriaAlquiler.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.BtnCategoriaAlquiler.Size = new System.Drawing.Size(272, 40);
+            this.BtnCategoriaAlquiler.Size = new System.Drawing.Size(272, 32);
             this.BtnCategoriaAlquiler.TabIndex = 9;
             this.BtnCategoriaAlquiler.Text = "Categorías de Alquiler";
             this.BtnCategoriaAlquiler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -421,7 +423,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnCargo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnCargo.Name = "BtnCargo";
             this.BtnCargo.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.BtnCargo.Size = new System.Drawing.Size(272, 40);
+            this.BtnCargo.Size = new System.Drawing.Size(272, 32);
             this.BtnCargo.TabIndex = 8;
             this.BtnCargo.Text = "Cargos";
             this.BtnCargo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -438,11 +440,11 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnOtros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnOtros.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnOtros.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnOtros.Location = new System.Drawing.Point(0, 200);
+            this.BtnOtros.Location = new System.Drawing.Point(0, 160);
             this.BtnOtros.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnOtros.Name = "BtnOtros";
             this.BtnOtros.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.BtnOtros.Size = new System.Drawing.Size(272, 40);
+            this.BtnOtros.Size = new System.Drawing.Size(272, 33);
             this.BtnOtros.TabIndex = 10;
             this.BtnOtros.Text = "Otros";
             this.BtnOtros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -459,11 +461,11 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEmpleado.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnEmpleado.Location = new System.Drawing.Point(0, 160);
+            this.BtnEmpleado.Location = new System.Drawing.Point(0, 128);
             this.BtnEmpleado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnEmpleado.Name = "BtnEmpleado";
             this.BtnEmpleado.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.BtnEmpleado.Size = new System.Drawing.Size(272, 40);
+            this.BtnEmpleado.Size = new System.Drawing.Size(272, 32);
             this.BtnEmpleado.TabIndex = 8;
             this.BtnEmpleado.Text = "Empleados";
             this.BtnEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -480,11 +482,11 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnUsuario.Location = new System.Drawing.Point(0, 120);
+            this.BtnUsuario.Location = new System.Drawing.Point(0, 96);
             this.BtnUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnUsuario.Name = "BtnUsuario";
             this.BtnUsuario.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.BtnUsuario.Size = new System.Drawing.Size(272, 40);
+            this.BtnUsuario.Size = new System.Drawing.Size(272, 32);
             this.BtnUsuario.TabIndex = 6;
             this.BtnUsuario.Text = "Usuarios";
             this.BtnUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -501,11 +503,11 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnProveedores.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnProveedores.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnProveedores.Location = new System.Drawing.Point(0, 80);
+            this.BtnProveedores.Location = new System.Drawing.Point(0, 64);
             this.BtnProveedores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnProveedores.Name = "BtnProveedores";
             this.BtnProveedores.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.BtnProveedores.Size = new System.Drawing.Size(272, 40);
+            this.BtnProveedores.Size = new System.Drawing.Size(272, 32);
             this.BtnProveedores.TabIndex = 4;
             this.BtnProveedores.Text = "Proveedores";
             this.BtnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -522,11 +524,11 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnArticulos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnArticulos.ForeColor = System.Drawing.Color.DimGray;
-            this.BtnArticulos.Location = new System.Drawing.Point(0, 40);
+            this.BtnArticulos.Location = new System.Drawing.Point(0, 32);
             this.BtnArticulos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnArticulos.Name = "BtnArticulos";
             this.BtnArticulos.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.BtnArticulos.Size = new System.Drawing.Size(272, 40);
+            this.BtnArticulos.Size = new System.Drawing.Size(272, 32);
             this.BtnArticulos.TabIndex = 2;
             this.BtnArticulos.Text = "Artículos";
             this.BtnArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -545,7 +547,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnSocio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnSocio.Name = "BtnSocio";
             this.BtnSocio.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.BtnSocio.Size = new System.Drawing.Size(272, 40);
+            this.BtnSocio.Size = new System.Drawing.Size(272, 32);
             this.BtnSocio.TabIndex = 0;
             this.BtnSocio.Text = "Socios";
             this.BtnSocio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -564,7 +566,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnABM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnABM.Name = "BtnABM";
             this.BtnABM.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.BtnABM.Size = new System.Drawing.Size(272, 45);
+            this.BtnABM.Size = new System.Drawing.Size(272, 35);
             this.BtnABM.TabIndex = 1;
             this.BtnABM.Text = "Gestiones";
             this.BtnABM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -592,6 +594,27 @@ namespace GameStore.InterfacesDeUsuario
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnResumen
+            // 
+            this.btnResumen.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.btnResumen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btnResumen.DialogResult = System.Windows.Forms.DialogResult.Retry;
+            this.btnResumen.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnResumen.FlatAppearance.BorderSize = 0;
+            this.btnResumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResumen.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResumen.ForeColor = System.Drawing.Color.DimGray;
+            this.btnResumen.Location = new System.Drawing.Point(0, 67);
+            this.btnResumen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnResumen.Name = "btnResumen";
+            this.btnResumen.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnResumen.Size = new System.Drawing.Size(272, 29);
+            this.btnResumen.TabIndex = 9;
+            this.btnResumen.Text = "Resumen";
+            this.btnResumen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnResumen.UseVisualStyleBackColor = false;
+            this.btnResumen.Click += new System.EventHandler(this.btnResumen_Click);
             // 
             // Inicio
             // 
@@ -647,5 +670,6 @@ namespace GameStore.InterfacesDeUsuario
         private System.Windows.Forms.Button BtnDesarrollador;
         private System.Windows.Forms.Button BtnClasificacion;
         private System.Windows.Forms.Button BtnCategoriaAlquiler;
+        private System.Windows.Forms.Button btnResumen;
     }
 }
