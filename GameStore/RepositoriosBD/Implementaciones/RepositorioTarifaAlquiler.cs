@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace GameStore.RepositoriosBD.Implementaciones
 {
-    public class RepositorioCategoriaAlquiler : Repositorio<CategoriaAlquiler>, IRepositorioCategoriaAlquiler
+    public class RepositorioTarifaAlquiler : Repositorio<TarifaAlquiler>, IRepositorioTarifaAlquiler
     {
-        public RepositorioCategoriaAlquiler(ContextoGameStore contextoBd) : base(contextoBd)
+        public RepositorioTarifaAlquiler(ContextoGameStore contextoBd) : base(contextoBd)
         {
         }
     }

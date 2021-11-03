@@ -37,7 +37,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
 
         private void DarBajaSocio()
         {
-            _servicioSocio.Borrar(_socioABorrar);
+            _servicioSocio.DarDeBaja(_socioABorrar);
             MessageBox.Show("La operación se realizó con éxito", "Información");
         }
 

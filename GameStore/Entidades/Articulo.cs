@@ -5,6 +5,7 @@ namespace GameStore.Entidades
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Text.RegularExpressions;
 
     [Table("Articulos")]
     public partial class Articulo
@@ -15,10 +16,10 @@ namespace GameStore.Entidades
         }
 
         [Key]
-        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-        public int Codigo { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public long Codigo { get; set; }
 
-        public int? IdTipoArticulo { get; set; }
+        public int IdTipoArticulo { get; set; }
 
         [Required]
         [StringLength(50)]
@@ -28,10 +29,10 @@ namespace GameStore.Entidades
 
         public int Stock { get; set; }
 
-        public int? IdEstado { get; set; }
+        public int IdEstado { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? FechaSalida { get; set; }
+        public DateTime FechaSalida { get; set; }
 
         public int? IdMarca { get; set; }
 
@@ -41,10 +42,10 @@ namespace GameStore.Entidades
 
         public int? IdDesarrollador { get; set; }
 
-        public int? IdPlataforma { get; set; }
+        public int IdPlataforma { get; set; }
 
         [ForeignKey("Archivo")]
-        public int? IdImagen { get; set; }
+        public int IdImagen { get; set; }
 
         public string Descripcion { get; set; }
 
@@ -64,9 +65,9 @@ namespace GameStore.Entidades
 
         public virtual Archivo Archivo { get; set; }
 
-        public int? IdCategoriaAlquiler { get; set; }
+        public int IdTarifaAlquiler { get; set; }
 
-        public virtual CategoriaAlquiler CategoriaAlquiler { get; set; }
+        public virtual TarifaAlquiler TarifaAlquiler { get; set; }
 
         public void ValidarNombre()
         {
@@ -82,17 +83,41 @@ namespace GameStore.Entidades
                 throw new ApplicationException("Ingrese un precio válido.");
         }
 
+        internal void ValidarCodigo()
+        {
+            if (Codigo.ToString().Length != 12)
+                throw new ApplicationException("El UPC debe tener 12 caracteres");
+        }
+
+        internal void ValidarTipoArticulo()
+        {
+            if (TipoArticulo == null)
+                throw new ApplicationException("El tipo de artículo es requerido");
+        }
+
+        internal void ValidarPlataforma()
+        {
+            if (Plataforma == null)
+                throw new ApplicationException("La plataforma es requerida");
+        }
+
+        internal void ValidarFechaSalida()
+        {
+            if (FechaSalida.Year < 2000 || FechaSalida.Year > 2022)
+                throw new ApplicationException("Ingrese una fecha válida");
+        }
+
         public int GetDiferenciaDias()
         {
             var fechaActual = DateTime.Today;
-            return (fechaActual - (DateTime) FechaSalida).Days;
+            return (fechaActual - FechaSalida).Days;
         }
 
         public decimal GetMontoAlquilerTardio()
         {
             decimal monto = 0;
             if (EsVideojuego())
-                monto = CategoriaAlquiler.MontoDevolucionTardiaPorDia;
+                monto = TarifaAlquiler.MontoDevolucionTardiaPorDia;
             return monto;
         }
 
@@ -100,7 +125,7 @@ namespace GameStore.Entidades
         {
             decimal monto = 0;
             if (EsVideojuego())
-                monto = CategoriaAlquiler.MontoAlquilerPorDia;
+                monto = TarifaAlquiler.MontoAlquilerPorDia;
             return monto;
         }
 

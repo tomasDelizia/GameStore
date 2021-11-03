@@ -50,7 +50,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
 
         private void DarBajaProveedor()
         {
-            _servicioProveedor.Borrar(_proveedorABorrar);
+            _servicioProveedor.DarDeBaja(_proveedorABorrar);
             MessageBox.Show("La operación se realizó con éxito", "Información");
         }
 

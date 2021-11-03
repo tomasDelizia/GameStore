@@ -53,7 +53,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         private void MostrarImagenArticuloSeleccionado()
         {
             var nroAlquiler = Convert.ToInt32(dgvDetallesDeAlquileres.CurrentRow.Cells["NroAlquiler"].Value);
-            var idArticulo = Convert.ToInt32(dgvDetallesDeAlquileres.CurrentRow.Cells["Codigo"].Value);
+            var idArticulo = Convert.ToInt64(dgvDetallesDeAlquileres.CurrentRow.Cells["Codigo"].Value);
             var articulo = GetArticulo(nroAlquiler, idArticulo);
             byte[] contenidoImagen = articulo.Archivo.Contenido;
             MemoryStream memorystream = new MemoryStream(contenidoImagen, 0, contenidoImagen.Length);
@@ -61,7 +61,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             picArticulo.Image = imagen;
         }
 
-        private Articulo GetArticulo(int nroAlquiler, int idArticulo)
+        private Articulo GetArticulo(int nroAlquiler, long idArticulo)
         {
             foreach (var detalle in _detallesDeAlquiler)
             {

@@ -14,17 +14,17 @@ using System.Windows.Forms;
 
 namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
 {
-    public partial class ModificacionCategoriaAlquiler : Form
+    public partial class ModificacionTarifaAlquiler : Form
     {
         private IUnidadDeTrabajo _unidadDeTrabajo;
-        private readonly IServicioCategoriaAlquiler _servicioCategoriaAlquiler;
-        private CategoriaAlquiler _categoriaAModificar;
-        public ModificacionCategoriaAlquiler(IUnidadDeTrabajo unidadDeTrabajo, int id)
+        private readonly IServicioTarifaAlquiler _servicioTarifaAlquiler;
+        private TarifaAlquiler _tarifaAModificar;
+        public ModificacionTarifaAlquiler(IUnidadDeTrabajo unidadDeTrabajo, int id)
         {
             InitializeComponent();
             _unidadDeTrabajo = unidadDeTrabajo;
-            _servicioCategoriaAlquiler = new ServicioCategoriaAlquiler(_unidadDeTrabajo.RepositorioCategoriaAlquiler);
-            _categoriaAModificar = _servicioCategoriaAlquiler.GetPorId(id);
+            _servicioTarifaAlquiler = new ServicioTarifaAlquiler(_unidadDeTrabajo.RepositorioTarifaAlquiler);
+            _tarifaAModificar = _servicioTarifaAlquiler.GetPorId(id);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -39,10 +39,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
 
         private void CargarDatos()
         {
-            txtNombre.Text = _categoriaAModificar.Nombre;
-            txtDescripcion.Text = _categoriaAModificar.Descripcion;
-            numMontoAlquiler.Value = _categoriaAModificar.MontoAlquilerPorDia;
-            numMontoTardio.Value = _categoriaAModificar.MontoDevolucionTardiaPorDia;
+            txtNombre.Text = _tarifaAModificar.Nombre;
+            txtDescripcion.Text = _tarifaAModificar.Descripcion;
+            numMontoAlquiler.Value = _tarifaAModificar.MontoAlquilerPorDia;
+            numMontoTardio.Value = _tarifaAModificar.MontoDevolucionTardiaPorDia;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -51,9 +51,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             {
                 if (!EsOperacionConfirmada())
                     return;
-                if (!EsCategoriaValida())
+                if (!EsTarifaValida())
                     return;
-                ModificarCategoria();
+                ModificarTarifa();
             }
             catch (ApplicationException aex)
             {
@@ -66,20 +66,20 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             }
         }
 
-        private void ModificarCategoria()
+        private void ModificarTarifa()
         {
-            _servicioCategoriaAlquiler.Actualizar(_categoriaAModificar);
-            MessageBox.Show("Se modificó con éxito la categoría de alquiler", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            _servicioTarifaAlquiler.Actualizar(_tarifaAModificar);
+            MessageBox.Show("Se modificó con éxito la tarifa de alquiler", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Dispose();
         }
 
-        private bool EsCategoriaValida()
+        private bool EsTarifaValida()
         {
-            _categoriaAModificar.Nombre = txtNombre.Text;
-            _categoriaAModificar.MontoAlquilerPorDia = numMontoAlquiler.Value;
-            _categoriaAModificar.MontoDevolucionTardiaPorDia = numMontoTardio.Value;
-            _categoriaAModificar.Descripcion = txtDescripcion.Text;
-            _servicioCategoriaAlquiler.ValidarCategoria(_categoriaAModificar);
+            _tarifaAModificar.Nombre = txtNombre.Text;
+            _tarifaAModificar.MontoAlquilerPorDia = numMontoAlquiler.Value;
+            _tarifaAModificar.MontoDevolucionTardiaPorDia = numMontoTardio.Value;
+            _tarifaAModificar.Descripcion = txtDescripcion.Text;
+            _servicioTarifaAlquiler.ValidarTarifa(_tarifaAModificar);
             return true;
         }
 

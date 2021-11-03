@@ -51,7 +51,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
 
         private void ConsultarUsuarios()
         {
-            var usuarios = _servicioUsuario.ListarUsuarios();
+            var usuarios = _servicioUsuario.ListarUsuariosActivos();
             CargarDgvUsuarios(usuarios);
         }
 
@@ -95,7 +95,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
                 throw new ApplicationException("El nombre no debe tener más de 50 caracteres.");
             var perfil = (Perfil)cboPerfiles.SelectedItem;
 
-            if (incluirTodos == true)
+            if (incluirTodos)
             {
                 var usuariosFiltrados = _servicioUsuario.Encontrar(u => u.NombreUsuario.Contains(nombreUsuario) && u.Perfil.Nombre == perfil.Nombre
                                         && (u.Empleado.Nombre + " " + u.Empleado.Apellido).Contains(nombreEmpleado)).ToList();
@@ -155,6 +155,17 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             }
             else if (dgvUsuarios.SelectedRows.Count > 1)
                 MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
+        }
+
+        private void ckbIncluirTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbIncluirTodos.Checked)
+            {
+                var usuarios = _servicioUsuario.ListarUsuarios();
+                CargarDgvUsuarios(usuarios);
+            }
+            else
+                ConsultarUsuarios();
         }
     }
 }

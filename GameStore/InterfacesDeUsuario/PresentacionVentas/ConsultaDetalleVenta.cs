@@ -51,7 +51,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
         private void MostrarImagenArticuloSeleccionado()
         {
             var nroFactura = Convert.ToInt32(dgvDetallesDeVenta.CurrentRow.Cells["NroFactura"].Value);
-            var idArticulo = Convert.ToInt32(dgvDetallesDeVenta.CurrentRow.Cells["Codigo"].Value);
+            var idArticulo = Convert.ToInt64(dgvDetallesDeVenta.CurrentRow.Cells["Codigo"].Value);
             var articulo = GetArticulo(nroFactura, idArticulo);
             byte[] contenidoImagen = articulo.Archivo.Contenido;
             MemoryStream memorystream = new MemoryStream(contenidoImagen, 0, contenidoImagen.Length);
@@ -59,7 +59,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             picArticulo.Image = imagen;
         }
 
-        private Articulo GetArticulo(int nroFactura, int idArticulo)
+        private Articulo GetArticulo(int nroFactura, long idArticulo)
         {
             foreach(var detalle in _detallesDeVenta)
             {

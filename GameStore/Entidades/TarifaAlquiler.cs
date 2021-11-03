@@ -6,17 +6,17 @@ namespace GameStore.Entidades
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("CategoriasDeAlquiler")]
-    public partial class CategoriaAlquiler
+    [Table("TarifasDeAlquiler")]
+    public partial class TarifaAlquiler
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CategoriaAlquiler()
+        public TarifaAlquiler()
         {
         }
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int IdCategoriaAlquiler { get; set; }
+        public int IdTarifaAlquiler { get; set; }
 
         [Required]
         [StringLength(30)]

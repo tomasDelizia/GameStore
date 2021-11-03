@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GameStore.RepositoriosBD
 {
-    public interface IRepositorioCategoriaAlquiler : IRepositorio<CategoriaAlquiler>
+    public interface IRepositorioTarifaAlquiler : IRepositorio<TarifaAlquiler>
     {
     }
 }

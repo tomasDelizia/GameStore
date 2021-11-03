@@ -95,7 +95,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
 
         private void ConsultarEmpleados()
         {
-            var empleados = _servicioEmpleado.ListarEmpleados();
+            ckbIncluirTodos.Checked = false;
+            var empleados = _servicioEmpleado.ListarEmpleadosActivos();
             CargarDgvEmpleados(empleados);
         }
 
@@ -105,6 +106,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
 
             foreach (var empleado in empleados)
             {
+                var descripcionEstado = (bool)empleado.Estado ? "Activo" : "Inactivo";
                 var fila = new string[]
                 {
                     empleado.IdEmpleado.ToString(),
@@ -113,6 +115,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
                     empleado.Apellido,
                     empleado.Email,
                     empleado.Cargo.Nombre,
+                    descripcionEstado
                 };
                 dgvEmpleados.Rows.Add(fila);
             }
@@ -201,6 +204,17 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             }
             else if (dgvEmpleados.SelectedRows.Count > 1)
                 MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
+        }
+
+        private void ckbIncluirTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbIncluirTodos.Checked)
+            {
+                var empleados = _servicioEmpleado.ListarEmpleados();
+                CargarDgvEmpleados(empleados);
+            }
+            else
+                ConsultarEmpleados();
         }
     }
 }

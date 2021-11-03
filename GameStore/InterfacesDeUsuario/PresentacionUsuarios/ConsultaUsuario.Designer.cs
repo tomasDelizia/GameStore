@@ -173,6 +173,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.ckbIncluirTodos.TabIndex = 103;
             this.ckbIncluirTodos.Text = "Incluir Todos";
             this.ckbIncluirTodos.UseVisualStyleBackColor = true;
+            this.ckbIncluirTodos.CheckedChanged += new System.EventHandler(this.ckbIncluirTodos_CheckedChanged);
             // 
             // btnFiltrar
             // 

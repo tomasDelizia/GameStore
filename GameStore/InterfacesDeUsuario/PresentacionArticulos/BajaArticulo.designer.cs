@@ -35,13 +35,15 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label2 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtUPC = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnEliminar.Location = new System.Drawing.Point(96, 84);
+            this.btnEliminar.Location = new System.Drawing.Point(88, 108);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 34);
             this.btnEliminar.TabIndex = 49;
@@ -53,7 +55,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnCancelar.Location = new System.Drawing.Point(202, 84);
+            this.btnCancelar.Location = new System.Drawing.Point(194, 108);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 34);
             this.btnCancelar.TabIndex = 46;
@@ -88,7 +90,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.txtPrecio.BackColor = System.Drawing.Color.White;
             this.txtPrecio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecio.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPrecio.Location = new System.Drawing.Point(107, 51);
+            this.txtPrecio.Location = new System.Drawing.Point(107, 75);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.ReadOnly = true;
             this.txtPrecio.Size = new System.Drawing.Size(187, 27);
@@ -99,18 +101,42 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(12, 52);
+            this.label1.Location = new System.Drawing.Point(15, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 22);
             this.label1.TabIndex = 80;
             this.label1.Text = "Precio: $";
+            // 
+            // txtUPC
+            // 
+            this.txtUPC.BackColor = System.Drawing.Color.White;
+            this.txtUPC.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUPC.ForeColor = System.Drawing.Color.DimGray;
+            this.txtUPC.Location = new System.Drawing.Point(107, 42);
+            this.txtUPC.Name = "txtUPC";
+            this.txtUPC.ReadOnly = true;
+            this.txtUPC.Size = new System.Drawing.Size(187, 27);
+            this.txtUPC.TabIndex = 81;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(48, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 22);
+            this.label3.TabIndex = 82;
+            this.label3.Text = "UPC:";
             // 
             // BajaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(314, 130);
+            this.ClientSize = new System.Drawing.Size(307, 155);
+            this.Controls.Add(this.txtUPC);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombre);
@@ -119,7 +145,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.btnCancelar);
             this.Name = "BajaArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BajaArticulo";
+            this.Text = "Eliminar artículo";
             this.Load += new System.EventHandler(this.BajaArticulo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -133,5 +159,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtUPC;
+        private System.Windows.Forms.Label label3;
     }
 }

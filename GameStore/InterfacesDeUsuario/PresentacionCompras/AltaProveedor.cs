@@ -34,6 +34,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             {
                 MessageBox.Show(aex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            catch (FormatException fe)
+            {
+                MessageBox.Show("El documento y la altura de la calle solo aceptan valores numéricos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception ex)
             {
                 var mensaje = ex.Message;
@@ -69,6 +73,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         private bool EsProveedorValido()
         {
             Proveedor nuevoProveedor = new Proveedor();
+            nuevoProveedor.Estado = true;
             nuevoProveedor.RazonSocial = txtRazonSocial.Text;
             nuevoProveedor.Cuit = Convert.ToInt32(txtCuit.Text);
             nuevoProveedor.Telefono = txtTelefono.Text;

@@ -78,7 +78,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
 
             if (dgvArticulos.SelectedRows.Count == 1)
             {
-                int idArticulo = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
+                long idArticulo = Convert.ToInt64(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
                 Articulo articuloSeleccionado = _servicioArticulo.GetPorId(idArticulo);
                 dgvArticulos.Rows.Remove(dgvArticulos.SelectedRows[0]);
                 _detallesDeCompra.RemoveAll(detalle => detalle.Articulo == articuloSeleccionado);

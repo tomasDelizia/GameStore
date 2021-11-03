@@ -10,6 +10,7 @@ namespace GameStore.Servicios
     public interface IServicioUsuario : IServicio<Usuario>
     {
         List<Usuario> ListarUsuarios();
+        List<Usuario> ListarUsuariosActivos();
 
         Usuario Login(string nombreUsuario, string contrasenia);
 

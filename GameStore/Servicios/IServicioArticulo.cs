@@ -12,5 +12,7 @@ namespace GameStore.Servicios
         void ValidarArticulo(Articulo articulo);
 
         List<Articulo> ListarArticulos();
+        void DarBajaArticulo(Articulo articulo, EstadoVideojuego estadoEliminado);
+        List<Articulo> ListarArticulosActivos();
     }
 }

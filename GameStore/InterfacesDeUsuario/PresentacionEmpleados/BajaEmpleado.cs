@@ -50,7 +50,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
 
         private void DarBajaEmpleado()
         {
-            _servicioEmpleado.Borrar(_empleadoAEliminar);
+            _servicioEmpleado.DarDeBaja(_empleadoAEliminar);
             MessageBox.Show("La operación se realizó con éxito", "Información");
         }
 

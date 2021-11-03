@@ -19,6 +19,11 @@ namespace GameStore.Servicios.Implementaciones
             return _repositorio.GetPorId(id);
         }
 
+        public TEntidad GetPorId(long id)
+        {
+            return _repositorio.GetPorId(id);
+        }
+
         public IEnumerable<TEntidad> GetTodos()
         {
             return _repositorio.GetTodos();
@@ -61,5 +66,7 @@ namespace GameStore.Servicios.Implementaciones
         {
             _repositorio.Guardar(entidad);
         }
+
+
     }
 }

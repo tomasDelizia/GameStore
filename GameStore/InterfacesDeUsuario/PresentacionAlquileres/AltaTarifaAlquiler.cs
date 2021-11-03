@@ -14,16 +14,16 @@ using System.Windows.Forms;
 
 namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
 {
-    public partial class AltaCategoriaAlquiler : Form
+    public partial class AltaTarifaAlquiler : Form
     {
         private IUnidadDeTrabajo _unidadDeTrabajo;
-        private readonly IServicioCategoriaAlquiler _servicioCategoriaAlquiler;
-        private CategoriaAlquiler _nuevaCategoria;
-        public AltaCategoriaAlquiler(IUnidadDeTrabajo unidadDeTrabajo)
+        private readonly IServicioTarifaAlquiler _servicioTarifaAlquiler;
+        private TarifaAlquiler _nuevaTarifa;
+        public AltaTarifaAlquiler(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
             _unidadDeTrabajo = unidadDeTrabajo;
-            _servicioCategoriaAlquiler = new ServicioCategoriaAlquiler(_unidadDeTrabajo.RepositorioCategoriaAlquiler);
+            _servicioTarifaAlquiler = new ServicioTarifaAlquiler(_unidadDeTrabajo.RepositorioTarifaAlquiler);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -37,9 +37,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             {
                 if (!EsOperacionConfirmada())
                     return;
-                if (!EsCategoriaValida())
+                if (!EsTarifaValida())
                     return;
-                RegistrarCategoria();
+                RegistrarTarifa();
             }
             catch (ApplicationException aex)
             {
@@ -52,27 +52,27 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             }
         }
 
-        private void RegistrarCategoria()
+        private void RegistrarTarifa()
         {
-            bool insertarCategoria = _servicioCategoriaAlquiler.Insertar(_nuevaCategoria);
-            if (!insertarCategoria)
+            bool insertarTarifa = _servicioTarifaAlquiler.Insertar(_nuevaTarifa);
+            if (!insertarTarifa)
             {
-                MessageBox.Show("Ocurrió un problema al registrar la categoría de alquiler", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ocurrió un problema al registrar la tarifa de alquiler", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            MessageBox.Show("Se registró con éxito la categoría", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Se registró con éxito la tarifa de alquiler", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Dispose();
         }
 
-        private bool EsCategoriaValida()
+        private bool EsTarifaValida()
         {
-            CategoriaAlquiler nuevaCategoria = new CategoriaAlquiler();
-            nuevaCategoria.Nombre = TxtNombre.Text;
-            nuevaCategoria.MontoAlquilerPorDia = numMontoAlquiler.Value;
-            nuevaCategoria.MontoDevolucionTardiaPorDia = numMontoTardio.Value;
-            nuevaCategoria.Descripcion = txtDescripcion.Text;
-            _servicioCategoriaAlquiler.ValidarCategoria(nuevaCategoria);
-            _nuevaCategoria = nuevaCategoria;
+            TarifaAlquiler nuevaTarifa = new TarifaAlquiler();
+            nuevaTarifa.Nombre = TxtNombre.Text;
+            nuevaTarifa.MontoAlquilerPorDia = numMontoAlquiler.Value;
+            nuevaTarifa.MontoDevolucionTardiaPorDia = numMontoTardio.Value;
+            nuevaTarifa.Descripcion = txtDescripcion.Text;
+            _servicioTarifaAlquiler.ValidarTarifa(nuevaTarifa);
+            _nuevaTarifa = nuevaTarifa;
             return true;
         }
 

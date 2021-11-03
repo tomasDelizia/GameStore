@@ -12,15 +12,15 @@ using System.Windows.Forms;
 
 namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
 {
-    public partial class BajaCategoriaAlquiler : Form
+    public partial class BajaTarifaAlquiler : Form
     {
-        private IServicioCategoriaAlquiler _servicioCategoriaAlquiler;
-        private CategoriaAlquiler _categoriaABorrar;
-        public BajaCategoriaAlquiler(IServicioCategoriaAlquiler servicioCategoriaAlquiler, int id)
+        private IServicioTarifaAlquiler _servicioTarifaAlquiler;
+        private TarifaAlquiler _tarifaABorrar;
+        public BajaTarifaAlquiler(IServicioTarifaAlquiler servicioTarifaAlquiler, int id)
         {
             InitializeComponent();
-            _servicioCategoriaAlquiler = servicioCategoriaAlquiler;
-            _categoriaABorrar = _servicioCategoriaAlquiler.GetPorId(id);
+            _servicioTarifaAlquiler = servicioTarifaAlquiler;
+            _tarifaABorrar = _servicioTarifaAlquiler.GetPorId(id);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -28,15 +28,15 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.Dispose();
         }
 
-        private void BajaCategoriaAlquiler_Load(object sender, EventArgs e)
+        private void BajaTarifaAlquiler_Load(object sender, EventArgs e)
         {
             CargarDatos();
         }
 
         private void CargarDatos()
         {
-            txtNombre.Text = _categoriaABorrar.Nombre;
-            txtPrecio.Text = _categoriaABorrar.MontoAlquilerPorDia.ToString();
+            txtNombre.Text = _tarifaABorrar.Nombre;
+            txtPrecio.Text = _tarifaABorrar.MontoAlquilerPorDia.ToString();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
                 DialogResult resultado = MessageBox.Show("Confirmar operación", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (resultado == DialogResult.Cancel)
                     return;
-                DarBajaCategoria();
+                DarBajaTarifa();
                 this.Dispose();
             }
             catch (ApplicationException aex)
@@ -59,9 +59,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             }
         }
 
-        private void DarBajaCategoria()
+        private void DarBajaTarifa()
         {
-            _servicioCategoriaAlquiler.Borrar(_categoriaABorrar);
+            _servicioTarifaAlquiler.Borrar(_tarifaABorrar);
             MessageBox.Show("La operación se realizó con éxito", "Información");
         }
     }

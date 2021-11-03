@@ -7,6 +7,7 @@ namespace GameStore.RepositoriosBD
     public interface IRepositorio<TEntidad> where TEntidad: class
     {
         TEntidad GetPorId(int id);
+        TEntidad GetPorId(long id);
 
         IEnumerable<TEntidad> GetTodos();
 

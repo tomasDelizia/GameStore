@@ -1,7 +1,7 @@
 ﻿
 namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
 {
-    partial class ConsultaCategoriaAlquiler
+    partial class ConsultaTarifaAlquiler
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaCategoriaAlquiler));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaTarifaAlquiler));
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.dgvCategorias = new System.Windows.Forms.DataGridView();
+            this.dgvTarifas = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +45,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnFiltrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTarifas)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,26 +88,26 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // dgvCategorias
+            // dgvTarifas
             // 
-            this.dgvCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvCategorias.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvTarifas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvTarifas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvTarifas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTarifas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Nombre,
             this.Descripcion,
             this.MontoAlquilerDiario,
             this.MontoDevolucionTardiaDiario});
-            this.dgvCategorias.Location = new System.Drawing.Point(12, 104);
-            this.dgvCategorias.Margin = new System.Windows.Forms.Padding(1);
-            this.dgvCategorias.Name = "dgvCategorias";
-            this.dgvCategorias.ReadOnly = true;
-            this.dgvCategorias.RowHeadersWidth = 102;
-            this.dgvCategorias.RowTemplate.Height = 40;
-            this.dgvCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCategorias.Size = new System.Drawing.Size(777, 304);
-            this.dgvCategorias.TabIndex = 0;
+            this.dgvTarifas.Location = new System.Drawing.Point(12, 104);
+            this.dgvTarifas.Margin = new System.Windows.Forms.Padding(1);
+            this.dgvTarifas.Name = "dgvTarifas";
+            this.dgvTarifas.ReadOnly = true;
+            this.dgvTarifas.RowHeadersWidth = 102;
+            this.dgvTarifas.RowTemplate.Height = 40;
+            this.dgvTarifas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTarifas.Size = new System.Drawing.Size(777, 304);
+            this.dgvTarifas.TabIndex = 0;
             // 
             // Id
             // 
@@ -140,14 +140,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.MontoAlquilerDiario.HeaderText = "Monto de alquiler por día";
             this.MontoAlquilerDiario.Name = "MontoAlquilerDiario";
             this.MontoAlquilerDiario.ReadOnly = true;
-            this.MontoAlquilerDiario.Width = 79;
+            this.MontoAlquilerDiario.Width = 106;
             // 
             // MontoDevolucionTardiaDiario
             // 
             this.MontoDevolucionTardiaDiario.HeaderText = "Monto por devolución tardía diario";
             this.MontoDevolucionTardiaDiario.Name = "MontoDevolucionTardiaDiario";
             this.MontoDevolucionTardiaDiario.ReadOnly = true;
-            this.MontoDevolucionTardiaDiario.Width = 108;
+            this.MontoDevolucionTardiaDiario.Width = 154;
             // 
             // panel1
             // 
@@ -180,7 +180,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(375, 9);
+            this.label3.Location = new System.Drawing.Point(340, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 33);
             this.label3.TabIndex = 105;
@@ -219,22 +219,22 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.btnFiltrar.UseVisualStyleBackColor = true;
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
-            // ConsultaCategoriaAlquiler
+            // ConsultaTarifaAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(799, 464);
-            this.Controls.Add(this.dgvCategorias);
+            this.Controls.Add(this.dgvTarifas);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.panel1);
-            this.Name = "ConsultaCategoriaAlquiler";
+            this.Name = "ConsultaTarifaAlquiler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConsultaCategoriaArticulo";
-            this.Load += new System.EventHandler(this.ConsultaCategoriaArticulo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
+            this.Text = "Consultar tarifas de alquiler";
+            this.Load += new System.EventHandler(this.ConsultaTarifaAlquiler_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTarifas)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -246,7 +246,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.DataGridView dgvCategorias;
+        private System.Windows.Forms.DataGridView dgvTarifas;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnReiniciarFiltros;
         private System.Windows.Forms.Label label3;

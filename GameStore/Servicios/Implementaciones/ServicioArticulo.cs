@@ -17,15 +17,30 @@ namespace GameStore.Servicios.Implementaciones
             _repositorioArticulo = repositorioArticulo;
         }
 
+        public void DarBajaArticulo(Articulo articulo, EstadoVideojuego estadoEliminado)
+        {
+            articulo.EstadoVideojuego = estadoEliminado;
+            _repositorioArticulo.Actualizar(articulo);
+        }
+
         public List<Articulo> ListarArticulos()
         {
             return _repositorioArticulo.GetTodos().ToList();
         }
 
+        public List<Articulo> ListarArticulosActivos()
+        {
+            return _repositorioArticulo.Encontrar(art => art.EstadoVideojuego.Nombre == "Registrado").ToList();
+        }
+
         public void ValidarArticulo(Articulo articulo)
         {
+            articulo.ValidarCodigo();
             articulo.ValidarNombre();
             articulo.ValidarPrecio();
+            articulo.ValidarTipoArticulo();
+            articulo.ValidarFechaSalida();
+            articulo.ValidarPlataforma();
         }
     }
 }

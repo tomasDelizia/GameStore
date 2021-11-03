@@ -1,7 +1,7 @@
 ﻿
 namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
 {
-    partial class BajaCategoriaAlquiler
+    partial class BajaTarifaAlquiler
     {
         /// <summary>
         /// Required designer variable.
@@ -119,8 +119,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.Controls.Add(this.btnCancelar);
             this.Name = "BajaCategoriaAlquiler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BajaCategoriaAlquiler";
-            this.Load += new System.EventHandler(this.BajaCategoriaAlquiler_Load);
+            this.Text = "Eliminar tarifa de alquiler";
+            this.Load += new System.EventHandler(this.BajaTarifaAlquiler_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
