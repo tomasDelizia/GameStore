@@ -56,7 +56,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregarClasificacion = new System.Windows.Forms.Button();
             this.btnAgregarDesarrollador = new System.Windows.Forms.Button();
-            this.btnAgregarTipoArticulo = new System.Windows.Forms.Button();
             this.btnAgregarGenero = new System.Windows.Forms.Button();
             this.cboPlataforma = new System.Windows.Forms.ComboBox();
             this.cboClasificacion = new System.Windows.Forms.ComboBox();
@@ -353,18 +352,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnAgregarDesarrollador.UseVisualStyleBackColor = true;
             this.btnAgregarDesarrollador.Click += new System.EventHandler(this.btnAgregarDesarrollador_Click);
             // 
-            // btnAgregarTipoArticulo
-            // 
-            this.btnAgregarTipoArticulo.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarTipoArticulo.ForeColor = System.Drawing.Color.DimGray;
-            this.btnAgregarTipoArticulo.Location = new System.Drawing.Point(378, 7);
-            this.btnAgregarTipoArticulo.Name = "btnAgregarTipoArticulo";
-            this.btnAgregarTipoArticulo.Size = new System.Drawing.Size(32, 29);
-            this.btnAgregarTipoArticulo.TabIndex = 60;
-            this.btnAgregarTipoArticulo.Text = "+";
-            this.btnAgregarTipoArticulo.UseVisualStyleBackColor = true;
-            this.btnAgregarTipoArticulo.Click += new System.EventHandler(this.btnAgregarTipoArticulo_Click);
-            // 
             // btnAgregarGenero
             // 
             this.btnAgregarGenero.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -480,7 +467,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAgregarClasificacion);
             this.Controls.Add(this.btnAgregarDesarrollador);
-            this.Controls.Add(this.btnAgregarTipoArticulo);
             this.Controls.Add(this.btnAgregarGenero);
             this.Controls.Add(this.cboPlataforma);
             this.Controls.Add(this.cboClasificacion);
@@ -529,7 +515,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAgregarClasificacion;
         private System.Windows.Forms.Button btnAgregarDesarrollador;
-        private System.Windows.Forms.Button btnAgregarTipoArticulo;
         private System.Windows.Forms.Button btnAgregarGenero;
         private System.Windows.Forms.ComboBox cboPlataforma;
         private System.Windows.Forms.ComboBox cboClasificacion;

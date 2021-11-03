@@ -21,7 +21,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private readonly IServicioPlataforma _servicioPlataforma;
         private readonly IServicioArchivo _servicioArchivo;
         private readonly IServicioMarca _servicioMarca;
-        private readonly IServicioCategoriaAlquiler _ServicioCategoriaAlquiler;
+        private readonly IServicioTarifaAlquiler _servicioTarifaAlquiler;
         private Archivo _nuevaImagen;
         private Articulo _nuevoArticulo;
 
@@ -37,7 +37,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _servicioPlataforma = new ServicioPlataforma(unidadDeTrabajo.RepositorioPlataforma);
             _servicioArchivo = new ServicioArchivo(unidadDeTrabajo.RepositorioArchivo);
             _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
-            _ServicioCategoriaAlquiler = new ServicioCategoriaAlquiler(_unidadDeTrabajo.RepositorioCategoriaAlquiler);
+            _servicioTarifaAlquiler = new ServicioTarifaAlquiler(_unidadDeTrabajo.RepositorioTarifaAlquiler);
             _unidadDeTrabajo = unidadDeTrabajo;
         }
 
@@ -187,11 +187,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             var diferenciaDias = articuloNuevo.GetDiferenciaDias();
 
             if (diferenciaDias < 90)
-                articuloNuevo.CategoriaAlquiler = _ServicioCategoriaAlquiler.GetPorNombre("Estreno");
+                articuloNuevo.TarifaAlquiler = _servicioTarifaAlquiler.GetPorNombre("Estreno");
             else if (diferenciaDias >= 90 && diferenciaDias <= 365)
-                articuloNuevo.CategoriaAlquiler = _ServicioCategoriaAlquiler.GetPorNombre("Viejos");
+                articuloNuevo.TarifaAlquiler = _servicioTarifaAlquiler.GetPorNombre("Viejos");
             else if (diferenciaDias > 365)
-                articuloNuevo.CategoriaAlquiler = _ServicioCategoriaAlquiler.GetPorNombre(" Muy viejos");
+                articuloNuevo.TarifaAlquiler = _servicioTarifaAlquiler.GetPorNombre(" Muy viejos");
 
             if (articuloNuevo.TipoArticulo.Nombre == "Videojuego")
             {
@@ -249,11 +249,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
-        }
-
-        private void btnAgregarTipoArticulo_Click(object sender, EventArgs e)
-        {
-            new AltaTipoArticulo().ShowDialog();
         }
 
         private void btnAgregarPlataforma_Click(object sender, EventArgs e)

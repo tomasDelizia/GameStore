@@ -90,6 +90,7 @@
   <ItemGroup>
     <Compile Include="Entidades\Archivo.cs" />
     <Compile Include="Entidades\Perfil.cs" />
+    <Compile Include="Entidades\TarifaAlquiler.cs" />
     <Compile Include="GAMESTOREDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -113,6 +114,18 @@
     <Compile Include="InterfacesDeUsuario\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\AltaTarifaAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\AltaTarifaAlquiler.Designer.cs">
+      <DependentUpon>AltaTarifaAlquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\BajaTarifaAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\BajaTarifaAlquiler.Designer.cs">
+      <DependentUpon>BajaTarifaAlquiler.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultaAlquiler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +138,18 @@
     <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultarDetalleAlquiler.Designer.cs">
       <DependentUpon>ConsultarDetalleAlquiler.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultaTarifaAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultaTarifaAlquiler.Designer.cs">
+      <DependentUpon>ConsultaTarifaAlquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ModificacionTarifaAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ModificacionTarifaAlquiler.Designer.cs">
+      <DependentUpon>ModificacionTarifaAlquiler.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\RegistrarAlquiler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,12 +161,6 @@
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaArticulo.designer.cs">
       <DependentUpon>AltaArticulo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\AltaCategoriaAlquiler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\AltaCategoriaAlquiler.Designer.cs">
-      <DependentUpon>AltaCategoriaAlquiler.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaClasificacion.cs">
       <SubType>Form</SubType>
@@ -173,23 +192,11 @@
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaPlataforma.Designer.cs">
       <DependentUpon>AltaPlataforma.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaTipoArticulo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaTipoArticulo.Designer.cs">
-      <DependentUpon>AltaTipoArticulo.cs</DependentUpon>
-    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaArticulo.designer.cs">
       <DependentUpon>BajaArticulo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\BajaCategoriaAlquiler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\BajaCategoriaAlquiler.Designer.cs">
-      <DependentUpon>BajaCategoriaAlquiler.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaClasificacion.cs">
       <SubType>Form</SubType>
@@ -221,23 +228,11 @@
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaPlataforma.Designer.cs">
       <DependentUpon>BajaPlataforma.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaTipoArticulo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionArticulos\BajaTipoArticulo.Designer.cs">
-      <DependentUpon>BajaTipoArticulo.cs</DependentUpon>
-    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaArticulo.Designer.cs">
       <DependentUpon>ConsultaArticulo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultaCategoriaAlquiler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultaCategoriaAlquiler.Designer.cs">
-      <DependentUpon>ConsultaCategoriaAlquiler.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaGenero.cs">
       <SubType>Form</SubType>
@@ -274,12 +269,6 @@
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionArticulo.designer.cs">
       <DependentUpon>ModificacionArticulo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ModificacionCategoriaAlquiler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\ModificacionCategoriaAlquiler.Designer.cs">
-      <DependentUpon>ModificacionCategoriaAlquiler.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionClasificacion.cs">
       <SubType>Form</SubType>
@@ -555,7 +544,6 @@
     <Compile Include="Entidades\EstadoVideojuego.cs" />
     <Compile Include="Entidades\FormaPago.cs" />
     <Compile Include="Entidades\Genero.cs" />
-    <Compile Include="Entidades\CategoriaAlquiler.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\ContextoGameStore.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\DBHelper.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\Repositorio.cs" />
@@ -564,7 +552,6 @@
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioArticulo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioBarrio.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioCargo.cs" />
-    <Compile Include="RepositoriosBD\Implementaciones\RepositorioCategoriaAlquiler.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioCompra.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioDesarrollador.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioDetalleVenta.cs" />
@@ -577,6 +564,7 @@
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioReporte.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioRol.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioSocio.cs" />
+    <Compile Include="RepositoriosBD\Implementaciones\RepositorioTarifaAlquiler.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioTipoArticulo.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioClasificacion.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioEmpleado.cs" />
@@ -590,7 +578,6 @@
     <Compile Include="RepositoriosBD\IRepositorioArticulo.cs" />
     <Compile Include="RepositoriosBD\IRepositorioBarrio.cs" />
     <Compile Include="RepositoriosBD\IRepositorioCargo.cs" />
-    <Compile Include="RepositoriosBD\IRepositorioCategoriaAlquiler.cs" />
     <Compile Include="RepositoriosBD\IRepositorioClasificacion.cs" />
     <Compile Include="Entidades\Marca.cs" />
     <Compile Include="Entidades\Permiso.cs" />
@@ -608,6 +595,7 @@
     <Compile Include="RepositoriosBD\IRepositorioReporte.cs" />
     <Compile Include="RepositoriosBD\IRepositorioRol.cs" />
     <Compile Include="RepositoriosBD\IRepositorioSocio.cs" />
+    <Compile Include="RepositoriosBD\IRepositorioTarifaAlquiler.cs" />
     <Compile Include="RepositoriosBD\IRepositorioTipoArticulo.cs" />
     <Compile Include="RepositoriosBD\IRepositorioTipoFactura.cs" />
     <Compile Include="RepositoriosBD\IRepositorioUsuario.cs" />
@@ -623,13 +611,13 @@
     <Compile Include="Entidades\Venta.cs" />
     <Compile Include="RepositoriosBD\IRepositorioMarca.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioAlquiler.cs" />
+    <Compile Include="Servicios\Implementaciones\ServicioTarifaAlquiler.cs" />
     <Compile Include="Servicios\IServicioAlquiler.cs" />
     <Compile Include="Servicios\Implementaciones\Servicio.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioArchivo.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioArticulo.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioBarrio.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioCargo.cs" />
-    <Compile Include="Servicios\Implementaciones\ServicioCategoriaAlquiler.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioClasificacion.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioCompra.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioDesarrollador.cs" />
@@ -652,7 +640,6 @@
     <Compile Include="Servicios\IServicioArticulo.cs" />
     <Compile Include="Servicios\IServicioBarrio.cs" />
     <Compile Include="Servicios\IServicioCargo.cs" />
-    <Compile Include="Servicios\IServicioCategoriaAlquiler.cs" />
     <Compile Include="Servicios\IServicioClasificacion.cs" />
     <Compile Include="Servicios\IServicioDesarrollador.cs" />
     <Compile Include="Servicios\IServicioDetalleVenta.cs" />
@@ -665,6 +652,7 @@
     <Compile Include="Servicios\IServicioProveedor.cs" />
     <Compile Include="Servicios\IServicioRol.cs" />
     <Compile Include="Servicios\IServicioSocio.cs" />
+    <Compile Include="Servicios\IServicioTarifaAlquiler.cs" />
     <Compile Include="Servicios\IServicioTipoArticulo.cs" />
     <Compile Include="Servicios\IServicioTipoFactura.cs" />
     <Compile Include="Servicios\IServicioUsuario.cs" />
@@ -686,20 +674,29 @@
     <EmbeddedResource Include="InterfacesDeUsuario\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\AltaTarifaAlquiler.resx">
+      <DependentUpon>AltaTarifaAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\BajaTarifaAlquiler.resx">
+      <DependentUpon>BajaTarifaAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultaAlquiler.resx">
       <DependentUpon>ConsultaAlquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultarDetalleAlquiler.resx">
       <DependentUpon>ConsultarDetalleAlquiler.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultaTarifaAlquiler.resx">
+      <DependentUpon>ConsultaTarifaAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\ModificacionTarifaAlquiler.resx">
+      <DependentUpon>ModificacionTarifaAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\RegistrarAlquiler.resx">
       <DependentUpon>RegistrarAlquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\AltaArticulo.resx">
       <DependentUpon>AltaArticulo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\AltaCategoriaAlquiler.resx">
-      <DependentUpon>AltaCategoriaAlquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\AltaClasificacion.resx">
       <DependentUpon>AltaClasificacion.cs</DependentUpon>
@@ -716,14 +713,8 @@
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\AltaPlataforma.resx">
       <DependentUpon>AltaPlataforma.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\AltaTipoArticulo.resx">
-      <DependentUpon>AltaTipoArticulo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\BajaArticulo.resx">
       <DependentUpon>BajaArticulo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\BajaCategoriaAlquiler.resx">
-      <DependentUpon>BajaCategoriaAlquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\BajaClasificacion.resx">
       <DependentUpon>BajaClasificacion.cs</DependentUpon>
@@ -739,12 +730,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\BajaPlataforma.resx">
       <DependentUpon>BajaPlataforma.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\BajaTipoArticulo.resx">
-      <DependentUpon>BajaTipoArticulo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\ConsultaCategoriaAlquiler.resx">
-      <DependentUpon>ConsultaCategoriaAlquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ConsultaArticulo.resx">
       <DependentUpon>ConsultaArticulo.cs</DependentUpon>
@@ -766,9 +751,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionArticulo.resx">
       <DependentUpon>ModificacionArticulo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\ModificacionCategoriaAlquiler.resx">
-      <DependentUpon>ModificacionCategoriaAlquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\ModificacionClasificacion.resx">
       <DependentUpon>ModificacionClasificacion.cs</DependentUpon>
@@ -963,7 +945,6 @@
     <None Include="Recursos\delete.png" />
     <Content Include="Recursos\logo.ico" />
     <Content Include="Recursos\logo.jpg" />
-    <Content Include="Recursos\minimazar.png" />
     <Content Include="Recursos\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -270,11 +270,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Dispose();
         }
 
-        private void btnAgregarTipoArticulo_Click(object sender, EventArgs e)
-        {
-            new AltaTipoArticulo().ShowDialog();
-        }
-
         private void btnAgregarPlataforma_Click(object sender, EventArgs e)
         {
             new AltaPlataforma(_unidadDeTrabajo).ShowDialog();

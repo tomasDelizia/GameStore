@@ -117,29 +117,29 @@ CREATE TABLE TiposDeArticulo (
 	CONSTRAINT tipo_de_articulo_id_tipo_articulo_pk PRIMARY KEY(IdTipoArticulo));
 
 CREATE TABLE Articulos (
-	Codigo INT IDENTITY,
-	IdTipoArticulo INT,
+	Codigo BIGINT,
+	IdTipoArticulo INT NOT NULL,
 	Nombre VARCHAR(50) NOT NULL,
 	PrecioUnitario DECIMAL(9,2) NOT NULL,
 	Stock INT NOT NULL,
 	-- MontoAlquilerPorDia DECIMAL(10,2),
 	-- MontoDevolucionTardiaPorDia DECIMAL(10,2),
-	IdEstado INT,
-	FechaSalida DATE,
+	IdEstado INT NOT NULL,
+	FechaSalida DATE NOT NULL,
 	IdMarca INT,
 	IdClasificacion INT,
 	IdGenero INT,
 	IdDesarrollador INT,
 	-- IdPublicante INT,
-	IdPlataforma INT,
-	IdImagen INT,
+	IdPlataforma INT NOT NULL,
+	IdImagen INT NOT NULL,
 	Descripcion VARCHAR(MAX),
-	IdCategoriaAlquiler INT,
+	IdTarifaAlquiler INT NOT NULL,
 	CONSTRAINT articulos_codigo_pk PRIMARY KEY(Codigo),
 	CONSTRAINT articulos_id_tipo_articulo_fk FOREIGN KEY(IdTipoArticulo) REFERENCES TiposDeArticulo (IdTipoArticulo)
-    ON UPDATE CASCADE ON DELETE SET NULL,
+    ON UPDATE CASCADE,
 	CONSTRAINT articulos_id_estado_fk FOREIGN KEY(IdEstado) REFERENCES EstadosDeVideojuego(IdEstado)
-    ON UPDATE CASCADE ON DELETE SET NULL,
+    ON UPDATE CASCADE,
 	CONSTRAINT articulos_id_clasificacion_fk FOREIGN KEY(IdClasificacion) REFERENCES Clasificaciones(IdClasificacion)
     ON UPDATE CASCADE ON DELETE SET NULL,
 	CONSTRAINT articulos_id_genero_fk FOREIGN KEY(IdGenero) REFERENCES Generos(IdGenero)
@@ -149,11 +149,13 @@ CREATE TABLE Articulos (
 	-- CONSTRAINT articulos_id_publicante_fk FOREIGN KEY(IdPublicante) REFERENCES Publicantes(IdPublicante)
     -- ON UPDATE CASCADE ON DELETE SET NULL,	
 	CONSTRAINT articulos_id_plataforma_fk FOREIGN KEY(IdPlataforma) REFERENCES Plataformas(IdPlataforma)
-    ON UPDATE CASCADE ON DELETE SET NULL,
+    ON UPDATE CASCADE,
 	CONSTRAINT articulos_id_marca_fk FOREIGN KEY(IdMarca) REFERENCES Marcas(IdMarca)
-    ON UPDATE CASCADE ON DELETE SET NULL,
-	CONSTRAINT articulos_imagen_fk FOREIGN KEY(Imagen) REFERENCES Archivos(IdArchivo)
-    ON UPDATE CASCADE ON DELETE SET NULL
+    ON UPDATE CASCADE,
+	CONSTRAINT articulos_id_imagen_fk FOREIGN KEY(IdImagen) REFERENCES Archivos(IdArchivo)
+    ON UPDATE CASCADE,
+	CONSTRAINT articulos_id_tarifa_alquiler_fk FOREIGN KEY(IdTarifaAlquiler) REFERENCES TarifasDeAlquiler(IdTarifaAlquiler)
+    ON UPDATE CASCADE
 	);
 
 ALTER TABLE Articulos
@@ -296,7 +298,7 @@ CREATE TABLE Ventas (
 
 CREATE TABLE DetallesDeVenta (
 	NroFactura INT NOT NULL,
-	Codigo INT NOT NULL,
+	Codigo BIGINT NOT NULL,
 	Cantidad INT NOT NULL,
 	PrecioUnitario DECIMAL(9,2) NOT NULL,
 	CONSTRAINT detalles_de_venta_nro_factura_codigo_pk PRIMARY KEY(NroFactura, Codigo),
@@ -327,18 +329,18 @@ CREATE TABLE Alquileres (
     ON UPDATE NO ACTION ON DELETE CASCADE,
 );
 
-CREATE TABLE CategoriasDeAlquiler (
-	IdCategoriaAlquiler INT IDENTITY,
+CREATE TABLE TarifasDeAlquiler (
+	IdTarifaaAlquiler INT IDENTITY,
 	Nombre VARCHAR(30) NOT NULL,
 	Descripcion VARCHAR(MAX),
 	MontoAlquilerPorDia DECIMAL(9,2) NOT NULL,
 	MontoDevolucionTardiaPorDia DECIMAL(9,2) NOT NULL,
-	CONSTRAINT categorias_de_alquiler_id_categoria_ok PRIMARY KEY (IdCategoriaAlquiler)
+	CONSTRAINT categorias_de_alquiler_id_categoria_ok PRIMARY KEY (IdTarifaAlquiler)
 );
 
 CREATE TABLE DetallesDeAlquiler (
 	NroAlquiler INT NOT NULL,
-	Codigo INT NOT NULL,
+	Codigo BIGINT NOT NULL,
 	-- Categoria INT,
 	MontoAlquilerPorDia DECIMAL(9,2) NOT NULL,
 	MontoDevolucionTardiaPorDia DECIMAL(9,2) NOT NULL,
@@ -383,7 +385,7 @@ CREATE TABLE Compras (
 
 CREATE TABLE DetallesDeCompra (
 	NroFactura INT NOT NULL,
-	Codigo INT NOT NULL,
+	Codigo BIGINT NOT NULL,
 	Cantidad INT NOT NULL,
 	PrecioUnitario DECIMAL(9,2) NOT NULL,
 	CONSTRAINT detalles_de_compra_nro_factura_codigo_pk PRIMARY KEY(NroFactura, Codigo),

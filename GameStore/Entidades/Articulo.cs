@@ -15,10 +15,10 @@ namespace GameStore.Entidades
         }
 
         [Key]
-        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-        public int Codigo { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public long Codigo { get; set; }
 
-        public int? IdTipoArticulo { get; set; }
+        public int IdTipoArticulo { get; set; }
 
         [Required]
         [StringLength(50)]
@@ -28,7 +28,7 @@ namespace GameStore.Entidades
 
         public int Stock { get; set; }
 
-        public int? IdEstado { get; set; }
+        public int IdEstado { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime? FechaSalida { get; set; }
@@ -41,10 +41,10 @@ namespace GameStore.Entidades
 
         public int? IdDesarrollador { get; set; }
 
-        public int? IdPlataforma { get; set; }
+        public int IdPlataforma { get; set; }
 
         [ForeignKey("Archivo")]
-        public int? IdImagen { get; set; }
+        public int IdImagen { get; set; }
 
         public string Descripcion { get; set; }
 
@@ -64,9 +64,9 @@ namespace GameStore.Entidades
 
         public virtual Archivo Archivo { get; set; }
 
-        public int? IdCategoriaAlquiler { get; set; }
+        public int IdTarifaAlquiler { get; set; }
 
-        public virtual CategoriaAlquiler CategoriaAlquiler { get; set; }
+        public virtual TarifaAlquiler TarifaAlquiler { get; set; }
 
         public void ValidarNombre()
         {
@@ -92,7 +92,7 @@ namespace GameStore.Entidades
         {
             decimal monto = 0;
             if (EsVideojuego())
-                monto = CategoriaAlquiler.MontoDevolucionTardiaPorDia;
+                monto = TarifaAlquiler.MontoDevolucionTardiaPorDia;
             return monto;
         }
 
@@ -100,7 +100,7 @@ namespace GameStore.Entidades
         {
             decimal monto = 0;
             if (EsVideojuego())
-                monto = CategoriaAlquiler.MontoAlquilerPorDia;
+                monto = TarifaAlquiler.MontoAlquilerPorDia;
             return monto;
         }
 

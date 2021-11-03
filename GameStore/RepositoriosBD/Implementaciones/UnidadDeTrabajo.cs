@@ -26,7 +26,7 @@ namespace GameStore.RepositoriosBD.Implementaciones
             RepositorioEmpleado = new RepositorioEmpleado(_contextoBd);
             RepositorioSocio = new RepositorioSocio(_contextoBd);
             RepositorioFormaPago = new RepositorioFormaPago(_contextoBd);
-            RepositorioCategoriaAlquiler = new RepositorioCategoriaAlquiler(_contextoBd);
+            RepositorioTarifaAlquiler = new RepositorioTarifaAlquiler(_contextoBd);
             RepositorioTipoFactura = new RepositorioTipoFactura(_contextoBd);
             RepositorioVenta = new RepositorioVenta(_contextoBd);
             RepositorioDetalleVenta = new RepositorioDetalleVenta(_contextoBd);
@@ -51,7 +51,7 @@ namespace GameStore.RepositoriosBD.Implementaciones
         public IRepositorioCargo RepositorioCargo { get; private set; }
         public IRepositorioSocio RepositorioSocio { get; private set; }
         public IRepositorioFormaPago RepositorioFormaPago { get; private set; }
-        public IRepositorioCategoriaAlquiler RepositorioCategoriaAlquiler { get; private set; }
+        public IRepositorioTarifaAlquiler RepositorioTarifaAlquiler { get; private set; }
         public IRepositorioTipoFactura RepositorioTipoFactura { get; private set; }
         public IRepositorioDetalleVenta RepositorioDetalleVenta { get; private set; }
         public IRepositorioVenta RepositorioVenta { get; private set; }

@@ -8,12 +8,13 @@ namespace GameStore.RepositoriosBD.Implementaciones
         public ContextoGameStore() : base("name=ContextoGamestore")
         {
         }
-
+        
         public virtual DbSet<Archivo> Archivos { get; set; }
         public virtual DbSet<Alquiler> Alquileres { get; set; }
         public virtual DbSet<Articulo> Articulos { get; set; }
         public virtual DbSet<Barrio> Barrios { get; set; }
         public virtual DbSet<Cargo> Cargos { get; set; }
+        public virtual DbSet<TarifaAlquiler> TarifasDeAlquiler { get; set; }
         public virtual DbSet<Clasificacion> Clasificaciones { get; set; }
         public virtual DbSet<Compra> Compras { get; set; }
         public virtual DbSet<Desarrollador> Desarrolladores { get; set; }
@@ -71,19 +72,19 @@ namespace GameStore.RepositoriosBD.Implementaciones
                 .Property(e => e.Descripcion)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<CategoriaAlquiler>()
+            modelBuilder.Entity<TarifaAlquiler>()
                 .Property(e => e.Nombre)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<CategoriaAlquiler>()
+            modelBuilder.Entity<TarifaAlquiler>()
                 .Property(e => e.Descripcion)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<CategoriaAlquiler>()
+            modelBuilder.Entity<TarifaAlquiler>()
                 .Property(e => e.MontoAlquilerPorDia)
                 .HasPrecision(9, 2);
 
-            modelBuilder.Entity<CategoriaAlquiler>()
+            modelBuilder.Entity<TarifaAlquiler>()
                 .Property(e => e.MontoDevolucionTardiaPorDia)
                 .HasPrecision(9, 2);
 

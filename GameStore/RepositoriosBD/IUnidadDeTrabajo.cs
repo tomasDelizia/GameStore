@@ -21,7 +21,7 @@ namespace GameStore.RepositoriosBD
         IRepositorioCargo RepositorioCargo { get; }
         IRepositorioSocio RepositorioSocio { get; }
         IRepositorioFormaPago RepositorioFormaPago { get; }
-        IRepositorioCategoriaAlquiler RepositorioCategoriaAlquiler { get; }
+        IRepositorioTarifaAlquiler RepositorioTarifaAlquiler { get; }
         IRepositorioTipoFactura RepositorioTipoFactura { get; }
         IRepositorioDetalleVenta RepositorioDetalleVenta { get; }
         IRepositorioVenta RepositorioVenta { get; }
