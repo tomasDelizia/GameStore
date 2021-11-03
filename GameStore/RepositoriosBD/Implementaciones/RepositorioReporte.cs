@@ -30,8 +30,8 @@ namespace GameStore.RepositoriosBD.Implementaciones
                 "WHERE art.IdTipoArticulo = 2 " +
                 "GROUP BY art.Nombre " +
                 "ORDER BY 1 DESC";
-            var tabla2 = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
-            return tabla2;
+            var tabla = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
+            return tabla;
         }
 
         public DataTable GetConsolasPorCantidadVendida()
@@ -41,8 +41,8 @@ namespace GameStore.RepositoriosBD.Implementaciones
                 "WHERE art.IdTipoArticulo = 3 " +
                 "GROUP BY art.Nombre " +
                 "ORDER BY 1 DESC";
-            var tabla3 = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
-            return tabla3;
+            var tabla = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
+            return tabla;
         }
 
         public DataTable GetSociosPorCantidadComprada()
@@ -52,8 +52,8 @@ namespace GameStore.RepositoriosBD.Implementaciones
                 "JOIN Socios soc ON(v.IdSocio = soc.IdSocio) " +
                 "GROUP BY soc.IdSocio, soc.Nombre, soc.Apellido " +
                 "ORDER BY 1 DESC";
-            var tabla4 = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
-            return tabla4;
+            var tabla = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
+            return tabla;
         }
 
         public DataTable GetSociosPorCantidadAlquilada()
@@ -62,21 +62,32 @@ namespace GameStore.RepositoriosBD.Implementaciones
                 "FROM Alquileres a JOIN Socios soc ON(soc.IdSocio = a.IdSocio) " +
                 "GROUP BY soc.IdSocio, soc.Nombre, soc.Apellido " +
                 "ORDER BY 1 DESC";
-            var tabla5 = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
-            return tabla5;
+            var tabla = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
+            return tabla;
         }
 
-        public DataTable GetComprasPorFecha(string desde, string hasta)
+        public DataTable GetComprasDelMes(string desde, string hasta)
         {
             string fechaDesde = desde.ToString();
             string fechaHasta = hasta.ToString();
-            var sentenciaSql = "SELECT detc.PrecioUnitario MontoCompras, c.FechaCompra Fecha, detv.PrecioUnitario MontoVentas " +
-                "FROM Compras c JOIN DetallesDeCompra detc ON(detc.NroFactura = c.NroFactura) JOIN " +
-                "Ventas v ON(v.FechaVenta = c.FechaCompra) JOIN DetallesDeVenta detv ON(v.NroFactura = detv.NroFactura) " +
+            var sentenciaSql = "SELECT (detc.PrecioUnitario * detc.Cantidad) MontoCompras, c.FechaCompra Fecha " +
+                "FROM Compras c JOIN DetallesDeCompra detc ON(detc.NroFactura = c.NroFactura) " +
                 $"WHERE c.FechaCompra BETWEEN '{fechaDesde}' AND '{fechaHasta}' " +
-                "ORDER BY 2; ";
-            var tabla6 = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
-            return tabla6;
+                "ORDER BY 2";
+            var tabla = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
+            return tabla;
+        }
+
+        public DataTable GetVentasDelMes(string desde, string hasta)
+        {
+            string fechaDesde = desde.ToString();
+            string fechaHasta = hasta.ToString();
+            var sentenciaSql = "SELECT (detv.PrecioUnitario * detv.Cantidad) MontoVentas, v.FechaVenta Fecha " +
+                "FROM Ventas v JOIN DetallesDeVenta detv ON (detv.NroFactura = v.NroFactura) " +
+                $"WHERE v.FechaVenta BETWEEN '{fechaDesde}' AND '{fechaHasta}' " +
+                "ORDER BY 2";
+            var tabla = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
+            return tabla;
         }
     }
 }
