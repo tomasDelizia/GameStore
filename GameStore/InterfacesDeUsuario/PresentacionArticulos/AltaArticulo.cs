@@ -22,6 +22,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private readonly IServicioArchivo _servicioArchivo;
         private readonly IServicioMarca _servicioMarca;
         private readonly IServicioTarifaAlquiler _servicioTarifaAlquiler;
+        private readonly IServicioEstadoVideojuego _servicioEstadoVideojuego;
         private Archivo _nuevaImagen;
         private Articulo _nuevoArticulo;
 
@@ -38,6 +39,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             _servicioArchivo = new ServicioArchivo(unidadDeTrabajo.RepositorioArchivo);
             _servicioMarca = new ServicioMarca(unidadDeTrabajo.RepositorioMarca);
             _servicioTarifaAlquiler = new ServicioTarifaAlquiler(_unidadDeTrabajo.RepositorioTarifaAlquiler);
+            _servicioEstadoVideojuego = new ServicioEstadoVideojuego(_unidadDeTrabajo.RepositorioEstadoVideojuego);
             _unidadDeTrabajo = unidadDeTrabajo;
         }
 
@@ -158,6 +160,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             {
                 MessageBox.Show(aex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            catch (FormatException fe)
+            {
+                MessageBox.Show("Ingrese un código de producto universal válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (NullReferenceException nre)
+            {
+                MessageBox.Show("Seleccione los datos que son requeridos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception ex)
             {
                 var mensaje = ex.Message;
@@ -177,6 +187,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private bool EsArticuloValido()
         {
             var articuloNuevo = new Articulo();
+            articuloNuevo.Codigo = Convert.ToInt64(txtUPC.Text);
             articuloNuevo.Nombre = txtNombre.Text;
             articuloNuevo.Descripcion = txtDescripcion.Text;
             articuloNuevo.Stock = 0;
@@ -184,16 +195,19 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             articuloNuevo.FechaSalida = dateTimePicker.Value;
             articuloNuevo.Plataforma = (Plataforma)cboPlataforma.SelectedItem;
             articuloNuevo.TipoArticulo = (TipoArticulo)cboTipoArticulo.SelectedItem;
-            var diferenciaDias = articuloNuevo.GetDiferenciaDias();
 
+            articuloNuevo.EstadoVideojuego = _servicioEstadoVideojuego.GetEstadoRegistrado();
+
+            var diferenciaDias = articuloNuevo.GetDiferenciaDias();
             if (diferenciaDias < 90)
                 articuloNuevo.TarifaAlquiler = _servicioTarifaAlquiler.GetPorNombre("Estreno");
             else if (diferenciaDias >= 90 && diferenciaDias <= 365)
                 articuloNuevo.TarifaAlquiler = _servicioTarifaAlquiler.GetPorNombre("Viejos");
             else if (diferenciaDias > 365)
-                articuloNuevo.TarifaAlquiler = _servicioTarifaAlquiler.GetPorNombre(" Muy viejos");
+                articuloNuevo.TarifaAlquiler = _servicioTarifaAlquiler.GetPorNombre("Muy viejos");
 
-            if (articuloNuevo.TipoArticulo.Nombre == "Videojuego")
+            var tipoArticulo = articuloNuevo.TipoArticulo.Nombre;
+            if (tipoArticulo == "Videojuego")
             {
                 articuloNuevo.Genero = (Genero)cboGenero.SelectedItem;
                 articuloNuevo.Desarrollador = (Desarrollador)cboDesarrollador.SelectedItem;

@@ -91,11 +91,6 @@
     <Compile Include="Entidades\Archivo.cs" />
     <Compile Include="Entidades\Perfil.cs" />
     <Compile Include="Entidades\TarifaAlquiler.cs" />
-    <Compile Include="GAMESTOREDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GAMESTOREDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="InterfacesDeUsuario\Bienvenida.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -561,6 +556,7 @@
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioCompra.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioDesarrollador.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioDetalleVenta.cs" />
+    <Compile Include="RepositoriosBD\Implementaciones\RepositorioEstadoVideojuego.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioFormaPago.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioGenero.cs" />
     <Compile Include="RepositoriosBD\Implementaciones\RepositorioMarca.cs" />
@@ -593,6 +589,7 @@
     <Compile Include="RepositoriosBD\IRepositorioDesarrollador.cs" />
     <Compile Include="RepositoriosBD\IRepositorioDetalleVenta.cs" />
     <Compile Include="RepositoriosBD\IRepositorioEmpleado.cs" />
+    <Compile Include="RepositoriosBD\IRepositorioEstadoVideojuego.cs" />
     <Compile Include="RepositoriosBD\IRepositorioFormaPago.cs" />
     <Compile Include="RepositoriosBD\IRepositorioGenero.cs" />
     <Compile Include="RepositoriosBD\IRepositorioPerfil.cs" />
@@ -617,6 +614,7 @@
     <Compile Include="Entidades\Venta.cs" />
     <Compile Include="RepositoriosBD\IRepositorioMarca.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioAlquiler.cs" />
+    <Compile Include="Servicios\Implementaciones\ServicioEstadoVideojuego.cs" />
     <Compile Include="Servicios\Implementaciones\ServicioTarifaAlquiler.cs" />
     <Compile Include="Servicios\IServicioAlquiler.cs" />
     <Compile Include="Servicios\Implementaciones\Servicio.cs" />
@@ -650,6 +648,7 @@
     <Compile Include="Servicios\IServicioDesarrollador.cs" />
     <Compile Include="Servicios\IServicioDetalleVenta.cs" />
     <Compile Include="Servicios\IServicioEmpleado.cs" />
+    <Compile Include="Servicios\IServicioEstadoVideojuego.cs" />
     <Compile Include="Servicios\IServicioFormaPago.cs" />
     <Compile Include="Servicios\IServicioGenero.cs" />
     <Compile Include="Servicios\IServicioMarca.cs" />
@@ -671,6 +670,7 @@
     <Compile Include="Utils\IngresarCantidad.Designer.cs">
       <DependentUpon>IngresarCantidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Utils.cs" />
     <EmbeddedResource Include="InterfacesDeUsuario\Bienvenida.resx">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </EmbeddedResource>
@@ -900,17 +900,6 @@
     <EmbeddedResource Include="Utils\IngresarCantidad.resx">
       <DependentUpon>IngresarCantidad.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="GAMESTOREDataSet.xsc">
-      <DependentUpon>GAMESTOREDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="GAMESTOREDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GAMESTOREDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GAMESTOREDataSet.xss">
-      <DependentUpon>GAMESTOREDataSet.xsd</DependentUpon>
-    </None>
     <None Include="InterfacesDeUsuario\Reportes\DSReportes.xsc">
       <DependentUpon>DSReportes.xsd</DependentUpon>
     </None>

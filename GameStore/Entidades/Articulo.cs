@@ -5,6 +5,7 @@ namespace GameStore.Entidades
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Text.RegularExpressions;
 
     [Table("Articulos")]
     public partial class Articulo
@@ -31,7 +32,7 @@ namespace GameStore.Entidades
         public int IdEstado { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? FechaSalida { get; set; }
+        public DateTime FechaSalida { get; set; }
 
         public int? IdMarca { get; set; }
 
@@ -82,10 +83,34 @@ namespace GameStore.Entidades
                 throw new ApplicationException("Ingrese un precio válido.");
         }
 
+        internal void ValidarCodigo()
+        {
+            if (Codigo.ToString().Length != 12)
+                throw new ApplicationException("El UPC debe tener 12 caracteres");
+        }
+
+        internal void ValidarTipoArticulo()
+        {
+            if (TipoArticulo == null)
+                throw new ApplicationException("El tipo de artículo es requerido");
+        }
+
+        internal void ValidarPlataforma()
+        {
+            if (Plataforma == null)
+                throw new ApplicationException("La plataforma es requerida");
+        }
+
+        internal void ValidarFechaSalida()
+        {
+            if (FechaSalida.Year < 2000 || FechaSalida.Year > 2022)
+                throw new ApplicationException("Ingrese una fecha válida");
+        }
+
         public int GetDiferenciaDias()
         {
             var fechaActual = DateTime.Today;
-            return (fechaActual - (DateTime) FechaSalida).Days;
+            return (fechaActual - FechaSalida).Days;
         }
 
         public decimal GetMontoAlquilerTardio()
