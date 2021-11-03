@@ -499,7 +499,6 @@
     <Compile Include="InterfacesDeUsuario\PresentacionVentas\RegistrarVenta.Designer.cs">
       <DependentUpon>RegistrarVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\ITransaccionBase.cs" />
     <Compile Include="InterfacesDeUsuario\Reportes\DSReportes.cs">
       <DependentUpon>DSReportes.xsd</DependentUpon>
     </Compile>
@@ -525,9 +524,6 @@
     </Compile>
     <Compile Include="InterfacesDeUsuario\Reportes\Resumen.Designer.cs">
       <DependentUpon>Resumen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\TransaccionBase.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

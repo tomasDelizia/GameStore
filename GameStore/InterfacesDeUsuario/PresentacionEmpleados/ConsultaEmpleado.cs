@@ -195,6 +195,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
                     _consultaVenta.SetVendedorFiltro(empleado);
                 else if (_consultaAlquiler != null)
                     _consultaAlquiler.SetVendedorFiltro(empleado);
+                else if (_consultaCompra != null)
+                    _consultaCompra.SetCompradorFiltro(empleado);
                 this.Dispose();
                 return;
             }
