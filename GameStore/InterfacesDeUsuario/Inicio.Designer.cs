@@ -404,10 +404,10 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnCategoriaAlquiler.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.BtnCategoriaAlquiler.Size = new System.Drawing.Size(272, 32);
             this.BtnCategoriaAlquiler.TabIndex = 9;
-            this.BtnCategoriaAlquiler.Text = "Categorías de Alquiler";
+            this.BtnCategoriaAlquiler.Text = "Tarifas de Alquiler";
             this.BtnCategoriaAlquiler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCategoriaAlquiler.UseVisualStyleBackColor = false;
-            this.BtnCategoriaAlquiler.Click += new System.EventHandler(this.BtnCategoriaAlquiler_Click);
+            this.BtnCategoriaAlquiler.Click += new System.EventHandler(this.BtnTarifaAlquiler_Click);
             // 
             // BtnCargo
             // 

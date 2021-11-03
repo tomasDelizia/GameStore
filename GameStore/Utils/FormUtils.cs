@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,8 @@ namespace GameStore.Utils
 {
     public static class FormUtils
     {
+        private static object pictureBox;
+
         public static void CargarCombo(ref ComboBox cb, BindingSource conector, string displayMember, string valueMember)
         {
             if (conector is null)

@@ -79,7 +79,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             _tarifaAModificar.MontoAlquilerPorDia = numMontoAlquiler.Value;
             _tarifaAModificar.MontoDevolucionTardiaPorDia = numMontoTardio.Value;
             _tarifaAModificar.Descripcion = txtDescripcion.Text;
-            _servicioTarifaAlquiler.ValidarCategoria(_tarifaAModificar);
+            _servicioTarifaAlquiler.ValidarTarifa(_tarifaAModificar);
             return true;
         }
 

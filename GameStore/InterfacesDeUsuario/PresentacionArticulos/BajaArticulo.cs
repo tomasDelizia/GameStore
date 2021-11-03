@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 using GameStore.Entidades;
+using GameStore.RepositoriosBD;
 using GameStore.Servicios;
+using GameStore.Servicios.Implementaciones;
 
 namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 {
@@ -9,11 +11,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
     {
         private Articulo _articuloABorrar;
         private IServicioArticulo _servicioArticulo;
+        private IServicioEstadoVideojuego _servicioEstadoVideojuego;
+        private EstadoVideojuego _estadoEliminado;
 
-        public BajaArticulo(IServicioArticulo servicioArticulo, int codigo)
+        public BajaArticulo(IUnidadDeTrabajo unidadDeTrabajo, long codigo)
         {
             InitializeComponent();
-            _servicioArticulo = servicioArticulo;
+            _servicioArticulo = new ServicioArticulo(unidadDeTrabajo.RepositorioArticulo);
+            _servicioEstadoVideojuego = new ServicioEstadoVideojuego(unidadDeTrabajo.RepositorioEstadoVideojuego);
             _articuloABorrar = _servicioArticulo.GetPorId(codigo);
         }
 
@@ -25,6 +30,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private void CargarDatos()
         {
             txtNombre.Text = _articuloABorrar.Nombre;
+            txtUPC.Text = _articuloABorrar.Codigo.ToString();
             txtPrecio.Text = _articuloABorrar.PrecioUnitario.ToString();
         }
 
@@ -50,8 +56,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 
         private void DarBajaArticulo()
         {
-            _servicioArticulo.Borrar(_articuloABorrar);        
+            buscarEstadoEliminado();
+            _servicioArticulo.DarBajaArticulo(_articuloABorrar, _estadoEliminado);        
             MessageBox.Show("La operación se realizó con éxito", "Información");
+        }
+
+        private void buscarEstadoEliminado()
+        {
+            _estadoEliminado = _servicioEstadoVideojuego.GetEstadoEliminado();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

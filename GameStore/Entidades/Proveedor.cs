@@ -53,7 +53,7 @@ namespace GameStore.Entidades
 
         internal string GetRazonSocial()
         {
-            return this.RazonSocial;
+            return RazonSocial;
         }
 
         public void ValidarCuit()

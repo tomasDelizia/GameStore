@@ -107,6 +107,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.btnAgregar.Size = new System.Drawing.Size(40, 40);
             this.btnAgregar.TabIndex = 115;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnFiltrar
             // 

@@ -24,17 +24,14 @@ namespace GameStore.Servicios.Implementaciones
 
         public EstadoVideojuego GetEstadoRegistrado()
         {
-            var estados = ListarEstadosVideojuego();
-            EstadoVideojuego estadoRegistrado = null;
-            foreach(var e in estados)
-            {
-                if (e.EsRegistrado())
-                {
-                    estadoRegistrado = e;
-                    break;
-                }
-            }
-            return estadoRegistrado;
+            var estadoRegistrado = _repositorioEstadoVideojuego.Encontrar(estado => estado.Nombre == "Registrado").ToList();
+            return estadoRegistrado[0];
+        }
+
+        public EstadoVideojuego GetEstadoEliminado()
+        {
+            var estadoEliminado = _repositorioEstadoVideojuego.Encontrar(estado => estado.Nombre == "Eliminado").ToList();
+            return estadoEliminado[0];
         }
     }
 }

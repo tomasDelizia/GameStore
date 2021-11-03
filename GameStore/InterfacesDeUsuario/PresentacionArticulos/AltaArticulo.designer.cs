@@ -30,11 +30,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private void InitializeComponent()
         {
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.cboTipoArticulo = new System.Windows.Forms.ComboBox();
-            this.cboGenero = new System.Windows.Forms.ComboBox();
-            this.cboDesarrollador = new System.Windows.Forms.ComboBox();
-            this.cboClasificacion = new System.Windows.Forms.ComboBox();
-            this.cboPlataforma = new System.Windows.Forms.ComboBox();
+            this.cboTiposArticulo = new System.Windows.Forms.ComboBox();
+            this.cboGeneros = new System.Windows.Forms.ComboBox();
+            this.cboDesarrolladores = new System.Windows.Forms.ComboBox();
+            this.cboClasificaciones = new System.Windows.Forms.ComboBox();
+            this.cboPlataformas = new System.Windows.Forms.ComboBox();
             this.btnAgregarGenero = new System.Windows.Forms.Button();
             this.btnAgregarDesarrollador = new System.Windows.Forms.Button();
             this.btnAgregarClasificacion = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnAgregarMarca = new System.Windows.Forms.Button();
-            this.cboMarca = new System.Windows.Forms.ComboBox();
+            this.cboMarcas = new System.Windows.Forms.ComboBox();
             this.numPrecioUnitario = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
             this.txtUPC = new System.Windows.Forms.TextBox();
@@ -77,67 +77,67 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             // 
             // cboTipoArticulo
             // 
-            this.cboTipoArticulo.BackColor = System.Drawing.Color.White;
-            this.cboTipoArticulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboTipoArticulo.ForeColor = System.Drawing.Color.DimGray;
-            this.cboTipoArticulo.FormattingEnabled = true;
-            this.cboTipoArticulo.Location = new System.Drawing.Point(172, 12);
-            this.cboTipoArticulo.Name = "cboTipoArticulo";
-            this.cboTipoArticulo.Size = new System.Drawing.Size(200, 29);
-            this.cboTipoArticulo.TabIndex = 4;
-            this.cboTipoArticulo.Text = "Selección";
-            this.cboTipoArticulo.SelectedValueChanged += new System.EventHandler(this.cboTipoArticulo_SelectedValueChanged);
+            this.cboTiposArticulo.BackColor = System.Drawing.Color.White;
+            this.cboTiposArticulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTiposArticulo.ForeColor = System.Drawing.Color.DimGray;
+            this.cboTiposArticulo.FormattingEnabled = true;
+            this.cboTiposArticulo.Location = new System.Drawing.Point(172, 12);
+            this.cboTiposArticulo.Name = "cboTipoArticulo";
+            this.cboTiposArticulo.Size = new System.Drawing.Size(200, 29);
+            this.cboTiposArticulo.TabIndex = 4;
+            this.cboTiposArticulo.Text = "Selección";
+            this.cboTiposArticulo.SelectedValueChanged += new System.EventHandler(this.cboTipoArticulo_SelectedValueChanged);
             // 
             // cboGenero
             // 
-            this.cboGenero.BackColor = System.Drawing.Color.White;
-            this.cboGenero.Enabled = false;
-            this.cboGenero.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboGenero.ForeColor = System.Drawing.Color.DimGray;
-            this.cboGenero.FormattingEnabled = true;
-            this.cboGenero.Location = new System.Drawing.Point(172, 82);
-            this.cboGenero.Name = "cboGenero";
-            this.cboGenero.Size = new System.Drawing.Size(200, 29);
-            this.cboGenero.TabIndex = 5;
-            this.cboGenero.Text = "Selección";
+            this.cboGeneros.BackColor = System.Drawing.Color.White;
+            this.cboGeneros.Enabled = false;
+            this.cboGeneros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboGeneros.ForeColor = System.Drawing.Color.DimGray;
+            this.cboGeneros.FormattingEnabled = true;
+            this.cboGeneros.Location = new System.Drawing.Point(172, 82);
+            this.cboGeneros.Name = "cboGenero";
+            this.cboGeneros.Size = new System.Drawing.Size(200, 29);
+            this.cboGeneros.TabIndex = 5;
+            this.cboGeneros.Text = "Selección";
             // 
             // cboDesarrollador
             // 
-            this.cboDesarrollador.BackColor = System.Drawing.Color.White;
-            this.cboDesarrollador.Enabled = false;
-            this.cboDesarrollador.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboDesarrollador.ForeColor = System.Drawing.Color.DimGray;
-            this.cboDesarrollador.FormattingEnabled = true;
-            this.cboDesarrollador.Location = new System.Drawing.Point(172, 117);
-            this.cboDesarrollador.Name = "cboDesarrollador";
-            this.cboDesarrollador.Size = new System.Drawing.Size(200, 29);
-            this.cboDesarrollador.TabIndex = 6;
-            this.cboDesarrollador.Text = "Selección";
+            this.cboDesarrolladores.BackColor = System.Drawing.Color.White;
+            this.cboDesarrolladores.Enabled = false;
+            this.cboDesarrolladores.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboDesarrolladores.ForeColor = System.Drawing.Color.DimGray;
+            this.cboDesarrolladores.FormattingEnabled = true;
+            this.cboDesarrolladores.Location = new System.Drawing.Point(172, 117);
+            this.cboDesarrolladores.Name = "cboDesarrollador";
+            this.cboDesarrolladores.Size = new System.Drawing.Size(200, 29);
+            this.cboDesarrolladores.TabIndex = 6;
+            this.cboDesarrolladores.Text = "Selección";
             // 
             // cboClasificacion
             // 
-            this.cboClasificacion.BackColor = System.Drawing.Color.White;
-            this.cboClasificacion.Enabled = false;
-            this.cboClasificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboClasificacion.ForeColor = System.Drawing.Color.DimGray;
-            this.cboClasificacion.FormattingEnabled = true;
-            this.cboClasificacion.Location = new System.Drawing.Point(172, 152);
-            this.cboClasificacion.Name = "cboClasificacion";
-            this.cboClasificacion.Size = new System.Drawing.Size(200, 29);
-            this.cboClasificacion.TabIndex = 7;
-            this.cboClasificacion.Text = "Selección";
+            this.cboClasificaciones.BackColor = System.Drawing.Color.White;
+            this.cboClasificaciones.Enabled = false;
+            this.cboClasificaciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboClasificaciones.ForeColor = System.Drawing.Color.DimGray;
+            this.cboClasificaciones.FormattingEnabled = true;
+            this.cboClasificaciones.Location = new System.Drawing.Point(172, 152);
+            this.cboClasificaciones.Name = "cboClasificacion";
+            this.cboClasificaciones.Size = new System.Drawing.Size(200, 29);
+            this.cboClasificaciones.TabIndex = 7;
+            this.cboClasificaciones.Text = "Selección";
             // 
             // cboPlataforma
             // 
-            this.cboPlataforma.BackColor = System.Drawing.Color.White;
-            this.cboPlataforma.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboPlataforma.ForeColor = System.Drawing.Color.DimGray;
-            this.cboPlataforma.FormattingEnabled = true;
-            this.cboPlataforma.Location = new System.Drawing.Point(172, 47);
-            this.cboPlataforma.Name = "cboPlataforma";
-            this.cboPlataforma.Size = new System.Drawing.Size(200, 29);
-            this.cboPlataforma.TabIndex = 9;
-            this.cboPlataforma.Text = "Selección";
+            this.cboPlataformas.BackColor = System.Drawing.Color.White;
+            this.cboPlataformas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboPlataformas.ForeColor = System.Drawing.Color.DimGray;
+            this.cboPlataformas.FormattingEnabled = true;
+            this.cboPlataformas.Location = new System.Drawing.Point(172, 47);
+            this.cboPlataformas.Name = "cboPlataforma";
+            this.cboPlataformas.Size = new System.Drawing.Size(200, 29);
+            this.cboPlataformas.TabIndex = 9;
+            this.cboPlataformas.Text = "Selección";
             // 
             // btnAgregarGenero
             // 
@@ -389,16 +389,16 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             // 
             // cboMarca
             // 
-            this.cboMarca.BackColor = System.Drawing.Color.White;
-            this.cboMarca.Enabled = false;
-            this.cboMarca.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboMarca.ForeColor = System.Drawing.Color.DimGray;
-            this.cboMarca.FormattingEnabled = true;
-            this.cboMarca.Location = new System.Drawing.Point(172, 187);
-            this.cboMarca.Name = "cboMarca";
-            this.cboMarca.Size = new System.Drawing.Size(200, 29);
-            this.cboMarca.TabIndex = 43;
-            this.cboMarca.Text = "Selección";
+            this.cboMarcas.BackColor = System.Drawing.Color.White;
+            this.cboMarcas.Enabled = false;
+            this.cboMarcas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboMarcas.ForeColor = System.Drawing.Color.DimGray;
+            this.cboMarcas.FormattingEnabled = true;
+            this.cboMarcas.Location = new System.Drawing.Point(172, 187);
+            this.cboMarcas.Name = "cboMarca";
+            this.cboMarcas.Size = new System.Drawing.Size(200, 29);
+            this.cboMarcas.TabIndex = 43;
+            this.cboMarcas.Text = "Selección";
             // 
             // numPrecioUnitario
             // 
@@ -452,7 +452,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.numPrecioUnitario);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnAgregarMarca);
-            this.Controls.Add(this.cboMarca);
+            this.Controls.Add(this.cboMarcas);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -473,11 +473,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.btnAgregarClasificacion);
             this.Controls.Add(this.btnAgregarDesarrollador);
             this.Controls.Add(this.btnAgregarGenero);
-            this.Controls.Add(this.cboPlataforma);
-            this.Controls.Add(this.cboClasificacion);
-            this.Controls.Add(this.cboDesarrollador);
-            this.Controls.Add(this.cboGenero);
-            this.Controls.Add(this.cboTipoArticulo);
+            this.Controls.Add(this.cboPlataformas);
+            this.Controls.Add(this.cboClasificaciones);
+            this.Controls.Add(this.cboDesarrolladores);
+            this.Controls.Add(this.cboGeneros);
+            this.Controls.Add(this.cboTiposArticulo);
             this.Controls.Add(this.txtNombre);
             this.Name = "AltaArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -493,11 +493,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         #endregion
 
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.ComboBox cboTipoArticulo;
-        private System.Windows.Forms.ComboBox cboGenero;
-        private System.Windows.Forms.ComboBox cboDesarrollador;
-        private System.Windows.Forms.ComboBox cboClasificacion;
-        private System.Windows.Forms.ComboBox cboPlataforma;
+        private System.Windows.Forms.ComboBox cboTiposArticulo;
+        private System.Windows.Forms.ComboBox cboGeneros;
+        private System.Windows.Forms.ComboBox cboDesarrolladores;
+        private System.Windows.Forms.ComboBox cboClasificaciones;
+        private System.Windows.Forms.ComboBox cboPlataformas;
         private System.Windows.Forms.Button btnAgregarGenero;
         private System.Windows.Forms.Button btnAgregarDesarrollador;
         private System.Windows.Forms.Button btnAgregarClasificacion;
@@ -520,7 +520,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnAgregarMarca;
-        private System.Windows.Forms.ComboBox cboMarca;
+        private System.Windows.Forms.ComboBox cboMarcas;
         private System.Windows.Forms.NumericUpDown numPrecioUnitario;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtUPC;

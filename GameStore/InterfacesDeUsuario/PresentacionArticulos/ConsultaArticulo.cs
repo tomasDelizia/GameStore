@@ -88,31 +88,19 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private void CargarPlataformas(ComboBox combo)
         {
             var plataformas = _servicioPlataforma.ListarPlataformas();
-            var bindingSource = new BindingSource();
-            bindingSource.DataSource = plataformas;
-            combo.DataSource = bindingSource;
-            combo.DisplayMember = "Nombre";
-            combo.ValueMember = "IdPlataforma";
-            combo.Text = "Selección";
+            FormUtils.CargarCombo(ref cboPlataforma, new BindingSource() { DataSource = plataformas }, "Nombre", "IdPlataforma");
         }
 
         private void CargarTipoArticulos(ComboBox combo)
         {
             var tiposArticulos = _servicioTipoArticulo.ListarTiposDeArticulo();
-
-            var bindingSource = new BindingSource();
-            bindingSource.DataSource = tiposArticulos;
-
-            combo.DataSource = bindingSource;
-            combo.DisplayMember = "Nombre";
-            combo.ValueMember = "IdTipoArticulo";
-            combo.SelectedItem = null;
-            combo.Text = "Selección";
+            FormUtils.CargarCombo(ref cboTipoArticulo, new BindingSource() { DataSource = tiposArticulos }, "Nombre", "IdTipoArticulo");
         }
 
         private void ConsultarArticulos()
         {
-            var articulos = _servicioArticulo.ListarArticulos();
+            ckbIncluirTodos.Checked = false;
+            var articulos = _servicioArticulo.ListarArticulosActivos();
             CargarDgvArticulos(articulos);
             MostrarImagenArticuloSeleccionado();
             dgvArticulos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -122,6 +110,15 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         {
             try
             {
+                List<Articulo> articulosFiltrados;
+                if (!string.IsNullOrEmpty(txtUPC.Text))
+                {
+                    long codigo = Convert.ToInt64(txtUPC.Text);
+                    articulosFiltrados = _servicioArticulo.Encontrar(a => a.Codigo == codigo).ToList();
+                    CargarDgvArticulos(articulosFiltrados);
+                    return;
+                }
+                
                 var nombreArticulo = txtNombre.Text.Trim();
                 if (nombreArticulo.Length > 50)
                     throw new ApplicationException("El nombre no debe tener más de 50 caracteres.");
@@ -145,15 +142,22 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                 if (precioMin > precioMax)
                     throw new ApplicationException("Ingrese un rango de precios válido.");
 
-                var articulosFiltrados = _servicioArticulo.Encontrar(a => a.Nombre.Contains(nombreArticulo) && a.PrecioUnitario >= precioMin
+                articulosFiltrados = _servicioArticulo.Encontrar(a => a.Nombre.Contains(nombreArticulo) && a.PrecioUnitario >= precioMin
                 && a.PrecioUnitario <= precioMax && a.TipoArticulo.Nombre == tipoArticulo.Nombre && a.Plataforma.Nombre == plataforma.Nombre).ToList();
-
                 CargarDgvArticulos(articulosFiltrados);
             } catch (ApplicationException aex)
             {
                 MessageBox.Show(aex.Message, "Información", MessageBoxButtons.OK);
             }
-            
+            catch (FormatException fe)
+            {
+                MessageBox.Show("El código de producto universal solo acepta caracteres numéricos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                var mensaje = ex.Message;
+                MessageBox.Show("Ha ocurrido un problema, intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void CargarDgvArticulos(List<Articulo> articulos)
@@ -170,6 +174,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                     articulo.Stock.ToString(),
                     articulo.TipoArticulo.Nombre,
                     articulo.Plataforma.Nombre.ToString(),
+                    articulo.EstadoVideojuego.Nombre,
                 };
                 dgvArticulos.Rows.Add(fila);
             }
@@ -201,7 +206,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             // validar cantidad de filas seleccionadas.
             if (dgvArticulos.SelectedRows.Count == 1)
             {
-                var id = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
+                var id = Convert.ToInt64(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
                 new ModificacionArticulo(_unidadDeTrabajo, id).ShowDialog();
                 ConsultarArticulos();
                 return;
@@ -220,9 +225,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         {
             if (dgvArticulos.SelectedRows.Count == 1)
             {
-                var id = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
+                var id = Convert.ToInt64(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
 
-                new BajaArticulo(_servicioArticulo, id).ShowDialog();
+                new BajaArticulo(_unidadDeTrabajo, id).ShowDialog();
+                ConsultarArticulos();
                 return;
             }
 
@@ -250,6 +256,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             btnEliminar.Visible = false;
             btnModificar.Visible = false;
             btnSeleccionar.Visible = true;
+            ckbIncluirTodos.Visible = false;
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
@@ -259,7 +266,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                 if (_registrarCompra != null)
                 {
                     List<Articulo> articulos = _registrarCompra.GetArticulos();
-                    var id = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
+                    var id = Convert.ToInt64(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
                     var articulo = _servicioArticulo.GetPorId(id);
                     if (articulos.Contains(articulo))
                     {
@@ -281,7 +288,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                 else if (_registrarVenta != null)
                 {
                     List<Articulo> articulos = _registrarVenta.GetArticulos();
-                    var id = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
+                    var id = Convert.ToInt64(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
                     var articulo = _servicioArticulo.GetPorId(id);
                     if (articulos.Contains(articulo))
                     {
@@ -308,7 +315,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 				else if (_registrarAlquiler != null)
                 {
                     List<Articulo> articulos = _registrarAlquiler.GetArticulos();
-                    var id = Convert.ToInt32(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
+                    var id = Convert.ToInt64(dgvArticulos.SelectedRows[0].Cells["Codigo"].Value);
                     var articulo = _servicioArticulo.GetPorId(id);
                     if (articulos.Contains(articulo))
                     {
@@ -340,6 +347,17 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             }
             else if (dgvArticulos.SelectedRows.Count > 1)
                 MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
+        }
+
+        private void ckbIncluirTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbIncluirTodos.Checked)
+            {
+                var articulos = _servicioArticulo.ListarArticulos();
+                CargarDgvArticulos(articulos);
+            }
+            else
+                ConsultarArticulos();
         }
     }
 }

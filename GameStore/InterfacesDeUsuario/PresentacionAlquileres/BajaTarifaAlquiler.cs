@@ -46,7 +46,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
                 DialogResult resultado = MessageBox.Show("Confirmar operación", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (resultado == DialogResult.Cancel)
                     return;
-                DarBajaCategoria();
+                DarBajaTarifa();
                 this.Dispose();
             }
             catch (ApplicationException aex)
@@ -59,7 +59,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             }
         }
 
-        private void DarBajaCategoria()
+        private void DarBajaTarifa()
         {
             _servicioTarifaAlquiler.Borrar(_tarifaABorrar);
             MessageBox.Show("La operación se realizó con éxito", "Información");

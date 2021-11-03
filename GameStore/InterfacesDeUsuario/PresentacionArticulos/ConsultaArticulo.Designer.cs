@@ -31,6 +31,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaArticulo));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtUPC = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnReiniciarFiltros = new System.Windows.Forms.Button();
             this.numPrecioMax = new System.Windows.Forms.NumericUpDown();
             this.numPrecioMin = new System.Windows.Forms.NumericUpDown();
@@ -45,18 +47,20 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.cboTipoArticulo = new System.Windows.Forms.ComboBox();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Plataforma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.picArticulo = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Plataforma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ckbIncluirTodos = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioMin)).BeginInit();
@@ -67,6 +71,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.Controls.Add(this.ckbIncluirTodos);
+            this.panel1.Controls.Add(this.txtUPC);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btnReiniciarFiltros);
             this.panel1.Controls.Add(this.numPrecioMax);
             this.panel1.Controls.Add(this.numPrecioMin);
@@ -82,14 +89,35 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.panel1.Controls.Add(this.cboTipoArticulo);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(890, 191);
+            this.panel1.Size = new System.Drawing.Size(918, 191);
             this.panel1.TabIndex = 88;
+            // 
+            // txtUPC
+            // 
+            this.txtUPC.BackColor = System.Drawing.Color.White;
+            this.txtUPC.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUPC.ForeColor = System.Drawing.Color.DimGray;
+            this.txtUPC.Location = new System.Drawing.Point(99, 92);
+            this.txtUPC.Name = "txtUPC";
+            this.txtUPC.Size = new System.Drawing.Size(233, 27);
+            this.txtUPC.TabIndex = 102;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(39, 94);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 22);
+            this.label4.TabIndex = 103;
+            this.label4.Text = "UPC:";
             // 
             // btnReiniciarFiltros
             // 
             this.btnReiniciarFiltros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReiniciarFiltros.ForeColor = System.Drawing.Color.DimGray;
-            this.btnReiniciarFiltros.Location = new System.Drawing.Point(639, 154);
+            this.btnReiniciarFiltros.Location = new System.Drawing.Point(668, 154);
             this.btnReiniciarFiltros.Name = "btnReiniciarFiltros";
             this.btnReiniciarFiltros.Size = new System.Drawing.Size(136, 29);
             this.btnReiniciarFiltros.TabIndex = 101;
@@ -102,7 +130,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.numPrecioMax.DecimalPlaces = 2;
             this.numPrecioMax.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPrecioMax.ForeColor = System.Drawing.Color.DimGray;
-            this.numPrecioMax.Location = new System.Drawing.Point(240, 94);
+            this.numPrecioMax.Location = new System.Drawing.Point(240, 125);
             this.numPrecioMax.Maximum = new decimal(new int[] {
             500000,
             0,
@@ -122,7 +150,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.numPrecioMin.DecimalPlaces = 2;
             this.numPrecioMin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPrecioMin.ForeColor = System.Drawing.Color.DimGray;
-            this.numPrecioMin.Location = new System.Drawing.Point(99, 93);
+            this.numPrecioMin.Location = new System.Drawing.Point(99, 124);
             this.numPrecioMin.Maximum = new decimal(new int[] {
             500000,
             0,
@@ -142,7 +170,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(197, 94);
+            this.label8.Location = new System.Drawing.Point(197, 125);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 22);
             this.label8.TabIndex = 98;
@@ -153,7 +181,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(13, 96);
+            this.label7.Location = new System.Drawing.Point(19, 125);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 22);
             this.label7.TabIndex = 95;
@@ -164,7 +192,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(522, 94);
+            this.label6.Location = new System.Drawing.Point(551, 94);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(116, 22);
             this.label6.TabIndex = 93;
@@ -175,7 +203,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(484, 61);
+            this.label1.Location = new System.Drawing.Point(513, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 22);
             this.label1.TabIndex = 91;
@@ -187,7 +215,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.cboPlataforma.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPlataforma.ForeColor = System.Drawing.Color.DimGray;
             this.cboPlataforma.FormattingEnabled = true;
-            this.cboPlataforma.Location = new System.Drawing.Point(644, 94);
+            this.cboPlataforma.Location = new System.Drawing.Point(673, 94);
             this.cboPlataforma.Name = "cboPlataforma";
             this.cboPlataforma.Size = new System.Drawing.Size(242, 29);
             this.cboPlataforma.TabIndex = 90;
@@ -198,7 +226,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(379, 2);
+            this.label3.Location = new System.Drawing.Point(412, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 33);
             this.label3.TabIndex = 88;
@@ -229,7 +257,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             // 
             this.btnFiltrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnFiltrar.Location = new System.Drawing.Point(781, 154);
+            this.btnFiltrar.Location = new System.Drawing.Point(810, 154);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(100, 29);
             this.btnFiltrar.TabIndex = 82;
@@ -243,7 +271,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.cboTipoArticulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoArticulo.ForeColor = System.Drawing.Color.DimGray;
             this.cboTipoArticulo.FormattingEnabled = true;
-            this.cboTipoArticulo.Location = new System.Drawing.Point(644, 59);
+            this.cboTipoArticulo.Location = new System.Drawing.Point(673, 59);
             this.cboTipoArticulo.Name = "cboTipoArticulo";
             this.cboTipoArticulo.Size = new System.Drawing.Size(242, 29);
             this.cboTipoArticulo.TabIndex = 72;
@@ -261,61 +289,19 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Precio,
             this.Stock,
             this.TipoArticulo,
-            this.Plataforma});
+            this.Plataforma,
+            this.Estado});
             this.dgvArticulos.Location = new System.Drawing.Point(12, 209);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArticulos.Size = new System.Drawing.Size(725, 200);
+            this.dgvArticulos.Size = new System.Drawing.Size(762, 200);
             this.dgvArticulos.TabIndex = 89;
             this.dgvArticulos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellClick);
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Visible = false;
-            this.Codigo.Width = 65;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 120;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            this.Precio.Width = 114;
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            this.Stock.Width = 113;
-            // 
-            // TipoArticulo
-            // 
-            this.TipoArticulo.HeaderText = "Tipo de Artículo";
-            this.TipoArticulo.Name = "TipoArticulo";
-            this.TipoArticulo.ReadOnly = true;
-            this.TipoArticulo.Width = 114;
-            // 
-            // Plataforma
-            // 
-            this.Plataforma.HeaderText = "Plataforma";
-            this.Plataforma.Name = "Plataforma";
-            this.Plataforma.ReadOnly = true;
-            this.Plataforma.Width = 114;
             // 
             // picArticulo
             // 
             this.picArticulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picArticulo.Location = new System.Drawing.Point(752, 209);
+            this.picArticulo.Location = new System.Drawing.Point(780, 209);
             this.picArticulo.Name = "picArticulo";
             this.picArticulo.Size = new System.Drawing.Size(150, 200);
             this.picArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -365,7 +351,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             // 
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.DimGray;
-            this.btnSalir.Location = new System.Drawing.Point(809, 426);
+            this.btnSalir.Location = new System.Drawing.Point(837, 426);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(93, 29);
             this.btnSalir.TabIndex = 104;
@@ -377,7 +363,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnSeleccionar.Location = new System.Drawing.Point(693, 426);
+            this.btnSeleccionar.Location = new System.Drawing.Point(721, 426);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(110, 29);
             this.btnSeleccionar.TabIndex = 105;
@@ -386,12 +372,73 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.btnSeleccionar.Visible = false;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "UPC";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 65;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 120;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            this.Precio.Width = 114;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            this.Stock.Width = 113;
+            // 
+            // TipoArticulo
+            // 
+            this.TipoArticulo.HeaderText = "Tipo";
+            this.TipoArticulo.Name = "TipoArticulo";
+            this.TipoArticulo.ReadOnly = true;
+            this.TipoArticulo.Width = 114;
+            // 
+            // Plataforma
+            // 
+            this.Plataforma.HeaderText = "Plataforma";
+            this.Plataforma.Name = "Plataforma";
+            this.Plataforma.ReadOnly = true;
+            this.Plataforma.Width = 114;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
+            // ckbIncluirTodos
+            // 
+            this.ckbIncluirTodos.AutoSize = true;
+            this.ckbIncluirTodos.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbIncluirTodos.ForeColor = System.Drawing.Color.DimGray;
+            this.ckbIncluirTodos.Location = new System.Drawing.Point(338, 60);
+            this.ckbIncluirTodos.Name = "ckbIncluirTodos";
+            this.ckbIncluirTodos.Size = new System.Drawing.Size(139, 26);
+            this.ckbIncluirTodos.TabIndex = 104;
+            this.ckbIncluirTodos.Text = "Incluir Todos";
+            this.ckbIncluirTodos.UseVisualStyleBackColor = true;
+            this.ckbIncluirTodos.CheckedChanged += new System.EventHandler(this.ckbIncluirTodos_CheckedChanged);
+            // 
             // ConsultaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(914, 464);
+            this.ClientSize = new System.Drawing.Size(942, 464);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
@@ -402,7 +449,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.panel1);
             this.Name = "ConsultaArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Consultar Artículo";
+            this.Text = "Consultar Artículos";
             this.Load += new System.EventHandler(this.ConsultaArticulo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -436,12 +483,16 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private System.Windows.Forms.Button btnReiniciarFiltros;
         private System.Windows.Forms.NumericUpDown numPrecioMax;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.TextBox txtUPC;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoArticulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Plataforma;
-        private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.CheckBox ckbIncluirTodos;
     }
 }

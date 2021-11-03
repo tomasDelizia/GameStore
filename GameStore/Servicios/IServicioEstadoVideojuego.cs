@@ -11,5 +11,6 @@ namespace GameStore.Servicios
     {
         List<EstadoVideojuego> ListarEstadosVideojuego();
         EstadoVideojuego GetEstadoRegistrado();
+        EstadoVideojuego GetEstadoEliminado();
     }
 }
