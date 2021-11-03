@@ -1,20 +1,15 @@
-#Reemplezar 3k2_Confiteria por nombre de carpeta que contiene la solución y solución.
 generar-ejecutable:
     image: mono:latest
 
-    variables:
-        solution: "GameStore/GameStore.sln"
-        carpeta: "GameStore"
-
     before_script:
-        - nuget restore $solution
+        - nuget restore $PATH_TO_SLN
 
     script:
         - pwd
         - ls -al
-        - msbuild /p:Configuration=Release $solution
+        - msbuild /p:Configuration=Release $PATH_TO_SLN
         - mkdir proyecto        
-        - mv $carpeta/bin/Release/* proyecto
+        - mv $PATH_DIR_TO_CSPROJ/bin/Release/* proyecto
         - ls -al proyecto
     artifacts:
         paths:
