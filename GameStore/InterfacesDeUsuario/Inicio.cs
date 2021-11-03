@@ -184,5 +184,10 @@ namespace GameStore.InterfacesDeUsuario
         {
             new MasFieles().ShowDialog();
         }
+
+        private void btnResumen_Click(object sender, EventArgs e)
+        {
+            new Resumen().ShowDialog();
+        }
     }
 }

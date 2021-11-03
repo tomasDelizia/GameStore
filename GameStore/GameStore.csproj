@@ -525,6 +525,12 @@
     <Compile Include="InterfacesDeUsuario\Reportes\MasVendidos.Designer.cs">
       <DependentUpon>MasVendidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\Reportes\Resumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\Reportes\Resumen.Designer.cs">
+      <DependentUpon>Resumen.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\TransaccionBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -875,8 +881,12 @@
     <EmbeddedResource Include="InterfacesDeUsuario\Reportes\MasVendidos.resx">
       <DependentUpon>MasVendidos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\Reportes\Resumen.rdlc" />
     <EmbeddedResource Include="InterfacesDeUsuario\Reportes\ReporteMasVendidos.rdlc" />
     <EmbeddedResource Include="InterfacesDeUsuario\Reportes\ReportesMasFieles.rdlc" />
+    <EmbeddedResource Include="InterfacesDeUsuario\Reportes\Resumen.resx">
+      <DependentUpon>Resumen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
