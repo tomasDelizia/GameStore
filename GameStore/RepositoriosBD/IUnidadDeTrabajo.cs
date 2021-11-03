@@ -27,6 +27,7 @@ namespace GameStore.RepositoriosBD
         IRepositorioVenta RepositorioVenta { get; }
         IRepositorioCompra RepositorioCompra { get; }
         IRepositorioAlquiler RepositorioAlquiler { get; }
+        IRepositorioEstadoVideojuego RepositorioEstadoVideojuego { get; }
         int Guardar();
         void Deshacer();
     }

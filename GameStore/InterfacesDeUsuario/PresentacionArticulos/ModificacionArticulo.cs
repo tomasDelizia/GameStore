@@ -53,6 +53,12 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             CargarPrecio(numPrecioUnitario);
             CargarLanzamiento(dateLanzamiento);
             CargarImagen(imgArticulo);
+            CargarUPC(txtUPC);
+        }
+
+        private void CargarUPC(TextBox txtUPC)
+        {
+            txtUPC.Text = _articuloAModificar.Codigo.ToString();
         }
 
         private void CargarImagen(PictureBox imgArticulo)

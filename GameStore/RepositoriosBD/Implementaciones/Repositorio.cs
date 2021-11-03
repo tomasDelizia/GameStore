@@ -19,6 +19,10 @@ namespace GameStore.RepositoriosBD.Implementaciones
         {
             return _contextoBd.Set<TEntidad>().Find(id);
         }
+        public TEntidad GetPorId(long id)
+        {
+            return _contextoBd.Set<TEntidad>().Find(id);
+        }
 
         public IEnumerable<TEntidad> GetTodos()
         {

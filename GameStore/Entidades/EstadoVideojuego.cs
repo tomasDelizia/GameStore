@@ -22,5 +22,10 @@ namespace GameStore.Entidades
         public string Nombre { get; set; }
 
         public string Descripcion { get; set; }
+
+        public bool EsRegistrado()
+        {
+            return Nombre == "Registrado";
+        }
     }
 }

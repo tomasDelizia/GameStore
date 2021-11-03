@@ -182,7 +182,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 
         private void MostrarImagenArticuloSeleccionado()
         {
-            var idArticulo = Convert.ToInt32(dgvArticulos.CurrentRow.Cells["Codigo"].Value);
+            var idArticulo = Convert.ToInt64(dgvArticulos.CurrentRow.Cells["Codigo"].Value);
             var articulo = _servicioArticulo.GetPorId(idArticulo);
             byte[] contenidoImagen = articulo.Archivo.Contenido;
             MemoryStream memorystream = new MemoryStream(contenidoImagen, 0, contenidoImagen.Length);

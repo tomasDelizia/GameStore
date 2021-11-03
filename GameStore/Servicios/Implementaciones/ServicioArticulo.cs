@@ -24,8 +24,13 @@ namespace GameStore.Servicios.Implementaciones
 
         public void ValidarArticulo(Articulo articulo)
         {
+            articulo.ValidarCodigo();
             articulo.ValidarNombre();
             articulo.ValidarPrecio();
+            articulo.ValidarTipoArticulo();
+            articulo.ValidarFechaSalida();
+            articulo.ValidarPlataforma();
+
         }
     }
 }
