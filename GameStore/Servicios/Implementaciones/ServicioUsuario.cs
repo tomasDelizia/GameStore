@@ -52,5 +52,10 @@ namespace GameStore.Servicios.Implementaciones
         {
             return UsuarioLogueado.Empleado;
         }
+
+        public List<Usuario> ListarUsuariosActivos()
+        {
+            return _repositorioUsuario.Encontrar(u => (bool)u.Estado).ToList();
+        }
     }
 }

@@ -95,7 +95,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
 
         private void ConsultarSocios()
         {
-            var socios = _servicioSocio.ListarSocios();
+            ckbIncluirTodos.Checked = false;
+            var socios = _servicioSocio.ListarSociosActivos();
             CargarDgvSocios(socios);
             dgvSocios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
@@ -105,6 +106,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             dgvSocios.Rows.Clear();
             foreach(var socio in socios)
             {
+                var descripcionEstado = (bool)socio.Estado ? "Activo" : "Inactivo";
                 var fila = new string[]
                 {
                     socio.IdSocio.ToString(),
@@ -114,6 +116,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
                     socio.Email,
                     socio.FechaAlta.ToString().Substring(0,10),
                     socio.FechaNacimiento.ToString().Substring(0,10),
+                    descripcionEstado
                 };
                 dgvSocios.Rows.Add(fila);
             }
@@ -213,5 +216,16 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             else if (dgvSocios.SelectedRows.Count > 1)
                 MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
 			}
-		}
+
+        private void ckbIncluirTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbIncluirTodos.Checked)
+            {
+                var socios = _servicioSocio.ListarSocios();
+                CargarDgvSocios(socios);
+            }
+            else
+                ConsultarSocios();
+        }
+    }
 	}

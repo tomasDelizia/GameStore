@@ -31,5 +31,16 @@ namespace GameStore.Servicios.Implementaciones
         {
             return _repositorioProveedor.GetPorId(cuit);
         }
+
+        public void DarDeBaja(Proveedor proveedor)
+        {
+            proveedor.Estado = false;
+            _repositorioProveedor.Actualizar(proveedor);
+        }
+
+        public List<Proveedor> ListarProveedoresActivos()
+        {
+            return _repositorioProveedor.Encontrar(u => (bool)u.Estado).ToList();
+        }
     }
 }

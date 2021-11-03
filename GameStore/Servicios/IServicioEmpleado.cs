@@ -11,5 +11,7 @@ namespace GameStore.Servicios
     {
         List<Empleado> ListarEmpleados();
         void ValidarEmpleado(Empleado empleado);
+        List<Empleado> ListarEmpleadosActivos();
+        void DarDeBaja(Empleado empleado);
     }
 }

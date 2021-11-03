@@ -16,9 +16,20 @@ namespace GameStore.Servicios.Implementaciones
             _repositorioSocio = repositorioSocio;
         }
 
+        public void DarDeBaja(Socio socio)
+        {
+            socio.Estado = false;
+            _repositorioSocio.Actualizar(socio);
+        }
+
         public List<Socio> ListarSocios()
         {
             return _repositorioSocio.GetTodos().ToList();
+        }
+
+        public List<Socio> ListarSociosActivos()
+        {
+            return _repositorioSocio.Encontrar(u => (bool)u.Estado).ToList();
         }
 
         public void ValidarSocio(Socio socio)

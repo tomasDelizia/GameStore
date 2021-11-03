@@ -19,6 +19,8 @@ namespace GameStore.Servicios.Implementaciones
 
         public void ValidarArchivo(Archivo archivo)
         {
+            if (archivo == null)
+                throw new ApplicationException("La imagen del artículo es requerida");
             archivo.ValidarNombre();
         }
     }

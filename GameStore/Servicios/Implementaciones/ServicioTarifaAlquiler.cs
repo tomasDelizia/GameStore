@@ -20,11 +20,11 @@ namespace GameStore.Servicios.Implementaciones
         {
             return _repositorioTarifa.GetTodos().ToList();
         }
-        public void ValidarCategoria(TarifaAlquiler categoria)
+        public void ValidarTarifa(TarifaAlquiler tarifa)
         {
-            categoria.ValidarNombre();
-            categoria.ValidarMontoAlquilerDiario();
-            categoria.ValidarMontoAlquilerTardio();
+            tarifa.ValidarNombre();
+            tarifa.ValidarMontoAlquilerDiario();
+            tarifa.ValidarMontoAlquilerTardio();
         }
 
         public TarifaAlquiler GetPorNombre(string nombre)

@@ -114,7 +114,7 @@ namespace GameStore.InterfacesDeUsuario
             new ConsultarCargo(_unidadDeTrabajo).ShowDialog();
         }
 
-        private void BtnCategoriaAlquiler_Click(object sender, EventArgs e)
+        private void BtnTarifaAlquiler_Click(object sender, EventArgs e)
         {
             new ConsultaTarifaAlquiler(_unidadDeTrabajo).ShowDialog();
         }
