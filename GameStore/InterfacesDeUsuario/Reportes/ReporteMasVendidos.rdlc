@@ -409,7 +409,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>VideoJuegos</Caption>
+                <Caption>Videojuegos</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontFamily>Century Gothic</FontFamily>
@@ -773,7 +773,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Perifericos</Caption>
+                <Caption>Periféricos</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontFamily>Century Gothic</FontFamily>

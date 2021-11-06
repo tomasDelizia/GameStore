@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using GameStore.Entidades;
 using GameStore.InterfacesDeUsuario.PresentacionAlquileres;
 using GameStore.InterfacesDeUsuario.PresentacionArticulos;
 using GameStore.InterfacesDeUsuario.PresentacionCompras;
@@ -9,24 +10,31 @@ using GameStore.InterfacesDeUsuario.PresentacionUsuarios;
 using GameStore.InterfacesDeUsuario.PresentacionVentas;
 using GameStore.InterfacesDeUsuario.Reportes;
 using GameStore.RepositoriosBD;
+using GameStore.Servicios;
+using GameStore.Servicios.Implementaciones;
 
 namespace GameStore.InterfacesDeUsuario
 {
     public partial class Inicio : Form
     {
         private IUnidadDeTrabajo _unidadDeTrabajo;
+        private IServicioUsuario _servicioUsuario;
+        private Usuario _usuarioLogueado;
 
         public Inicio(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
             customizeDesign();
             _unidadDeTrabajo = unidadDeTrabajo;
+            _servicioUsuario = new ServicioUsuario(unidadDeTrabajo.RepositorioUsuario);
         }
 
         private void Inicio_Load(object sender, EventArgs e)
         {
             new Login(_unidadDeTrabajo).ShowDialog();
+            _usuarioLogueado = _servicioUsuario.GetUsuarioLogueado();
             this.WindowState = FormWindowState.Maximized;
+            lblUsuarioLogueado.Text = _usuarioLogueado.NombreUsuario;
         }
 
         private void customizeDesign()

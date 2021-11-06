@@ -425,7 +425,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Top 5 ventas</Value>
+                    <Value>Top 5 socios que más compraron</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>12pt</FontSize>
@@ -461,7 +461,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Top 5 alquileres</Value>
+                    <Value>Top 5 socios que más alquilaron</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>12pt</FontSize>
@@ -804,7 +804,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -842,7 +841,7 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>15cm</Height>
+        <Height>9.25854cm</Height>
         <Style>
           <Border>
             <Style>None</Style>

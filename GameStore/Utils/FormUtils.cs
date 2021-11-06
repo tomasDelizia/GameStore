@@ -10,7 +10,6 @@ namespace GameStore.Utils
 {
     public static class FormUtils
     {
-        private static object pictureBox;
 
         public static void CargarCombo(ref ComboBox cb, BindingSource conector, string displayMember, string valueMember)
         {

@@ -89,5 +89,34 @@ namespace GameStore.RepositoriosBD.Implementaciones
             var tabla = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
             return tabla;
         }
+
+        public DataTable GetVenta(int nroFactura)
+        {
+            var sentenciaSql = $@"SELECT v.NroFactura, CONVERT(char(10), v.FechaVenta, 103) FechaVenta,
+            tf.Nombre TipoFactura, fp.Nombre FormaPago,
+            s.IdSocio, s.Nombre + ' ' + s.Apellido Socio, s.Email, s.CalleNombre + ' ' + CONVERT(VARCHAR, s.CalleNumero) Domicilio, b.Nombre Barrio,
+            a.Codigo UPC, a.Nombre Articulo, dv.Cantidad, CONCAT('$ ', dv.PrecioUnitario) PrecioUnitario, CONCAT('$ ', dv.Cantidad * dv.PrecioUnitario) Subtotal
+            
+            FROM Ventas v JOIN TiposDeFactura tf ON v.IdTipoFactura = tf.IdTipoFactura
+            JOIN FormasDePago fp ON v.IdFormaPago = fp.IdFormaPago
+            JOIN Socios s ON v.IdSocio = s.IdSocio
+            JOIN Barrios b ON s.IdBarrio = b.IdBarrio
+            JOIN DetallesDeVenta dv ON dv.NroFactura = v.NroFactura
+            JOIN Articulos a ON a.Codigo = dv.Codigo
+            WHERE v.NroFactura = {nroFactura}";
+            var tabla = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
+            return tabla;
+        }
+
+        public string GetTotalVenta(int nroFactura)
+        {
+            var sentenciaSql = $@"SELECT CONCAT('$ ', SUM(dv.Cantidad * dv.PrecioUnitario))
+            FROM Ventas v JOIN DetallesDeVenta dv ON v.NroFactura = dv.NroFactura
+            WHERE v.NroFactura = {nroFactura}
+            GROUP BY v.NroFactura";
+            
+            var tabla = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
+            return tabla.Rows[0][0].ToString();
+        }
     }
 }
