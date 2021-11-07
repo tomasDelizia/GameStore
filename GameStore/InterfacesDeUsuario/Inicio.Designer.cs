@@ -660,11 +660,11 @@ namespace GameStore.InterfacesDeUsuario
             this.lblFechaYHora.AutoSize = true;
             this.lblFechaYHora.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaYHora.ForeColor = System.Drawing.Color.Black;
-            this.lblFechaYHora.Location = new System.Drawing.Point(1091, 9);
+            this.lblFechaYHora.Location = new System.Drawing.Point(1090, 9);
             this.lblFechaYHora.Name = "lblFechaYHora";
-            this.lblFechaYHora.Size = new System.Drawing.Size(170, 33);
+            this.lblFechaYHora.Size = new System.Drawing.Size(264, 33);
             this.lblFechaYHora.TabIndex = 92;
-            this.lblFechaYHora.Text = "fechaYHora";
+            this.lblFechaYHora.Text = "dd MMM HH:mm:ss";
             // 
             // timerHora
             // 
