@@ -71,6 +71,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             {
                 MessageBox.Show(aex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            catch (FormatException fe)
+            {
+                MessageBox.Show("El documento solo acepta valores numéricos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception ex)
             {
                 var mensaje = ex.Message;
@@ -90,6 +94,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
         private bool EsEmpleadoValido()
         {
             var empleadoNuevo = new Empleado();
+            empleadoNuevo.Estado = true;
             empleadoNuevo.Nombre = txtNombre.Text;
             empleadoNuevo.Apellido = txtApellido.Text;
             empleadoNuevo.Telefono = txtTelefono.Text;

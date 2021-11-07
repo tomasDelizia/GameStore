@@ -17,9 +17,20 @@ namespace GameStore.Servicios.Implementaciones
             _repositorioEmpleado = repositorioEmpleado;
         }
 
+        public void DarDeBaja(Empleado empleado)
+        {
+            empleado.Estado = false;
+            _repositorioEmpleado.Actualizar(empleado);
+        }
+
         public List<Empleado> ListarEmpleados()
         {
             return _repositorioEmpleado.GetTodos().ToList();
+        }
+
+        public List<Empleado> ListarEmpleadosActivos()
+        {
+            return _repositorioEmpleado.Encontrar(u => (bool)u.Estado).ToList();
         }
 
         public void ValidarEmpleado(Empleado empleado)

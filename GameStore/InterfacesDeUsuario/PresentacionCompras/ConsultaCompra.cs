@@ -172,5 +172,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             string datos = _compradorFiltro.GetNombreYApellido();
             lblComprador.Text = "Comprador: " + datos;
         }
+
+        public void SetCompradorFiltro(Empleado empleado)
+        {
+            _compradorFiltro = empleado;
+        }
     }
 }

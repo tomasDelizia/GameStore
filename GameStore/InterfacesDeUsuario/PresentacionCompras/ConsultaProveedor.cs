@@ -72,16 +72,18 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
 
         private void ConsultarProveedores()
         {
-            var proveedores = _servicioProveedor.ListarProveedores();
-            CargarDgvProveedor(proveedores);
+            ckbIncluirTodos.Checked = false;
+            var proveedores = _servicioProveedor.ListarProveedoresActivos();
+            CargarDgvProveedores(proveedores);
             dgvProveedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        private void CargarDgvProveedor(List<Proveedor> proveedores)
+        private void CargarDgvProveedores(List<Proveedor> proveedores)
         {
             dgvProveedores.Rows.Clear();
             foreach(var proveedor in proveedores)
             {
+                var descripcionEstado = (bool)proveedor.Estado ? "Activo" : "Inactivo";
                 var fila = new string[]
                 {
                     proveedor.IdProveedor.ToString(),
@@ -92,6 +94,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
                     proveedor.CalleNombre,
                     proveedor.CalleNumero.ToString(),
                     proveedor.Barrio.Nombre,
+                    descripcionEstado
                 };
                 dgvProveedores.Rows.Add(fila);
             }
@@ -169,7 +172,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
 
             var proveedoresFiltrados = _servicioProveedor.Encontrar(a => a.RazonSocial.Contains(razonSocial) && a.Barrio.Nombre == barrio.Nombre).ToList();
 
-            CargarDgvProveedor(proveedoresFiltrados);
+            CargarDgvProveedores(proveedoresFiltrados);
         }
 
         private void btnReiniciarFiltros_Click(object sender, EventArgs e)
@@ -203,6 +206,17 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             }
             else if (dgvProveedores.SelectedRows.Count > 1)
                 MessageBox.Show("Debe seleccionar un solo registro, no muchos.", "Información", MessageBoxButtons.OK);
+        }
+
+        private void ckbIncluirTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbIncluirTodos.Checked)
+            {
+                var proveedores = _servicioProveedor.ListarProveedores();
+                CargarDgvProveedores(proveedores);
+            }
+            else
+                ConsultarProveedores();
         }
     }
 }

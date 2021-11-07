@@ -60,6 +60,8 @@ namespace GameStore.Entidades
                 throw new ApplicationException("El nombre es requerido.");
             if (Nombre.Length > 50)
                 throw new ApplicationException("El nombre no debe superar los 50 caracteres.");
+            if (!Utils.Utils.TieneSoloValoresAlfabeticos(Nombre))
+                throw new ApplicationException("El nombre solo puede contener letras de la A a la Z");
         }
         
         public void ValidarApellido()
@@ -68,6 +70,8 @@ namespace GameStore.Entidades
                 throw new ApplicationException("El apellido es requerido.");
             if (Apellido.Length > 50)
                 throw new ApplicationException("El apellido no debe superar los 50 caracteres.");
+            if (!Utils.Utils.TieneSoloValoresAlfabeticos(Apellido))
+                throw new ApplicationException("El apellido solo puede contener letras de la A a la Z");
         }
 
         public void ValidarMail()

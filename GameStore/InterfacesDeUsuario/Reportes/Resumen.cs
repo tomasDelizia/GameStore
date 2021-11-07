@@ -15,35 +15,33 @@ namespace GameStore.InterfacesDeUsuario.Reportes
     public partial class Resumen : Form
     {
         private RepositorioReporte _repositorioReporte;
+        private string fechaHoy;
+        private string fechaMesPasado;
         public Resumen()
         {
             _repositorioReporte = new RepositorioReporte();
+            fechaHoy = DateTime.Now.ToShortDateString();
+            fechaMesPasado = DateTime.Now.AddDays(-31).ToShortDateString();
             InitializeComponent();
         }
 
         private void Ventas_Load(object sender, EventArgs e)
         {
-            string fechaHoy = DateTime.Now.ToShortDateString();
-            string fechaMesPasado = DateTime.Now.AddDays(-30).ToShortDateString();
-            CargarReporte(fechaMesPasado, fechaHoy);
+            CargarReporte();
         }
 
-        private void btnVerResumen_Click(object sender, EventArgs e)
+        private void CargarReporte()
         {
-            string fechaDesde = dtpFechaDesde.Value.ToShortDateString();
-            string fechaHasta = dtpFechaHasta.Value.ToShortDateString();
-            CargarReporte(fechaDesde, fechaHasta);
-        }
-
-        private void CargarReporte(string fechaDesde, string fechaHasta)
-        {
-            var reporteCompras = _repositorioReporte.GetComprasPorFecha(fechaDesde, fechaHasta);
+            var compras = _repositorioReporte.GetComprasDelMes(fechaMesPasado, fechaHoy);
+            var ventas = _repositorioReporte.GetVentasDelMes(fechaMesPasado, fechaHoy);
             RwResumen.LocalReport.DataSources.Clear();
-            var dsCompras = new ReportDataSource("DTCompras", reporteCompras);
+            var dsCompras = new ReportDataSource("DTCompras", compras);
+            var dsVentas = new ReportDataSource("DTVentas", ventas);
             RwResumen.LocalReport.DataSources.Add(dsCompras);
+            RwResumen.LocalReport.DataSources.Add(dsVentas);
             var parametros = new List<ReportParameter>();
-            var paramFechaDesde = new ReportParameter("ParamFechaDesde", fechaDesde);
-            var paramFechaHasta = new ReportParameter("ParamFechaHasta", fechaHasta);
+            var paramFechaDesde = new ReportParameter("ParamFechaDesde", fechaHoy);
+            var paramFechaHasta = new ReportParameter("ParamFechaHasta", fechaMesPasado);
             parametros.Add(paramFechaDesde);
             parametros.Add(paramFechaHasta);
             RwResumen.LocalReport.SetParameters(parametros);

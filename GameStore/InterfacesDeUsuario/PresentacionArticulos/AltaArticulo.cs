@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -7,6 +9,7 @@ using GameStore.Entidades;
 using GameStore.RepositoriosBD;
 using GameStore.Servicios;
 using GameStore.Servicios.Implementaciones;
+using GameStore.Utils;
 
 namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 {
@@ -45,81 +48,48 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 
         private void AltaArticulo_Load(object sender, System.EventArgs e)
         {
-            CargarTipoArticulos(cboTipoArticulo);
-            CargarDesarrolladores(cboDesarrollador);
-            CargarGeneros(cboGenero);
-            CargarClasificaciones(cboClasificacion);
-            CargarPlataformas(cboPlataforma);
-            CargarMarcas(cboMarca);
+            CargarTipoArticulos();
+            CargarDesarrolladores();
+            CargarGeneros();
+            CargarClasificaciones();
+            CargarPlataformas();
+            CargarMarcas();
         }
 
-        private void CargarMarcas(ComboBox combo)
+        private void CargarMarcas()
         {
             var marcas = _servicioMarca.ListarMarcas();
-            var bindingSource = new BindingSource();
-            bindingSource.DataSource = marcas;
-            combo.DataSource = bindingSource;
-            combo.DisplayMember = "Nombre";
-            combo.ValueMember = "IdMarca";
-            combo.Text = "Selección";
+            FormUtils.CargarCombo(ref cboMarcas, new BindingSource() { DataSource = marcas }, "Nombre", "IdMarca");
         }
 
-        private void CargarPlataformas(ComboBox combo)
+        private void CargarPlataformas()
         {
             var plataformas = _servicioPlataforma.ListarPlataformas();
-            var bindingSource = new BindingSource();
-            bindingSource.DataSource = plataformas;
-            combo.DataSource = bindingSource;
-            combo.DisplayMember = "Nombre";
-            combo.ValueMember = "IdPlataforma";
-            combo.Text = "Selección";
+            FormUtils.CargarCombo(ref cboPlataformas, new BindingSource() { DataSource = plataformas }, "Nombre", "IdPlataforma");
         }
 
-        private void CargarClasificaciones(ComboBox combo)
+        private void CargarClasificaciones()
         {
             var clasificaciones = _servicioClasificacion.ListarClasificaciones();
-            var bindingSource = new BindingSource();
-            bindingSource.DataSource = clasificaciones;
-            combo.DataSource = bindingSource;
-            combo.DisplayMember = "Nombre";
-            combo.ValueMember = "IdClasificacion";
-            combo.Text = "Selección";
+            FormUtils.CargarCombo(ref cboClasificaciones, new BindingSource() { DataSource = clasificaciones }, "Nombre", "IdClasificacion");
         }
 
-        private void CargarTipoArticulos(ComboBox combo)
+        private void CargarTipoArticulos()
         {
             var tiposArticulos = _servicioTipoArticulo.ListarTiposDeArticulo();
-
-            var bindingSource = new BindingSource();
-            bindingSource.DataSource = tiposArticulos;
-
-            combo.DataSource = bindingSource;
-            combo.DisplayMember = "Nombre";
-            combo.ValueMember = "IdTipoArticulo";
-            combo.SelectedItem = null;
-            combo.Text = "Selección";
+            FormUtils.CargarCombo(ref cboTiposArticulo, new BindingSource() { DataSource = tiposArticulos }, "Nombre", "IdTipoArticulo");
         }
 
-        private void CargarDesarrolladores(ComboBox combo)
+        private void CargarDesarrolladores()
         {
             var desarrolladores = _servicioDesarrollador.ListarDesarrolladores();
-            var bindingSource = new BindingSource();
-            bindingSource.DataSource = desarrolladores;
-            combo.DataSource = bindingSource;
-            combo.DisplayMember = "Nombre";
-            combo.ValueMember = "IdDesarrollador";
-            combo.Text = "Selección";
+            FormUtils.CargarCombo(ref cboDesarrolladores, new BindingSource() { DataSource = desarrolladores }, "Nombre", "IdDesarrollador");
         }
 
-        private void CargarGeneros(ComboBox combo)
+        private void CargarGeneros()
         {
             var generos = _servicioGenero.ListarGeneros();
-            var bindingSource = new BindingSource();
-            bindingSource.DataSource = generos;
-            combo.DataSource = bindingSource;
-            combo.DisplayMember = "Nombre";
-            combo.ValueMember = "IdGenero";
-            combo.Text = "Selección";
+            FormUtils.CargarCombo(ref cboGeneros, new BindingSource() { DataSource = generos }, "Nombre", "IdGenero");
         }
 
         private void btnSubirImagen_Click(object sender, EventArgs e)
@@ -162,11 +132,15 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             }
             catch (FormatException fe)
             {
-                MessageBox.Show("Ingrese un código de producto universal válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El código de producto universal solo acepta caracteres numéricos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (NullReferenceException nre)
             {
-                MessageBox.Show("Seleccione los datos que son requeridos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Complete todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (UpdateException ex) when (ex.InnerException is SqlException sqlException && (sqlException.Number == 2627 || sqlException.Number == 2601))
+            {
+                MessageBox.Show("UPC de artículo duplicado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
@@ -177,11 +151,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 
         private bool EsOperacionConfirmada()
         {
-            var respuesta = MessageBox.Show("¿Desea confirmar la operación?", "Confirmación", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-            if (respuesta == DialogResult.Yes)
-                return true;
-            return false;
+            return FormUtils.EsOperacionConfirmada();
         }
 
         private bool EsArticuloValido()
@@ -193,8 +163,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             articuloNuevo.Stock = 0;
             articuloNuevo.PrecioUnitario = numPrecioUnitario.Value;
             articuloNuevo.FechaSalida = dateTimePicker.Value;
-            articuloNuevo.Plataforma = (Plataforma)cboPlataforma.SelectedItem;
-            articuloNuevo.TipoArticulo = (TipoArticulo)cboTipoArticulo.SelectedItem;
+            articuloNuevo.Plataforma = (Plataforma)cboPlataformas.SelectedItem;
+            articuloNuevo.TipoArticulo = (TipoArticulo)cboTiposArticulo.SelectedItem;
 
             articuloNuevo.EstadoVideojuego = _servicioEstadoVideojuego.GetEstadoRegistrado();
 
@@ -205,17 +175,18 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
                 articuloNuevo.TarifaAlquiler = _servicioTarifaAlquiler.GetPorNombre("Viejos");
             else if (diferenciaDias > 365)
                 articuloNuevo.TarifaAlquiler = _servicioTarifaAlquiler.GetPorNombre("Muy viejos");
-
-            var tipoArticulo = articuloNuevo.TipoArticulo.Nombre;
-            if (tipoArticulo == "Videojuego")
+            
+            var tipoArticulo = articuloNuevo.TipoArticulo;
+            if (tipoArticulo != null)
             {
-                articuloNuevo.Genero = (Genero)cboGenero.SelectedItem;
-                articuloNuevo.Desarrollador = (Desarrollador)cboDesarrollador.SelectedItem;
-                articuloNuevo.Clasificacion = (Clasificacion)cboClasificacion.SelectedItem;
-            }
-            else
-            {
-                articuloNuevo.Marca = (Marca)cboMarca.SelectedItem;
+                if (tipoArticulo.Nombre == "Videojuego")
+                {
+                    articuloNuevo.Genero = (Genero)cboGeneros.SelectedItem;
+                    articuloNuevo.Desarrollador = (Desarrollador)cboDesarrolladores.SelectedItem;
+                    articuloNuevo.Clasificacion = (Clasificacion)cboClasificaciones.SelectedItem;
+                }
+                else
+                    articuloNuevo.Marca = (Marca)cboMarcas.SelectedItem;
             }
             _servicioArchivo.ValidarArchivo(_nuevaImagen);
             articuloNuevo.Archivo = _nuevaImagen;
@@ -244,19 +215,23 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
 
         private void cboTipoArticulo_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (cboTipoArticulo.Text == "Videojuego")
+            if (cboTiposArticulo.Text == "Videojuego")
             {
-                cboGenero.Enabled = true;
-                cboDesarrollador.Enabled = true;
-                cboClasificacion.Enabled = true;
-                cboMarca.Enabled = false;
+                cboGeneros.Enabled = true;
+                cboDesarrolladores.Enabled = true;
+                cboClasificaciones.Enabled = true;
+                cboMarcas.Enabled = false;
+                cboMarcas.SelectedItem = null;
             }
-            if (cboTipoArticulo.Text == "Periférico" || cboTipoArticulo.Text == "Consola")
+            if (cboTiposArticulo.Text == "Periférico" || cboTiposArticulo.Text == "Consola")
             {
-                cboGenero.Enabled = false;
-                cboDesarrollador.Enabled = false;
-                cboClasificacion.Enabled = false;
-                cboMarca.Enabled = true;
+                cboGeneros.Enabled = false;
+                cboGeneros.SelectedItem = null;
+                cboDesarrolladores.Enabled = false;
+                cboDesarrolladores.SelectedItem = null;
+                cboClasificaciones.Enabled = false;
+                cboClasificaciones.SelectedItem = null;
+                cboMarcas.Enabled = true;
             }
         }
 
@@ -268,26 +243,31 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
         private void btnAgregarPlataforma_Click(object sender, EventArgs e)
         {
             new AltaPlataforma(_unidadDeTrabajo).ShowDialog();
+            CargarPlataformas();
         }
 
         private void btnAgregarGenero_Click(object sender, EventArgs e)
         {
             new AltaGenero(_unidadDeTrabajo).ShowDialog();
+            CargarGeneros();
         }
 
         private void btnAgregarDesarrollador_Click(object sender, EventArgs e)
         {
             new AltaDesarrollador(_unidadDeTrabajo).ShowDialog();
+            CargarDesarrolladores();
         }
 
         private void btnAgregarClasificacion_Click(object sender, EventArgs e)
         {
             new AltaClasificacion(_unidadDeTrabajo).ShowDialog();
+            CargarClasificaciones();
         }
 
         private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
             new AltaMarca(_unidadDeTrabajo).ShowDialog();
+            CargarMarcas();
         }
     }
 }

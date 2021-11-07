@@ -103,7 +103,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         {
             if (dgvJuegos.SelectedRows.Count == 1)
             {
-                int idArticulo = Convert.ToInt32(dgvJuegos.SelectedRows[0].Cells["Codigo"].Value);
+                long idArticulo = Convert.ToInt64(dgvJuegos.SelectedRows[0].Cells["Codigo"].Value);
                 Articulo articuloSeleccionado = _servicioArticulo.GetPorId(idArticulo);
                 dgvJuegos.Rows.Remove(dgvJuegos.SelectedRows[0]);
                 _detalleAlquilers.RemoveAll(detalle => detalle.Articulo == articuloSeleccionado);

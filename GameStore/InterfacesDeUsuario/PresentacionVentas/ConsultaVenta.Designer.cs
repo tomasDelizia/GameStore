@@ -63,6 +63,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.btnConsultarSocio = new System.Windows.Forms.Button();
             this.lblSocio = new System.Windows.Forms.Label();
             this.btnNuevaVenta = new System.Windows.Forms.Button();
+            this.btnGenerarFactura = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
@@ -459,12 +460,25 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.btnNuevaVenta.UseVisualStyleBackColor = true;
             this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
             // 
+            // btnGenerarFactura
+            // 
+            this.btnGenerarFactura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarFactura.ForeColor = System.Drawing.Color.DimGray;
+            this.btnGenerarFactura.Location = new System.Drawing.Point(446, 426);
+            this.btnGenerarFactura.Name = "btnGenerarFactura";
+            this.btnGenerarFactura.Size = new System.Drawing.Size(156, 29);
+            this.btnGenerarFactura.TabIndex = 115;
+            this.btnGenerarFactura.Text = "Generar factura";
+            this.btnGenerarFactura.UseVisualStyleBackColor = true;
+            this.btnGenerarFactura.Click += new System.EventHandler(this.btnGenerarFactura_Click);
+            // 
             // ConsultaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(824, 465);
+            this.Controls.Add(this.btnGenerarFactura);
             this.Controls.Add(this.btnNuevaVenta);
             this.Controls.Add(this.btnVerDetalle);
             this.Controls.Add(this.btnSalir);
@@ -517,5 +531,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
         private System.Windows.Forms.DateTimePicker dtpFechaHasta;
         private System.Windows.Forms.DateTimePicker dtpFechaDesde;
         private System.Windows.Forms.Button btnNuevaVenta;
+        private System.Windows.Forms.Button btnGenerarFactura;
     }
 }

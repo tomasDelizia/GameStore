@@ -10,6 +10,7 @@ namespace GameStore.Servicios
     public interface IServicioUsuario : IServicio<Usuario>
     {
         List<Usuario> ListarUsuarios();
+        List<Usuario> ListarUsuariosActivos();
 
         Usuario Login(string nombreUsuario, string contrasenia);
 
@@ -17,5 +18,6 @@ namespace GameStore.Servicios
 
         void BorrarUsuario(Usuario usuario);
         Empleado GetEmpleadoLogueado();
+        Usuario GetUsuarioLogueado();
     }
 }

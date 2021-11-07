@@ -499,7 +499,6 @@
     <Compile Include="InterfacesDeUsuario\PresentacionVentas\RegistrarVenta.Designer.cs">
       <DependentUpon>RegistrarVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfacesDeUsuario\ITransaccionBase.cs" />
     <Compile Include="InterfacesDeUsuario\Reportes\DSReportes.cs">
       <DependentUpon>DSReportes.xsd</DependentUpon>
     </Compile>
@@ -507,6 +506,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DSReportes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\Reportes\FrmFacturaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\Reportes\FrmFacturaVenta.Designer.cs">
+      <DependentUpon>FrmFacturaVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfacesDeUsuario\Reportes\MasFieles.cs">
       <SubType>Form</SubType>
@@ -525,9 +530,6 @@
     </Compile>
     <Compile Include="InterfacesDeUsuario\Reportes\Resumen.Designer.cs">
       <DependentUpon>Resumen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfacesDeUsuario\TransaccionBase.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -874,6 +876,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionVentas\RegistrarVenta.resx">
       <DependentUpon>RegistrarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\Reportes\FacturaVenta.rdlc" />
+    <EmbeddedResource Include="InterfacesDeUsuario\Reportes\FrmFacturaVenta.resx">
+      <DependentUpon>FrmFacturaVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\Reportes\MasFieles.resx">
       <DependentUpon>MasFieles.cs</DependentUpon>

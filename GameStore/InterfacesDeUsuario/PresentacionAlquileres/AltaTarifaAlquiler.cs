@@ -18,7 +18,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
     {
         private IUnidadDeTrabajo _unidadDeTrabajo;
         private readonly IServicioTarifaAlquiler _servicioTarifaAlquiler;
-        private TarifaAlquiler _nuevaCategoria;
+        private TarifaAlquiler _nuevaTarifa;
         public AltaTarifaAlquiler(IUnidadDeTrabajo unidadDeTrabajo)
         {
             InitializeComponent();
@@ -54,8 +54,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
 
         private void RegistrarTarifa()
         {
-            bool insertarCategoria = _servicioTarifaAlquiler.Insertar(_nuevaCategoria);
-            if (!insertarCategoria)
+            bool insertarTarifa = _servicioTarifaAlquiler.Insertar(_nuevaTarifa);
+            if (!insertarTarifa)
             {
                 MessageBox.Show("Ocurrió un problema al registrar la tarifa de alquiler", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -71,8 +71,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             nuevaTarifa.MontoAlquilerPorDia = numMontoAlquiler.Value;
             nuevaTarifa.MontoDevolucionTardiaPorDia = numMontoTardio.Value;
             nuevaTarifa.Descripcion = txtDescripcion.Text;
-            _servicioTarifaAlquiler.ValidarCategoria(nuevaTarifa);
-            _nuevaCategoria = nuevaTarifa;
+            _servicioTarifaAlquiler.ValidarTarifa(nuevaTarifa);
+            _nuevaTarifa = nuevaTarifa;
             return true;
         }
 

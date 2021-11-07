@@ -10,6 +10,8 @@ namespace GameStore.Servicios
     public interface IServicioProveedor : IServicio<Proveedor>
     {
         void ValidarProveedor(Proveedor proveedor);
+        List<Proveedor> ListarProveedoresActivos();
         List<Proveedor> ListarProveedores();
+        void DarDeBaja(Proveedor proveedor);
     }
 }

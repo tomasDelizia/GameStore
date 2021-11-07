@@ -53,6 +53,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             {
                 MessageBox.Show(aex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            catch (FormatException fe)
+            {
+                MessageBox.Show("El documento solo acepta valores numéricos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception ex)
             {
                 var mensaje = ex.Message;
@@ -93,6 +97,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
         private bool EsSocioValido()
         {
             Socio nuevoSocio = new Socio();
+            nuevoSocio.Estado = true;
             nuevoSocio.Nombre = txtNombre.Text;
             nuevoSocio.Apellido = txtApellido.Text;
             nuevoSocio.NroDocumento = Convert.ToInt32(txtDocumento.Text);

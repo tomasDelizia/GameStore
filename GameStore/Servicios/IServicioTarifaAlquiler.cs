@@ -10,7 +10,7 @@ namespace GameStore.Servicios
     public interface IServicioTarifaAlquiler : IServicio<TarifaAlquiler>
     {
         List<TarifaAlquiler> ListarTarifasDeAlquiler();
-        void ValidarCategoria(TarifaAlquiler tarifa);
+        void ValidarTarifa(TarifaAlquiler tarifa);
 
         TarifaAlquiler GetPorNombre(string nombre);
     }

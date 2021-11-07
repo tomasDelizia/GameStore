@@ -35,6 +35,7 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnAlquiler = new System.Windows.Forms.Button();
             this.BtnRegistrarVenta = new System.Windows.Forms.Button();
             this.PnlSubMenuReporte = new System.Windows.Forms.Panel();
+            this.btnResumen = new System.Windows.Forms.Button();
             this.BtnMasFieles = new System.Windows.Forms.Button();
             this.BtnMasVendidos = new System.Windows.Forms.Button();
             this.BtnReporte = new System.Windows.Forms.Button();
@@ -58,13 +59,15 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnABM = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnResumen = new System.Windows.Forms.Button();
+            this.lblUsuarioLogueado = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.MenuVertical.SuspendLayout();
             this.PnlSubMenuReporte.SuspendLayout();
             this.PnlSubmenuABM.SuspendLayout();
             this.PnlSubMenuOtros.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -146,6 +149,27 @@ namespace GameStore.InterfacesDeUsuario
             this.PnlSubMenuReporte.Name = "PnlSubMenuReporte";
             this.PnlSubMenuReporte.Size = new System.Drawing.Size(272, 96);
             this.PnlSubMenuReporte.TabIndex = 4;
+            // 
+            // btnResumen
+            // 
+            this.btnResumen.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.btnResumen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btnResumen.DialogResult = System.Windows.Forms.DialogResult.Retry;
+            this.btnResumen.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnResumen.FlatAppearance.BorderSize = 0;
+            this.btnResumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResumen.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResumen.ForeColor = System.Drawing.Color.DimGray;
+            this.btnResumen.Location = new System.Drawing.Point(0, 67);
+            this.btnResumen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnResumen.Name = "btnResumen";
+            this.btnResumen.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnResumen.Size = new System.Drawing.Size(272, 29);
+            this.btnResumen.TabIndex = 9;
+            this.btnResumen.Text = "Resumen";
+            this.btnResumen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnResumen.UseVisualStyleBackColor = false;
+            this.btnResumen.Click += new System.EventHandler(this.btnResumen_Click);
             // 
             // BtnMasFieles
             // 
@@ -404,10 +428,10 @@ namespace GameStore.InterfacesDeUsuario
             this.BtnCategoriaAlquiler.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.BtnCategoriaAlquiler.Size = new System.Drawing.Size(272, 32);
             this.BtnCategoriaAlquiler.TabIndex = 9;
-            this.BtnCategoriaAlquiler.Text = "Categorías de Alquiler";
+            this.BtnCategoriaAlquiler.Text = "Tarifas de Alquiler";
             this.BtnCategoriaAlquiler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCategoriaAlquiler.UseVisualStyleBackColor = false;
-            this.BtnCategoriaAlquiler.Click += new System.EventHandler(this.BtnCategoriaAlquiler_Click);
+            this.BtnCategoriaAlquiler.Click += new System.EventHandler(this.BtnTarifaAlquiler_Click);
             // 
             // BtnCargo
             // 
@@ -595,26 +619,26 @@ namespace GameStore.InterfacesDeUsuario
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnResumen
+            // lblUsuarioLogueado
             // 
-            this.btnResumen.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            this.btnResumen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.btnResumen.DialogResult = System.Windows.Forms.DialogResult.Retry;
-            this.btnResumen.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnResumen.FlatAppearance.BorderSize = 0;
-            this.btnResumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResumen.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResumen.ForeColor = System.Drawing.Color.DimGray;
-            this.btnResumen.Location = new System.Drawing.Point(0, 67);
-            this.btnResumen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnResumen.Name = "btnResumen";
-            this.btnResumen.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnResumen.Size = new System.Drawing.Size(272, 29);
-            this.btnResumen.TabIndex = 9;
-            this.btnResumen.Text = "Resumen";
-            this.btnResumen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnResumen.UseVisualStyleBackColor = false;
-            this.btnResumen.Click += new System.EventHandler(this.btnResumen_Click);
+            this.lblUsuarioLogueado.AutoSize = true;
+            this.lblUsuarioLogueado.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioLogueado.ForeColor = System.Drawing.Color.Black;
+            this.lblUsuarioLogueado.Location = new System.Drawing.Point(349, 9);
+            this.lblUsuarioLogueado.Name = "lblUsuarioLogueado";
+            this.lblUsuarioLogueado.Size = new System.Drawing.Size(244, 33);
+            this.lblUsuarioLogueado.TabIndex = 89;
+            this.lblUsuarioLogueado.Text = "usuarioLogueado";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(293, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 90;
+            this.pictureBox2.TabStop = false;
             // 
             // Inicio
             // 
@@ -622,6 +646,8 @@ namespace GameStore.InterfacesDeUsuario
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1366, 749);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.lblUsuarioLogueado);
             this.Controls.Add(this.MenuVertical);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.DimGray;
@@ -637,7 +663,9 @@ namespace GameStore.InterfacesDeUsuario
             this.PnlSubMenuOtros.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -671,5 +699,7 @@ namespace GameStore.InterfacesDeUsuario
         private System.Windows.Forms.Button BtnClasificacion;
         private System.Windows.Forms.Button BtnCategoriaAlquiler;
         private System.Windows.Forms.Button btnResumen;
+        private System.Windows.Forms.Label lblUsuarioLogueado;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

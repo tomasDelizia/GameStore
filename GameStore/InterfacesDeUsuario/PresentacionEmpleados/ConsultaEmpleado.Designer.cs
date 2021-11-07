@@ -42,14 +42,16 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.txtEmpleado = new System.Windows.Forms.TextBox();
             this.cboCargos = new System.Windows.Forms.ComboBox();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.IdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ckbIncluirTodos = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +98,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.Controls.Add(this.ckbIncluirTodos);
             this.panel1.Controls.Add(this.btnReiniciarFiltros);
             this.panel1.Controls.Add(this.btnFiltrar);
             this.panel1.Controls.Add(this.label8);
@@ -105,14 +108,14 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.panel1.Controls.Add(this.cboCargos);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(713, 145);
+            this.panel1.Size = new System.Drawing.Size(813, 145);
             this.panel1.TabIndex = 115;
             // 
             // btnReiniciarFiltros
             // 
             this.btnReiniciarFiltros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReiniciarFiltros.ForeColor = System.Drawing.Color.DimGray;
-            this.btnReiniciarFiltros.Location = new System.Drawing.Point(326, 94);
+            this.btnReiniciarFiltros.Location = new System.Drawing.Point(674, 97);
             this.btnReiniciarFiltros.Name = "btnReiniciarFiltros";
             this.btnReiniciarFiltros.Size = new System.Drawing.Size(136, 29);
             this.btnReiniciarFiltros.TabIndex = 103;
@@ -124,7 +127,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             // 
             this.btnFiltrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnFiltrar.Location = new System.Drawing.Point(362, 57);
+            this.btnFiltrar.Location = new System.Drawing.Point(710, 60);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(100, 29);
             this.btnFiltrar.TabIndex = 102;
@@ -161,7 +164,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(287, 10);
+            this.label4.Location = new System.Drawing.Point(350, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(146, 33);
             this.label4.TabIndex = 89;
@@ -200,12 +203,37 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.Nombre,
             this.Apellido,
             this.Email,
-            this.Cargo});
+            this.Cargo,
+            this.Estado});
             this.dgvEmpleados.Location = new System.Drawing.Point(12, 163);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpleados.Size = new System.Drawing.Size(713, 129);
+            this.dgvEmpleados.Size = new System.Drawing.Size(813, 129);
             this.dgvEmpleados.TabIndex = 41;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.DimGray;
+            this.btnSalir.Location = new System.Drawing.Point(732, 298);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(93, 29);
+            this.btnSalir.TabIndex = 116;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.ForeColor = System.Drawing.Color.DimGray;
+            this.btnSeleccionar.Location = new System.Drawing.Point(611, 298);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(115, 29);
+            this.btnSeleccionar.TabIndex = 117;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // IdEmpleado
             // 
@@ -213,6 +241,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.IdEmpleado.Name = "IdEmpleado";
             this.IdEmpleado.ReadOnly = true;
             this.IdEmpleado.Visible = false;
+            this.IdEmpleado.Width = 88;
             // 
             // NroDocumento
             // 
@@ -249,36 +278,32 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.Cargo.ReadOnly = true;
             this.Cargo.Width = 60;
             // 
-            // btnSalir
+            // Estado
             // 
-            this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.ForeColor = System.Drawing.Color.DimGray;
-            this.btnSalir.Location = new System.Drawing.Point(632, 304);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(93, 29);
-            this.btnSalir.TabIndex = 116;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Width = 65;
             // 
-            // btnSeleccionar
+            // ckbIncluirTodos
             // 
-            this.btnSeleccionar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnSeleccionar.Location = new System.Drawing.Point(511, 304);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(115, 29);
-            this.btnSeleccionar.TabIndex = 117;
-            this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.UseVisualStyleBackColor = true;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            this.ckbIncluirTodos.AutoSize = true;
+            this.ckbIncluirTodos.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbIncluirTodos.ForeColor = System.Drawing.Color.DimGray;
+            this.ckbIncluirTodos.Location = new System.Drawing.Point(304, 61);
+            this.ckbIncluirTodos.Name = "ckbIncluirTodos";
+            this.ckbIncluirTodos.Size = new System.Drawing.Size(139, 26);
+            this.ckbIncluirTodos.TabIndex = 118;
+            this.ckbIncluirTodos.Text = "Incluir Todos";
+            this.ckbIncluirTodos.UseVisualStyleBackColor = true;
+            this.ckbIncluirTodos.CheckedChanged += new System.EventHandler(this.ckbIncluirTodos_CheckedChanged);
             // 
             // ConsultaEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(737, 347);
+            this.ClientSize = new System.Drawing.Size(837, 347);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.panel1);
@@ -305,12 +330,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
         private System.Windows.Forms.Button btnReiniciarFiltros;
         private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.DataGridView dgvEmpleados;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdEmpleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NroDocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cargo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -318,5 +337,13 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
         private System.Windows.Forms.ComboBox cboCargos;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdEmpleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NroDocumento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cargo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.CheckBox ckbIncluirTodos;
     }
 }
