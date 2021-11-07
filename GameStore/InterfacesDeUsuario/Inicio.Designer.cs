@@ -29,6 +29,7 @@ namespace GameStore.InterfacesDeUsuario
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.BtnCompraProveedor = new System.Windows.Forms.Button();
@@ -61,6 +62,9 @@ namespace GameStore.InterfacesDeUsuario
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblUsuarioLogueado = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelContenedor = new System.Windows.Forms.Panel();
+            this.lblFechaYHora = new System.Windows.Forms.Label();
+            this.timerHora = new System.Windows.Forms.Timer(this.components);
             this.MenuVertical.SuspendLayout();
             this.PnlSubMenuReporte.SuspendLayout();
             this.PnlSubmenuABM.SuspendLayout();
@@ -640,12 +644,41 @@ namespace GameStore.InterfacesDeUsuario
             this.pictureBox2.TabIndex = 90;
             this.pictureBox2.TabStop = false;
             // 
+            // panelContenedor
+            // 
+            this.panelContenedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelContenedor.Location = new System.Drawing.Point(295, 56);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(1059, 681);
+            this.panelContenedor.TabIndex = 91;
+            // 
+            // lblFechaYHora
+            // 
+            this.lblFechaYHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFechaYHora.AutoSize = true;
+            this.lblFechaYHora.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaYHora.ForeColor = System.Drawing.Color.Black;
+            this.lblFechaYHora.Location = new System.Drawing.Point(1091, 9);
+            this.lblFechaYHora.Name = "lblFechaYHora";
+            this.lblFechaYHora.Size = new System.Drawing.Size(170, 33);
+            this.lblFechaYHora.TabIndex = 92;
+            this.lblFechaYHora.Text = "fechaYHora";
+            // 
+            // timerHora
+            // 
+            this.timerHora.Enabled = true;
+            this.timerHora.Tick += new System.EventHandler(this.actualizarFechaYHora);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1366, 749);
+            this.Controls.Add(this.lblFechaYHora);
+            this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblUsuarioLogueado);
             this.Controls.Add(this.MenuVertical);
@@ -653,6 +686,7 @@ namespace GameStore.InterfacesDeUsuario
             this.ForeColor = System.Drawing.Color.DimGray;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MinimumSize = new System.Drawing.Size(1382, 788);
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameStore  - Inicio";
@@ -701,5 +735,8 @@ namespace GameStore.InterfacesDeUsuario
         private System.Windows.Forms.Button btnResumen;
         private System.Windows.Forms.Label lblUsuarioLogueado;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panelContenedor;
+        private System.Windows.Forms.Label lblFechaYHora;
+        private System.Windows.Forms.Timer timerHora;
     }
 }

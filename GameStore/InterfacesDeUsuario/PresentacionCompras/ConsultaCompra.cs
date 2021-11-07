@@ -65,6 +65,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
                 };
                 dgvCompras.Rows.Add(fila);
             }
+            dgvCompras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void CargarTiposDeFactura()
@@ -105,8 +106,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
         {
             _consultaProveedor = new ConsultaProveedor(_unidadDeTrabajo, this);
             _consultaProveedor.ShowDialog();
-            string datos = _proveedorFiltro.GetRazonSocial();
-            lblProveedor.Text = "Socio: " + datos;
+            if (_proveedorFiltro != null)
+            {
+                string datos = _proveedorFiltro.GetRazonSocial();
+                lblProveedor.Text = "Socio: " + datos;
+            }
         }
 
         private void btnFiltrar_Click(object sender, EventArgs e)

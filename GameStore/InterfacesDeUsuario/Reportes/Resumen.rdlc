@@ -419,8 +419,8 @@
             </ChartNoDataMessage>
             <DataSetName>DTCompras</DataSetName>
             <Top>0.07056cm</Top>
-            <Height>8.73627cm</Height>
-            <Width>31.90875cm</Width>
+            <Height>11.0646cm</Height>
+            <Width>43.4975cm</Width>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
@@ -785,9 +785,9 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DTVentas</DataSetName>
-            <Top>8.80682cm</Top>
-            <Height>8.70099cm</Height>
-            <Width>31.90875cm</Width>
+            <Top>11.01169cm</Top>
+            <Height>10.63245cm</Height>
+            <Width>43.4975cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -799,10 +799,10 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>6.93104in</Height>
+        <Height>8.52131in</Height>
         <Style />
       </Body>
-      <Width>12.5625in</Width>
+      <Width>17.125in</Width>
       <Page>
         <PageHeader>
           <Height>1.61396cm</Height>
@@ -832,7 +832,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Height>1.61396cm</Height>
-              <Width>31.90875cm</Width>
+              <Width>43.4975cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>

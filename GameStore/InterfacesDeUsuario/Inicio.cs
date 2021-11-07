@@ -169,17 +169,20 @@ namespace GameStore.InterfacesDeUsuario
 
         private void BtnCompraProveedor_Click(object sender, EventArgs e)
         {
-            new ConsultaCompra(_unidadDeTrabajo).ShowDialog();
-	}
+            var consulta = new ConsultaCompra(_unidadDeTrabajo);
+            AbrirFormHijo(consulta);
+	    }
 
         private void BtnRegistrarVenta_Click(object sender, EventArgs e)
         {
-            new ConsultaVenta(_unidadDeTrabajo).ShowDialog();
+            var venta = new ConsultaVenta(_unidadDeTrabajo);
+            AbrirFormHijo(venta);
         }
 
         private void BtnAlquiler_Click(object sender, EventArgs e)
         {
-            new ConsultaAlquiler(_unidadDeTrabajo).ShowDialog();
+            var alquiler = new ConsultaAlquiler(_unidadDeTrabajo);
+            AbrirFormHijo(alquiler);
         }
 
         private void BtnMasVendidos_Click(object sender, EventArgs e)
@@ -195,7 +198,26 @@ namespace GameStore.InterfacesDeUsuario
 
         private void btnResumen_Click(object sender, EventArgs e)
         {
-            new Resumen().ShowDialog();
+            var resumen = new Resumen();
+            AbrirFormHijo(resumen);
+        }
+
+        private void AbrirFormHijo(object formHijo)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
+            Form fh = (Form)formHijo;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            fh.Show();
+        }
+
+        private void actualizarFechaYHora(object sender, EventArgs e)
+        {
+            var fechaYHora = DateTime.Now.ToString("dd MMM HH:mm:ss");
+            lblFechaYHora.Text = fechaYHora;
         }
     }
 }

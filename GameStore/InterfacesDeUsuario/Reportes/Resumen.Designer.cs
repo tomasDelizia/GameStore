@@ -39,15 +39,19 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             // 
             // RwResumen
             // 
+            this.RwResumen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.RwResumen.LocalReport.ReportEmbeddedResource = "GameStore.InterfacesDeUsuario.Reportes.Resumen.rdlc";
-            this.RwResumen.Location = new System.Drawing.Point(0, 62);
+            this.RwResumen.Location = new System.Drawing.Point(0, 52);
             this.RwResumen.Name = "RwResumen";
             this.RwResumen.ServerReport.BearerToken = null;
-            this.RwResumen.Size = new System.Drawing.Size(1237, 752);
+            this.RwResumen.Size = new System.Drawing.Size(1237, 762);
             this.RwResumen.TabIndex = 0;
             // 
             // dtpFechaHasta
             // 
+            this.dtpFechaHasta.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpFechaHasta.CalendarForeColor = System.Drawing.Color.DimGray;
             this.dtpFechaHasta.CalendarTitleForeColor = System.Drawing.Color.DimGray;
             this.dtpFechaHasta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -59,6 +63,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             // 
             // dtpFechaDesde
             // 
+            this.dtpFechaDesde.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpFechaDesde.CalendarForeColor = System.Drawing.Color.DimGray;
             this.dtpFechaDesde.CalendarTitleForeColor = System.Drawing.Color.DimGray;
             this.dtpFechaDesde.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -70,6 +75,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
@@ -81,6 +87,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DimGray;
@@ -92,6 +99,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             // 
             // btnFiltrar
             // 
+            this.btnFiltrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnFiltrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrar.ForeColor = System.Drawing.Color.DimGray;
             this.btnFiltrar.Location = new System.Drawing.Point(678, 17);
@@ -114,6 +122,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.RwResumen);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Resumen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resumen";

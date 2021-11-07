@@ -53,6 +53,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             dgvProveedores.DefaultCellStyle.Font = new Font("Century Gothic", 10);
             _unidadDeTrabajo = unidadDeTrabajo;
             _servicioProveedor = new ServicioProveedor(_unidadDeTrabajo.RepositorioProveedor);
+            _servicioBarrio = new ServicioBarrio(unidadDeTrabajo.RepositorioBarrio);
             ocultarBotonesDeConsulta();
             _consultaCompra = consultaVenta;
 

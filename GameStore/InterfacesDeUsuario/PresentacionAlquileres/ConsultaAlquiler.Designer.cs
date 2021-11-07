@@ -71,6 +71,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             // dtpFechaHasta
             // 
+            this.dtpFechaHasta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpFechaHasta.CalendarForeColor = System.Drawing.Color.DimGray;
             this.dtpFechaHasta.CalendarTitleForeColor = System.Drawing.Color.DimGray;
             this.dtpFechaHasta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -82,6 +83,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             // dtpFechaDesde
             // 
+            this.dtpFechaDesde.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpFechaDesde.CalendarForeColor = System.Drawing.Color.DimGray;
             this.dtpFechaDesde.CalendarTitleForeColor = System.Drawing.Color.DimGray;
             this.dtpFechaDesde.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -93,6 +95,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
@@ -104,6 +107,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DimGray;
@@ -126,6 +130,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
             this.panel1.Controls.Add(this.dtpFechaHasta);
             this.panel1.Controls.Add(this.dtpFechaDesde);
@@ -155,6 +161,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
@@ -203,6 +210,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             // btnReiniciarFiltros
             // 
+            this.btnReiniciarFiltros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReiniciarFiltros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReiniciarFiltros.ForeColor = System.Drawing.Color.DimGray;
             this.btnReiniciarFiltros.Location = new System.Drawing.Point(549, 147);
@@ -277,6 +285,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
@@ -288,6 +297,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
@@ -299,6 +309,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             // cboTiposFactura
             // 
+            this.cboTiposFactura.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cboTiposFactura.BackColor = System.Drawing.Color.White;
             this.cboTiposFactura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTiposFactura.ForeColor = System.Drawing.Color.DimGray;
@@ -332,6 +343,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             // btnFiltrar
             // 
+            this.btnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFiltrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrar.ForeColor = System.Drawing.Color.DimGray;
             this.btnFiltrar.Location = new System.Drawing.Point(691, 147);
@@ -344,6 +356,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             // cboFormasPago
             // 
+            this.cboFormasPago.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cboFormasPago.BackColor = System.Drawing.Color.White;
             this.cboFormasPago.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFormasPago.ForeColor = System.Drawing.Color.DimGray;
@@ -356,6 +369,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             // btnSalir
             // 
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.DimGray;
             this.btnSalir.Location = new System.Drawing.Point(724, 426);
@@ -368,6 +382,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             // btnVerDetalle
             // 
+            this.btnVerDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVerDetalle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerDetalle.ForeColor = System.Drawing.Color.DimGray;
             this.btnVerDetalle.Location = new System.Drawing.Point(608, 426);
@@ -382,6 +397,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             this.dgvAlquiler.AllowUserToAddRows = false;
             this.dgvAlquiler.AllowUserToDeleteRows = false;
+            this.dgvAlquiler.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAlquiler.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvAlquiler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAlquiler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -448,6 +466,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             // btnNuevoAlquiler
             // 
+            this.btnNuevoAlquiler.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnNuevoAlquiler.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevoAlquiler.BackgroundImage")));
             this.btnNuevoAlquiler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNuevoAlquiler.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -470,6 +489,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnVerDetalle);
             this.Controls.Add(this.dgvAlquiler);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConsultaAlquiler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaAlquiler";
