@@ -27,25 +27,47 @@ namespace GameStore.InterfacesDeUsuario.Reportes
 
         private void Ventas_Load(object sender, EventArgs e)
         {
-            CargarReporte();
+            CargarReporte(fechaMesPasado, fechaHoy);
         }
 
-        private void CargarReporte()
+        private void CargarReporte(string fechaDesde, string fechaHasta)
         {
-            var compras = _repositorioReporte.GetComprasDelMes(fechaMesPasado, fechaHoy);
-            var ventas = _repositorioReporte.GetVentasDelMes(fechaMesPasado, fechaHoy);
+            var compras = _repositorioReporte.GetComprasDelMes(fechaDesde, fechaHasta);
+            var ventas = _repositorioReporte.GetVentasDelMes(fechaDesde, fechaHasta);
             RwResumen.LocalReport.DataSources.Clear();
             var dsCompras = new ReportDataSource("DTCompras", compras);
             var dsVentas = new ReportDataSource("DTVentas", ventas);
             RwResumen.LocalReport.DataSources.Add(dsCompras);
             RwResumen.LocalReport.DataSources.Add(dsVentas);
             var parametros = new List<ReportParameter>();
-            var paramFechaDesde = new ReportParameter("ParamFechaDesde", fechaHoy);
-            var paramFechaHasta = new ReportParameter("ParamFechaHasta", fechaMesPasado);
+            var paramFechaDesde = new ReportParameter("ParamFechaDesde", fechaDesde);
+            var paramFechaHasta = new ReportParameter("ParamFechaHasta", fechaHasta);
             parametros.Add(paramFechaDesde);
             parametros.Add(paramFechaHasta);
             RwResumen.LocalReport.SetParameters(parametros);
             RwResumen.RefreshReport();
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            var fechaDesde = dtpFechaDesde.Value;
+            var fechaHasta = dtpFechaHasta.Value;
+            try
+            {
+                if (fechaDesde > fechaHasta)
+                    throw new ApplicationException("Ingrese un rango de fechas válido");
+                RwResumen.Clear();
+                CargarReporte(fechaDesde.ToShortDateString(), fechaHasta.ToShortDateString());
+            }
+            catch (ApplicationException aex)
+            {
+                MessageBox.Show(aex.Message, "Error", MessageBoxButtons.OK);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK);
+            }
+
         }
     }
 }
