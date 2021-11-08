@@ -487,8 +487,8 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DTVentasPorPeriodo</DataSetName>
-            <Top>0.36724cm</Top>
-            <Left>0.76412cm</Left>
+            <Top>0.17639cm</Top>
+            <Left>1.39912cm</Left>
             <Height>1.2cm</Height>
             <Width>23.38792cm</Width>
             <Style>
@@ -498,15 +498,15 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>681cm</Height>
+        <Height>7in</Height>
         <Style>
           <BackgroundColor>DarkGray</BackgroundColor>
         </Style>
       </Body>
-      <Width>1059cm</Width>
+      <Width>18in</Width>
       <Page>
         <PageHeader>
-          <Height>1.74625cm</Height>
+          <Height>1.50813cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -531,8 +531,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox45</rd:DefaultName>
-              <Top>0.36724cm</Top>
-              <Left>10.31558cm</Left>
+              <Top>0.29668cm</Top>
+              <Left>12.29996cm</Left>
               <Height>1.07033cm</Height>
               <Width>7.15667cm</Width>
               <Style>
