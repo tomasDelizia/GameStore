@@ -187,13 +187,14 @@ namespace GameStore.InterfacesDeUsuario
 
         private void BtnMasVendidos_Click(object sender, EventArgs e)
         {
-            var repo = new MasVendidos();
-            repo.ShowDialog();
+            var masVendidos = new MasVendidos();
+            AbrirFormHijo(masVendidos);
         }
 
         private void BtnMasFieles_Click(object sender, EventArgs e)
         {
-            new MasFieles().ShowDialog();
+            var masFieles = new MasFieles();
+            AbrirFormHijo(masFieles);
         }
 
         private void btnResumen_Click(object sender, EventArgs e)
@@ -205,7 +206,7 @@ namespace GameStore.InterfacesDeUsuario
         private void btnVentas_Click(object sender, EventArgs e)
         {
             var ventas = new Ventas();
-            ventas.ShowDialog();
+            AbrirFormHijo(ventas);
         }
 
         private void AbrirFormHijo(object formHijo)

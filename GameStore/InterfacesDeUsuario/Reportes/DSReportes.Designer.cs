@@ -2875,9 +2875,13 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             
             private global::System.Data.DataColumn columnNombre;
             
-            private global::System.Data.DataColumn columnMontoVenta;
+            private global::System.Data.DataColumn columnSubtotal;
             
             private global::System.Data.DataColumn columnFecha;
+            
+            private global::System.Data.DataColumn columnUPC;
+            
+            private global::System.Data.DataColumn columnPrecioArticulo;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -2930,9 +2934,9 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn MontoVentaColumn {
+            public global::System.Data.DataColumn SubtotalColumn {
                 get {
-                    return this.columnMontoVenta;
+                    return this.columnSubtotal;
                 }
             }
             
@@ -2941,6 +2945,22 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             public global::System.Data.DataColumn FechaColumn {
                 get {
                     return this.columnFecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn UPCColumn {
+                get {
+                    return this.columnUPC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PrecioArticuloColumn {
+                get {
+                    return this.columnPrecioArticulo;
                 }
             }
             
@@ -2981,13 +3001,15 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DTVentasPorPeriodoRow AddDTVentasPorPeriodoRow(string Cantidad, string Nombre, string MontoVenta, string Fecha) {
+            public DTVentasPorPeriodoRow AddDTVentasPorPeriodoRow(string Cantidad, string Nombre, string Subtotal, string Fecha, string UPC, string PrecioArticulo) {
                 DTVentasPorPeriodoRow rowDTVentasPorPeriodoRow = ((DTVentasPorPeriodoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Cantidad,
                         Nombre,
-                        MontoVenta,
-                        Fecha};
+                        Subtotal,
+                        Fecha,
+                        UPC,
+                        PrecioArticulo};
                 rowDTVentasPorPeriodoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDTVentasPorPeriodoRow);
                 return rowDTVentasPorPeriodoRow;
@@ -3012,8 +3034,10 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             internal void InitVars() {
                 this.columnCantidad = base.Columns["Cantidad"];
                 this.columnNombre = base.Columns["Nombre"];
-                this.columnMontoVenta = base.Columns["MontoVenta"];
+                this.columnSubtotal = base.Columns["Subtotal"];
                 this.columnFecha = base.Columns["Fecha"];
+                this.columnUPC = base.Columns["UPC"];
+                this.columnPrecioArticulo = base.Columns["PrecioArticulo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3023,10 +3047,14 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
                 base.Columns.Add(this.columnCantidad);
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
-                this.columnMontoVenta = new global::System.Data.DataColumn("MontoVenta", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMontoVenta);
+                this.columnSubtotal = new global::System.Data.DataColumn("Subtotal", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSubtotal);
                 this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFecha);
+                this.columnUPC = new global::System.Data.DataColumn("UPC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUPC);
+                this.columnPrecioArticulo = new global::System.Data.DataColumn("PrecioArticulo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrecioArticulo);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4217,17 +4245,17 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string MontoVenta {
+            public string Subtotal {
                 get {
                     try {
-                        return ((string)(this[this.tableDTVentasPorPeriodo.MontoVentaColumn]));
+                        return ((string)(this[this.tableDTVentasPorPeriodo.SubtotalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MontoVenta\' in table \'DTVentasPorPeriodo\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Subtotal\' in table \'DTVentasPorPeriodo\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDTVentasPorPeriodo.MontoVentaColumn] = value;
+                    this[this.tableDTVentasPorPeriodo.SubtotalColumn] = value;
                 }
             }
             
@@ -4244,6 +4272,38 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
                 }
                 set {
                     this[this.tableDTVentasPorPeriodo.FechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string UPC {
+                get {
+                    try {
+                        return ((string)(this[this.tableDTVentasPorPeriodo.UPCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UPC\' in table \'DTVentasPorPeriodo\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDTVentasPorPeriodo.UPCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string PrecioArticulo {
+                get {
+                    try {
+                        return ((string)(this[this.tableDTVentasPorPeriodo.PrecioArticuloColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PrecioArticulo\' in table \'DTVentasPorPeriodo\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDTVentasPorPeriodo.PrecioArticuloColumn] = value;
                 }
             }
             
@@ -4273,14 +4333,14 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsMontoVentaNull() {
-                return this.IsNull(this.tableDTVentasPorPeriodo.MontoVentaColumn);
+            public bool IsSubtotalNull() {
+                return this.IsNull(this.tableDTVentasPorPeriodo.SubtotalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetMontoVentaNull() {
-                this[this.tableDTVentasPorPeriodo.MontoVentaColumn] = global::System.Convert.DBNull;
+            public void SetSubtotalNull() {
+                this[this.tableDTVentasPorPeriodo.SubtotalColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4293,6 +4353,30 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetFechaNull() {
                 this[this.tableDTVentasPorPeriodo.FechaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsUPCNull() {
+                return this.IsNull(this.tableDTVentasPorPeriodo.UPCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetUPCNull() {
+                this[this.tableDTVentasPorPeriodo.UPCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPrecioArticuloNull() {
+                return this.IsNull(this.tableDTVentasPorPeriodo.PrecioArticuloColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPrecioArticuloNull() {
+                this[this.tableDTVentasPorPeriodo.PrecioArticuloColumn] = global::System.Convert.DBNull;
             }
         }
         

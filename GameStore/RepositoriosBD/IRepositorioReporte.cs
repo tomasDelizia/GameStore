@@ -9,11 +9,11 @@ namespace GameStore.RepositoriosBD
 {
     public interface IRepositorioReporte
     {
-        DataTable GetVideojuegosPorCantidadVendida();
-        DataTable GetPerifericosPorCantidadVendida();
-        DataTable GetConsolasPorCantidadVendida();
-        DataTable GetSociosPorCantidadComprada();
-        DataTable GetSociosPorCantidadAlquilada();
+        DataTable GetVideojuegosPorCantidadVendida(string desde, string hasta);
+        DataTable GetPerifericosPorCantidadVendida(string desde, string hasta);
+        DataTable GetConsolasPorCantidadVendida(string desde, string hasta);
+        DataTable GetSociosPorCantidadComprada(string desde, string hasta);
+        DataTable GetSociosPorCantidadAlquilada(string desde, string hasta);
         DataTable GetVenta(int nroFactura);
         string GetTotalVenta(int nroFactura);
     }

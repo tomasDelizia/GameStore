@@ -894,8 +894,8 @@
       <DependentUpon>MasVendidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\Reportes\Resumen.rdlc" />
-    <EmbeddedResource Include="InterfacesDeUsuario\Reportes\ReporteMasVendidos.rdlc" />
-    <EmbeddedResource Include="InterfacesDeUsuario\Reportes\ReportesMasFieles.rdlc" />
+    <EmbeddedResource Include="InterfacesDeUsuario\Reportes\MasVendidos.rdlc" />
+    <EmbeddedResource Include="InterfacesDeUsuario\Reportes\MasFieles.rdlc" />
     <EmbeddedResource Include="InterfacesDeUsuario\Reportes\Resumen.resx">
       <DependentUpon>Resumen.cs</DependentUpon>
     </EmbeddedResource>

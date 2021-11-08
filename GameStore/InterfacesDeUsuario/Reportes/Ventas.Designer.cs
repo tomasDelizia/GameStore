@@ -44,11 +44,14 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             // 
             // RwVentas
             // 
+            this.RwVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.RwVentas.LocalReport.ReportEmbeddedResource = "GameStore.InterfacesDeUsuario.Reportes.Ventas.rdlc";
             this.RwVentas.Location = new System.Drawing.Point(2, 47);
             this.RwVentas.Name = "RwVentas";
             this.RwVentas.ServerReport.BearerToken = null;
-            this.RwVentas.Size = new System.Drawing.Size(1233, 766);
+            this.RwVentas.Size = new System.Drawing.Size(1234, 766);
             this.RwVentas.TabIndex = 0;
             // 
             // btnFiltrar
