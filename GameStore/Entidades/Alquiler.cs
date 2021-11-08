@@ -88,6 +88,38 @@ namespace GameStore.Entidades
             return total;
         }
 
+        public bool EsDevuelto()
+        {
+            if (FechaFinReal != null)
+                return true;
+            return false;
+        }
+
+        public decimal CalcularImporteDevolucionTardia()
+        {
+            decimal total = 0;
+            var fechaDevolucionReal = DateTime.Today;
+            if (fechaDevolucionReal > FechaFin)
+                total = CalcularAdicional();
+            return total;
+        }
+
+        private decimal CalcularAdicional()
+        {
+            decimal adicional = 0;
+            int cantDiasExtra = (DateTime.Today - FechaFin).Days;
+            foreach(var detalle in DetallesDeAlquiler)
+            {
+                adicional += detalle.MontoDevolucionTardiaPorDia * cantDiasExtra;
+            }
+            return adicional;
+        }
+
+        public decimal CalcularImporteFinal()
+        {
+            return CalcularTotal() - MontoSenia + CalcularImporteDevolucionTardia();
+        }
+
         public int CantidadDias()
         {
             return (FechaFin - FechaInicio).Days; 

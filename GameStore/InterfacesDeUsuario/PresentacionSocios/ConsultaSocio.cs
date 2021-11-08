@@ -95,7 +95,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
 
         private void ConsultarSocios()
         {
-            ckbIncluirTodos.Checked = false;
+            ckbIncluirDevueltos.Checked = false;
             var socios = _servicioSocio.ListarSociosActivos();
             CargarDgvSocios(socios);
             dgvSocios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -219,7 +219,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
 
         private void ckbIncluirTodos_CheckedChanged(object sender, EventArgs e)
         {
-            if (ckbIncluirTodos.Checked)
+            if (ckbIncluirDevueltos.Checked)
             {
                 var socios = _servicioSocio.ListarSocios();
                 CargarDgvSocios(socios);

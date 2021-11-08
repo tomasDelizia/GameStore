@@ -49,7 +49,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             // 
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.DimGray;
-            this.btnSalir.Location = new System.Drawing.Point(846, 229);
+            this.btnSalir.Location = new System.Drawing.Point(846, 218);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(93, 29);
             this.btnSalir.TabIndex = 126;
@@ -162,7 +162,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(949, 268);
+            this.ClientSize = new System.Drawing.Size(949, 253);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.picArticulo);
             this.Controls.Add(this.dgvDetallesDeAlquileres);
@@ -170,7 +170,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.Controls.Add(this.txtTotal);
             this.Name = "ConsultarDetalleAlquiler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConsultarDetalleAlquiler";
+            this.Text = "Ver detalles del alquiler";
             this.Load += new System.EventHandler(this.ConsultarDetalleAlquiler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetallesDeAlquileres)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArticulo)).EndInit();

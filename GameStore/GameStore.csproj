@@ -151,6 +151,12 @@
     <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\RegistrarAlquiler.Designer.cs">
       <DependentUpon>RegistrarAlquiler.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\RegistrarDevolucionAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfacesDeUsuario\PresentacionAlquileres\RegistrarDevolucionAlquiler.Designer.cs">
+      <DependentUpon>RegistrarDevolucionAlquiler.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfacesDeUsuario\PresentacionArticulos\AltaArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -702,6 +708,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\RegistrarAlquiler.resx">
       <DependentUpon>RegistrarAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacesDeUsuario\PresentacionAlquileres\RegistrarDevolucionAlquiler.resx">
+      <DependentUpon>RegistrarDevolucionAlquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacesDeUsuario\PresentacionArticulos\AltaArticulo.resx">
       <DependentUpon>AltaArticulo.cs</DependentUpon>
