@@ -35,9 +35,9 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.btnFiltrarVen = new System.Windows.Forms.Button();
+            this.dtpFechaHastaVen = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaDesdeVen = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -111,41 +111,42 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.label9.TabIndex = 124;
             this.label9.Text = "Entre";
             // 
-            // button1
+            // btnFiltrarVen
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.Location = new System.Drawing.Point(776, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 29);
-            this.button1.TabIndex = 133;
-            this.button1.Text = "Filtrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnFiltrarVen.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnFiltrarVen.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltrarVen.ForeColor = System.Drawing.Color.DimGray;
+            this.btnFiltrarVen.Location = new System.Drawing.Point(776, 12);
+            this.btnFiltrarVen.Name = "btnFiltrarVen";
+            this.btnFiltrarVen.Size = new System.Drawing.Size(100, 29);
+            this.btnFiltrarVen.TabIndex = 133;
+            this.btnFiltrarVen.Text = "Filtrar";
+            this.btnFiltrarVen.UseVisualStyleBackColor = true;
+            this.btnFiltrarVen.Click += new System.EventHandler(this.btnFiltrarVen_Click);
             // 
-            // dateTimePicker1
+            // dtpFechaHastaVen
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.DimGray;
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.DimGray;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(620, 12);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(125, 27);
-            this.dateTimePicker1.TabIndex = 132;
+            this.dtpFechaHastaVen.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpFechaHastaVen.CalendarForeColor = System.Drawing.Color.DimGray;
+            this.dtpFechaHastaVen.CalendarTitleForeColor = System.Drawing.Color.DimGray;
+            this.dtpFechaHastaVen.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaHastaVen.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaHastaVen.Location = new System.Drawing.Point(620, 12);
+            this.dtpFechaHastaVen.Name = "dtpFechaHastaVen";
+            this.dtpFechaHastaVen.Size = new System.Drawing.Size(125, 27);
+            this.dtpFechaHastaVen.TabIndex = 132;
             // 
-            // dateTimePicker2
+            // dtpFechaDesdeVen
             // 
-            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dateTimePicker2.CalendarForeColor = System.Drawing.Color.DimGray;
-            this.dateTimePicker2.CalendarTitleForeColor = System.Drawing.Color.DimGray;
-            this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(462, 12);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(125, 27);
-            this.dateTimePicker2.TabIndex = 131;
+            this.dtpFechaDesdeVen.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpFechaDesdeVen.CalendarForeColor = System.Drawing.Color.DimGray;
+            this.dtpFechaDesdeVen.CalendarTitleForeColor = System.Drawing.Color.DimGray;
+            this.dtpFechaDesdeVen.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaDesdeVen.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaDesdeVen.Location = new System.Drawing.Point(462, 12);
+            this.dtpFechaDesdeVen.Name = "dtpFechaDesdeVen";
+            this.dtpFechaDesdeVen.Size = new System.Drawing.Size(125, 27);
+            this.dtpFechaDesdeVen.TabIndex = 131;
             // 
             // label1
             // 
@@ -177,9 +178,9 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1237, 814);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.btnFiltrarVen);
+            this.Controls.Add(this.dtpFechaHastaVen);
+            this.Controls.Add(this.dtpFechaDesdeVen);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnFiltrar);
@@ -207,9 +208,9 @@ namespace GameStore.InterfacesDeUsuario.Reportes
         private System.Windows.Forms.DateTimePicker dtpFechaDesde;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button btnFiltrarVen;
+        private System.Windows.Forms.DateTimePicker dtpFechaHastaVen;
+        private System.Windows.Forms.DateTimePicker dtpFechaDesdeVen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }

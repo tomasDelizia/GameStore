@@ -46,10 +46,10 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             RwVentas.RefreshReport();
         }
 
-        private void btnFiltrar_Click(object sender, EventArgs e)
+        private void btnFiltrarVen_Click(object sender, EventArgs e)
         {
-            var fechaDesde = dtpFechaDesde.Value;
-            var fechaHasta = dtpFechaHasta.Value;
+            var fechaDesde = dtpFechaDesdeVen.Value;
+            var fechaHasta = dtpFechaHastaVen.Value;
             try
             {
                 if (fechaDesde > fechaHasta)
