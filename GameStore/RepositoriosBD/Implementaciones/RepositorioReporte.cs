@@ -12,54 +12,65 @@ namespace GameStore.RepositoriosBD.Implementaciones
     public class RepositorioReporte : IRepositorioReporte
     {
 
-        public DataTable GetVideojuegosPorCantidadVendida()
+        public DataTable GetVideojuegosPorCantidadVendida(string desde, string hasta)
         {
+            string fechaDesde = desde.ToString();
+            string fechaHasta = hasta.ToString();
             var sentenciaSql = "SELECT TOP 5 SUM(det.Cantidad) AS Cantidad, art.Nombre AS Nombre " +
-                "FROM DetallesDeVenta det JOIN Articulos art ON(det.Codigo = art.Codigo) " +
-                "WHERE art.IdTipoArticulo = 1 " +
+                "FROM Ventas v JOIN DetallesDeVenta det ON(det.NroFactura = v.NroFactura) JOIN Articulos art ON(det.Codigo = art.Codigo)  " +
+                $"WHERE art.IdTipoArticulo = 1 AND v.FechaVenta BETWEEN '{fechaDesde}' AND '{fechaHasta}' " +
                 "GROUP BY art.Nombre " +
                 "ORDER BY 1 DESC";
             var tabla = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
             return tabla;
         }
 
-        public DataTable GetPerifericosPorCantidadVendida()
+        public DataTable GetPerifericosPorCantidadVendida(string desde, string hasta)
         {
+            string fechaDesde = desde.ToString();
+            string fechaHasta = hasta.ToString();
             var sentenciaSql = "SELECT TOP 5 SUM(det.Cantidad) AS Cantidad, art.Nombre AS Nombre " +
-                "FROM DetallesDeVenta det JOIN Articulos art ON(det.Codigo = art.Codigo) " +
-                "WHERE art.IdTipoArticulo = 2 " +
+                "FROM Ventas v JOIN DetallesDeVenta det ON(det.NroFactura = v.NroFactura) JOIN Articulos art ON(det.Codigo = art.Codigo) " +
+                $"WHERE art.IdTipoArticulo = 2 AND v.FechaVenta BETWEEN '{fechaDesde}' AND '{fechaHasta}' " +
                 "GROUP BY art.Nombre " +
                 "ORDER BY 1 DESC";
             var tabla = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
             return tabla;
         }
 
-        public DataTable GetConsolasPorCantidadVendida()
+        public DataTable GetConsolasPorCantidadVendida(string desde, string hasta)
         {
+            string fechaDesde = desde.ToString();
+            string fechaHasta = hasta.ToString();
             var sentenciaSql = "SELECT TOP 5 SUM(det.Cantidad) AS Cantidad, art.Nombre AS Nombre " +
-                "FROM DetallesDeVenta det JOIN Articulos art ON(det.Codigo = art.Codigo) " +
-                "WHERE art.IdTipoArticulo = 3 " +
+                "FROM Ventas v JOIN DetallesDeVenta det ON(det.NroFactura = v.NroFactura) JOIN Articulos art ON(det.Codigo = art.Codigo) " +
+                $"WHERE art.IdTipoArticulo = 3 AND v.FechaVenta BETWEEN '{fechaDesde}' AND '{fechaHasta}' " +
                 "GROUP BY art.Nombre " +
                 "ORDER BY 1 DESC";
             var tabla = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
             return tabla;
         }
 
-        public DataTable GetSociosPorCantidadComprada()
+        public DataTable GetSociosPorCantidadComprada(string desde, string hasta)
         {
+            string fechaDesde = desde.ToString();
+            string fechaHasta = hasta.ToString();
             var sentenciaSql = "SELECT TOP 5 SUM (det.cantidad) Cantidad, soc.Nombre Nombre, soc.Apellido Apellido, SUM(det.PrecioUnitario) Monto " +
-                "FROM DetallesDeVenta det JOIN Ventas v ON(v.NroFactura = det.NroFactura) " +
-                "JOIN Socios soc ON(v.IdSocio = soc.IdSocio) " +
+                "FROM DetallesDeVenta det JOIN Ventas v ON(v.NroFactura = det.NroFactura) JOIN Socios soc ON(v.IdSocio = soc.IdSocio) " +
+                $"WHERE v.FechaVenta BETWEEN '{fechaDesde}' AND '{fechaHasta}' " +
                 "GROUP BY soc.IdSocio, soc.Nombre, soc.Apellido " +
                 "ORDER BY 1 DESC";
             var tabla = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
             return tabla;
         }
 
-        public DataTable GetSociosPorCantidadAlquilada()
+        public DataTable GetSociosPorCantidadAlquilada(string desde, string hasta)
         {
+            string fechaDesde = desde.ToString();
+            string fechaHasta = hasta.ToString();
             var sentenciaSql = "SELECT TOP 5 COUNT(soc.Nombre) Cantidad, soc.Nombre Nombre, soc.Apellido Apellido, SUM(Datediff(DAY, FechaInicio, FechaFin) * det.MontoAlquilerPorDia) Monto " +
                 "FROM Alquileres a JOIN Socios soc ON(soc.IdSocio = a.IdSocio) JOIN DetallesDeAlquiler det ON(a.NroAlquiler = det.NroAlquiler) " +
+                $"WHERE a.FechaInicio BETWEEN '{fechaDesde}' AND '{fechaHasta}' " +
                 "GROUP BY soc.IdSocio, soc.Nombre, soc.Apellido " +
                 "ORDER BY 1 DESC";
             var tabla = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
@@ -117,6 +128,17 @@ namespace GameStore.RepositoriosBD.Implementaciones
             
             var tabla = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
             return tabla.Rows[0][0].ToString();
+        }
+
+        public DataTable GetVentas(string desde, string hasta)
+        {
+            string fechaDesde = desde.ToString();
+            string fechaHasta = hasta.ToString();
+            var sentenciaSql = "SELECT  det.Cantidad AS Cantidad, art.Nombre AS Nombre, (det.PrecioUnitario * det.Cantidad) AS Subtotal, CONVERT(char(10), v.FechaVenta, 103) AS Fecha, art.Codigo AS UPC, CONCAT('$ ', det.PrecioUnitario) AS PrecioArticulo  " +
+                "FROM Ventas v JOIN DetallesDeVenta det ON(det.NroFactura = v.NroFactura) JOIN Articulos art ON(det.Codigo = art.Codigo) " +
+                $"WHERE v.FechaVenta BETWEEN '{fechaDesde}' AND '{fechaHasta}' ";
+            var tabla = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
+            return tabla;
         }
     }
 }

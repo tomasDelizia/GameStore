@@ -43,10 +43,10 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RwResumen.LocalReport.ReportEmbeddedResource = "GameStore.InterfacesDeUsuario.Reportes.Resumen.rdlc";
-            this.RwResumen.Location = new System.Drawing.Point(0, 52);
+            this.RwResumen.Location = new System.Drawing.Point(0, 45);
             this.RwResumen.Name = "RwResumen";
             this.RwResumen.ServerReport.BearerToken = null;
-            this.RwResumen.Size = new System.Drawing.Size(1237, 762);
+            this.RwResumen.Size = new System.Drawing.Size(1237, 769);
             this.RwResumen.TabIndex = 0;
             // 
             // dtpFechaHasta
@@ -56,7 +56,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.dtpFechaHasta.CalendarTitleForeColor = System.Drawing.Color.DimGray;
             this.dtpFechaHasta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(522, 17);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(604, 12);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(125, 27);
             this.dtpFechaHasta.TabIndex = 121;
@@ -68,7 +68,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.dtpFechaDesde.CalendarTitleForeColor = System.Drawing.Color.DimGray;
             this.dtpFechaDesde.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(364, 17);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(446, 12);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(125, 27);
             this.dtpFechaDesde.TabIndex = 120;
@@ -79,7 +79,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(495, 20);
+            this.label5.Location = new System.Drawing.Point(577, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(21, 22);
             this.label5.TabIndex = 119;
@@ -91,7 +91,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(301, 20);
+            this.label9.Location = new System.Drawing.Point(383, 15);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 22);
             this.label9.TabIndex = 118;
@@ -102,7 +102,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.btnFiltrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnFiltrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnFiltrar.Location = new System.Drawing.Point(678, 17);
+            this.btnFiltrar.Location = new System.Drawing.Point(760, 12);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(100, 29);
             this.btnFiltrar.TabIndex = 122;

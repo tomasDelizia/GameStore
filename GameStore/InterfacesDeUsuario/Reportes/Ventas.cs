@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace GameStore.InterfacesDeUsuario.Reportes
 {
-    public partial class MasFieles : Form
+    public partial class Ventas : Form
     {
         private RepositorioReporte _repositorioReporte;
         private string fechaHoy;
         private string fechaMesPasado;
 
-        public MasFieles()
+        public Ventas()
         {
             _repositorioReporte = new RepositorioReporte();
             fechaHoy = DateTime.Now.ToShortDateString();
@@ -26,39 +26,36 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             InitializeComponent();
         }
 
-        private void MasFieles_Load(object sender, EventArgs e)
+        private void Ventas_Load(object sender, EventArgs e)
         {
-            CargarReporte(fechaMesPasado, fechaHoy);
+            CargarVentas(fechaMesPasado, fechaHoy);
         }
 
-        private void CargarReporte(string fechaDesde, string fechaHasta)
+        private void CargarVentas(string fechaDesde, string fechaHasta)
         {
-            var reporteVentas = _repositorioReporte.GetSociosPorCantidadComprada(fechaDesde, fechaHasta);
-            var reporteAlquileres = _repositorioReporte.GetSociosPorCantidadAlquilada(fechaDesde, fechaHasta);
-            RwMasFieles.LocalReport.DataSources.Clear();
-            var dsVentas = new ReportDataSource("DTCantidadesCompradas", reporteVentas);
-            var dsAlquileres = new ReportDataSource("DTCantidadesAlquiladas", reporteAlquileres);
-            RwMasFieles.LocalReport.DataSources.Add(dsVentas);
-            RwMasFieles.LocalReport.DataSources.Add(dsAlquileres);
+            var ventas = _repositorioReporte.GetVentas(fechaDesde, fechaHasta);
+            RwVentas.LocalReport.DataSources.Clear();
+            var dsVentas = new ReportDataSource("DTVentasPorPeriodo", ventas);
+            RwVentas.LocalReport.DataSources.Add(dsVentas);
             var parametros = new List<ReportParameter>();
             var paramFechaDesde = new ReportParameter("ParamFechaDesde", fechaDesde);
             var paramFechaHasta = new ReportParameter("ParamFechaHasta", fechaHasta);
             parametros.Add(paramFechaDesde);
             parametros.Add(paramFechaHasta);
-            RwMasFieles.LocalReport.SetParameters(parametros);
-            RwMasFieles.RefreshReport();
+            RwVentas.LocalReport.SetParameters(parametros);
+            RwVentas.RefreshReport();
         }
 
-        private void btnFiltrarMasFie_Click(object sender, EventArgs e)
+        private void btnFiltrarVen_Click(object sender, EventArgs e)
         {
-            var fechaDesde = dtpFechaDesdeMasFie.Value;
-            var fechaHasta = dtpFechaHastaMasFie.Value;
+            var fechaDesde = dtpFechaDesdeVen.Value;
+            var fechaHasta = dtpFechaHastaVen.Value;
             try
             {
                 if (fechaDesde > fechaHasta)
                     throw new ApplicationException("Ingrese un rango de fechas válido");
-                RwMasFieles.Clear();
-                CargarReporte(fechaDesde.ToShortDateString(), fechaHasta.ToShortDateString());
+                RwVentas.Clear();
+                CargarVentas(fechaDesde.ToShortDateString(), fechaHasta.ToShortDateString());
             }
             catch (ApplicationException aex)
             {

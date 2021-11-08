@@ -15,24 +15,28 @@ namespace GameStore.InterfacesDeUsuario.Reportes
 {
     public partial class MasVendidos : Form
     {
+        private RepositorioReporte _repositorioReporte;
+        private string fechaHoy;
+        private string fechaMesPasado;
 
-        private IRepositorioReporte repositorioReporte;
         public MasVendidos()
         {
-            repositorioReporte = new RepositorioReporte();
+            _repositorioReporte = new RepositorioReporte();
+            fechaHoy = DateTime.Now.ToShortDateString();
+            fechaMesPasado = DateTime.Now.AddDays(-31).ToShortDateString();
             InitializeComponent();
         }
 
         private void MasVendidos_Load(object sender, EventArgs e)
         {
-            this.CargarReporte();
+            this.CargarReporte(fechaMesPasado, fechaHoy);
         }
 
-        private void CargarReporte()
+        private void CargarReporte(string fechaDesde, string fechaHasta)
         {
-            var datos = repositorioReporte.GetVideojuegosPorCantidadVendida();
-            var datos2 = repositorioReporte.GetPerifericosPorCantidadVendida();
-            var datos3 = repositorioReporte.GetConsolasPorCantidadVendida();
+            var datos = _repositorioReporte.GetVideojuegosPorCantidadVendida(fechaDesde, fechaHasta);
+            var datos2 = _repositorioReporte.GetPerifericosPorCantidadVendida(fechaDesde, fechaHasta);
+            var datos3 = _repositorioReporte.GetConsolasPorCantidadVendida(fechaDesde, fechaHasta);
 
             this.RwMasVendidos.LocalReport.DataSources.Clear();
 
@@ -45,12 +49,33 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.RwMasVendidos.LocalReport.DataSources.Add(dsConsolas);
 
             var parametros = new List<ReportParameter>();
-            var fechaHoy = DateTime.Now.ToString("dd/MM/yyyy");
-            var paramFechaHoy = new ReportParameter("ParamFechaHoy", fechaHoy);
-            parametros.Add(paramFechaHoy);
+            var paramFechaDesde = new ReportParameter("ParamFechaDesde", fechaDesde);
+            var paramFechaHasta = new ReportParameter("ParamFechaHasta", fechaHasta);
+            parametros.Add(paramFechaDesde);
+            parametros.Add(paramFechaHasta);
             this.RwMasVendidos.LocalReport.SetParameters(parametros);
-
             this.RwMasVendidos.RefreshReport();
+        }
+
+        private void btnFiltrarMasVen_Click(object sender, EventArgs e)
+        {
+            var fechaDesde = dtpFechaDesdeMasVen.Value;
+            var fechaHasta = dtpFechaHastaMasVen.Value;
+            try
+            {
+                if (fechaDesde > fechaHasta)
+                    throw new ApplicationException("Ingrese un rango de fechas válido");
+                RwMasVendidos.Clear();
+                CargarReporte(fechaDesde.ToShortDateString(), fechaHasta.ToShortDateString());
+            }
+            catch (ApplicationException aex)
+            {
+                MessageBox.Show(aex.Message, "Error", MessageBoxButtons.OK);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK);
+            }
         }
     }
 }

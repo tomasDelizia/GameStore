@@ -385,7 +385,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Compras del mes</Caption>
+                <Caption>Compras</Caption>
                 <Style>
                   <Border>
                     <Color>SlateBlue</Color>
@@ -754,7 +754,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Ventas del mes</Caption>
+                <Caption>Ventas</Caption>
                 <Style>
                   <BackgroundColor>Indigo</BackgroundColor>
                   <BackgroundGradientType>None</BackgroundGradientType>

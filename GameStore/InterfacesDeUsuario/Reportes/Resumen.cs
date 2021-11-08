@@ -17,6 +17,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
         private RepositorioReporte _repositorioReporte;
         private string fechaHoy;
         private string fechaMesPasado;
+
         public Resumen()
         {
             _repositorioReporte = new RepositorioReporte();

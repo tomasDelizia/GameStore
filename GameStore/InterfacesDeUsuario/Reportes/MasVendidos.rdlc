@@ -1183,7 +1183,7 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>9.5925in</Height>
+        <Height>681cm</Height>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1191,7 +1191,7 @@
           <BackgroundColor>DarkGray</BackgroundColor>
         </Style>
       </Body>
-      <Width>8.56125in</Width>
+      <Width>1059cm</Width>
       <Page>
         <PageHeader>
           <Height>0.51041in</Height>
@@ -1233,40 +1233,6 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="Textbox2">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Parameters!ParamFechaHoy.Value</Value>
-                      <Style>
-                        <FontFamily>Century Gothic</FontFamily>
-                        <FontSize>12pt</FontSize>
-                        <Color>#0f0f0f</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.13194in</Top>
-              <Left>0.32167in</Left>
-              <Height>0.25in</Height>
-              <Width>1.88542in</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
           </ReportItems>
           <Style>
             <Border>
@@ -1284,7 +1250,11 @@
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="ParamFechaHoy">
+    <ReportParameter Name="ParamFechaDesde">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ParamFechaHasta">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
@@ -1297,7 +1267,12 @@
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>ParamFechaHoy</ParameterName>
+          <ParameterName>ParamFechaDesde</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>ParamFechaHasta</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
