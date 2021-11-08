@@ -39,9 +39,6 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             // 
             // RwResumen
             // 
-            this.RwResumen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.RwResumen.LocalReport.ReportEmbeddedResource = "GameStore.InterfacesDeUsuario.Reportes.Resumen.rdlc";
             this.RwResumen.Location = new System.Drawing.Point(0, 52);
             this.RwResumen.Name = "RwResumen";

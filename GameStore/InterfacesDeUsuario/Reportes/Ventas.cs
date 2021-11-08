@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace GameStore.InterfacesDeUsuario.Reportes
 {
-    public partial class Resumen : Form
+    public partial class Ventas : Form
     {
         private RepositorioReporte _repositorioReporte;
         private string fechaHoy;
         private string fechaMesPasado;
 
-        public Resumen()
+        public Ventas()
         {
             _repositorioReporte = new RepositorioReporte();
             fechaHoy = DateTime.Now.ToShortDateString();
@@ -28,25 +28,22 @@ namespace GameStore.InterfacesDeUsuario.Reportes
 
         private void Ventas_Load(object sender, EventArgs e)
         {
-            CargarReporte(fechaMesPasado, fechaHoy);
+            CargarVentas(fechaMesPasado, fechaHoy);
         }
 
-        private void CargarReporte(string fechaDesde, string fechaHasta)
+        private void CargarVentas(string fechaDesde, string fechaHasta)
         {
-            var compras = _repositorioReporte.GetComprasDelMes(fechaDesde, fechaHasta);
-            var ventas = _repositorioReporte.GetVentasDelMes(fechaDesde, fechaHasta);
-            RwResumen.LocalReport.DataSources.Clear();
-            var dsCompras = new ReportDataSource("DTCompras", compras);
-            var dsVentas = new ReportDataSource("DTVentas", ventas);
-            RwResumen.LocalReport.DataSources.Add(dsCompras);
-            RwResumen.LocalReport.DataSources.Add(dsVentas);
+            var ventas = _repositorioReporte.GetVentas(fechaDesde, fechaHasta);
+            RwVentas.LocalReport.DataSources.Clear();
+            var dsVentas = new ReportDataSource("DTVentasPorPeriodo", ventas);
+            RwVentas.LocalReport.DataSources.Add(dsVentas);
             var parametros = new List<ReportParameter>();
             var paramFechaDesde = new ReportParameter("ParamFechaDesde", fechaDesde);
             var paramFechaHasta = new ReportParameter("ParamFechaHasta", fechaHasta);
             parametros.Add(paramFechaDesde);
             parametros.Add(paramFechaHasta);
-            RwResumen.LocalReport.SetParameters(parametros);
-            RwResumen.RefreshReport();
+            RwVentas.LocalReport.SetParameters(parametros);
+            RwVentas.RefreshReport();
         }
 
         private void btnFiltrar_Click(object sender, EventArgs e)
@@ -57,8 +54,8 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             {
                 if (fechaDesde > fechaHasta)
                     throw new ApplicationException("Ingrese un rango de fechas válido");
-                RwResumen.Clear();
-                CargarReporte(fechaDesde.ToShortDateString(), fechaHasta.ToShortDateString());
+                RwVentas.Clear();
+                CargarVentas(fechaDesde.ToShortDateString(), fechaHasta.ToShortDateString());
             }
             catch (ApplicationException aex)
             {
@@ -68,7 +65,6 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             {
                 MessageBox.Show("Error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK);
             }
-
         }
     }
 }

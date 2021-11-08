@@ -202,6 +202,12 @@ namespace GameStore.InterfacesDeUsuario
             AbrirFormHijo(resumen);
         }
 
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            var ventas = new Ventas();
+            ventas.ShowDialog();
+        }
+
         private void AbrirFormHijo(object formHijo)
         {
             if (this.panelContenedor.Controls.Count > 0)

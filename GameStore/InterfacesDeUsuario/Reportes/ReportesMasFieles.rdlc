@@ -849,7 +849,7 @@
           <BackgroundColor>DarkGray</BackgroundColor>
         </Style>
       </Body>
-      <Width>30cm</Width>
+      <Width>30.02646cm</Width>
       <Page>
         <PageHeader>
           <Height>1.7198cm</Height>
@@ -877,6 +877,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
+              <Left>0.02646cm</Left>
               <Height>1.7198cm</Height>
               <Width>30cm</Width>
               <Style>
@@ -909,7 +910,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox5</rd:DefaultName>
               <Top>0.59973cm</Top>
-              <Left>0.31432cm</Left>
+              <Left>0.34078cm</Left>
               <Height>0.78521cm</Height>
               <Width>3.71708cm</Width>
               <ZIndex>1</ZIndex>
