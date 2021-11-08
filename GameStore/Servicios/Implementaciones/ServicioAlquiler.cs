@@ -23,6 +23,11 @@ namespace GameStore.Servicios.Implementaciones
             return _repositorioAlquiler.GetTodos().ToList();
         }
 
+        public List<Alquiler> ListarAlquileresNoDevueltos()
+        {
+            return _repositorioAlquiler.Encontrar(a => a.FechaFinReal == null).ToList();
+        }
+
         public void ValidarAlquiler(Alquiler nuevoAlquiler)
         {
             nuevoAlquiler.ValidarSocio();

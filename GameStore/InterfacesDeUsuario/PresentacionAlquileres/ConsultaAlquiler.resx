@@ -340,6 +340,9 @@
         z1T/u0/47//6f+5D4GLg55yoAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="Devuelto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="Total.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -472,4 +475,10 @@
         AQ4Qj8Cp9Fr6vwCn8N///g+W+W9RBD20JwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="Devuelto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Total.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

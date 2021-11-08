@@ -37,8 +37,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.lblVendedor = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnConsultarVendedor = new System.Windows.Forms.Button();
-            this.btnConsultarSocio = new System.Windows.Forms.Button();
             this.lblSocio = new System.Windows.Forms.Label();
             this.btnReiniciarFiltros = new System.Windows.Forms.Button();
             this.numPrecioMax = new System.Windows.Forms.NumericUpDown();
@@ -55,15 +53,21 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnVerDetalle = new System.Windows.Forms.Button();
             this.dgvAlquiler = new System.Windows.Forms.DataGridView();
+            this.btnRegistrarDevolucion = new System.Windows.Forms.Button();
+            this.btnNuevoAlquiler = new System.Windows.Forms.Button();
+            this.btnConsultarVendedor = new System.Windows.Forms.Button();
+            this.btnConsultarSocio = new System.Windows.Forms.Button();
             this.NroAlquiler = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FormaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Socio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Vendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Devuelto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNuevoAlquiler = new System.Windows.Forms.Button();
             this.btnGenerarFactura = new System.Windows.Forms.Button();
+            this.ckbIncluirTodos = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioMin)).BeginInit();
@@ -77,7 +81,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.dtpFechaHasta.CalendarTitleForeColor = System.Drawing.Color.DimGray;
             this.dtpFechaHasta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(666, 111);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(751, 106);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(125, 27);
             this.dtpFechaHasta.TabIndex = 117;
@@ -89,7 +93,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.dtpFechaDesde.CalendarTitleForeColor = System.Drawing.Color.DimGray;
             this.dtpFechaDesde.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(508, 108);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(593, 106);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(125, 27);
             this.dtpFechaDesde.TabIndex = 116;
@@ -100,7 +104,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(639, 111);
+            this.label5.Location = new System.Drawing.Point(724, 109);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(21, 22);
             this.label5.TabIndex = 115;
@@ -112,7 +116,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(445, 111);
+            this.label9.Location = new System.Drawing.Point(530, 109);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 22);
             this.label9.TabIndex = 114;
@@ -134,6 +138,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.Controls.Add(this.ckbIncluirTodos);
             this.panel1.Controls.Add(this.dtpFechaHasta);
             this.panel1.Controls.Add(this.dtpFechaDesde);
             this.panel1.Controls.Add(this.label5);
@@ -157,7 +162,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.panel1.Controls.Add(this.cboFormasPago);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(805, 191);
+            this.panel1.Size = new System.Drawing.Size(890, 191);
             this.panel1.TabIndex = 115;
             // 
             // label3
@@ -166,37 +171,11 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(347, 4);
+            this.label3.Location = new System.Drawing.Point(390, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 33);
             this.label3.TabIndex = 88;
             this.label3.Text = "Búsqueda";
-            // 
-            // btnConsultarVendedor
-            // 
-            this.btnConsultarVendedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConsultarVendedor.BackgroundImage")));
-            this.btnConsultarVendedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConsultarVendedor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarVendedor.ForeColor = System.Drawing.Color.DimGray;
-            this.btnConsultarVendedor.Location = new System.Drawing.Point(337, 101);
-            this.btnConsultarVendedor.Name = "btnConsultarVendedor";
-            this.btnConsultarVendedor.Size = new System.Drawing.Size(30, 30);
-            this.btnConsultarVendedor.TabIndex = 113;
-            this.btnConsultarVendedor.UseVisualStyleBackColor = true;
-            this.btnConsultarVendedor.Click += new System.EventHandler(this.btnConsultarVendedor_Click);
-            // 
-            // btnConsultarSocio
-            // 
-            this.btnConsultarSocio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConsultarSocio.BackgroundImage")));
-            this.btnConsultarSocio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConsultarSocio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarSocio.ForeColor = System.Drawing.Color.DimGray;
-            this.btnConsultarSocio.Location = new System.Drawing.Point(337, 69);
-            this.btnConsultarSocio.Name = "btnConsultarSocio";
-            this.btnConsultarSocio.Size = new System.Drawing.Size(30, 30);
-            this.btnConsultarSocio.TabIndex = 111;
-            this.btnConsultarSocio.UseVisualStyleBackColor = true;
-            this.btnConsultarSocio.Click += new System.EventHandler(this.btnConsultarSocio_Click);
             // 
             // lblSocio
             // 
@@ -214,7 +193,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.btnReiniciarFiltros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReiniciarFiltros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReiniciarFiltros.ForeColor = System.Drawing.Color.DimGray;
-            this.btnReiniciarFiltros.Location = new System.Drawing.Point(549, 147);
+            this.btnReiniciarFiltros.Location = new System.Drawing.Point(634, 147);
             this.btnReiniciarFiltros.Name = "btnReiniciarFiltros";
             this.btnReiniciarFiltros.Size = new System.Drawing.Size(136, 29);
             this.btnReiniciarFiltros.TabIndex = 101;
@@ -290,7 +269,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(445, 73);
+            this.label6.Location = new System.Drawing.Point(530, 73);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(155, 22);
             this.label6.TabIndex = 93;
@@ -302,7 +281,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(445, 40);
+            this.label1.Location = new System.Drawing.Point(530, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 22);
             this.label1.TabIndex = 91;
@@ -315,7 +294,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.cboTiposFactura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTiposFactura.ForeColor = System.Drawing.Color.DimGray;
             this.cboTiposFactura.FormattingEnabled = true;
-            this.cboTiposFactura.Location = new System.Drawing.Point(606, 73);
+            this.cboTiposFactura.Location = new System.Drawing.Point(691, 73);
             this.cboTiposFactura.Name = "cboTiposFactura";
             this.cboTiposFactura.Size = new System.Drawing.Size(185, 29);
             this.cboTiposFactura.TabIndex = 90;
@@ -347,7 +326,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.btnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFiltrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrar.ForeColor = System.Drawing.Color.DimGray;
-            this.btnFiltrar.Location = new System.Drawing.Point(691, 147);
+            this.btnFiltrar.Location = new System.Drawing.Point(776, 147);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(100, 29);
             this.btnFiltrar.TabIndex = 82;
@@ -362,7 +341,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.cboFormasPago.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFormasPago.ForeColor = System.Drawing.Color.DimGray;
             this.cboFormasPago.FormattingEnabled = true;
-            this.cboFormasPago.Location = new System.Drawing.Point(606, 38);
+            this.cboFormasPago.Location = new System.Drawing.Point(691, 38);
             this.cboFormasPago.Name = "cboFormasPago";
             this.cboFormasPago.Size = new System.Drawing.Size(185, 29);
             this.cboFormasPago.TabIndex = 72;
@@ -373,7 +352,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.DimGray;
-            this.btnSalir.Location = new System.Drawing.Point(724, 426);
+            this.btnSalir.Location = new System.Drawing.Point(809, 426);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(93, 29);
             this.btnSalir.TabIndex = 117;
@@ -386,7 +365,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.btnVerDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVerDetalle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerDetalle.ForeColor = System.Drawing.Color.DimGray;
-            this.btnVerDetalle.Location = new System.Drawing.Point(608, 426);
+            this.btnVerDetalle.Location = new System.Drawing.Point(693, 426);
             this.btnVerDetalle.Name = "btnVerDetalle";
             this.btnVerDetalle.Size = new System.Drawing.Size(110, 29);
             this.btnVerDetalle.TabIndex = 118;
@@ -410,12 +389,66 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.Socio,
             this.Vendedor,
             this.FechaInicio,
+            this.Devuelto,
             this.Total});
             this.dgvAlquiler.Location = new System.Drawing.Point(12, 209);
             this.dgvAlquiler.Name = "dgvAlquiler";
             this.dgvAlquiler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAlquiler.Size = new System.Drawing.Size(805, 200);
+            this.dgvAlquiler.Size = new System.Drawing.Size(890, 200);
             this.dgvAlquiler.TabIndex = 116;
+            // 
+            // btnRegistrarDevolucion
+            // 
+            this.btnRegistrarDevolucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegistrarDevolucion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarDevolucion.ForeColor = System.Drawing.Color.DimGray;
+            this.btnRegistrarDevolucion.Location = new System.Drawing.Point(506, 426);
+            this.btnRegistrarDevolucion.Name = "btnRegistrarDevolucion";
+            this.btnRegistrarDevolucion.Size = new System.Drawing.Size(181, 29);
+            this.btnRegistrarDevolucion.TabIndex = 120;
+            this.btnRegistrarDevolucion.Text = "Registrar devolución";
+            this.btnRegistrarDevolucion.UseVisualStyleBackColor = true;
+            this.btnRegistrarDevolucion.Click += new System.EventHandler(this.btnRegistrarDevolucion_Click);
+            // 
+            // btnNuevoAlquiler
+            // 
+            this.btnNuevoAlquiler.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNuevoAlquiler.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevoAlquiler.BackgroundImage")));
+            this.btnNuevoAlquiler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNuevoAlquiler.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoAlquiler.ForeColor = System.Drawing.Color.DimGray;
+            this.btnNuevoAlquiler.Location = new System.Drawing.Point(12, 415);
+            this.btnNuevoAlquiler.Name = "btnNuevoAlquiler";
+            this.btnNuevoAlquiler.Size = new System.Drawing.Size(40, 40);
+            this.btnNuevoAlquiler.TabIndex = 119;
+            this.btnNuevoAlquiler.UseVisualStyleBackColor = true;
+            this.btnNuevoAlquiler.Click += new System.EventHandler(this.btnNuevoAlquiler_Click);
+            // 
+            // btnConsultarVendedor
+            // 
+            this.btnConsultarVendedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConsultarVendedor.BackgroundImage")));
+            this.btnConsultarVendedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConsultarVendedor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarVendedor.ForeColor = System.Drawing.Color.DimGray;
+            this.btnConsultarVendedor.Location = new System.Drawing.Point(337, 101);
+            this.btnConsultarVendedor.Name = "btnConsultarVendedor";
+            this.btnConsultarVendedor.Size = new System.Drawing.Size(30, 30);
+            this.btnConsultarVendedor.TabIndex = 113;
+            this.btnConsultarVendedor.UseVisualStyleBackColor = true;
+            this.btnConsultarVendedor.Click += new System.EventHandler(this.btnConsultarVendedor_Click);
+            // 
+            // btnConsultarSocio
+            // 
+            this.btnConsultarSocio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConsultarSocio.BackgroundImage")));
+            this.btnConsultarSocio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConsultarSocio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarSocio.ForeColor = System.Drawing.Color.DimGray;
+            this.btnConsultarSocio.Location = new System.Drawing.Point(337, 69);
+            this.btnConsultarSocio.Name = "btnConsultarSocio";
+            this.btnConsultarSocio.Size = new System.Drawing.Size(30, 30);
+            this.btnConsultarSocio.TabIndex = 111;
+            this.btnConsultarSocio.UseVisualStyleBackColor = true;
+            this.btnConsultarSocio.Click += new System.EventHandler(this.btnConsultarSocio_Click);
             // 
             // NroAlquiler
             // 
@@ -459,25 +492,32 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.FechaInicio.ReadOnly = true;
             this.FechaInicio.Width = 114;
             // 
+            // Devuelto
+            // 
+            this.Devuelto.HeaderText = "Devuelto";
+            this.Devuelto.Name = "Devuelto";
+            this.Devuelto.ReadOnly = true;
+            // 
             // Total
             // 
             this.Total.HeaderText = "Total";
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
             // 
-            // btnNuevoAlquiler
+            // ckbIncluirTodos
             // 
-            this.btnNuevoAlquiler.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNuevoAlquiler.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevoAlquiler.BackgroundImage")));
-            this.btnNuevoAlquiler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNuevoAlquiler.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoAlquiler.ForeColor = System.Drawing.Color.DimGray;
-            this.btnNuevoAlquiler.Location = new System.Drawing.Point(12, 415);
-            this.btnNuevoAlquiler.Name = "btnNuevoAlquiler";
-            this.btnNuevoAlquiler.Size = new System.Drawing.Size(40, 40);
-            this.btnNuevoAlquiler.TabIndex = 119;
-            this.btnNuevoAlquiler.UseVisualStyleBackColor = true;
-            this.btnNuevoAlquiler.Click += new System.EventHandler(this.btnNuevoAlquiler_Click);
+            this.ckbIncluirTodos.AutoSize = true;
+            this.ckbIncluirTodos.Checked = true;
+            this.ckbIncluirTodos.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckbIncluirTodos.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbIncluirTodos.ForeColor = System.Drawing.Color.DimGray;
+            this.ckbIncluirTodos.Location = new System.Drawing.Point(337, 38);
+            this.ckbIncluirTodos.Name = "ckbIncluirTodos";
+            this.ckbIncluirTodos.Size = new System.Drawing.Size(179, 26);
+            this.ckbIncluirTodos.TabIndex = 121;
+            this.ckbIncluirTodos.Text = "Incluir Devueltos";
+            this.ckbIncluirTodos.UseVisualStyleBackColor = true;
+            this.ckbIncluirTodos.CheckedChanged += new System.EventHandler(this.ckbIncluirTodos_CheckedChanged);
             // 
             // btnGenerarFactura
             // 
@@ -497,8 +537,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(824, 467);
             this.Controls.Add(this.btnGenerarFactura);
+            this.ClientSize = new System.Drawing.Size(909, 467);
+            this.Controls.Add(this.btnRegistrarDevolucion);
             this.Controls.Add(this.btnNuevoAlquiler);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSalir);
@@ -546,13 +587,16 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnVerDetalle;
         private System.Windows.Forms.DataGridView dgvAlquiler;
+        private System.Windows.Forms.Button btnRegistrarDevolucion;
         private System.Windows.Forms.DataGridViewTextBoxColumn NroAlquiler;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoFactura;
         private System.Windows.Forms.DataGridViewTextBoxColumn FormaPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn Socio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Vendedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Devuelto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.Button btnGenerarFactura;
+        private System.Windows.Forms.CheckBox ckbIncluirTodos;
     }
 }

@@ -31,7 +31,16 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaSocio));
             this.dgvSocios = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ckbIncluirDevueltos = new System.Windows.Forms.CheckBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnReiniciarFiltros = new System.Windows.Forms.Button();
@@ -44,15 +53,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ckbIncluirTodos = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSocios)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -77,10 +77,56 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.dgvSocios.Size = new System.Drawing.Size(836, 208);
             this.dgvSocios.TabIndex = 111;
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Apellido
+            // 
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.HeaderText = "Teléfono";
+            this.Telefono.Name = "Telefono";
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // FechaAlta
+            // 
+            this.FechaAlta.HeaderText = "Fecha de creación";
+            this.FechaAlta.Name = "FechaAlta";
+            // 
+            // FechaNacimiento
+            // 
+            this.FechaNacimiento.HeaderText = "Fecha de nacimiento";
+            this.FechaNacimiento.Name = "FechaNacimiento";
+            this.FechaNacimiento.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.Controls.Add(this.ckbIncluirTodos);
+            this.panel1.Controls.Add(this.ckbIncluirDevueltos);
             this.panel1.Controls.Add(this.txtApellido);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btnReiniciarFiltros);
@@ -92,6 +138,19 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(836, 134);
             this.panel1.TabIndex = 110;
+            // 
+            // ckbIncluirDevueltos
+            // 
+            this.ckbIncluirDevueltos.AutoSize = true;
+            this.ckbIncluirDevueltos.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbIncluirDevueltos.ForeColor = System.Drawing.Color.DimGray;
+            this.ckbIncluirDevueltos.Location = new System.Drawing.Point(361, 61);
+            this.ckbIncluirDevueltos.Name = "ckbIncluirDevueltos";
+            this.ckbIncluirDevueltos.Size = new System.Drawing.Size(139, 26);
+            this.ckbIncluirDevueltos.TabIndex = 119;
+            this.ckbIncluirDevueltos.Text = "Incluir Todos";
+            this.ckbIncluirDevueltos.UseVisualStyleBackColor = true;
+            this.ckbIncluirDevueltos.CheckedChanged += new System.EventHandler(this.ckbIncluirTodos_CheckedChanged);
             // 
             // txtApellido
             // 
@@ -233,65 +292,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Apellido
-            // 
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Teléfono";
-            this.Telefono.Name = "Telefono";
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // FechaAlta
-            // 
-            this.FechaAlta.HeaderText = "Fecha de creación";
-            this.FechaAlta.Name = "FechaAlta";
-            // 
-            // FechaNacimiento
-            // 
-            this.FechaNacimiento.HeaderText = "Fecha de nacimiento";
-            this.FechaNacimiento.Name = "FechaNacimiento";
-            this.FechaNacimiento.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            // 
-            // ckbIncluirTodos
-            // 
-            this.ckbIncluirTodos.AutoSize = true;
-            this.ckbIncluirTodos.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbIncluirTodos.ForeColor = System.Drawing.Color.DimGray;
-            this.ckbIncluirTodos.Location = new System.Drawing.Point(361, 61);
-            this.ckbIncluirTodos.Name = "ckbIncluirTodos";
-            this.ckbIncluirTodos.Size = new System.Drawing.Size(139, 26);
-            this.ckbIncluirTodos.TabIndex = 119;
-            this.ckbIncluirTodos.Text = "Incluir Todos";
-            this.ckbIncluirTodos.UseVisualStyleBackColor = true;
-            this.ckbIncluirTodos.CheckedChanged += new System.EventHandler(this.ckbIncluirTodos_CheckedChanged);
-            // 
             // ConsultaSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,6 +340,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionSocios
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaAlta;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaNacimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.CheckBox ckbIncluirTodos;
+        private System.Windows.Forms.CheckBox ckbIncluirDevueltos;
     }
 }

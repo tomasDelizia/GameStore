@@ -72,6 +72,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             dgvAlquiler.Rows.Clear();
             foreach (var alquiler in alquileres)
             {
+                var esDevuelto = alquiler.EsDevuelto() ? "Sí" : "No";
                 var fila = new string[]
                 {
                     alquiler.NroAlquiler.ToString(),
@@ -80,6 +81,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
                     alquiler.Socio.Nombre + " " + alquiler.Socio.Apellido,
                     alquiler.Vendedor.Nombre + " " + alquiler.Vendedor.Apellido,
                     alquiler.FechaInicio.ToShortDateString(),
+                    esDevuelto,
                     "$ "  + alquiler.CalcularTotal().ToString()
                 };
                 dgvAlquiler.Rows.Add(fila);
@@ -213,6 +215,29 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
                 return;
             }
             MessageBox.Show("Debe seleccionar solo pedido", "Informacion", MessageBoxButtons.OK);
+        }
+        private void btnRegistrarDevolucion_Click(object sender, EventArgs e)
+        {
+            var nroAlquiler = Convert.ToInt32(dgvAlquiler.CurrentRow.Cells["NroAlquiler"].Value);
+            var alquiler = _servicioAlquiler.GetPorId(nroAlquiler);
+            if (alquiler.EsDevuelto())
+                MessageBox.Show("El alquiler ya fue devuelto", "Información", MessageBoxButtons.OK);
+            else
+            {
+                new RegistrarDevolucionAlquiler(alquiler, _unidadDeTrabajo).ShowDialog();
+                ConsultarAlquileres();
+            }
+        }
+
+        private void ckbIncluirTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbIncluirTodos.Checked)
+                ConsultarAlquileres();
+            else
+            {
+                var alquileresDevueltos = _servicioAlquiler.ListarAlquileresNoDevueltos();
+                CargarDgvAlquileres(alquileresDevueltos);
+            }
         }
     }
 }

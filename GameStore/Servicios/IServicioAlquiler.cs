@@ -10,6 +10,7 @@ namespace GameStore.Servicios.Implementaciones
     public interface IServicioAlquiler : IServicio<Alquiler>
     {
         List<Alquiler> ListarAlquileres();
+        List<Alquiler> ListarAlquileresNoDevueltos();
 
         void ValidarAlquiler(Alquiler nuevoAlquiler);
     }
