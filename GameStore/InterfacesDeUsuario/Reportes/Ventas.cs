@@ -22,7 +22,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
         {
             _repositorioReporte = new RepositorioReporte();
             fechaHoy = DateTime.Now.ToShortDateString();
-            fechaMesPasado = DateTime.Now.AddDays(-31).ToShortDateString();
+            fechaMesPasado = DateTime.Now.AddDays(-10).ToShortDateString();
             InitializeComponent();
         }
 

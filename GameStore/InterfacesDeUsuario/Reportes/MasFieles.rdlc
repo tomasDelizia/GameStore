@@ -841,7 +841,7 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>681cm</Height>
+        <Height>10in</Height>
         <Style>
           <Border>
             <Style>None</Style>
@@ -849,7 +849,7 @@
           <BackgroundColor>DarkGray</BackgroundColor>
         </Style>
       </Body>
-      <Width>1059cm</Width>
+      <Width>18in</Width>
       <Page>
         <PageHeader>
           <Height>1.7198cm</Height>
