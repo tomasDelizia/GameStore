@@ -63,6 +63,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNuevoAlquiler = new System.Windows.Forms.Button();
+            this.btnGenerarFactura = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioMin)).BeginInit();
@@ -478,12 +479,26 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.btnNuevoAlquiler.UseVisualStyleBackColor = true;
             this.btnNuevoAlquiler.Click += new System.EventHandler(this.btnNuevoAlquiler_Click);
             // 
+            // btnGenerarFactura
+            // 
+            this.btnGenerarFactura.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGenerarFactura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarFactura.ForeColor = System.Drawing.Color.DimGray;
+            this.btnGenerarFactura.Location = new System.Drawing.Point(446, 426);
+            this.btnGenerarFactura.Name = "btnGenerarFactura";
+            this.btnGenerarFactura.Size = new System.Drawing.Size(156, 29);
+            this.btnGenerarFactura.TabIndex = 120;
+            this.btnGenerarFactura.Text = "Generar factura";
+            this.btnGenerarFactura.UseVisualStyleBackColor = true;
+            this.btnGenerarFactura.Click += new System.EventHandler(this.btnGenerarFactura_Click);
+            // 
             // ConsultaAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(824, 467);
+            this.Controls.Add(this.btnGenerarFactura);
             this.Controls.Add(this.btnNuevoAlquiler);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSalir);
@@ -538,5 +553,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
         private System.Windows.Forms.DataGridViewTextBoxColumn Vendedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.Button btnGenerarFactura;
     }
 }

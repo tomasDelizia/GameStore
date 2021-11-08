@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using GameStore.Entidades;
 using GameStore.InterfacesDeUsuario.PresentacionEmpleados;
 using GameStore.InterfacesDeUsuario.PresentacionSocios;
+using GameStore.InterfacesDeUsuario.Reportes;
 using GameStore.RepositoriosBD;
 using GameStore.Servicios;
 using GameStore.Servicios.Implementaciones;
@@ -201,6 +202,17 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             {
                 MessageBox.Show("Ingrese un número válido", "Información", MessageBoxButtons.OK);
             }
+        }
+
+        private void btnGenerarFactura_Click(object sender, EventArgs e)
+        {
+            if (dgvAlquiler.SelectedRows.Count == 1)
+            {
+                var nroFactura = Convert.ToInt32(dgvAlquiler.SelectedRows[0].Cells["NroAlquiler"].Value);
+                new FrmFacturaAlquiler(nroFactura).ShowDialog();
+                return;
+            }
+            MessageBox.Show("Debe seleccionar solo pedido", "Informacion", MessageBoxButtons.OK);
         }
     }
 }

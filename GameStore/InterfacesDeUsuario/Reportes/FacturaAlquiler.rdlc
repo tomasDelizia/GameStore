@@ -7,11 +7,11 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>c6317fcd-368c-44b0-ac6d-8b83333aac6e</rd:DataSourceID>
+      <rd:DataSourceID>153f45ba-c3f4-4839-a272-1d7f834e1a3a</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DTFacturaVenta">
+    <DataSet Name="DTFacturaAlquiler">
       <Query>
         <DataSourceName>DSReportes</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -21,24 +21,20 @@
           <DataField>NroFactura</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="FechaVenta">
-          <DataField>FechaVenta</DataField>
+        <Field Name="FechaInicio">
+          <DataField>FechaInicio</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="TipoFactura">
-          <DataField>TipoFactura</DataField>
+        <Field Name="FechaFin">
+          <DataField>FechaFin</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="FormaPago">
-          <DataField>FormaPago</DataField>
+        <Field Name="Articulo">
+          <DataField>Articulo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="IdSocio">
-          <DataField>IdSocio</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Socio">
-          <DataField>Socio</DataField>
+        <Field Name="UPC">
+          <DataField>UPC</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Email">
@@ -49,35 +45,47 @@
           <DataField>Domicilio</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Barrio">
-          <DataField>Barrio</DataField>
+        <Field Name="Socio">
+          <DataField>Socio</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="UPC">
-          <DataField>UPC</DataField>
+        <Field Name="IdSocio">
+          <DataField>IdSocio</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Articulo">
-          <DataField>Articulo</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Cantidad">
-          <DataField>Cantidad</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PrecioUnitario">
-          <DataField>PrecioUnitario</DataField>
+        <Field Name="TipoFactura">
+          <DataField>TipoFactura</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Subtotal">
           <DataField>Subtotal</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="PrecioDiario">
+          <DataField>PrecioDiario</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PrecioDiaExtra">
+          <DataField>PrecioDiaExtra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FechaFinReal">
+          <DataField>FechaFinReal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FormaPago">
+          <DataField>FormaPago</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Barrio">
+          <DataField>Barrio</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DSReportes</rd:DataSetName>
         <rd:SchemaPath>A:\3k\PAVI\TP\pav-3k2-2021-9\GameStore\InterfacesDeUsuario\Reportes\DSReportes.xsd</rd:SchemaPath>
-        <rd:TableName>DTFacturaVenta</rd:TableName>
+        <rd:TableName>DTFacturaAlquiler</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -95,7 +103,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>FECHA:</Value>
+                    <Value>FECHA DE INICIO:</Value>
                     <Style>
                       <FontFamily />
                     </Style>
@@ -107,8 +115,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>1.04366cm</Top>
-            <Left>11.08051cm</Left>
+            <Top>1.16138cm</Top>
+            <Left>11.23808cm</Left>
             <Height>0.6cm</Height>
             <Width>3.08208cm</Width>
             <Style>
@@ -140,8 +148,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>0.30255cm</Top>
-            <Left>11.08051cm</Left>
+            <Top>0.42027cm</Top>
+            <Left>11.23808cm</Left>
             <Height>0.6cm</Height>
             <Width>3.08208cm</Width>
             <ZIndex>1</ZIndex>
@@ -172,10 +180,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>ParamNroFactura</rd:DefaultName>
-            <Top>0.30255cm</Top>
-            <Left>15.17037cm</Left>
+            <Top>0.42027cm</Top>
+            <Left>14.95752cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.4525cm</Width>
+            <Width>3.82294cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -206,8 +214,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>1.82005cm</Top>
-            <Left>11.08051cm</Left>
+            <Top>3.49055cm</Top>
+            <Left>11.23808cm</Left>
             <Height>0.6cm</Height>
             <Width>3.08208cm</Width>
             <ZIndex>3</ZIndex>
@@ -236,10 +244,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>ParamFecha</rd:DefaultName>
-            <Top>1.04366cm</Top>
-            <Left>15.17037cm</Left>
+            <Top>1.16138cm</Top>
+            <Left>14.95752cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.4525cm</Width>
+            <Width>3.82294cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -268,10 +276,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>ParamNroSocio</rd:DefaultName>
-            <Top>1.82005cm</Top>
-            <Left>15.17037cm</Left>
+            <Top>3.49055cm</Top>
+            <Left>14.95752cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.4525cm</Width>
+            <Width>3.82294cm</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -300,8 +308,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>0.30255cm</Top>
-            <Left>0.37041cm</Left>
+            <Top>0.42027cm</Top>
+            <Left>0.52798cm</Left>
             <Height>0.6cm</Height>
             <Width>3.08208cm</Width>
             <ZIndex>6</ZIndex>
@@ -330,8 +338,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>ParamNombreYApellido</rd:DefaultName>
-            <Top>1.04366cm</Top>
-            <Left>0.37041cm</Left>
+            <Top>1.16138cm</Top>
+            <Left>0.52798cm</Left>
             <Height>0.6cm</Height>
             <Width>4.59021cm</Width>
             <ZIndex>7</ZIndex>
@@ -360,8 +368,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>ParamDomicilio</rd:DefaultName>
-            <Top>1.82005cm</Top>
-            <Left>0.37041cm</Left>
+            <Top>1.93777cm</Top>
+            <Left>0.52798cm</Left>
             <Height>0.6cm</Height>
             <Width>4.59021cm</Width>
             <ZIndex>8</ZIndex>
@@ -390,8 +398,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>ParamBarrio</rd:DefaultName>
-            <Top>2.59644cm</Top>
-            <Left>0.37041cm</Left>
+            <Top>2.71416cm</Top>
+            <Left>0.52798cm</Left>
             <Height>0.6cm</Height>
             <Width>4.59021cm</Width>
             <ZIndex>9</ZIndex>
@@ -420,8 +428,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>ParamEmail</rd:DefaultName>
-            <Top>3.37282cm</Top>
-            <Left>0.37041cm</Left>
+            <Top>3.49055cm</Top>
+            <Left>0.52797cm</Left>
             <Height>0.6cm</Height>
             <Width>4.59021cm</Width>
             <ZIndex>10</ZIndex>
@@ -454,8 +462,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>2.59644cm</Top>
-            <Left>11.08051cm</Left>
+            <Top>4.26694cm</Top>
+            <Left>11.23808cm</Left>
             <Height>0.6cm</Height>
             <Width>3.08208cm</Width>
             <ZIndex>11</ZIndex>
@@ -488,8 +496,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>3.37282cm</Top>
-            <Left>10.73655cm</Left>
+            <Top>5.04332cm</Top>
+            <Left>10.89412cm</Left>
             <Height>0.6cm</Height>
             <Width>3.42604cm</Width>
             <ZIndex>12</ZIndex>
@@ -518,10 +526,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>ParamFormaPago</rd:DefaultName>
-            <Top>2.59644cm</Top>
-            <Left>15.17037cm</Left>
+            <Top>4.26694cm</Top>
+            <Left>14.95752cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.4525cm</Width>
+            <Width>3.82294cm</Width>
             <ZIndex>13</ZIndex>
             <Style>
               <Border>
@@ -548,10 +556,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>ParamTipoFac</rd:DefaultName>
-            <Top>3.33755cm</Top>
-            <Left>15.17037cm</Left>
+            <Top>5.00805cm</Top>
+            <Left>14.95752cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.4525cm</Width>
+            <Width>3.82294cm</Width>
             <ZIndex>14</ZIndex>
             <Style>
               <Border>
@@ -563,32 +571,98 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Tablix Name="Tablix4">
+          <Textbox Name="Textbox13">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>TOTAL</Value>
+                    <Style>
+                      <FontFamily />
+                      <FontSize>16pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox3</rd:DefaultName>
+            <Top>8.26114cm</Top>
+            <Left>13.40314cm</Left>
+            <Height>0.70583cm</Height>
+            <Width>2.18936cm</Width>
+            <ZIndex>15</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="ParamTotal">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!ParamTotal.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>ParamTotal</rd:DefaultName>
+            <Top>8.26114cm</Top>
+            <Left>16.28042cm</Left>
+            <Height>0.70583cm</Height>
+            <Width>2.5cm</Width>
+            <ZIndex>16</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Tablix Name="Tablix2">
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>3.08208cm</Width>
+                  <Width>3.16463cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>5.95012cm</Width>
+                  <Width>5.8073cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.25998cm</Width>
+                  <Width>3.21239cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.87042cm</Width>
+                  <Width>3.39958cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>4.08986cm</Width>
+                  <Width>2.66857cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>1.08948cm</Height>
+                  <Height>1.10271cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox64">
+                        <Textbox Name="Textbox32">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -602,7 +676,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox64</rd:DefaultName>
+                          <rd:DefaultName>Textbox32</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -618,7 +692,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox66">
+                        <Textbox Name="Textbox34">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -632,7 +706,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox66</rd:DefaultName>
+                          <rd:DefaultName>Textbox34</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -648,21 +722,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox68">
+                        <Textbox Name="Textbox36">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Cantidad</Value>
+                                  <Value>Precio diario</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox68</rd:DefaultName>
+                          <rd:DefaultName>Textbox36</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -678,21 +752,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox70">
+                        <Textbox Name="Textbox38">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Precio Unitario</Value>
+                                  <Value>Precio por día extra</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox70</rd:DefaultName>
+                          <rd:DefaultName>Textbox38</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -708,7 +782,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox72">
+                        <Textbox Name="Textbox40">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -722,7 +796,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox72</rd:DefaultName>
+                          <rd:DefaultName>Textbox40</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -739,7 +813,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.74552cm</Height>
+                  <Height>0.6cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -803,21 +877,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Cantidad">
+                        <Textbox Name="PrecioDiario">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Cantidad.Value</Value>
+                                  <Value>=Fields!PrecioDiario.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Cantidad</rd:DefaultName>
+                          <rd:DefaultName>PrecioDiario</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -833,21 +907,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="PrecioUnitario">
+                        <Textbox Name="PrecioDiaExtra">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!PrecioUnitario.Value</Value>
+                                  <Value>=Fields!PrecioDiaExtra.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>PrecioUnitario</rd:DefaultName>
+                          <rd:DefaultName>PrecioDiaExtra</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -914,30 +988,28 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DTFacturaVenta</DataSetName>
-            <Top>5.03563cm</Top>
-            <Left>0.37041cm</Left>
-            <Height>1.835cm</Height>
-            <Width>18.25246cm</Width>
-            <ZIndex>15</ZIndex>
+            <DataSetName>DTFacturaAlquiler</DataSetName>
+            <Top>6.18522cm</Top>
+            <Left>0.52797cm</Left>
+            <Height>1.70271cm</Height>
+            <Width>18.25247cm</Width>
+            <ZIndex>17</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Tablix>
-          <Textbox Name="Textbox13">
+          <Textbox Name="Textbox6">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>TOTAL</Value>
+                    <Value>FECHA FIN:</Value>
                     <Style>
                       <FontFamily />
-                      <FontSize>16pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -947,11 +1019,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>7.24958cm</Top>
-            <Left>13.24559cm</Left>
-            <Height>0.70583cm</Height>
-            <Width>2.18936cm</Width>
-            <ZIndex>16</ZIndex>
+            <Top>1.97305cm</Top>
+            <Left>11.23808cm</Left>
+            <Height>0.6cm</Height>
+            <Width>3.08208cm</Width>
+            <ZIndex>18</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -962,26 +1034,94 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="ParamTotal">
+          <Textbox Name="ParamNroFactura2">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!ParamTotal.Value</Value>
+                    <Value>=Parameters!ParamFechaFin.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>ParamTotal</rd:DefaultName>
-            <Top>7.24958cm</Top>
-            <Left>16.12287cm</Left>
-            <Height>0.70583cm</Height>
-            <Width>2.5cm</Width>
-            <ZIndex>17</ZIndex>
+            <rd:DefaultName>ParamNroFactura</rd:DefaultName>
+            <Top>1.97305cm</Top>
+            <Left>14.95752cm</Left>
+            <Height>0.6cm</Height>
+            <Width>3.82294cm</Width>
+            <ZIndex>19</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox7">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>FECHA FIN REAL:</Value>
+                    <Style>
+                      <FontFamily />
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox3</rd:DefaultName>
+            <Top>2.71416cm</Top>
+            <Left>11.23806cm</Left>
+            <Height>0.6cm</Height>
+            <Width>3.08208cm</Width>
+            <ZIndex>20</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="ParamNroFactura3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!ParamFechaFinReal.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>ParamNroFactura</rd:DefaultName>
+            <Top>2.71416cm</Top>
+            <Left>14.9575cm</Left>
+            <Height>0.6cm</Height>
+            <Width>3.82294cm</Width>
+            <ZIndex>21</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -996,10 +1136,10 @@
         <Height>4.11122in</Height>
         <Style />
       </Body>
-      <Width>8.31609in</Width>
+      <Width>8.37812in</Width>
       <Page>
         <PageHeader>
-          <Height>3.37495cm</Height>
+          <Height>3.41023cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1021,8 +1161,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>1.00542cm</Top>
-              <Left>13.3712cm</Left>
+              <Top>1.1318cm</Top>
+              <Left>13.21913cm</Left>
               <Height>1.17616cm</Height>
               <Width>5.25167cm</Width>
               <Style>
@@ -1039,8 +1179,8 @@
               <Source>Embedded</Source>
               <Value>logo</Value>
               <Sizing>FitProportional</Sizing>
-              <Top>1.33766cm</Top>
-              <Left>1.0247cm</Left>
+              <Top>1.46404cm</Top>
+              <Left>0.94533cm</Left>
               <Height>1.64041cm</Height>
               <Width>2.48071cm</Width>
               <ZIndex>1</ZIndex>
@@ -1067,8 +1207,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.2734cm</Top>
-              <Left>0.42333cm</Left>
+              <Top>0.39978cm</Top>
+              <Left>0.34396cm</Left>
               <Height>0.88787cm</Height>
               <Width>4.06104cm</Width>
               <ZIndex>2</ZIndex>
@@ -1101,18 +1241,6 @@
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="ParamNroFactura">
-      <DataType>Integer</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="ParamFecha">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="ParamNroSocio">
-      <DataType>Integer</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
     <ReportParameter Name="ParamNombreYApellido">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
@@ -1126,6 +1254,26 @@
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="ParamEmail">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ParamNroFactura">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ParamFecha">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ParamFechaFin">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ParamFechaFinReal">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ParamNroSocio">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
@@ -1150,50 +1298,60 @@
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
+          <ParameterName>ParamNombreYApellido</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>ParamDomicilio</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>ParamBarrio</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>3</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>ParamEmail</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>1</RowIndex>
           <ParameterName>ParamNroFactura</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
-          <RowIndex>0</RowIndex>
+          <RowIndex>1</RowIndex>
           <ParameterName>ParamFecha</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>2</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>ParamNroSocio</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>3</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>ParamNombreYApellido</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
           <RowIndex>1</RowIndex>
-          <ParameterName>ParamDomicilio</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>1</RowIndex>
-          <ParameterName>ParamBarrio</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>2</ColumnIndex>
-          <RowIndex>1</RowIndex>
-          <ParameterName>ParamEmail</ParameterName>
+          <ParameterName>ParamFechaFin</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>3</ColumnIndex>
           <RowIndex>1</RowIndex>
-          <ParameterName>ParamFormaPago</ParameterName>
+          <ParameterName>ParamFechaFinReal</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>2</RowIndex>
-          <ParameterName>ParamTipoFac</ParameterName>
+          <ParameterName>ParamNroSocio</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
+          <RowIndex>2</RowIndex>
+          <ParameterName>ParamFormaPago</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>2</RowIndex>
+          <ParameterName>ParamTipoFac</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>3</ColumnIndex>
           <RowIndex>2</RowIndex>
           <ParameterName>ParamTotal</ParameterName>
         </CellDefinition>
@@ -1303,5 +1461,5 @@ Lu/F3fi7vxd34u78Xd+Lu/F3fiTQRTp+cf/Z</ImageData>
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>f29b6005-7838-4a60-ac79-aee3f593fa2e</rd:ReportID>
+  <rd:ReportID>577f4095-89fe-4122-af84-a8b12168d338</rd:ReportID>
 </Report>
