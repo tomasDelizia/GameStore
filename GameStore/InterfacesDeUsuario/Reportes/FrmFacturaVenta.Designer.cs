@@ -39,15 +39,16 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.rwFacturaVenta.Location = new System.Drawing.Point(0, 0);
             this.rwFacturaVenta.Name = "rwFacturaVenta";
             this.rwFacturaVenta.ServerReport.BearerToken = null;
-            this.rwFacturaVenta.Size = new System.Drawing.Size(742, 514);
+            this.rwFacturaVenta.Size = new System.Drawing.Size(815, 789);
             this.rwFacturaVenta.TabIndex = 0;
             // 
             // FrmFacturaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 514);
+            this.ClientSize = new System.Drawing.Size(815, 789);
             this.Controls.Add(this.rwFacturaVenta);
+            this.MinimumSize = new System.Drawing.Size(831, 828);
             this.Name = "FrmFacturaVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Factura de Venta";

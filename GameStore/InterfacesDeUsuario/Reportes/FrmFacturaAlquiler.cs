@@ -42,9 +42,9 @@ namespace GameStore.InterfacesDeUsuario.Reportes
 
             var totalFactura = _alquiler.CalcularTotal().ToString();
             var nroFactura = _alquiler.NroAlquiler.ToString();
-            var fechaInicio = _alquiler.FechaInicio.ToString();
-            var fechaFin = _alquiler.FechaFin.ToString();
-            var fechaFinReal = _alquiler.FechaFinReal.ToString();
+            var fechaInicio = _alquiler.FechaInicio.ToShortDateString();
+            var fechaFin = _alquiler.FechaFin.ToShortDateString();
+            var fechaFinReal = _alquiler.FechaFinReal.Value.ToShortDateString();
             var nroSocio = _alquiler.IdSocio.ToString();
             var formaPago = _alquiler.FormaPago.Nombre;
             var tipoFactura = _alquiler.TipoFactura.Nombre;

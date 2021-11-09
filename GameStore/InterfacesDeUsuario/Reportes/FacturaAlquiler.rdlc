@@ -614,7 +614,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!ParamImporteFinal.Value</Value>
+                    <Value>="$" &amp; Parameters!ParamImporteFinal.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -884,7 +884,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!PrecioDiario.Value</Value>
+                                  <Value>="$" &amp; Fields!PrecioDiario.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -914,7 +914,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!PrecioDiaExtra.Value</Value>
+                                  <Value>="$" &amp; Fields!PrecioDiaExtra.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -944,7 +944,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Subtotal.Value</Value>
+                                  <Value>="$" &amp; Fields!Subtotal.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1247,7 +1247,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!ParamDevolucionTardia.Value</Value>
+                    <Value>="$" &amp; Parameters!ParamDevolucionTardia.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -1277,7 +1277,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!ParamDescuentoSenia.Value</Value>
+                    <Value>="$" &amp; Parameters!ParamDescuentoSenia.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -1307,7 +1307,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!ParamTotal.Value</Value>
+                    <Value>="$" &amp; Parameters!ParamTotal.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>

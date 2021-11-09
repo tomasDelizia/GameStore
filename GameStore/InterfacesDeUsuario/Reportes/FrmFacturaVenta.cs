@@ -36,7 +36,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             var totalFactura = _repositorioReporte.GetTotalVenta(_nroFactura);
             rwFacturaVenta.LocalReport.DataSources.Clear();
 
-            var ds = new ReportDataSource("DSFacturaVenta", datosFactura);
+            var ds = new ReportDataSource("DTFacturaVenta", datosFactura);
             rwFacturaVenta.LocalReport.DataSources.Add(ds);
 
             var nroFactura = datosFactura.Rows[0]["NroFactura"].ToString();
