@@ -27,7 +27,6 @@ namespace GameStore.InterfacesDeUsuario.Reportes
 
         private void FrmFacturaVenta_Load(object sender, EventArgs e)
         {
-            this.rwFacturaVenta.RefreshReport();
             CargarFactura();
         }
 

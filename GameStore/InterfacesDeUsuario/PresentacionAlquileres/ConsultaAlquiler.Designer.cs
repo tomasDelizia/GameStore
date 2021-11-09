@@ -36,7 +36,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.label9 = new System.Windows.Forms.Label();
             this.lblVendedor = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ckbIncluirTodos = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnConsultarVendedor = new System.Windows.Forms.Button();
+            this.btnConsultarSocio = new System.Windows.Forms.Button();
             this.lblSocio = new System.Windows.Forms.Label();
             this.btnReiniciarFiltros = new System.Windows.Forms.Button();
             this.numPrecioMax = new System.Windows.Forms.NumericUpDown();
@@ -53,10 +56,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnVerDetalle = new System.Windows.Forms.Button();
             this.dgvAlquiler = new System.Windows.Forms.DataGridView();
-            this.btnRegistrarDevolucion = new System.Windows.Forms.Button();
-            this.btnNuevoAlquiler = new System.Windows.Forms.Button();
-            this.btnConsultarVendedor = new System.Windows.Forms.Button();
-            this.btnConsultarSocio = new System.Windows.Forms.Button();
             this.NroAlquiler = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FormaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,9 +64,9 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Devuelto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRegistrarDevolucion = new System.Windows.Forms.Button();
             this.btnNuevoAlquiler = new System.Windows.Forms.Button();
             this.btnGenerarFactura = new System.Windows.Forms.Button();
-            this.ckbIncluirTodos = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioMin)).BeginInit();
@@ -165,6 +164,21 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.panel1.Size = new System.Drawing.Size(890, 191);
             this.panel1.TabIndex = 115;
             // 
+            // ckbIncluirTodos
+            // 
+            this.ckbIncluirTodos.AutoSize = true;
+            this.ckbIncluirTodos.Checked = true;
+            this.ckbIncluirTodos.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckbIncluirTodos.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbIncluirTodos.ForeColor = System.Drawing.Color.DimGray;
+            this.ckbIncluirTodos.Location = new System.Drawing.Point(337, 38);
+            this.ckbIncluirTodos.Name = "ckbIncluirTodos";
+            this.ckbIncluirTodos.Size = new System.Drawing.Size(179, 26);
+            this.ckbIncluirTodos.TabIndex = 121;
+            this.ckbIncluirTodos.Text = "Incluir Devueltos";
+            this.ckbIncluirTodos.UseVisualStyleBackColor = true;
+            this.ckbIncluirTodos.CheckedChanged += new System.EventHandler(this.ckbIncluirTodos_CheckedChanged);
+            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -176,6 +190,32 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.label3.Size = new System.Drawing.Size(146, 33);
             this.label3.TabIndex = 88;
             this.label3.Text = "Búsqueda";
+            // 
+            // btnConsultarVendedor
+            // 
+            this.btnConsultarVendedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConsultarVendedor.BackgroundImage")));
+            this.btnConsultarVendedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConsultarVendedor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarVendedor.ForeColor = System.Drawing.Color.DimGray;
+            this.btnConsultarVendedor.Location = new System.Drawing.Point(337, 101);
+            this.btnConsultarVendedor.Name = "btnConsultarVendedor";
+            this.btnConsultarVendedor.Size = new System.Drawing.Size(30, 30);
+            this.btnConsultarVendedor.TabIndex = 113;
+            this.btnConsultarVendedor.UseVisualStyleBackColor = true;
+            this.btnConsultarVendedor.Click += new System.EventHandler(this.btnConsultarVendedor_Click);
+            // 
+            // btnConsultarSocio
+            // 
+            this.btnConsultarSocio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConsultarSocio.BackgroundImage")));
+            this.btnConsultarSocio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConsultarSocio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarSocio.ForeColor = System.Drawing.Color.DimGray;
+            this.btnConsultarSocio.Location = new System.Drawing.Point(337, 69);
+            this.btnConsultarSocio.Name = "btnConsultarSocio";
+            this.btnConsultarSocio.Size = new System.Drawing.Size(30, 30);
+            this.btnConsultarSocio.TabIndex = 111;
+            this.btnConsultarSocio.UseVisualStyleBackColor = true;
+            this.btnConsultarSocio.Click += new System.EventHandler(this.btnConsultarSocio_Click);
             // 
             // lblSocio
             // 
@@ -397,59 +437,6 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.dgvAlquiler.Size = new System.Drawing.Size(890, 200);
             this.dgvAlquiler.TabIndex = 116;
             // 
-            // btnRegistrarDevolucion
-            // 
-            this.btnRegistrarDevolucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRegistrarDevolucion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarDevolucion.ForeColor = System.Drawing.Color.DimGray;
-            this.btnRegistrarDevolucion.Location = new System.Drawing.Point(506, 426);
-            this.btnRegistrarDevolucion.Name = "btnRegistrarDevolucion";
-            this.btnRegistrarDevolucion.Size = new System.Drawing.Size(181, 29);
-            this.btnRegistrarDevolucion.TabIndex = 120;
-            this.btnRegistrarDevolucion.Text = "Registrar devolución";
-            this.btnRegistrarDevolucion.UseVisualStyleBackColor = true;
-            this.btnRegistrarDevolucion.Click += new System.EventHandler(this.btnRegistrarDevolucion_Click);
-            // 
-            // btnNuevoAlquiler
-            // 
-            this.btnNuevoAlquiler.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNuevoAlquiler.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevoAlquiler.BackgroundImage")));
-            this.btnNuevoAlquiler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNuevoAlquiler.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoAlquiler.ForeColor = System.Drawing.Color.DimGray;
-            this.btnNuevoAlquiler.Location = new System.Drawing.Point(12, 415);
-            this.btnNuevoAlquiler.Name = "btnNuevoAlquiler";
-            this.btnNuevoAlquiler.Size = new System.Drawing.Size(40, 40);
-            this.btnNuevoAlquiler.TabIndex = 119;
-            this.btnNuevoAlquiler.UseVisualStyleBackColor = true;
-            this.btnNuevoAlquiler.Click += new System.EventHandler(this.btnNuevoAlquiler_Click);
-            // 
-            // btnConsultarVendedor
-            // 
-            this.btnConsultarVendedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConsultarVendedor.BackgroundImage")));
-            this.btnConsultarVendedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConsultarVendedor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarVendedor.ForeColor = System.Drawing.Color.DimGray;
-            this.btnConsultarVendedor.Location = new System.Drawing.Point(337, 101);
-            this.btnConsultarVendedor.Name = "btnConsultarVendedor";
-            this.btnConsultarVendedor.Size = new System.Drawing.Size(30, 30);
-            this.btnConsultarVendedor.TabIndex = 113;
-            this.btnConsultarVendedor.UseVisualStyleBackColor = true;
-            this.btnConsultarVendedor.Click += new System.EventHandler(this.btnConsultarVendedor_Click);
-            // 
-            // btnConsultarSocio
-            // 
-            this.btnConsultarSocio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConsultarSocio.BackgroundImage")));
-            this.btnConsultarSocio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConsultarSocio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarSocio.ForeColor = System.Drawing.Color.DimGray;
-            this.btnConsultarSocio.Location = new System.Drawing.Point(337, 69);
-            this.btnConsultarSocio.Name = "btnConsultarSocio";
-            this.btnConsultarSocio.Size = new System.Drawing.Size(30, 30);
-            this.btnConsultarSocio.TabIndex = 111;
-            this.btnConsultarSocio.UseVisualStyleBackColor = true;
-            this.btnConsultarSocio.Click += new System.EventHandler(this.btnConsultarSocio_Click);
-            // 
             // NroAlquiler
             // 
             this.NroAlquiler.HeaderText = "N° alquiler";
@@ -504,27 +491,39 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
             // 
-            // ckbIncluirTodos
+            // btnRegistrarDevolucion
             // 
-            this.ckbIncluirTodos.AutoSize = true;
-            this.ckbIncluirTodos.Checked = true;
-            this.ckbIncluirTodos.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckbIncluirTodos.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbIncluirTodos.ForeColor = System.Drawing.Color.DimGray;
-            this.ckbIncluirTodos.Location = new System.Drawing.Point(337, 38);
-            this.ckbIncluirTodos.Name = "ckbIncluirTodos";
-            this.ckbIncluirTodos.Size = new System.Drawing.Size(179, 26);
-            this.ckbIncluirTodos.TabIndex = 121;
-            this.ckbIncluirTodos.Text = "Incluir Devueltos";
-            this.ckbIncluirTodos.UseVisualStyleBackColor = true;
-            this.ckbIncluirTodos.CheckedChanged += new System.EventHandler(this.ckbIncluirTodos_CheckedChanged);
+            this.btnRegistrarDevolucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegistrarDevolucion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarDevolucion.ForeColor = System.Drawing.Color.DimGray;
+            this.btnRegistrarDevolucion.Location = new System.Drawing.Point(506, 426);
+            this.btnRegistrarDevolucion.Name = "btnRegistrarDevolucion";
+            this.btnRegistrarDevolucion.Size = new System.Drawing.Size(181, 29);
+            this.btnRegistrarDevolucion.TabIndex = 120;
+            this.btnRegistrarDevolucion.Text = "Registrar devolución";
+            this.btnRegistrarDevolucion.UseVisualStyleBackColor = true;
+            this.btnRegistrarDevolucion.Click += new System.EventHandler(this.btnRegistrarDevolucion_Click);
+            // 
+            // btnNuevoAlquiler
+            // 
+            this.btnNuevoAlquiler.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNuevoAlquiler.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevoAlquiler.BackgroundImage")));
+            this.btnNuevoAlquiler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNuevoAlquiler.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoAlquiler.ForeColor = System.Drawing.Color.DimGray;
+            this.btnNuevoAlquiler.Location = new System.Drawing.Point(12, 415);
+            this.btnNuevoAlquiler.Name = "btnNuevoAlquiler";
+            this.btnNuevoAlquiler.Size = new System.Drawing.Size(40, 40);
+            this.btnNuevoAlquiler.TabIndex = 119;
+            this.btnNuevoAlquiler.UseVisualStyleBackColor = true;
+            this.btnNuevoAlquiler.Click += new System.EventHandler(this.btnNuevoAlquiler_Click);
             // 
             // btnGenerarFactura
             // 
             this.btnGenerarFactura.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenerarFactura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarFactura.ForeColor = System.Drawing.Color.DimGray;
-            this.btnGenerarFactura.Location = new System.Drawing.Point(446, 426);
+            this.btnGenerarFactura.Location = new System.Drawing.Point(344, 426);
             this.btnGenerarFactura.Name = "btnGenerarFactura";
             this.btnGenerarFactura.Size = new System.Drawing.Size(156, 29);
             this.btnGenerarFactura.TabIndex = 120;
@@ -537,8 +536,8 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.Controls.Add(this.btnGenerarFactura);
             this.ClientSize = new System.Drawing.Size(909, 467);
+            this.Controls.Add(this.btnGenerarFactura);
             this.Controls.Add(this.btnRegistrarDevolucion);
             this.Controls.Add(this.btnNuevoAlquiler);
             this.Controls.Add(this.panel1);

@@ -45,6 +45,7 @@ namespace GameStore.Entidades
 
         public virtual Empleado Vendedor { get; set; }
 
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetalleAlquiler> DetallesDeAlquiler { get; set; }
 
@@ -104,7 +105,7 @@ namespace GameStore.Entidades
             return total;
         }
 
-        private decimal CalcularAdicional()
+        public decimal CalcularAdicional()
         {
             decimal adicional = 0;
             int cantDiasExtra = (DateTime.Today - FechaFin).Days;

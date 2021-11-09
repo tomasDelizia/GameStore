@@ -3223,37 +3223,15 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DTFacturaAlquilerDataTable : global::System.Data.TypedTableBase<DTFacturaAlquilerRow> {
             
-            private global::System.Data.DataColumn columnNroFactura;
-            
-            private global::System.Data.DataColumn columnFechaInicio;
-            
-            private global::System.Data.DataColumn columnFechaFin;
-            
             private global::System.Data.DataColumn columnArticulo;
             
             private global::System.Data.DataColumn columnUPC;
-            
-            private global::System.Data.DataColumn columnEmail;
-            
-            private global::System.Data.DataColumn columnDomicilio;
-            
-            private global::System.Data.DataColumn columnSocio;
-            
-            private global::System.Data.DataColumn columnIdSocio;
-            
-            private global::System.Data.DataColumn columnTipoFactura;
             
             private global::System.Data.DataColumn columnSubtotal;
             
             private global::System.Data.DataColumn columnPrecioDiario;
             
             private global::System.Data.DataColumn columnPrecioDiaExtra;
-            
-            private global::System.Data.DataColumn columnFechaFinReal;
-            
-            private global::System.Data.DataColumn columnFormaPago;
-            
-            private global::System.Data.DataColumn columnBarrio;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -3290,30 +3268,6 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn NroFacturaColumn {
-                get {
-                    return this.columnNroFactura;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn FechaInicioColumn {
-                get {
-                    return this.columnFechaInicio;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn FechaFinColumn {
-                get {
-                    return this.columnFechaFin;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn ArticuloColumn {
                 get {
                     return this.columnArticulo;
@@ -3325,46 +3279,6 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             public global::System.Data.DataColumn UPCColumn {
                 get {
                     return this.columnUPC;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn EmailColumn {
-                get {
-                    return this.columnEmail;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DomicilioColumn {
-                get {
-                    return this.columnDomicilio;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn SocioColumn {
-                get {
-                    return this.columnSocio;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IdSocioColumn {
-                get {
-                    return this.columnIdSocio;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TipoFacturaColumn {
-                get {
-                    return this.columnTipoFactura;
                 }
             }
             
@@ -3389,30 +3303,6 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             public global::System.Data.DataColumn PrecioDiaExtraColumn {
                 get {
                     return this.columnPrecioDiaExtra;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn FechaFinRealColumn {
-                get {
-                    return this.columnFechaFinReal;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn FormaPagoColumn {
-                get {
-                    return this.columnFormaPago;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BarrioColumn {
-                get {
-                    return this.columnBarrio;
                 }
             }
             
@@ -3453,41 +3343,14 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DTFacturaAlquilerRow AddDTFacturaAlquilerRow(
-                        string NroFactura, 
-                        string FechaInicio, 
-                        string FechaFin, 
-                        string Articulo, 
-                        string UPC, 
-                        string Email, 
-                        string Domicilio, 
-                        string Socio, 
-                        string IdSocio, 
-                        string TipoFactura, 
-                        string Subtotal, 
-                        string PrecioDiario, 
-                        string PrecioDiaExtra, 
-                        string FechaFinReal, 
-                        string FormaPago, 
-                        string Barrio) {
+            public DTFacturaAlquilerRow AddDTFacturaAlquilerRow(string Articulo, string UPC, string Subtotal, string PrecioDiario, string PrecioDiaExtra) {
                 DTFacturaAlquilerRow rowDTFacturaAlquilerRow = ((DTFacturaAlquilerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        NroFactura,
-                        FechaInicio,
-                        FechaFin,
                         Articulo,
                         UPC,
-                        Email,
-                        Domicilio,
-                        Socio,
-                        IdSocio,
-                        TipoFactura,
                         Subtotal,
                         PrecioDiario,
-                        PrecioDiaExtra,
-                        FechaFinReal,
-                        FormaPago,
-                        Barrio};
+                        PrecioDiaExtra};
                 rowDTFacturaAlquilerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDTFacturaAlquilerRow);
                 return rowDTFacturaAlquilerRow;
@@ -3510,59 +3373,26 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnNroFactura = base.Columns["NroFactura"];
-                this.columnFechaInicio = base.Columns["FechaInicio"];
-                this.columnFechaFin = base.Columns["FechaFin"];
                 this.columnArticulo = base.Columns["Articulo"];
                 this.columnUPC = base.Columns["UPC"];
-                this.columnEmail = base.Columns["Email"];
-                this.columnDomicilio = base.Columns["Domicilio"];
-                this.columnSocio = base.Columns["Socio"];
-                this.columnIdSocio = base.Columns["IdSocio"];
-                this.columnTipoFactura = base.Columns["TipoFactura"];
                 this.columnSubtotal = base.Columns["Subtotal"];
                 this.columnPrecioDiario = base.Columns["PrecioDiario"];
                 this.columnPrecioDiaExtra = base.Columns["PrecioDiaExtra"];
-                this.columnFechaFinReal = base.Columns["FechaFinReal"];
-                this.columnFormaPago = base.Columns["FormaPago"];
-                this.columnBarrio = base.Columns["Barrio"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnNroFactura = new global::System.Data.DataColumn("NroFactura", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNroFactura);
-                this.columnFechaInicio = new global::System.Data.DataColumn("FechaInicio", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFechaInicio);
-                this.columnFechaFin = new global::System.Data.DataColumn("FechaFin", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFechaFin);
                 this.columnArticulo = new global::System.Data.DataColumn("Articulo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnArticulo);
                 this.columnUPC = new global::System.Data.DataColumn("UPC", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUPC);
-                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmail);
-                this.columnDomicilio = new global::System.Data.DataColumn("Domicilio", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDomicilio);
-                this.columnSocio = new global::System.Data.DataColumn("Socio", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSocio);
-                this.columnIdSocio = new global::System.Data.DataColumn("IdSocio", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIdSocio);
-                this.columnTipoFactura = new global::System.Data.DataColumn("TipoFactura", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTipoFactura);
                 this.columnSubtotal = new global::System.Data.DataColumn("Subtotal", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSubtotal);
                 this.columnPrecioDiario = new global::System.Data.DataColumn("PrecioDiario", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrecioDiario);
                 this.columnPrecioDiaExtra = new global::System.Data.DataColumn("PrecioDiaExtra", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrecioDiaExtra);
-                this.columnFechaFinReal = new global::System.Data.DataColumn("FechaFinReal", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFechaFinReal);
-                this.columnFormaPago = new global::System.Data.DataColumn("FormaPago", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFormaPago);
-                this.columnBarrio = new global::System.Data.DataColumn("Barrio", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBarrio);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4904,54 +4734,6 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string NroFactura {
-                get {
-                    try {
-                        return ((string)(this[this.tableDTFacturaAlquiler.NroFacturaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NroFactura\' in table \'DTFacturaAlquiler\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDTFacturaAlquiler.NroFacturaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string FechaInicio {
-                get {
-                    try {
-                        return ((string)(this[this.tableDTFacturaAlquiler.FechaInicioColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FechaInicio\' in table \'DTFacturaAlquiler\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDTFacturaAlquiler.FechaInicioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string FechaFin {
-                get {
-                    try {
-                        return ((string)(this[this.tableDTFacturaAlquiler.FechaFinColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FechaFin\' in table \'DTFacturaAlquiler\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDTFacturaAlquiler.FechaFinColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Articulo {
                 get {
                     try {
@@ -4979,86 +4761,6 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
                 }
                 set {
                     this[this.tableDTFacturaAlquiler.UPCColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Email {
-                get {
-                    try {
-                        return ((string)(this[this.tableDTFacturaAlquiler.EmailColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Email\' in table \'DTFacturaAlquiler\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDTFacturaAlquiler.EmailColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Domicilio {
-                get {
-                    try {
-                        return ((string)(this[this.tableDTFacturaAlquiler.DomicilioColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Domicilio\' in table \'DTFacturaAlquiler\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDTFacturaAlquiler.DomicilioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Socio {
-                get {
-                    try {
-                        return ((string)(this[this.tableDTFacturaAlquiler.SocioColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Socio\' in table \'DTFacturaAlquiler\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDTFacturaAlquiler.SocioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string IdSocio {
-                get {
-                    try {
-                        return ((string)(this[this.tableDTFacturaAlquiler.IdSocioColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IdSocio\' in table \'DTFacturaAlquiler\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDTFacturaAlquiler.IdSocioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string TipoFactura {
-                get {
-                    try {
-                        return ((string)(this[this.tableDTFacturaAlquiler.TipoFacturaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TipoFactura\' in table \'DTFacturaAlquiler\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDTFacturaAlquiler.TipoFacturaColumn] = value;
                 }
             }
             
@@ -5112,90 +4814,6 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string FechaFinReal {
-                get {
-                    try {
-                        return ((string)(this[this.tableDTFacturaAlquiler.FechaFinRealColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FechaFinReal\' in table \'DTFacturaAlquiler\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDTFacturaAlquiler.FechaFinRealColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string FormaPago {
-                get {
-                    try {
-                        return ((string)(this[this.tableDTFacturaAlquiler.FormaPagoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FormaPago\' in table \'DTFacturaAlquiler\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDTFacturaAlquiler.FormaPagoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Barrio {
-                get {
-                    try {
-                        return ((string)(this[this.tableDTFacturaAlquiler.BarrioColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Barrio\' in table \'DTFacturaAlquiler\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDTFacturaAlquiler.BarrioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsNroFacturaNull() {
-                return this.IsNull(this.tableDTFacturaAlquiler.NroFacturaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetNroFacturaNull() {
-                this[this.tableDTFacturaAlquiler.NroFacturaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsFechaInicioNull() {
-                return this.IsNull(this.tableDTFacturaAlquiler.FechaInicioColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetFechaInicioNull() {
-                this[this.tableDTFacturaAlquiler.FechaInicioColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsFechaFinNull() {
-                return this.IsNull(this.tableDTFacturaAlquiler.FechaFinColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetFechaFinNull() {
-                this[this.tableDTFacturaAlquiler.FechaFinColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsArticuloNull() {
                 return this.IsNull(this.tableDTFacturaAlquiler.ArticuloColumn);
             }
@@ -5216,66 +4834,6 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetUPCNull() {
                 this[this.tableDTFacturaAlquiler.UPCColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsEmailNull() {
-                return this.IsNull(this.tableDTFacturaAlquiler.EmailColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetEmailNull() {
-                this[this.tableDTFacturaAlquiler.EmailColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDomicilioNull() {
-                return this.IsNull(this.tableDTFacturaAlquiler.DomicilioColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDomicilioNull() {
-                this[this.tableDTFacturaAlquiler.DomicilioColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsSocioNull() {
-                return this.IsNull(this.tableDTFacturaAlquiler.SocioColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetSocioNull() {
-                this[this.tableDTFacturaAlquiler.SocioColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsIdSocioNull() {
-                return this.IsNull(this.tableDTFacturaAlquiler.IdSocioColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetIdSocioNull() {
-                this[this.tableDTFacturaAlquiler.IdSocioColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTipoFacturaNull() {
-                return this.IsNull(this.tableDTFacturaAlquiler.TipoFacturaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTipoFacturaNull() {
-                this[this.tableDTFacturaAlquiler.TipoFacturaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5312,42 +4870,6 @@ namespace GameStore.InterfacesDeUsuario.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPrecioDiaExtraNull() {
                 this[this.tableDTFacturaAlquiler.PrecioDiaExtraColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsFechaFinRealNull() {
-                return this.IsNull(this.tableDTFacturaAlquiler.FechaFinRealColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetFechaFinRealNull() {
-                this[this.tableDTFacturaAlquiler.FechaFinRealColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsFormaPagoNull() {
-                return this.IsNull(this.tableDTFacturaAlquiler.FormaPagoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetFormaPagoNull() {
-                this[this.tableDTFacturaAlquiler.FormaPagoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBarrioNull() {
-                return this.IsNull(this.tableDTFacturaAlquiler.BarrioColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBarrioNull() {
-                this[this.tableDTFacturaAlquiler.BarrioColumn] = global::System.Convert.DBNull;
             }
         }
         

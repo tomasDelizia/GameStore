@@ -208,10 +208,18 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
 
         private void btnGenerarFactura_Click(object sender, EventArgs e)
         {
+            string esDevuelto = dgvAlquiler.SelectedRows[0].Cells["Devuelto"].Value.ToString();
+            if (esDevuelto == "No")
+            {
+                MessageBox.Show("El alquiler solicitado no fue devuelto.", "Información", MessageBoxButtons.OK);
+                return;
+            }
+                
             if (dgvAlquiler.SelectedRows.Count == 1)
             {
-                var nroFactura = Convert.ToInt32(dgvAlquiler.SelectedRows[0].Cells["NroAlquiler"].Value);
-                new FrmFacturaAlquiler(nroFactura).ShowDialog();
+                var nroAlquiler = Convert.ToInt32(dgvAlquiler.SelectedRows[0].Cells["NroAlquiler"].Value);
+                var alquiler = _servicioAlquiler.GetPorId(nroAlquiler);
+                new FrmFacturaAlquiler(alquiler).ShowDialog();
                 return;
             }
             MessageBox.Show("Debe seleccionar solo pedido", "Informacion", MessageBoxButtons.OK);

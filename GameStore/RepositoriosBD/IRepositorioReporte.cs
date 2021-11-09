@@ -16,5 +16,6 @@ namespace GameStore.RepositoriosBD
         DataTable GetSociosPorCantidadAlquilada(string desde, string hasta);
         DataTable GetVenta(int nroFactura);
         string GetTotalVenta(int nroFactura);
+        DataTable GetAlquiler(int nroFactura);
     }
 }

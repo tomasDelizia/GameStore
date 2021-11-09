@@ -140,5 +140,15 @@ namespace GameStore.RepositoriosBD.Implementaciones
             var tabla = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
             return tabla;
         }
+
+        public DataTable GetAlquiler(int nroAlquiler)
+        {
+            var sentenciaSql = "SELECT art.Codigo UPC, art.Nombre Articulo, deta.MontoAlquilerPorDia PrecioDiario, deta.MontoDevolucionTardiaPorDia PrecioDiaExtra, deta.MontoAlquilerPorDia * DATEDIFF(day, a.FechaInicio, a.FechaFin ) Subtotal " + /*deta.MontoDevolucionTardiaPorDia * DATEDIFF(DAY, a.FechaFin, a.FechaFinReal) Subtotal " +*/
+                                "FROM Alquileres a JOIN DetallesDeAlquiler deta ON(a.NroAlquiler = deta.NroAlquiler) join Articulos art on art.Codigo = deta.Codigo " +
+                                $"WHERE a.NroAlquiler = {nroAlquiler} " +
+                                "GROUP BY  a.NroAlquiler, a.FechaFin, a.FechaInicio, a.FechaFinReal, deta.MontoDevolucionTardiaPorDia, DETA.MontoAlquilerPorDia, art.nombre, art.codigo ";
+            var tabla = DBHelper.GetDBHelper().ConsultaSQL(sentenciaSql);
+            return tabla;
+        }
     }
 }

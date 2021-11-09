@@ -29,26 +29,28 @@ namespace GameStore.InterfacesDeUsuario.Reportes
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.rwFacturaAlquiler = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // rwFacturaAlquiler
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "GameStore.InterfacesDeUsuario.Reportes.FacturaAlquiler.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(726, 475);
-            this.reportViewer1.TabIndex = 0;
+            this.rwFacturaAlquiler.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rwFacturaAlquiler.LocalReport.ReportEmbeddedResource = "GameStore.InterfacesDeUsuario.Reportes.FacturaAlquiler.rdlc";
+            this.rwFacturaAlquiler.Location = new System.Drawing.Point(0, 0);
+            this.rwFacturaAlquiler.Name = "rwFacturaAlquiler";
+            this.rwFacturaAlquiler.ServerReport.BearerToken = null;
+            this.rwFacturaAlquiler.Size = new System.Drawing.Size(815, 789);
+            this.rwFacturaAlquiler.TabIndex = 0;
             // 
             // FrmFacturaAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 475);
-            this.Controls.Add(this.reportViewer1);
+            this.ClientSize = new System.Drawing.Size(815, 789);
+            this.Controls.Add(this.rwFacturaAlquiler);
+            this.MinimumSize = new System.Drawing.Size(831, 828);
             this.Name = "FrmFacturaAlquiler";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Factura del Alquiler";
             this.Load += new System.EventHandler(this.FrmFacturaAlquiler_Load);
             this.ResumeLayout(false);
@@ -57,6 +59,6 @@ namespace GameStore.InterfacesDeUsuario.Reportes
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer rwFacturaAlquiler;
     }
 }
