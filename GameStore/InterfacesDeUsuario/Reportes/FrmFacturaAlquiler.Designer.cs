@@ -39,16 +39,16 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.rwFacturaAlquiler.Location = new System.Drawing.Point(0, 0);
             this.rwFacturaAlquiler.Name = "rwFacturaAlquiler";
             this.rwFacturaAlquiler.ServerReport.BearerToken = null;
-            this.rwFacturaAlquiler.Size = new System.Drawing.Size(815, 789);
+            this.rwFacturaAlquiler.Size = new System.Drawing.Size(815, 749);
             this.rwFacturaAlquiler.TabIndex = 0;
             // 
             // FrmFacturaAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 789);
+            this.ClientSize = new System.Drawing.Size(815, 749);
             this.Controls.Add(this.rwFacturaAlquiler);
-            this.MinimumSize = new System.Drawing.Size(831, 828);
+            this.MinimumSize = new System.Drawing.Size(831, 726);
             this.Name = "FrmFacturaAlquiler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Factura del Alquiler";

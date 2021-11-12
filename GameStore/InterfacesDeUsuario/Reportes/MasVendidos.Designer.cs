@@ -46,7 +46,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.RwMasVendidos.Location = new System.Drawing.Point(0, 41);
             this.RwMasVendidos.Name = "RwMasVendidos";
             this.RwMasVendidos.ServerReport.BearerToken = null;
-            this.RwMasVendidos.Size = new System.Drawing.Size(866, 705);
+            this.RwMasVendidos.Size = new System.Drawing.Size(866, 686);
             this.RwMasVendidos.TabIndex = 0;
             // 
             // btnFiltrarMasVen
@@ -115,7 +115,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(867, 768);
+            this.ClientSize = new System.Drawing.Size(867, 749);
             this.Controls.Add(this.btnFiltrarMasVen);
             this.Controls.Add(this.dtpFechaHastaMasVen);
             this.Controls.Add(this.dtpFechaDesdeMasVen);

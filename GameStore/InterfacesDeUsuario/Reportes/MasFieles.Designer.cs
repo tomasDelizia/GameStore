@@ -43,7 +43,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.RwMasFieles.Location = new System.Drawing.Point(0, 41);
             this.RwMasFieles.Name = "RwMasFieles";
             this.RwMasFieles.ServerReport.BearerToken = null;
-            this.RwMasFieles.Size = new System.Drawing.Size(1092, 420);
+            this.RwMasFieles.Size = new System.Drawing.Size(1261, 455);
             this.RwMasFieles.TabIndex = 0;
             // 
             // btnFiltrarMasFie
@@ -51,7 +51,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.btnFiltrarMasFie.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnFiltrarMasFie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrarMasFie.ForeColor = System.Drawing.Color.DimGray;
-            this.btnFiltrarMasFie.Location = new System.Drawing.Point(713, 6);
+            this.btnFiltrarMasFie.Location = new System.Drawing.Point(797, 6);
             this.btnFiltrarMasFie.Name = "btnFiltrarMasFie";
             this.btnFiltrarMasFie.Size = new System.Drawing.Size(100, 29);
             this.btnFiltrarMasFie.TabIndex = 138;
@@ -66,7 +66,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.dtpFechaHastaMasFie.CalendarTitleForeColor = System.Drawing.Color.DimGray;
             this.dtpFechaHastaMasFie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaHastaMasFie.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHastaMasFie.Location = new System.Drawing.Point(557, 6);
+            this.dtpFechaHastaMasFie.Location = new System.Drawing.Point(641, 6);
             this.dtpFechaHastaMasFie.Name = "dtpFechaHastaMasFie";
             this.dtpFechaHastaMasFie.Size = new System.Drawing.Size(125, 27);
             this.dtpFechaHastaMasFie.TabIndex = 137;
@@ -78,7 +78,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.dtpFechaDesdeMasFie.CalendarTitleForeColor = System.Drawing.Color.DimGray;
             this.dtpFechaDesdeMasFie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaDesdeMasFie.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesdeMasFie.Location = new System.Drawing.Point(399, 6);
+            this.dtpFechaDesdeMasFie.Location = new System.Drawing.Point(483, 6);
             this.dtpFechaDesdeMasFie.Name = "dtpFechaDesdeMasFie";
             this.dtpFechaDesdeMasFie.Size = new System.Drawing.Size(125, 27);
             this.dtpFechaDesdeMasFie.TabIndex = 136;
@@ -89,7 +89,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(530, 9);
+            this.label1.Location = new System.Drawing.Point(614, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(21, 22);
             this.label1.TabIndex = 135;
@@ -101,7 +101,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(336, 9);
+            this.label2.Location = new System.Drawing.Point(420, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 22);
             this.label2.TabIndex = 134;
@@ -112,7 +112,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(1090, 461);
+            this.ClientSize = new System.Drawing.Size(1259, 495);
             this.Controls.Add(this.btnFiltrarMasFie);
             this.Controls.Add(this.dtpFechaHastaMasFie);
             this.Controls.Add(this.dtpFechaDesdeMasFie);
