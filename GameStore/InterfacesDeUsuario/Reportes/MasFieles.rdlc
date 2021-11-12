@@ -408,7 +408,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DTCantidadesCompradas</DataSetName>
-            <Top>1.95474cm</Top>
+            <Top>2.90724cm</Top>
             <Left>1.5314cm</Left>
             <Height>1.2cm</Height>
             <Width>12.43417cm</Width>
@@ -438,7 +438,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox31</rd:DefaultName>
-            <Top>0.98805cm</Top>
+            <Top>1.72916cm</Top>
             <Left>1.5314cm</Left>
             <Height>0.82558cm</Height>
             <Width>12.43417cm</Width>
@@ -474,7 +474,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox31</rd:DefaultName>
-            <Top>0.95278cm</Top>
+            <Top>1.72916cm</Top>
             <Left>16.46683cm</Left>
             <Height>0.82558cm</Height>
             <Width>12.43417cm</Width>
@@ -491,8 +491,9 @@
             </Style>
           </Textbox>
           <Line Name="Line1">
+            <Top>1.72916cm</Top>
             <Left>15.34266cm</Left>
-            <Height>5.61891cm</Height>
+            <Height>23.67084cm</Height>
             <Width>0cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
@@ -829,7 +830,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DTCantidadesAlquiladas</DataSetName>
-            <Top>1.95474cm</Top>
+            <Top>2.90724cm</Top>
             <Left>16.46683cm</Left>
             <Height>1.2cm</Height>
             <Width>12.43417cm</Width>
@@ -840,6 +841,134 @@
               </Border>
             </Style>
           </Tablix>
+          <Textbox Name="Textbox5">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>FECHA INICIO:</Value>
+                    <Style>
+                      <FontFamily />
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox3</rd:DefaultName>
+            <Top>0.17639cm</Top>
+            <Left>1.5314cm</Left>
+            <Height>0.6cm</Height>
+            <Width>3.08208cm</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox6">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>FECHA FIN:</Value>
+                    <Style>
+                      <FontFamily />
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox3</rd:DefaultName>
+            <Top>0.88222cm</Top>
+            <Left>1.5314cm</Left>
+            <Height>0.6cm</Height>
+            <Width>3.08208cm</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="ParamFechaDesde">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!ParamFechaDesde.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>ParamFechaDesde</rd:DefaultName>
+            <Top>0.14111cm</Top>
+            <Left>4.78987cm</Left>
+            <Height>0.6cm</Height>
+            <Width>4.59021cm</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="ParamFechaHasta">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!ParamFechaHasta.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>ParamFechaHasta</rd:DefaultName>
+            <Top>0.88222cm</Top>
+            <Left>4.78987cm</Left>
+            <Height>0.6cm</Height>
+            <Width>4.59021cm</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
         <Height>10in</Height>
         <Style>
@@ -849,7 +978,7 @@
           <BackgroundColor>DarkGray</BackgroundColor>
         </Style>
       </Body>
-      <Width>18in</Width>
+      <Width>11.875in</Width>
       <Page>
         <PageHeader>
           <Height>1.7198cm</Height>

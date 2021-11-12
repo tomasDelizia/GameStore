@@ -22,6 +22,10 @@ namespace GameStore.Servicios.Implementaciones
             proveedor.ValidarTelefono();
             proveedor.ValidarCalle();
             proveedor.ValidarNumeroCalle();
+            var cuit = proveedor.Cuit;
+            int repetido = Encontrar(p => p.Cuit == cuit).ToList().Count;
+            if (repetido != 0)
+                throw new ApplicationException("Ya existe un proveedor con ese número de CUIT");
         }
         public List<Proveedor> ListarProveedores()
         {

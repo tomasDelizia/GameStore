@@ -201,7 +201,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.dgvPlataformas);
             this.Name = "ConsultaPlataforma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConsultaPlataforma";
+            this.Text = "Consultar plataformas";
             this.Load += new System.EventHandler(this.ConsultaPlataforma_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlataformas)).EndInit();
             this.panel1.ResumeLayout(false);

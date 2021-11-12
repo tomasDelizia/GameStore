@@ -92,7 +92,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.BtnCancelar);
             this.Name = "BajaMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BajaMarca";
+            this.Text = "Eliminar marca";
             this.Load += new System.EventHandler(this.BajaMarca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

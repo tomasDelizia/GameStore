@@ -116,7 +116,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.label1);
             this.Name = "ModificacionMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ModificacionMarca";
+            this.Text = "Modificar marca";
             this.Load += new System.EventHandler(this.ModificacionMarca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

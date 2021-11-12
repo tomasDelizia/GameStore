@@ -201,7 +201,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             this.Controls.Add(this.dgvCargos);
             this.Name = "ConsultarCargo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConsultarCargo";
+            this.Text = "Consultar cargos";
             this.Load += new System.EventHandler(this.ConsultarCargo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

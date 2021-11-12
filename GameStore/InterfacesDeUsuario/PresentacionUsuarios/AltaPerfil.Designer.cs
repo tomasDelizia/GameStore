@@ -47,6 +47,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.btnCancelar.TabIndex = 88;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnRegistrar
             // 
@@ -116,7 +117,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.Controls.Add(this.label1);
             this.Name = "AltaPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AltaPerfil";
+            this.Text = "Registrar perfil";
             this.ResumeLayout(false);
             this.PerformLayout();
 

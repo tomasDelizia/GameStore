@@ -51,6 +51,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             // 
             // TxtDescripcion
             // 
+            this.TxtDescripcion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDescripcion.Location = new System.Drawing.Point(12, 66);
             this.TxtDescripcion.Name = "TxtDescripcion";
             this.TxtDescripcion.Size = new System.Drawing.Size(385, 179);
@@ -116,7 +117,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.Controls.Add(this.BtnCancelar);
             this.Name = "ModificacionFormaPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ModificacionFormaPago";
+            this.Text = "Modificar formas de pago";
             this.Load += new System.EventHandler(this.ModificacionFormaPago_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

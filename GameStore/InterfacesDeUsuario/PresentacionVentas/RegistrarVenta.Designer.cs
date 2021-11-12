@@ -311,7 +311,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "RegistrarVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar una Nueva Venta";
+            this.Text = "Registrar una nueva Venta";
             this.Load += new System.EventHandler(this.RegistrarVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             this.panel1.ResumeLayout(false);

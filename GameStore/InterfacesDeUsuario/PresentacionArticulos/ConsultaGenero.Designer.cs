@@ -204,7 +204,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.btnAgregar);
             this.Name = "ConsultaGenero";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConsultaGenero";
+            this.Text = "Consultar géneros";
             this.Load += new System.EventHandler(this.ConsultaGenero_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

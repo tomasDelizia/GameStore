@@ -46,7 +46,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.RwResumen.Location = new System.Drawing.Point(0, 45);
             this.RwResumen.Name = "RwResumen";
             this.RwResumen.ServerReport.BearerToken = null;
-            this.RwResumen.Size = new System.Drawing.Size(1237, 769);
+            this.RwResumen.Size = new System.Drawing.Size(1237, 665);
             this.RwResumen.TabIndex = 0;
             // 
             // dtpFechaHasta
@@ -115,14 +115,13 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(1237, 814);
+            this.ClientSize = new System.Drawing.Size(1237, 749);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.dtpFechaHasta);
             this.Controls.Add(this.dtpFechaDesde);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.RwResumen);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Resumen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resumen";

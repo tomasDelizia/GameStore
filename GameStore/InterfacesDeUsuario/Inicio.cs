@@ -187,26 +187,22 @@ namespace GameStore.InterfacesDeUsuario
 
         private void BtnMasVendidos_Click(object sender, EventArgs e)
         {
-            var masVendidos = new MasVendidos();
-            AbrirFormHijo(masVendidos);
+            var masVendidos = new MasVendidos().ShowDialog();
         }
 
         private void BtnMasFieles_Click(object sender, EventArgs e)
         {
-            var masFieles = new MasFieles();
-            AbrirFormHijo(masFieles);
+            var masFieles = new MasFieles().ShowDialog();
         }
 
         private void btnResumen_Click(object sender, EventArgs e)
         {
-            var resumen = new Resumen();
-            AbrirFormHijo(resumen);
+            var resumen = new Resumen().ShowDialog();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            var ventas = new Ventas();
-            AbrirFormHijo(ventas);
+            var ventas = new Ventas().ShowDialog();
         }
 
         private void AbrirFormHijo(object formHijo)

@@ -74,6 +74,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             // 
             // TxtDescripcion
             // 
+            this.TxtDescripcion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDescripcion.Location = new System.Drawing.Point(12, 63);
             this.TxtDescripcion.Name = "TxtDescripcion";
             this.TxtDescripcion.Size = new System.Drawing.Size(395, 132);
@@ -114,7 +115,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.Controls.Add(this.TxtNombre);
             this.Name = "AltaFormaPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AltaFormaPago";
+            this.Text = "Registrar forma de pago";
             this.ResumeLayout(false);
             this.PerformLayout();
 

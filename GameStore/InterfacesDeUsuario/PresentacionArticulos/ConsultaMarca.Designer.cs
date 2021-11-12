@@ -204,7 +204,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.btnAgregar);
             this.Name = "ConsultaMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConsultaMarca";
+            this.Text = "Consultar marcas";
             this.Load += new System.EventHandler(this.ConsultaMarca_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

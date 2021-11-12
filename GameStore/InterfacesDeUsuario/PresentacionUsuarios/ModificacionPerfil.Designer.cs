@@ -116,7 +116,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.Controls.Add(this.label1);
             this.Name = "ModificacionPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ModificacionPerfil";
+            this.Text = "Modificar perfiles";
             this.Load += new System.EventHandler(this.ModificacionPerfil_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

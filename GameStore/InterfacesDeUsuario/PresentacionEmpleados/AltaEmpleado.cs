@@ -73,7 +73,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionEmpleados
             }
             catch (FormatException fe)
             {
-                MessageBox.Show("El documento solo acepta valores numéricos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El documento y la altura solo aceptan valores numéricos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {

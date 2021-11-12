@@ -178,7 +178,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.Controls.Add(this.dgvDetallesDeVenta);
             this.Name = "ConsultaDetalleVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ver Detalles de la Venta";
+            this.Text = "Ver detalles de la Venta";
             this.Load += new System.EventHandler(this.ConsultaDetalleVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picArticulo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetallesDeVenta)).EndInit();

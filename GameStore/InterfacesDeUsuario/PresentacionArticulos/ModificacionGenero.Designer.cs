@@ -116,7 +116,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.label1);
             this.Name = "ModificacionGenero";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ModificacionGenero";
+            this.Text = "Modificar género";
             this.Load += new System.EventHandler(this.ModificacionGenero_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -116,7 +116,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.label1);
             this.Name = "AltaDesarrollador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AltaDesarrollador";
+            this.Text = "Registrar desarrollador";
             this.ResumeLayout(false);
             this.PerformLayout();
 

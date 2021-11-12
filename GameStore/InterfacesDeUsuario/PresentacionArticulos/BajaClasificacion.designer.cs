@@ -92,7 +92,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.btnCancelar);
             this.Name = "BajaClasificacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BajaClasificacion";
+            this.Text = "Eliminar clasificación";
             this.Load += new System.EventHandler(this.BajaClasificacion_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();

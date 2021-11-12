@@ -46,7 +46,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.RwMasVendidos.Location = new System.Drawing.Point(0, 41);
             this.RwMasVendidos.Name = "RwMasVendidos";
             this.RwMasVendidos.ServerReport.BearerToken = null;
-            this.RwMasVendidos.Size = new System.Drawing.Size(866, 724);
+            this.RwMasVendidos.Size = new System.Drawing.Size(866, 705);
             this.RwMasVendidos.TabIndex = 0;
             // 
             // btnFiltrarMasVen
@@ -122,7 +122,6 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.RwMasVendidos);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MasVendidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Artículos más Vendidos";

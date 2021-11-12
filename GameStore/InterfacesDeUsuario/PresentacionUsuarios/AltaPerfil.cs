@@ -77,5 +77,10 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
                 return true;
             return false;
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
     }
 }

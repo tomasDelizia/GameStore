@@ -116,7 +116,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.label1);
             this.Name = "ModificacionDesarrollador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ModificacionDesarrollador";
+            this.Text = "Modificar desarrollador";
             this.Load += new System.EventHandler(this.ModificacionDesarrollador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

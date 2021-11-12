@@ -42,6 +42,10 @@ namespace GameStore.Servicios.Implementaciones
             empleado.ValidarCalleNumero();
             empleado.ValidarDocumento();
             empleado.ValidarTelefono();
+            var dni = empleado.NroDocumento;
+            int repetido = Encontrar(e => e.NroDocumento == dni).ToList().Count;
+            if (repetido != 0)
+                throw new ApplicationException("Ya existe un empleado con ese número de documento");
         }
     }
 }

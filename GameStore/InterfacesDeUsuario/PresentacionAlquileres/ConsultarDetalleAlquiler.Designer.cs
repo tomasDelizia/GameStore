@@ -170,7 +170,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionAlquileres
             this.Controls.Add(this.txtTotal);
             this.Name = "ConsultarDetalleAlquiler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ver detalles del alquiler";
+            this.Text = "Ver detalles del Alquiler";
             this.Load += new System.EventHandler(this.ConsultarDetalleAlquiler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetallesDeAlquileres)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArticulo)).EndInit();

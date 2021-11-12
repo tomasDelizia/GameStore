@@ -92,7 +92,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.BtnCancelar);
             this.Name = "BajaDesarrollador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BajaDesarrollador";
+            this.Text = "Eliminar desarrollador";
             this.Load += new System.EventHandler(this.BajaDesarrollador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

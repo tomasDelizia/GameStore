@@ -201,7 +201,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionUsuarios
             this.Controls.Add(this.dgvPerfiles);
             this.Name = "ConsultaPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConsultaPerfil";
+            this.Text = "Consultar perfiles";
             this.Load += new System.EventHandler(this.ConsultaPerfil_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

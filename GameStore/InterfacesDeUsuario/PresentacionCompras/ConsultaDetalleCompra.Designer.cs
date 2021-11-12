@@ -177,7 +177,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.Controls.Add(this.picArticulo);
             this.Controls.Add(this.dgvDetallesDeCompra);
             this.Name = "ConsultaDetalleCompra";
-            this.Text = "Ver Detalles de la Compra";
+            this.Text = "Ver detalles de la Compra";
             this.Load += new System.EventHandler(this.ConsultaDetalleCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picArticulo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetallesDeCompra)).EndInit();

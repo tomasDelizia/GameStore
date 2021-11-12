@@ -204,7 +204,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionVentas
             this.Controls.Add(this.btnAgregar);
             this.Name = "ConsultaFormaPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConsultaFormaPago";
+            this.Text = "Consultar formas de pago";
             this.Load += new System.EventHandler(this.ConsultaFormaPago_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

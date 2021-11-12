@@ -206,7 +206,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.panel1);
             this.Name = "ConsultaDesarrollador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConsultaDesarrollador";
+            this.Text = "Consultar desarrolladores";
             this.Load += new System.EventHandler(this.ConsultaDesarrollador_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

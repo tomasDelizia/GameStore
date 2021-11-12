@@ -116,7 +116,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.label1);
             this.Name = "AltaClasificacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AltaClasificacion";
+            this.Text = "Registrar clasificación";
             this.ResumeLayout(false);
             this.PerformLayout();
 

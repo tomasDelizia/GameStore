@@ -294,7 +294,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionCompras
             this.Controls.Add(this.panel1);
             this.Name = "RegistrarCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar una Nueva Compra";
+            this.Text = "Registrar una nueva Compra";
             this.Load += new System.EventHandler(this.RegistrarCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             this.panel1.ResumeLayout(false);

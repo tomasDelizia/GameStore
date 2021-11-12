@@ -483,7 +483,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.txtNombre);
             this.Name = "ModificacionArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ModificacionArticulo";
+            this.Text = "Modificar Artículo";
             this.Load += new System.EventHandler(this.ModificacionArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioUnitario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgArticulo)).EndInit();

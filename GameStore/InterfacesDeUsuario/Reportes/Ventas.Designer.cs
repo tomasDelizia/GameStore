@@ -51,7 +51,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.RwVentas.Location = new System.Drawing.Point(1, 45);
             this.RwVentas.Name = "RwVentas";
             this.RwVentas.ServerReport.BearerToken = null;
-            this.RwVentas.Size = new System.Drawing.Size(864, 722);
+            this.RwVentas.Size = new System.Drawing.Size(864, 684);
             this.RwVentas.TabIndex = 0;
             // 
             // btnFiltrar
@@ -180,7 +180,7 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(867, 768);
+            this.ClientSize = new System.Drawing.Size(867, 749);
             this.Controls.Add(this.btnFiltrarVen);
             this.Controls.Add(this.dtpFechaHastaVen);
             this.Controls.Add(this.dtpFechaDesdeVen);
@@ -193,7 +193,6 @@ namespace GameStore.InterfacesDeUsuario.Reportes
             this.Controls.Add(this.label9);
             this.Controls.Add(this.RwVentas);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Ventas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventas";

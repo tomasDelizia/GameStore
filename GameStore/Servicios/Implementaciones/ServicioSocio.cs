@@ -41,6 +41,10 @@ namespace GameStore.Servicios.Implementaciones
             socio.ValidarEmail();
             socio.ValidarCalle();
             socio.ValidarNumeroCalle();
+            var dni = socio.NroDocumento;
+            int repetido = Encontrar(s => s.NroDocumento == dni).ToList().Count;
+            if (repetido != 0)
+                throw new ApplicationException("Ya existe un socio con ese número de documento");
         }
     }
 }

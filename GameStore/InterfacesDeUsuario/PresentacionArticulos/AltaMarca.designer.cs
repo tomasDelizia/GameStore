@@ -114,7 +114,7 @@ namespace GameStore.InterfacesDeUsuario.PresentacionArticulos
             this.Controls.Add(this.TxtNombre);
             this.Name = "AltaMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AltaMarca";
+            this.Text = "Registrar marca";
             this.ResumeLayout(false);
             this.PerformLayout();
 
