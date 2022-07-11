@@ -17,7 +17,7 @@ namespace GameStore.RepositoriosBD.Implementaciones
 
         private DBHelper()
         {
-            _stringConexion = "data source = 200.69.137.167,11333;Initial Catalog=PAV-3K2-2021-9;User ID=PAV_3K2_2021_9;Password=PAV_3K2_2021_9";
+            _stringConexion = "data source = (LocalDB)\MSSQLLocalDB;Initial Catalog=GameStore";
         }
 
         public static DBHelper GetDBHelper()
